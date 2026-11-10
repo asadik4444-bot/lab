@@ -61,7 +61,9 @@
       if (r.ticker_source === 'override') fl.appendChild(L.tip(el('button', { type: 'button', 'class': 'flag' }, 'Ticker added manually'), { title: 'Ticker added manually', def: 'SEC lists no ticker for this company, so one was added by hand.', source: src(r), href: null }));
       COLS.slice(4).forEach(function (k) {
         var v = k.get(r), td = el('td', { 'class': 'r', 'data-l': k.t });
-        if (v == null) td.appendChild(el('span', { 'class': 'muted' }, 'n/a'));
+        /* banks and insurers: margins and free cash flow do not apply, which is not the same as missing */
+        var nc = r.fundamentals && r.fundamentals.financial && { om: 1, fcf: 1, fm: 1 }[k.k];
+        if (v == null) td.appendChild(nc ? el('span', { 'class': 'muted', title: 'Not comparable for banks and insurers' }, 'n/c') : el('span', { 'class': 'muted' }, 'n/a'));
         else { td.appendChild(k.chip ? L.chg(v, L.pctS(v)) : document.createTextNode(k.fmt(v))); if (k.k === S.key && k.bar) td.appendChild(el('span', { 'class': 'cbar', style: 'width:' + Math.max(2, Math.abs(v) / maxv * 100) + '%' })); }
         tr.appendChild(td);
       });

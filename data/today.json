@@ -26,12 +26,12 @@
     },
     {
       "id": "companies",
-      "text": "44 of 47 large US companies grew revenue in their latest fiscal year.",
+      "text": "47 of 50 large US companies grew revenue in their latest fiscal year.",
       "href": "/companies",
       "figure": {
-        "value": 44,
+        "value": 47,
         "unit": "companies",
-        "label": "of 47 with a revenue growth figure"
+        "label": "of 50 with a revenue growth figure"
       },
       "as_of": "2026-11-10"
     }

@@ -3,8 +3,8 @@
   "private": false,
   "universe_as_of": "2026-11-09",
   "rank_basis": "public_float_unverified",
-  "fundamentals_built": "2026-11-10 19:44 UTC",
-  "valuation_built": "2026-11-10 19:44 UTC",
+  "fundamentals_built": "2026-11-10 20:09 UTC",
+  "valuation_built": "2026-11-10 20:09 UTC",
   "defaults": {
     "erp": 0.05,
     "terminal_growth": 0.025,
@@ -322,6 +322,7 @@
             "revenue": 26914000000,
             "operating_income": 10041000000,
             "fcf": 8132000000,
+            "net_income": 9752000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581022000036/"
           },
@@ -331,6 +332,7 @@
             "revenue": 26974000000,
             "operating_income": 4224000000,
             "fcf": 3808000000,
+            "net_income": 4368000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/"
           },
@@ -340,6 +342,7 @@
             "revenue": 60922000000,
             "operating_income": 32972000000,
             "fcf": 27021000000,
+            "net_income": 29760000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/"
           },
@@ -349,6 +352,7 @@
             "revenue": 130497000000,
             "operating_income": 81453000000,
             "fcf": 60853000000,
+            "net_income": 72880000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/"
           },
@@ -358,6 +362,7 @@
             "revenue": 215938000000,
             "operating_income": 130387000000,
             "fcf": 96676000000,
+            "net_income": 120067000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/"
           }
@@ -612,23 +617,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 62475000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2026-01-25",
-              "value": 62475000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 4.9,
           "unit": "USD/shares",
@@ -682,6 +670,23 @@
           "rule": null,
           "partial": null,
           "inputs": []
+        },
+        "cogs": {
+          "value": 62475000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2026-01-25",
+              "value": 62475000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/"
+            }
+          ]
         },
         "ebitda": {
           "value": 133230000000,
@@ -1172,6 +1177,7 @@
             "revenue": 394328000000,
             "operating_income": 119437000000,
             "fcf": 111443000000,
+            "net_income": 99803000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019324000123/"
           },
@@ -1181,6 +1187,7 @@
             "revenue": 383285000000,
             "operating_income": 114301000000,
             "fcf": 99584000000,
+            "net_income": 96995000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019325000079/"
           },
@@ -1190,6 +1197,7 @@
             "revenue": 391035000000,
             "operating_income": 123216000000,
             "fcf": 108807000000,
+            "net_income": 93736000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/"
           },
@@ -1199,6 +1207,7 @@
             "revenue": 416161000000,
             "operating_income": 133050000000,
             "fcf": 98767000000,
+            "net_income": 112010000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/"
           },
@@ -1208,6 +1217,7 @@
             "revenue": 478834000000,
             "operating_income": 158063000000,
             "fcf": 136056000000,
+            "net_income": 132175000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/"
           }
@@ -1475,23 +1485,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 245232000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2026-09-26",
-              "value": 245232000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 8.98,
           "unit": "USD/shares",
@@ -1545,6 +1538,23 @@
           "rule": null,
           "partial": null,
           "inputs": []
+        },
+        "cogs": {
+          "value": 245232000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2026-09-26",
+              "value": 245232000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/"
+            }
+          ]
         },
         "ebitda": {
           "value": 171486000000,
@@ -2046,6 +2056,7 @@
             "revenue": 198270000000,
             "operating_income": 83383000000,
             "fcf": 65149000000,
+            "net_income": 72738000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087843/"
           },
@@ -2055,6 +2066,7 @@
             "revenue": 211915000000,
             "operating_income": 88523000000,
             "fcf": 59475000000,
+            "net_income": 72361000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017025100235/"
           },
@@ -2064,6 +2076,7 @@
             "revenue": 245122000000,
             "operating_income": 109433000000,
             "fcf": 74071000000,
+            "net_income": 88136000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/"
           },
@@ -2073,6 +2086,7 @@
             "revenue": 281724000000,
             "operating_income": 128528000000,
             "fcf": 71611000000,
+            "net_income": 101832000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/"
           },
@@ -2082,6 +2096,7 @@
             "revenue": 331839000000,
             "operating_income": 155237000000,
             "fcf": 66987000000,
+            "net_income": 133749000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/"
           }
@@ -2356,23 +2371,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 106374000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2026-06-30",
-              "value": 106374000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 17.95,
           "unit": "USD/shares",
@@ -2430,6 +2428,23 @@
               "concept": "InterestPaid",
               "period_end": "2026-06-30",
               "value": 1500000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 106374000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2026-06-30",
+              "value": 106374000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/"
             }
           ]
@@ -2937,6 +2952,7 @@
             "revenue": 469822000000,
             "operating_income": 24879000000,
             "fcf": -14726000000,
+            "net_income": 33364000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/"
           },
@@ -2946,6 +2962,7 @@
             "revenue": 513983000000,
             "operating_income": 12248000000,
             "fcf": -16893000000,
+            "net_income": -2722000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872425000004/"
           },
@@ -2955,6 +2972,7 @@
             "revenue": 574785000000,
             "operating_income": 36852000000,
             "fcf": 32217000000,
+            "net_income": 30425000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/"
           },
@@ -2964,6 +2982,7 @@
             "revenue": 637959000000,
             "operating_income": 68593000000,
             "fcf": 32878000000,
+            "net_income": 59248000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/"
           },
@@ -2973,6 +2992,7 @@
             "revenue": 716924000000,
             "operating_income": 79975000000,
             "fcf": 7695000000,
+            "net_income": 77670000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/"
           }
@@ -3247,23 +3267,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 356414000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 356414000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 7.17,
           "unit": "USD/shares",
@@ -3317,6 +3320,23 @@
           "rule": null,
           "partial": null,
           "inputs": []
+        },
+        "cogs": {
+          "value": 356414000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 356414000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/"
+            }
+          ]
         },
         "ebitda": {
           "value": 145731000000,
@@ -3825,6 +3845,7 @@
             "revenue": 257637000000,
             "operating_income": 78714000000,
             "fcf": 67012000000,
+            "net_income": 76033000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/"
           },
@@ -3834,6 +3855,7 @@
             "revenue": 282836000000,
             "operating_income": 74842000000,
             "fcf": 60010000000,
+            "net_income": 59972000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/"
           },
@@ -3843,6 +3865,7 @@
             "revenue": 307394000000,
             "operating_income": 84293000000,
             "fcf": 69495000000,
+            "net_income": 73795000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/"
           },
@@ -3852,6 +3875,7 @@
             "revenue": 350018000000,
             "operating_income": 112390000000,
             "fcf": 72764000000,
+            "net_income": 100118000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000014/"
           },
@@ -3861,6 +3885,7 @@
             "revenue": 402836000000,
             "operating_income": 129039000000,
             "fcf": 73266000000,
+            "net_income": 132170000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/"
           }
@@ -4128,23 +4153,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 162535000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2025-12-31",
-              "value": 162535000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 10.81,
           "unit": "USD/shares",
@@ -4198,6 +4206,23 @@
           "rule": null,
           "partial": null,
           "inputs": []
+        },
+        "cogs": {
+          "value": 162535000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2025-12-31",
+              "value": 162535000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/"
+            }
+          ]
         },
         "ebitda": {
           "value": 150175000000,
@@ -4693,6 +4718,7 @@
             "revenue": 117929000000,
             "operating_income": 46753000000,
             "fcf": 38993000000,
+            "net_income": 39370000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680124000012/"
           },
@@ -4702,6 +4728,7 @@
             "revenue": 116609000000,
             "operating_income": 28944000000,
             "fcf": 19289000000,
+            "net_income": 23200000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000017/"
           },
@@ -4711,6 +4738,7 @@
             "revenue": 134902000000,
             "operating_income": 46751000000,
             "fcf": 44068000000,
+            "net_income": 39098000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/"
           },
@@ -4720,6 +4748,7 @@
             "revenue": 164501000000,
             "operating_income": 69380000000,
             "fcf": 54072000000,
+            "net_income": 62360000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/"
           },
@@ -4729,6 +4758,7 @@
             "revenue": 200966000000,
             "operating_income": 83276000000,
             "fcf": 46109000000,
+            "net_income": 60458000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/"
           }
@@ -4977,23 +5007,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 36175000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2025-12-31",
-              "value": 36175000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 23.49,
           "unit": "USD/shares",
@@ -5051,6 +5064,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 696000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 36175000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2025-12-31",
+              "value": 36175000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/"
             }
           ]
@@ -5524,6 +5554,7 @@
             "revenue": 27450000000,
             "operating_income": 8519000000,
             "fcf": 13321000000,
+            "net_income": 6437000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016823000096/"
           },
@@ -5533,6 +5564,7 @@
             "revenue": 33203000000,
             "operating_income": 14225000000,
             "fcf": 16312000000,
+            "net_income": 11495000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016824000139/"
           },
@@ -5542,6 +5574,7 @@
             "revenue": 35819000000,
             "operating_income": 16207000000,
             "fcf": 17633000000,
+            "net_income": 14082000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/"
           },
@@ -5551,6 +5584,7 @@
             "revenue": 51574000000,
             "operating_income": 13463000000,
             "fcf": 19414000000,
+            "net_income": 5895000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/"
           },
@@ -5560,7 +5594,10 @@
             "revenue": 63887000000,
             "operating_income": 25484000000,
             "fcf": 26914000000,
-            "reasons": {},
+            "net_income": null,
+            "reasons": {
+              "net_income": "no NetIncomeLoss / NetIncomeLossAvailableToCommonStockholdersBasic for this fiscal year"
+            },
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/"
           }
         ],
@@ -5749,7 +5786,7 @@
         "net_income": {
           "value": null,
           "unit": "USD",
-          "reason": "no NetIncomeLoss for the fiscal year",
+          "reason": "no NetIncomeLoss / NetIncomeLossAvailableToCommonStockholdersBasic for the fiscal year",
           "not_comparable": null,
           "formula": null,
           "rule": null,
@@ -5803,23 +5840,6 @@
               "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
               "period_end": "2025-11-02",
               "value": 22729000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/"
-            }
-          ]
-        },
-        "cogs": {
-          "value": 20593000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2025-11-02",
-              "value": 20593000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/"
             }
           ]
@@ -5881,6 +5901,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-11-02",
               "value": 2672000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 20593000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2025-11-02",
+              "value": 20593000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1730168/000173016825000121/"
             }
           ]
@@ -6286,6 +6323,7 @@
             "revenue": 276185000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 89937000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -6298,6 +6336,7 @@
             "revenue": 302020000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": -22759000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -6310,6 +6349,7 @@
             "revenue": 364482000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 96223000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -6322,6 +6362,7 @@
             "revenue": 371433000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 88995000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year",
               "fcf": "not comparable for financial companies"
@@ -6334,6 +6375,7 @@
             "revenue": 371444000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 66968000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -6564,16 +6606,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": null,
           "unit": "USD/shares",
@@ -6608,6 +6640,16 @@
           "value": null,
           "unit": "USD",
           "reason": "no InterestPaidNet / InterestPaid for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
           "not_comparable": null,
           "formula": null,
           "rule": null,
@@ -7020,6 +7062,7 @@
             "revenue": 53823000000,
             "operating_income": 6523000000,
             "fcf": 5015000000,
+            "net_income": 5519000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828024002390/"
           },
@@ -7029,6 +7072,7 @@
             "revenue": 81462000000,
             "operating_income": 13656000000,
             "fcf": 7566000000,
+            "net_income": 12556000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828025003063/"
           },
@@ -7038,6 +7082,7 @@
             "revenue": 96773000000,
             "operating_income": 8891000000,
             "fcf": 4357000000,
+            "net_income": 14997000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/"
           },
@@ -7047,6 +7092,7 @@
             "revenue": 97690000000,
             "operating_income": 7076000000,
             "fcf": 3581000000,
+            "net_income": 7091000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/"
           },
@@ -7056,6 +7102,7 @@
             "revenue": 94827000000,
             "operating_income": 4355000000,
             "fcf": 6220000000,
+            "net_income": 3794000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/"
           }
@@ -7325,23 +7372,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 77733000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2025-12-31",
-              "value": 77733000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 1.08,
           "unit": "USD/shares",
@@ -7399,6 +7429,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 292000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 77733000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2025-12-31",
+              "value": 77733000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026003952/"
             }
           ]
@@ -7863,6 +7910,7 @@
             "revenue": 28318400000,
             "operating_income": null,
             "fcf": 6056100000,
+            "net_income": 5581700000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -7874,6 +7922,7 @@
             "revenue": 28541400000,
             "operating_income": null,
             "fcf": 5731400000,
+            "net_income": 6244800000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -7885,6 +7934,7 @@
             "revenue": 34124000000,
             "operating_income": null,
             "fcf": 792000000,
+            "net_income": 5240000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -7896,6 +7946,7 @@
             "revenue": 45043000000,
             "operating_income": null,
             "fcf": 3760000000,
+            "net_income": 10590000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year"
             },
@@ -7907,6 +7958,7 @@
             "revenue": 65179000000,
             "operating_income": null,
             "fcf": 8972000000,
+            "net_income": 20640000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -8163,23 +8215,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 11052000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 11052000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 22.95,
           "unit": "USD/shares",
@@ -8237,6 +8272,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 633000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 11052000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 11052000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000013/"
             }
           ]
@@ -8635,6 +8687,7 @@
             "revenue": 121649000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 48334000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -8647,6 +8700,7 @@
             "revenue": 128695000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 37676000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -8659,6 +8713,7 @@
             "revenue": 158104000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 49552000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -8671,6 +8726,7 @@
             "revenue": 177556000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 58471000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year",
               "fcf": "not comparable for financial companies"
@@ -8683,6 +8739,7 @@
             "revenue": 182447000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 57048000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -8892,16 +8949,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 20.02,
           "unit": "USD/shares",
@@ -8962,6 +9009,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/19617/000162828026008131/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": null,
@@ -9369,6 +9426,7 @@
             "revenue": 29697844000,
             "operating_income": 6194509000,
             "fcf": -131975000,
+            "net_income": 5116228000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528024000030/"
           },
@@ -9378,6 +9436,7 @@
             "revenue": 31615550000,
             "operating_income": 5632831000,
             "fcf": 1618528000,
+            "net_income": 4491924000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528025000044/"
           },
@@ -9387,6 +9446,7 @@
             "revenue": 33723297000,
             "operating_income": 6954003000,
             "fcf": 6925749000,
+            "net_income": 5407990000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/"
           },
@@ -9396,6 +9456,7 @@
             "revenue": 39000966000,
             "operating_income": 10417614000,
             "fcf": 6921826000,
+            "net_income": 8711631000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/"
           },
@@ -9405,6 +9466,7 @@
             "revenue": 45183036000,
             "operating_income": 13326603000,
             "fcf": 9461053000,
+            "net_income": 10981201000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/"
           }
@@ -9652,23 +9714,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 23275329000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2025-12-31",
-              "value": 23275329000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 2.53,
           "unit": "USD/shares",
@@ -9726,6 +9771,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 718611000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 23275329000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2025-12-31",
+              "value": 23275329000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/"
             }
           ]
@@ -10199,7 +10261,10 @@
             "revenue": 29845000000,
             "operating_income": 10082000000,
             "fcf": 9056000000,
-            "reasons": {},
+            "net_income": null,
+            "reasons": {
+              "net_income": "no NetIncomeLoss / NetIncomeLossAvailableToCommonStockholdersBasic for this fiscal year"
+            },
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139122000023/"
           },
           {
@@ -10208,7 +10273,10 @@
             "revenue": 22237000000,
             "operating_income": 12264000000,
             "fcf": 10753000000,
-            "reasons": {},
+            "net_income": null,
+            "reasons": {
+              "net_income": "no NetIncomeLoss / NetIncomeLossAvailableToCommonStockholdersBasic for this fiscal year"
+            },
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139125000011/"
           },
           {
@@ -10217,7 +10285,10 @@
             "revenue": 25098000000,
             "operating_income": 14008000000,
             "fcf": 11609000000,
-            "reasons": {},
+            "net_income": null,
+            "reasons": {
+              "net_income": "no NetIncomeLoss / NetIncomeLossAvailableToCommonStockholdersBasic for this fiscal year"
+            },
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/"
           },
           {
@@ -10226,7 +10297,10 @@
             "revenue": 28167000000,
             "operating_income": 15582000000,
             "fcf": 14306000000,
-            "reasons": {},
+            "net_income": null,
+            "reasons": {
+              "net_income": "no NetIncomeLoss / NetIncomeLossAvailableToCommonStockholdersBasic for this fiscal year"
+            },
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/"
           },
           {
@@ -10235,7 +10309,10 @@
             "revenue": 32791000000,
             "operating_income": 18897000000,
             "fcf": 17159000000,
-            "reasons": {},
+            "net_income": null,
+            "reasons": {
+              "net_income": "no NetIncomeLoss / NetIncomeLossAvailableToCommonStockholdersBasic for this fiscal year"
+            },
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/"
           }
         ],
@@ -10418,7 +10495,7 @@
         "net_income": {
           "value": null,
           "unit": "USD",
-          "reason": "no NetIncomeLoss for the fiscal year",
+          "reason": "no NetIncomeLoss / NetIncomeLossAvailableToCommonStockholdersBasic for the fiscal year",
           "not_comparable": null,
           "formula": null,
           "rule": null,
@@ -10476,16 +10553,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 16.52,
           "unit": "USD/shares",
@@ -10534,6 +10601,16 @@
           "value": null,
           "unit": "USD",
           "reason": "no InterestPaidNet / InterestPaid for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
           "not_comparable": null,
           "formula": null,
           "rule": null,
@@ -10997,6 +11074,7 @@
             "revenue": 29310000000,
             "operating_income": 18813000000,
             "fcf": 17879000000,
+            "net_income": 14957000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316124000058/"
           },
@@ -11006,6 +11084,7 @@
             "revenue": 32653000000,
             "operating_income": 21000000000,
             "fcf": 19696000000,
+            "net_income": 17273000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316125000089/"
           },
@@ -11015,6 +11094,7 @@
             "revenue": 35926000000,
             "operating_income": 23595000000,
             "fcf": 18693000000,
+            "net_income": 19743000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000134/"
           },
@@ -11024,6 +11104,7 @@
             "revenue": 40000000000,
             "operating_income": 23994000000,
             "fcf": 21577000000,
+            "net_income": 20058000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000134/"
           },
@@ -11033,6 +11114,7 @@
             "revenue": 45903000000,
             "operating_income": 28110000000,
             "fcf": 22057000000,
+            "net_income": 23504000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000134/"
           }
@@ -11274,16 +11356,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": null,
           "unit": "USD/shares",
@@ -11330,6 +11402,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000134/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 29513000000,
@@ -11753,6 +11835,7 @@
             "revenue": 276692000000,
             "operating_income": null,
             "fcf": 36053000000,
+            "net_income": 23040000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -11764,6 +11847,7 @@
             "revenue": 413680000000,
             "operating_income": null,
             "fcf": 58390000000,
+            "net_income": 55740000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -11775,6 +11859,7 @@
             "revenue": 344582000000,
             "operating_income": null,
             "fcf": 33450000000,
+            "net_income": 36010000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -11786,6 +11871,7 @@
             "revenue": 349585000000,
             "operating_income": null,
             "fcf": 30716000000,
+            "net_income": 33680000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year"
             },
@@ -11797,6 +11883,7 @@
             "revenue": 332238000000,
             "operating_income": null,
             "fcf": 23612000000,
+            "net_income": 28844000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -12046,16 +12133,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 6.7,
           "unit": "USD/shares",
@@ -12109,6 +12186,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/34088/000003408826000045/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 67864000000,
@@ -12575,6 +12662,7 @@
             "revenue": 226954000000,
             "operating_income": 7793000000,
             "fcf": 3501000000,
+            "net_income": 5844000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/909832/000090983224000049/"
           },
@@ -12584,6 +12672,7 @@
             "revenue": 242290000000,
             "operating_income": 8114000000,
             "fcf": 6745000000,
+            "net_income": 6292000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/"
           },
@@ -12593,6 +12682,7 @@
             "revenue": 254453000000,
             "operating_income": 9285000000,
             "fcf": 6629000000,
+            "net_income": 7367000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/"
           },
@@ -12602,6 +12692,7 @@
             "revenue": 275235000000,
             "operating_income": 10383000000,
             "fcf": 7837000000,
+            "net_income": 8099000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/"
           },
@@ -12611,6 +12702,7 @@
             "revenue": 303154000000,
             "operating_income": 11685000000,
             "fcf": 9382000000,
+            "net_income": 9226000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/"
           }
@@ -12872,23 +12964,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 264279000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2026-08-30",
-              "value": 264279000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 20.76,
           "unit": "USD/shares",
@@ -12946,6 +13021,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2026-08-30",
               "value": 103000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 264279000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2026-08-30",
+              "value": 264279000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/"
             }
           ]
@@ -13434,6 +13526,7 @@
             "revenue": 567762000000,
             "operating_income": 25942000000,
             "fcf": 11075000000,
+            "net_income": 13673000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416924000056/"
           },
@@ -13443,6 +13536,7 @@
             "revenue": 605881000000,
             "operating_income": 20428000000,
             "fcf": 11984000000,
+            "net_income": 11680000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416925000021/"
           },
@@ -13452,6 +13546,7 @@
             "revenue": 642637000000,
             "operating_income": 27012000000,
             "fcf": 15120000000,
+            "net_income": 15511000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/"
           },
@@ -13461,6 +13556,7 @@
             "revenue": 674538000000,
             "operating_income": 29348000000,
             "fcf": 12660000000,
+            "net_income": 19436000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/"
           },
@@ -13470,6 +13566,7 @@
             "revenue": 706413000000,
             "operating_income": 29825000000,
             "fcf": 14923000000,
+            "net_income": 21893000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/"
           }
@@ -13737,23 +13834,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 535395000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2026-01-31",
-              "value": 535395000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 2.73,
           "unit": "USD/shares",
@@ -13818,6 +13898,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2026-01-31",
               "value": 2793000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 535395000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2026-01-31",
+              "value": 535395000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/"
             }
           ]
@@ -14306,6 +14403,7 @@
             "revenue": 151157000000,
             "operating_income": 23040000000,
             "fcf": 14005000000,
+            "net_income": 16433000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/354950/000035495024000062/"
           },
@@ -14315,6 +14413,7 @@
             "revenue": 157403000000,
             "operating_income": 24039000000,
             "fcf": 11496000000,
+            "net_income": 17105000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/354950/000035495025000085/"
           },
@@ -14324,6 +14423,7 @@
             "revenue": 152669000000,
             "operating_income": 21689000000,
             "fcf": 17946000000,
+            "net_income": 15143000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/"
           },
@@ -14333,6 +14433,7 @@
             "revenue": 159514000000,
             "operating_income": 21526000000,
             "fcf": 16325000000,
+            "net_income": 14806000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/"
           },
@@ -14342,6 +14443,7 @@
             "revenue": 164683000000,
             "operating_income": 20890000000,
             "fcf": 12646000000,
+            "net_income": 14156000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/"
           }
@@ -14602,23 +14704,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 109818000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2026-02-01",
-              "value": 109818000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 14.23,
           "unit": "USD/shares",
@@ -14676,6 +14761,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2026-02-01",
               "value": 2405000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 109818000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2026-02-01",
+              "value": 109818000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/"
             }
           ]
@@ -15171,6 +15273,7 @@
             "revenue": 30758000000,
             "operating_income": 9702000000,
             "fcf": 3114000000,
+            "net_income": 8687000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312524000027/"
           },
@@ -15180,6 +15283,7 @@
             "revenue": 15540000000,
             "operating_income": -5745000000,
             "fcf": -6117000000,
+            "net_income": -5833000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000028/"
           },
@@ -15189,6 +15293,7 @@
             "revenue": 25111000000,
             "operating_income": 1304000000,
             "fcf": 121000000,
+            "net_income": 778000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/"
           },
@@ -15198,6 +15303,7 @@
             "revenue": 37378000000,
             "operating_income": 9770000000,
             "fcf": 1668000000,
+            "net_income": 8539000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/"
           },
@@ -15207,6 +15313,7 @@
             "revenue": 133188000000,
             "operating_income": 99340000000,
             "fcf": 58963000000,
+            "net_income": 84969000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/"
           }
@@ -15461,23 +15568,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 25684000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2026-09-03",
-              "value": 25684000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 74.33,
           "unit": "USD/shares",
@@ -15535,6 +15625,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2026-09-03",
               "value": 197000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 25684000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2026-09-03",
+              "value": 25684000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/"
             }
           ]
@@ -15992,6 +16099,7 @@
             "revenue": 78740000000,
             "operating_income": null,
             "fcf": 19758000000,
+            "net_income": 20878000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -16003,6 +16111,7 @@
             "revenue": 79990000000,
             "operating_income": null,
             "fcf": 17185000000,
+            "net_income": 17941000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -16014,6 +16123,7 @@
             "revenue": 85159000000,
             "operating_income": null,
             "fcf": 18248000000,
+            "net_income": 35153000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -16025,6 +16135,7 @@
             "revenue": 88821000000,
             "operating_income": null,
             "fcf": 19842000000,
+            "net_income": 14066000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year"
             },
@@ -16036,6 +16147,7 @@
             "revenue": 94193000000,
             "operating_income": null,
             "fcf": 19698000000,
+            "net_income": 26804000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -16299,23 +16411,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 30256000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-28",
-              "value": 30256000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 11.03,
           "unit": "USD/shares",
@@ -16373,6 +16468,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-28",
               "value": 1863000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 30256000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-28",
+              "value": 30256000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/200406/000020040626000016/"
             }
           ]
@@ -16787,6 +16899,7 @@
             "revenue": 89113000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 31978000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -16799,6 +16912,7 @@
             "revenue": 94950000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 27528000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -16811,6 +16925,7 @@
             "revenue": 102769000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 26305000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -16823,6 +16938,7 @@
             "revenue": 105856000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 26973000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year",
               "fcf": "not comparable for financial companies"
@@ -16835,6 +16951,7 @@
             "revenue": 113097000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 30509000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -17044,16 +17161,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 3.81,
           "unit": "USD/shares",
@@ -17114,6 +17221,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/70858/000007085826000157/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": null,
@@ -17517,6 +17634,7 @@
             "revenue": 42440000000,
             "operating_income": 10926000000,
             "fcf": 5028000000,
+            "net_income": 6717000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017024075605/"
           },
@@ -17526,6 +17644,7 @@
             "revenue": 49954000000,
             "operating_income": 13093000000,
             "fcf": 8470000000,
+            "net_income": 8503000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017025087926/"
           },
@@ -17535,6 +17654,7 @@
             "revenue": 52961000000,
             "operating_income": 15353000000,
             "fcf": 11807000000,
+            "net_income": 10467000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/"
           },
@@ -17544,6 +17664,7 @@
             "revenue": 57399000000,
             "operating_income": 17678000000,
             "fcf": -394000000,
+            "net_income": 12443000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/"
           },
@@ -17553,6 +17674,7 @@
             "revenue": 67357000000,
             "operating_income": 20606000000,
             "fcf": -23686000000,
+            "net_income": 17087000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/"
           }
@@ -17807,16 +17929,6 @@
           "partial": null,
           "inputs": []
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 5.83,
           "unit": "USD/shares",
@@ -17877,6 +17989,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 29900000000,
@@ -18325,6 +18447,7 @@
             "revenue": 80187000000,
             "operating_income": 17813000000,
             "fcf": 13567000000,
+            "net_income": 14742000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042424000083/"
           },
@@ -18334,6 +18457,7 @@
             "revenue": 82006000000,
             "operating_income": 18134000000,
             "fcf": 13786000000,
+            "net_income": 14653000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042425000076/"
           },
@@ -18343,6 +18467,7 @@
             "revenue": 84039000000,
             "operating_income": 18545000000,
             "fcf": 16524000000,
+            "net_income": 14879000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/"
           },
@@ -18352,6 +18477,7 @@
             "revenue": 84284000000,
             "operating_income": 20451000000,
             "fcf": 14044000000,
+            "net_income": 15974000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/"
           },
@@ -18361,6 +18487,7 @@
             "revenue": 87032000000,
             "operating_income": 19748000000,
             "fcf": 15147000000,
+            "net_income": 16046000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/"
           }
@@ -18622,23 +18749,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 43362000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2026-06-30",
-              "value": 43362000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 6.62,
           "unit": "USD/shares",
@@ -18696,6 +18806,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2026-06-30",
               "value": 866000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 43362000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2026-06-30",
+              "value": 43362000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/80424/000008042426000103/"
             }
           ]
@@ -19189,6 +19316,7 @@
             "revenue": 56197000000,
             "operating_income": 17924000000,
             "fcf": 21990000000,
+            "net_income": 11542000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115224000011/"
           },
@@ -19198,6 +19326,7 @@
             "revenue": 58054000000,
             "operating_income": 18117000000,
             "fcf": 24248000000,
+            "net_income": 11836000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115225000020/"
           },
@@ -19207,6 +19336,7 @@
             "revenue": 54318000000,
             "operating_income": 12757000000,
             "fcf": 22062000000,
+            "net_income": 4863000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/"
           },
@@ -19216,6 +19346,7 @@
             "revenue": 56334000000,
             "operating_income": 9137000000,
             "fcf": 17832000000,
+            "net_income": 4278000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/"
           },
@@ -19225,6 +19356,7 @@
             "revenue": 61160000000,
             "operating_income": 15075000000,
             "fcf": 17816000000,
+            "net_income": 4226000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/"
           }
@@ -19505,23 +19637,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 18204000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 18204000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 2.36,
           "unit": "USD/shares",
@@ -19586,6 +19701,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 3002000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 18204000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 18204000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/"
             }
           ]
@@ -20097,6 +20229,7 @@
             "revenue": 38655000000,
             "operating_income": 10308000000,
             "fcf": 11258000000,
+            "net_income": 9771000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000002134424000009/"
           },
@@ -20106,6 +20239,7 @@
             "revenue": 43004000000,
             "operating_income": 10909000000,
             "fcf": 9534000000,
+            "net_income": 9542000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000002134425000011/"
           },
@@ -20115,6 +20249,7 @@
             "revenue": 45754000000,
             "operating_income": 11311000000,
             "fcf": 9747000000,
+            "net_income": 10714000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/"
           },
@@ -20124,6 +20259,7 @@
             "revenue": 47061000000,
             "operating_income": 9992000000,
             "fcf": 4741000000,
+            "net_income": 10631000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/"
           },
@@ -20133,6 +20269,7 @@
             "revenue": 47941000000,
             "operating_income": 13762000000,
             "fcf": 5296000000,
+            "net_income": 13107000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/"
           }
@@ -20393,23 +20530,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 18397000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 18397000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 3.04,
           "unit": "USD/shares",
@@ -20467,6 +20587,23 @@
               "concept": "InterestPaid",
               "period_end": "2025-12-31",
               "value": 1724000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 18397000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 18397000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/"
             }
           ]
@@ -20953,6 +21090,7 @@
             "revenue": 1541889000,
             "operating_income": -411046000,
             "fcf": 321224000,
+            "net_income": -520379000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165524000022/"
           },
@@ -20962,6 +21100,7 @@
             "revenue": 1905871000,
             "operating_income": -161201000,
             "fcf": 183710000,
+            "net_income": -373705000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165525000022/"
           },
@@ -20971,6 +21110,7 @@
             "revenue": 2225012000,
             "operating_income": 119966000,
             "fcf": 697069000,
+            "net_income": 209825000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/"
           },
@@ -20980,6 +21120,7 @@
             "revenue": 2865507000,
             "operating_income": 310403000,
             "fcf": 1141231000,
+            "net_income": 462190000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/"
           },
@@ -20989,6 +21130,7 @@
             "revenue": 4475446000,
             "operating_income": 1414015000,
             "fcf": 2100591000,
+            "net_income": 1625033000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/"
           }
@@ -21230,23 +21372,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 789177000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2025-12-31",
-              "value": 789177000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 0.63,
           "unit": "USD/shares",
@@ -21300,6 +21425,23 @@
           "rule": null,
           "partial": null,
           "inputs": []
+        },
+        "cogs": {
+          "value": 789177000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2025-12-31",
+              "value": 789177000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/"
+            }
+          ]
         },
         "ebitda": {
           "value": 1440160000,
@@ -21764,6 +21906,7 @@
             "revenue": 51557000000,
             "operating_income": 13969000000,
             "fcf": 12749000000,
+            "net_income": 11812000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887724000017/"
           },
@@ -21773,6 +21916,7 @@
             "revenue": 56998000000,
             "operating_income": 15031000000,
             "fcf": 19037000000,
+            "net_income": 12613000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887725000111/"
           },
@@ -21782,6 +21926,7 @@
             "revenue": 53803000000,
             "operating_income": 12181000000,
             "fcf": 10210000000,
+            "net_income": 10320000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/"
           },
@@ -21791,6 +21936,7 @@
             "revenue": 56654000000,
             "operating_income": 11760000000,
             "fcf": 13288000000,
+            "net_income": 10180000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/"
           },
@@ -21800,6 +21946,7 @@
             "revenue": 63325000000,
             "operating_income": 15368000000,
             "fcf": 12767000000,
+            "net_income": 13267000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/"
           }
@@ -22061,23 +22208,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 22465000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2026-07-25",
-              "value": 22465000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 3.33,
           "unit": "USD/shares",
@@ -22131,6 +22261,23 @@
           "rule": null,
           "partial": null,
           "inputs": []
+        },
+        "cogs": {
+          "value": 22465000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2026-07-25",
+              "value": 22465000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/"
+            }
+          ]
         },
         "ebitda": {
           "value": 16068000000,
@@ -22623,6 +22770,7 @@
             "revenue": 31405000000,
             "operating_income": 12975000000,
             "fcf": 11219000000,
+            "net_income": 9109000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1413329/000141332924000013/"
           },
@@ -22632,6 +22780,7 @@
             "revenue": 31762000000,
             "operating_income": 12246000000,
             "fcf": 9726000000,
+            "net_income": 9048000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1413329/000141332925000013/"
           },
@@ -22641,6 +22790,7 @@
             "revenue": 35174000000,
             "operating_income": 11556000000,
             "fcf": 7883000000,
+            "net_income": 7813000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/"
           },
@@ -22650,6 +22800,7 @@
             "revenue": 37878000000,
             "operating_income": 13402000000,
             "fcf": 10773000000,
+            "net_income": 7057000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/"
           },
@@ -22659,6 +22810,7 @@
             "revenue": 40648000000,
             "operating_income": 14892000000,
             "fcf": 10664000000,
+            "net_income": 11348000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/"
           }
@@ -22926,23 +23078,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 13366000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 13366000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 7.26,
           "unit": "USD/shares",
@@ -23007,6 +23142,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 1688000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 13366000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 13366000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/"
             }
           ]
@@ -23436,6 +23588,7 @@
             "revenue": 287597000000,
             "operating_income": 23970000000,
             "fcf": null,
+            "net_income": 17285000000,
             "reasons": {
               "fcf": "not comparable for financial companies"
             },
@@ -23447,6 +23600,7 @@
             "revenue": 324162000000,
             "operating_income": 28435000000,
             "fcf": null,
+            "net_income": 20120000000,
             "reasons": {
               "fcf": "not comparable for financial companies"
             },
@@ -23458,6 +23612,7 @@
             "revenue": 371622000000,
             "operating_income": 32358000000,
             "fcf": null,
+            "net_income": 22381000000,
             "reasons": {
               "fcf": "not comparable for financial companies"
             },
@@ -23469,6 +23624,7 @@
             "revenue": 400278000000,
             "operating_income": 32287000000,
             "fcf": null,
+            "net_income": 14405000000,
             "reasons": {
               "fcf": "not comparable for financial companies"
             },
@@ -23480,6 +23636,7 @@
             "revenue": 447567000000,
             "operating_income": 18964000000,
             "fcf": null,
+            "net_income": 12056000000,
             "reasons": {
               "fcf": "not comparable for financial companies"
             },
@@ -23723,23 +23880,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 50655000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 50655000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 13.23,
           "unit": "USD/shares",
@@ -23797,6 +23937,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 4030000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 50655000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 50655000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/731766/000073176626000062/"
             }
           ]
@@ -24176,6 +24333,7 @@
             "revenue": 57350000000,
             "operating_income": null,
             "fcf": 10734000000,
+            "net_income": 5743000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -24187,6 +24345,7 @@
             "revenue": 60530000000,
             "operating_income": null,
             "fcf": 9089000000,
+            "net_income": 1639000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -24198,6 +24357,7 @@
             "revenue": 61860000000,
             "operating_income": null,
             "fcf": 12686000000,
+            "net_income": 7502000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -24209,6 +24369,7 @@
             "revenue": 62753000000,
             "operating_income": null,
             "fcf": 12397000000,
+            "net_income": 6023000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year"
             },
@@ -24220,6 +24381,7 @@
             "revenue": 67535000000,
             "operating_income": null,
             "fcf": 12102000000,
+            "net_income": 10593000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -24496,23 +24658,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 28239000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfRevenue",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfRevenue",
-              "period_end": "2025-12-31",
-              "value": 28239000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 11.17,
           "unit": "USD/shares",
@@ -24570,6 +24715,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 2042000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 28239000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2025-12-31",
+              "value": 28239000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/51143/000005114326000010/"
             }
           ]
@@ -25050,6 +25212,7 @@
             "revenue": 56469000000,
             "operating_income": null,
             "fcf": 2231000000,
+            "net_income": -6337000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -25061,6 +25224,7 @@
             "revenue": 29139000000,
             "operating_income": null,
             "fcf": 4546000000,
+            "net_income": 336000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -25072,6 +25236,7 @@
             "revenue": 35348000000,
             "operating_income": null,
             "fcf": 4327000000,
+            "net_income": 9482000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -25083,6 +25248,7 @@
             "revenue": 38702000000,
             "operating_income": null,
             "fcf": 3678000000,
+            "net_income": 6556000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year"
             },
@@ -25094,6 +25260,7 @@
             "revenue": 45855000000,
             "operating_income": null,
             "fcf": 7264000000,
+            "net_income": 8704000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -25337,16 +25504,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 8.14,
           "unit": "USD/shares",
@@ -25407,6 +25564,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/40545/000004054526000008/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": null,
@@ -25572,34 +25739,61 @@
       },
       "fundamentals": {
         "revenue": {
-          "value": null,
+          "value": 83699000000,
           "unit": "USD",
-          "reason": "no Monitor revenue tag (Revenues, RevenueFromContractWithCustomerExcludingAssessedTax, SalesRevenueNet, RevenueFromContractWithCustomerIncludingAssessedTax) for this fiscal year",
+          "reason": null,
           "not_comparable": null,
           "formula": null,
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2025-12-31",
+              "value": 83699000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
+            }
+          ]
         },
         "revenue_prior": {
-          "value": null,
+          "value": 82296000000,
           "unit": "USD",
-          "reason": "no revenue for this fiscal year",
+          "reason": null,
           "not_comparable": null,
           "formula": null,
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2024-12-31",
+              "value": 82296000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
+            }
+          ]
         },
         "growth_yoy": {
-          "value": null,
+          "value": 0.01704821619519782,
           "unit": "ratio",
-          "reason": "revenue or prior revenue unavailable",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "revenue / revenue_prior - 1",
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2025-12-31",
+              "value": 83699000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
+            },
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2024-12-31",
+              "value": 82296000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
+            }
+          ]
         },
         "operating_income": {
           "value": null,
@@ -25669,35 +25863,136 @@
           "inputs": []
         }
       },
-      "prior": null,
+      "prior": {
+        "revenue": {
+          "value": 82296000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": null,
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_start": "2024-01-01",
+              "period_end": "2024-12-31",
+              "value": 82296000000,
+              "accession": "0000072971-26-000133",
+              "form": "10-K",
+              "filed": "2026-02-24",
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
+            }
+          ]
+        },
+        "operating_income": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no OperatingIncomeLoss for the prior year",
+          "not_comparable": null,
+          "formula": null,
+          "inputs": []
+        },
+        "fcf": {
+          "value": null,
+          "unit": "USD",
+          "reason": "not comparable for financial companies",
+          "not_comparable": "financial company",
+          "formula": null,
+          "inputs": []
+        }
+      },
       "history": {
         "years": [
           {
-            "start": "2025-01-01",
-            "end": "2025-12-31",
-            "revenue": null,
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "revenue": 79166000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 22109000000,
             "reasons": {
-              "revenue": "no Monitor revenue tag (Revenues, RevenueFromContractWithCustomerExcludingAssessedTax, SalesRevenueNet, RevenueFromContractWithCustomerIncludingAssessedTax) for this fiscal year",
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
             },
-            "filing_url": null
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297124000064/"
+          },
+          {
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "revenue": 74368000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 13677000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for this fiscal year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297125000066/"
+          },
+          {
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "revenue": 82597000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 19142000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for this fiscal year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
+          },
+          {
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "revenue": 82296000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 19722000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for the prior year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
+          },
+          {
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "revenue": 83699000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 21338000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for this fiscal year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
           }
         ],
-        "stop": "no prior fiscal year lines up with the current one",
+        "stop": null,
         "revenue_cagr": {
-          "value": null,
+          "value": 0.014017363782834736,
           "unit": "ratio",
-          "reason": "fewer than three lined-up fiscal years",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "(revenue FY ending 2025-12-31 / revenue FY ending 2021-12-31)^(1/4) - 1",
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2021-12-31",
+              "value": 79166000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297124000064/"
+            },
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2025-12-31",
+              "value": 83699000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
+            }
+          ]
         },
-        "cagr_years": 0
+        "cagr_years": 4
       },
       "valuation": {
         "cash": {
@@ -25882,16 +26177,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 6.26,
           "unit": "USD/shares",
@@ -25952,6 +26237,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000133/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": null,
@@ -26070,7 +26365,7 @@
       },
       "dcf": {
         "reason": "a DCF on free cash flow is not meaningful for banks and insurers",
-        "revenue": null,
+        "revenue": 83699000000,
         "defaults": null
       }
     },
@@ -26324,6 +26619,7 @@
             "revenue": 155606000000,
             "operating_income": null,
             "fcf": 21131000000,
+            "net_income": 15625000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -26335,6 +26631,7 @@
             "revenue": 235717000000,
             "operating_income": null,
             "fcf": 37628000000,
+            "net_income": 35465000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -26346,6 +26643,7 @@
             "revenue": 196913000000,
             "operating_income": null,
             "fcf": 19780000000,
+            "net_income": 21369000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -26357,6 +26655,7 @@
             "revenue": 193414000000,
             "operating_income": null,
             "fcf": 15044000000,
+            "net_income": 17661000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year"
             },
@@ -26368,6 +26667,7 @@
             "revenue": 184432000000,
             "operating_income": null,
             "fcf": 16592000000,
+            "net_income": 12299000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -26645,23 +26945,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 108214000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 108214000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 6.63,
           "unit": "USD/shares",
@@ -26719,6 +27002,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 942000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 108214000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 108214000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/93410/000009341026000078/"
             }
           ]
@@ -27230,6 +27530,7 @@
             "revenue": 16434000000,
             "operating_income": 3648000000,
             "fcf": 3220000000,
+            "net_income": 3162000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248824000012/"
           },
@@ -27239,6 +27540,7 @@
             "revenue": 23601000000,
             "operating_income": 1264000000,
             "fcf": 3115000000,
+            "net_income": 1320000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248825000012/"
           },
@@ -27248,6 +27550,7 @@
             "revenue": 22680000000,
             "operating_income": 401000000,
             "fcf": 1121000000,
+            "net_income": 854000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/"
           },
@@ -27257,6 +27560,7 @@
             "revenue": 25785000000,
             "operating_income": 1900000000,
             "fcf": 2405000000,
+            "net_income": 1641000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/"
           },
@@ -27266,6 +27570,7 @@
             "revenue": 34639000000,
             "operating_income": 3694000000,
             "fcf": 6735000000,
+            "net_income": 4335000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/"
           }
@@ -27527,23 +27832,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 17487000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-27",
-              "value": 17487000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 2.65,
           "unit": "USD/shares",
@@ -27601,6 +27889,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-27",
               "value": 91000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 17487000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-27",
+              "value": 17487000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/2488/000000248826000018/"
             }
           ]
@@ -28100,6 +28405,7 @@
             "revenue": 43075000000,
             "operating_income": 8425000000,
             "fcf": 8648000000,
+            "net_income": 7071000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1800/000162828024005348/"
           },
@@ -28109,6 +28415,7 @@
             "revenue": 43653000000,
             "operating_income": 8362000000,
             "fcf": 7804000000,
+            "net_income": 6933000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1800/000162828025007110/"
           },
@@ -28118,6 +28425,7 @@
             "revenue": 40109000000,
             "operating_income": 6478000000,
             "fcf": 5059000000,
+            "net_income": 5723000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/"
           },
@@ -28127,6 +28435,7 @@
             "revenue": 41950000000,
             "operating_income": 6825000000,
             "fcf": 6351000000,
+            "net_income": 13402000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/"
           },
@@ -28136,6 +28445,7 @@
             "revenue": 44328000000,
             "operating_income": 8053000000,
             "fcf": 7395000000,
+            "net_income": 6524000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/"
           }
@@ -28403,23 +28713,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 19319000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 19319000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 3.72,
           "unit": "USD/shares",
@@ -28477,6 +28770,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 545000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 19319000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 19319000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1800/000162828026010185/"
             }
           ]
@@ -28885,6 +29195,7 @@
             "revenue": 27716000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 8060000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -28897,6 +29208,7 @@
             "revenue": 34219000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 7514000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -28909,6 +29221,7 @@
             "revenue": 37218000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 8374000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -28921,6 +29234,7 @@
             "revenue": 38825000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 10129000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year",
               "fcf": "not comparable for financial companies"
@@ -28933,6 +29247,7 @@
             "revenue": 41304000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 10833000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
@@ -29149,16 +29464,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 15.38,
           "unit": "USD/shares",
@@ -29219,6 +29524,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000080/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": null,
@@ -29622,6 +29937,7 @@
             "revenue": 30793000000,
             "operating_income": 4984000000,
             "fcf": 6639000000,
+            "net_income": 3826000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828024007424/"
           },
@@ -29631,6 +29947,7 @@
             "revenue": 33364000000,
             "operating_income": 5369000000,
             "fcf": 5691000000,
+            "net_income": 4147000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828025007990/"
           },
@@ -29640,6 +29957,7 @@
             "revenue": 32854000000,
             "operating_income": 8024000000,
             "fcf": 5518000000,
+            "net_income": 6199000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/"
           },
@@ -29649,6 +29967,7 @@
             "revenue": 33005000000,
             "operating_income": 8635000000,
             "fcf": 4926000000,
+            "net_income": 6565000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/"
           },
@@ -29658,6 +29977,7 @@
             "revenue": 33986000000,
             "operating_income": 8923000000,
             "fcf": 5089000000,
+            "net_income": 6898000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/"
           }
@@ -29913,16 +30233,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 14.61,
           "unit": "USD/shares",
@@ -29983,6 +30293,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026011430/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 12686000000,
@@ -30177,34 +30497,61 @@
       },
       "fundamentals": {
         "revenue": {
-          "value": null,
+          "value": 70645000000,
           "unit": "USD",
-          "reason": "no Monitor revenue tag (Revenues, RevenueFromContractWithCustomerExcludingAssessedTax, SalesRevenueNet, RevenueFromContractWithCustomerIncludingAssessedTax) for this fiscal year",
+          "reason": null,
           "not_comparable": null,
           "formula": null,
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2025-12-31",
+              "value": 70645000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
+            }
+          ]
         },
         "revenue_prior": {
-          "value": null,
+          "value": 61761000000,
           "unit": "USD",
-          "reason": "no revenue for this fiscal year",
+          "reason": null,
           "not_comparable": null,
           "formula": null,
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2024-12-31",
+              "value": 61761000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
+            }
+          ]
         },
         "growth_yoy": {
-          "value": null,
+          "value": 0.1438448211654604,
           "unit": "ratio",
-          "reason": "revenue or prior revenue unavailable",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "revenue / revenue_prior - 1",
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2025-12-31",
+              "value": 70645000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
+            },
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2024-12-31",
+              "value": 61761000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
+            }
+          ]
         },
         "operating_income": {
           "value": null,
@@ -30274,35 +30621,136 @@
           "inputs": []
         }
       },
-      "prior": null,
+      "prior": {
+        "revenue": {
+          "value": 61761000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": null,
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_start": "2024-01-01",
+              "period_end": "2024-12-31",
+              "value": 61761000000,
+              "accession": "0000895421-26-000086",
+              "form": "10-K",
+              "filed": "2026-02-19",
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
+            }
+          ]
+        },
+        "operating_income": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no OperatingIncomeLoss for the prior year",
+          "not_comparable": null,
+          "formula": null,
+          "inputs": []
+        },
+        "fcf": {
+          "value": null,
+          "unit": "USD",
+          "reason": "not comparable for financial companies",
+          "not_comparable": "financial company",
+          "formula": null,
+          "inputs": []
+        }
+      },
       "history": {
         "years": [
           {
-            "start": "2025-01-01",
-            "end": "2025-12-31",
-            "revenue": null,
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "revenue": 59755000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 15034000000,
             "reasons": {
-              "revenue": "no Monitor revenue tag (Revenues, RevenueFromContractWithCustomerExcludingAssessedTax, SalesRevenueNet, RevenueFromContractWithCustomerIncludingAssessedTax) for this fiscal year",
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
             },
-            "filing_url": null
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542124000300/"
+          },
+          {
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "revenue": 53668000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 11029000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for this fiscal year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542125000304/"
+          },
+          {
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "revenue": 54143000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 9087000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for this fiscal year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
+          },
+          {
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "revenue": 61761000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 13390000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for the prior year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
+          },
+          {
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "revenue": 70645000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 16861000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for this fiscal year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
           }
         ],
-        "stop": "no prior fiscal year lines up with the current one",
+        "stop": null,
         "revenue_cagr": {
-          "value": null,
+          "value": 0.04274182735357828,
           "unit": "ratio",
-          "reason": "fewer than three lined-up fiscal years",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "(revenue FY ending 2025-12-31 / revenue FY ending 2021-12-31)^(1/4) - 1",
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2021-12-31",
+              "value": 59755000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542124000300/"
+            },
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2025-12-31",
+              "value": 70645000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
+            }
+          ]
         },
-        "cagr_years": 0
+        "cagr_years": 4
       },
       "valuation": {
         "cash": {
@@ -30480,16 +30928,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 10.21,
           "unit": "USD/shares",
@@ -30557,6 +30995,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/895421/000089542126000086/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": null,
@@ -30675,7 +31123,7 @@
       },
       "dcf": {
         "reason": "a DCF on free cash flow is not meaningful for banks and insurers",
-        "revenue": null,
+        "revenue": 70645000000,
         "defaults": null
       }
     },
@@ -30704,34 +31152,61 @@
       },
       "fundamentals": {
         "revenue": {
-          "value": null,
+          "value": 58283000000,
           "unit": "USD",
-          "reason": "no Monitor revenue tag (Revenues, RevenueFromContractWithCustomerExcludingAssessedTax, SalesRevenueNet, RevenueFromContractWithCustomerIncludingAssessedTax) for this fiscal year",
+          "reason": null,
           "not_comparable": null,
           "formula": null,
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2025-12-31",
+              "value": 58283000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
+            }
+          ]
         },
         "revenue_prior": {
-          "value": null,
+          "value": 53512000000,
           "unit": "USD",
-          "reason": "no revenue for this fiscal year",
+          "reason": null,
           "not_comparable": null,
           "formula": null,
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2024-12-31",
+              "value": 53512000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
+            }
+          ]
         },
         "growth_yoy": {
-          "value": null,
+          "value": 0.08915757213335326,
           "unit": "ratio",
-          "reason": "revenue or prior revenue unavailable",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "revenue / revenue_prior - 1",
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2025-12-31",
+              "value": 58283000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
+            },
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2024-12-31",
+              "value": 53512000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
+            }
+          ]
         },
         "operating_income": {
           "value": null,
@@ -30808,35 +31283,136 @@
           "inputs": []
         }
       },
-      "prior": null,
+      "prior": {
+        "revenue": {
+          "value": 53512000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": null,
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_start": "2024-01-01",
+              "period_end": "2024-12-31",
+              "value": 53512000000,
+              "accession": "0000886982-26-000091",
+              "form": "10-K",
+              "filed": "2026-02-25",
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
+            }
+          ]
+        },
+        "operating_income": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no OperatingIncomeLoss for the prior year",
+          "not_comparable": null,
+          "formula": null,
+          "inputs": []
+        },
+        "fcf": {
+          "value": null,
+          "unit": "USD",
+          "reason": "not comparable for financial companies",
+          "not_comparable": "financial company",
+          "formula": null,
+          "inputs": []
+        }
+      },
       "history": {
         "years": [
           {
-            "start": "2025-01-01",
-            "end": "2025-12-31",
-            "revenue": null,
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "revenue": 59339000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 21635000000,
             "reasons": {
-              "revenue": "no Monitor revenue tag (Revenues, RevenueFromContractWithCustomerExcludingAssessedTax, SalesRevenueNet, RevenueFromContractWithCustomerIncludingAssessedTax) for this fiscal year",
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "not comparable for financial companies"
             },
-            "filing_url": null
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698224000006/"
+          },
+          {
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "revenue": 47365000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 11261000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for this fiscal year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698225000005/"
+          },
+          {
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "revenue": 46254000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 8516000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for this fiscal year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
+          },
+          {
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "revenue": 53512000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 14276000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for the prior year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
+          },
+          {
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "revenue": 58283000000,
+            "operating_income": null,
+            "fcf": null,
+            "net_income": 17176000000,
+            "reasons": {
+              "operating_income": "no OperatingIncomeLoss for this fiscal year",
+              "fcf": "not comparable for financial companies"
+            },
+            "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
           }
         ],
-        "stop": "no prior fiscal year lines up with the current one",
+        "stop": null,
         "revenue_cagr": {
-          "value": null,
+          "value": -0.0044790159163154595,
           "unit": "ratio",
-          "reason": "fewer than three lined-up fiscal years",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "(revenue FY ending 2025-12-31 / revenue FY ending 2021-12-31)^(1/4) - 1",
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2021-12-31",
+              "value": 59339000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698224000006/"
+            },
+            {
+              "concept": "RevenuesNetOfInterestExpense",
+              "period_end": "2025-12-31",
+              "value": 58283000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
+            }
+          ]
         },
-        "cagr_years": 0
+        "cagr_years": 4
       },
       "valuation": {
         "cash": {
@@ -31021,16 +31597,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 51.32,
           "unit": "USD/shares",
@@ -31091,6 +31657,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/886982/000088698226000091/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": null,
@@ -31209,7 +31785,7 @@
       },
       "dcf": {
         "reason": "a DCF on free cash flow is not meaningful for banks and insurers",
-        "revenue": null,
+        "revenue": 58283000000,
         "defaults": null
       }
     },
@@ -31498,6 +32074,7 @@
             "revenue": 23222900000,
             "operating_income": 10356000000,
             "fcf": 7101500000,
+            "net_income": 7545200000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390824000072/"
           },
@@ -31507,6 +32084,7 @@
             "revenue": 23183000000,
             "operating_income": 9371000000,
             "fcf": 5488000000,
+            "net_income": 6177000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390825000012/"
           },
@@ -31516,6 +32094,7 @@
             "revenue": 25494000000,
             "operating_income": 11647000000,
             "fcf": 7255000000,
+            "net_income": 8469000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/"
           },
@@ -31525,6 +32104,7 @@
             "revenue": 25920000000,
             "operating_income": 11712000000,
             "fcf": 6672000000,
+            "net_income": 8223000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/"
           },
@@ -31534,6 +32114,7 @@
             "revenue": 26885000000,
             "operating_income": 12393000000,
             "fcf": 7186000000,
+            "net_income": 8563000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/"
           }
@@ -31780,16 +32361,6 @@
           "partial": null,
           "inputs": []
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 11.95,
           "unit": "USD/shares",
@@ -31850,6 +32421,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/63908/000006390826000035/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 12850000000,
@@ -32300,6 +32881,7 @@
             "revenue": 134038000000,
             "operating_income": 25897000000,
             "fcf": 26412000000,
+            "net_income": 20081000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/732717/000073271724000009/"
           },
@@ -32309,6 +32891,7 @@
             "revenue": 120741000000,
             "operating_income": -4587000000,
             "fcf": null,
+            "net_income": -8524000000,
             "reasons": {
               "fcf": "no NetCashProvidedByUsedInOperatingActivities for this fiscal year"
             },
@@ -32320,6 +32903,7 @@
             "revenue": 122428000000,
             "operating_income": 23461000000,
             "fcf": 20461000000,
+            "net_income": 14400000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/"
           },
@@ -32329,6 +32913,7 @@
             "revenue": 122336000000,
             "operating_income": 19049000000,
             "fcf": 18508000000,
+            "net_income": 10948000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/"
           },
@@ -32338,6 +32923,7 @@
             "revenue": 125648000000,
             "operating_income": 24162000000,
             "fcf": 19442000000,
+            "net_income": 21953000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/"
           }
@@ -32599,16 +33185,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 3.04,
           "unit": "USD/shares",
@@ -32669,6 +33245,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 45048000000,
@@ -33108,6 +33694,7 @@
             "revenue": 48704000000,
             "operating_income": null,
             "fcf": null,
+            "net_income": 13049000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year",
               "fcf": "no NetCashProvidedByUsedInOperatingActivities for this fiscal year"
@@ -33120,6 +33707,7 @@
             "revenue": 59283000000,
             "operating_income": null,
             "fcf": 14707000000,
+            "net_income": 14519000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -33131,6 +33719,7 @@
             "revenue": 60115000000,
             "operating_income": null,
             "fcf": 9143000000,
+            "net_income": 365000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -33142,6 +33731,7 @@
             "revenue": 64168000000,
             "operating_income": null,
             "fcf": 18096000000,
+            "net_income": 17117000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for the prior year"
             },
@@ -33153,6 +33743,7 @@
             "revenue": 65011000000,
             "operating_income": null,
             "fcf": 12360000000,
+            "net_income": 18254000000,
             "reasons": {
               "operating_income": "no OperatingIncomeLoss for this fiscal year"
             },
@@ -33423,23 +34014,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 16382000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 16382000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 7.28,
           "unit": "USD/shares",
@@ -33497,6 +34071,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 1300000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 16382000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 16382000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/"
             }
           ]
@@ -33998,6 +34589,7 @@
             "revenue": 64388000000,
             "operating_income": 5136000000,
             "fcf": null,
+            "net_income": 3864000000,
             "reasons": {
               "fcf": "no NetCashProvidedByUsedInOperatingActivities for this fiscal year"
             },
@@ -34009,6 +34601,7 @@
             "revenue": 67074000000,
             "operating_income": 5504000000,
             "fcf": 4880000000,
+            "net_income": 5197000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/101829/000010182925000005/"
           },
@@ -34018,6 +34611,7 @@
             "revenue": 68920000000,
             "operating_income": 3561000000,
             "fcf": 5468000000,
+            "net_income": 3195000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/"
           },
@@ -34027,6 +34621,7 @@
             "revenue": 80738000000,
             "operating_income": 6538000000,
             "fcf": 4534000000,
+            "net_income": 4774000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/"
           },
@@ -34036,6 +34631,7 @@
             "revenue": 88603000000,
             "operating_income": 9300000000,
             "fcf": 7940000000,
+            "net_income": 6732000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/"
           }
@@ -34296,16 +34892,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 4.96,
           "unit": "USD/shares",
@@ -34373,6 +34959,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 13678000000,
@@ -34832,6 +35428,7 @@
             "revenue": 5710100000,
             "operating_income": 1821000000,
             "fcf": 1749900000,
+            "net_income": 1704600000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526724000021/"
           },
@@ -34841,6 +35438,7 @@
             "revenue": 6222200000,
             "operating_income": 1577100000,
             "fcf": 958400000,
+            "net_income": 1322300000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526725000017/"
           },
@@ -34850,6 +35448,7 @@
             "revenue": 7124100000,
             "operating_income": 1766800000,
             "fcf": 749600000,
+            "net_income": 1798000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/"
           },
@@ -34859,6 +35458,7 @@
             "revenue": 8352100000,
             "operating_income": 2348900000,
             "fcf": 1303800000,
+            "net_income": 2322600000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/"
           },
@@ -34868,6 +35468,7 @@
             "revenue": 10064700000,
             "operating_income": 2945500000,
             "fcf": 2490700000,
+            "net_income": 2856000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/"
           }
@@ -35122,23 +35723,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 3422400000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 3422400000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 7.87,
           "unit": "USD/shares",
@@ -35192,6 +35776,23 @@
           "rule": null,
           "partial": null,
           "inputs": []
+        },
+        "cogs": {
+          "value": 3422400000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 3422400000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/"
+            }
+          ]
         },
         "ebitda": {
           "value": 3558700000,
@@ -35675,6 +36276,7 @@
             "revenue": 26492000000,
             "operating_income": 548000000,
             "fcf": 5283000000,
+            "net_income": 1444000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852424000005/"
           },
@@ -35684,6 +36286,7 @@
             "revenue": 31352000000,
             "operating_income": 1030000000,
             "fcf": 6313000000,
+            "net_income": 208000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000006/"
           },
@@ -35693,6 +36296,7 @@
             "revenue": 34857000000,
             "operating_income": 5011000000,
             "fcf": 9498000000,
+            "net_income": 4136000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/"
           },
@@ -35702,6 +36306,7 @@
             "revenue": 37895000000,
             "operating_income": 7205000000,
             "fcf": 12434000000,
+            "net_income": 6197000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/"
           },
@@ -35711,6 +36316,7 @@
             "revenue": 41525000000,
             "operating_income": 8331000000,
             "fcf": 14402000000,
+            "net_income": 7457000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/"
           }
@@ -35965,23 +36571,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 9270000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2026-01-31",
-              "value": 9270000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 7.8,
           "unit": "USD/shares",
@@ -36039,6 +36628,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2026-01-31",
               "value": 276000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 9270000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2026-01-31",
+              "value": 9270000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/"
             }
           ]
@@ -36514,6 +37120,7 @@
             "revenue": 18344000000,
             "operating_income": 8960000000,
             "fcf": 6294000000,
+            "net_income": 7769000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747624000007/"
           },
@@ -36523,6 +37130,7 @@
             "revenue": 20028000000,
             "operating_income": 10140000000,
             "fcf": 5923000000,
+            "net_income": 8749000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747625000007/"
           },
@@ -36532,6 +37140,7 @@
             "revenue": 17519000000,
             "operating_income": 7331000000,
             "fcf": 1349000000,
+            "net_income": 6510000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/"
           },
@@ -36541,6 +37150,7 @@
             "revenue": 15641000000,
             "operating_income": 5465000000,
             "fcf": 1498000000,
+            "net_income": 4799000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/"
           },
@@ -36550,6 +37160,7 @@
             "revenue": 17682000000,
             "operating_income": 6023000000,
             "fcf": 2603000000,
+            "net_income": 5001000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/"
           }
@@ -36817,23 +37428,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": 7599000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 7599000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/"
-            }
-          ]
-        },
         "eps_diluted": {
           "value": 5.45,
           "unit": "USD/shares",
@@ -36891,6 +37485,23 @@
               "concept": "InterestPaid",
               "period_end": "2025-12-31",
               "value": 542000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 7599000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfGoodsAndServicesSold",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfGoodsAndServicesSold",
+              "period_end": "2025-12-31",
+              "value": 7599000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/"
             }
           ]
@@ -37396,6 +38007,7 @@
             "revenue": 17455000000,
             "operating_income": -3834000000,
             "fcf": -743000000,
+            "net_income": -496000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315124000012/"
           },
@@ -37405,6 +38017,7 @@
             "revenue": 31877000000,
             "operating_income": -1832000000,
             "fcf": 390000000,
+            "net_income": -9141000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000008/"
           },
@@ -37414,6 +38027,7 @@
             "revenue": 37281000000,
             "operating_income": 1110000000,
             "fcf": 3362000000,
+            "net_income": 1887000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/"
           },
@@ -37423,6 +38037,7 @@
             "revenue": 43978000000,
             "operating_income": 2799000000,
             "fcf": 6895000000,
+            "net_income": 9856000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/"
           },
@@ -37432,6 +38047,7 @@
             "revenue": 52017000000,
             "operating_income": 5565000000,
             "fcf": 9763000000,
+            "net_income": 10053000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/"
           }
@@ -37693,16 +38309,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 4.73,
           "unit": "USD/shares",
@@ -37763,6 +38369,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 6284000000,
@@ -38239,6 +38855,7 @@
             "revenue": 10958000000,
             "operating_income": 2496000000,
             "fcf": 2516000000,
+            "net_income": 1165000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553124000014/"
           },
@@ -38248,6 +38865,7 @@
             "revenue": 17090000000,
             "operating_income": 5102000000,
             "fcf": 6186000000,
+            "net_income": 3058000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553125000010/"
           },
@@ -38257,6 +38875,7 @@
             "revenue": 21365000000,
             "operating_income": 5835000000,
             "fcf": 6999000000,
+            "net_income": 4289000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/"
           },
@@ -38266,6 +38885,7 @@
             "revenue": 23739000000,
             "operating_income": 7555000000,
             "fcf": 7894000000,
+            "net_income": 5882000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/"
           },
@@ -38275,6 +38895,7 @@
             "revenue": 26917000000,
             "operating_income": 8825000000,
             "fcf": 9087000000,
+            "net_income": 5404000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/"
           }
@@ -38455,14 +39076,21 @@
           ]
         },
         "net_income": {
-          "value": null,
+          "value": 5404000000,
           "unit": "USD",
-          "reason": "no NetIncomeLoss for the fiscal year",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "NetIncomeLossAvailableToCommonStockholdersBasic",
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "NetIncomeLossAvailableToCommonStockholdersBasic",
+              "period_end": "2025-12-31",
+              "value": 5404000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/"
+            }
+          ]
         },
         "interest_expense": {
           "value": 1617000000,
@@ -38514,16 +39142,6 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/"
             }
           ]
-        },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
         },
         "eps_diluted": {
           "value": 165.57,
@@ -38585,6 +39203,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 9448000000,
@@ -39042,6 +39670,7 @@
             "revenue": 133613000000,
             "operating_income": 32448000000,
             "fcf": 19253000000,
+            "net_income": 22065000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/732712/000073271224000010/"
           },
@@ -39051,6 +39680,7 @@
             "revenue": 136835000000,
             "operating_income": 30467000000,
             "fcf": 14054000000,
+            "net_income": 21256000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/732712/000073271225000006/"
           },
@@ -39060,6 +39690,7 @@
             "revenue": 133974000000,
             "operating_income": 22877000000,
             "fcf": 18708000000,
+            "net_income": 11614000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/"
           },
@@ -39069,6 +39700,7 @@
             "revenue": 134788000000,
             "operating_income": 28686000000,
             "fcf": 19822000000,
+            "net_income": 17506000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/"
           },
@@ -39078,6 +39710,7 @@
             "revenue": 138191000000,
             "operating_income": 29259000000,
             "fcf": 20126000000,
+            "net_income": 17174000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/"
           }
@@ -39326,16 +39959,6 @@
             }
           ]
         },
-        "cogs": {
-          "value": null,
-          "unit": "USD",
-          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
-          "not_comparable": null,
-          "formula": null,
-          "rule": null,
-          "partial": null,
-          "inputs": []
-        },
         "eps_diluted": {
           "value": 4.06,
           "unit": "USD/shares",
@@ -39396,6 +40019,16 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/732712/000073271226000007/"
             }
           ]
+        },
+        "cogs": {
+          "value": null,
+          "unit": "USD",
+          "reason": "no CostOfGoodsAndServicesSold / CostOfRevenue for the fiscal year",
+          "not_comparable": null,
+          "formula": null,
+          "rule": null,
+          "partial": null,
+          "inputs": []
         },
         "ebitda": {
           "value": 47608000000,
@@ -39841,6 +40474,7 @@
             "revenue": 50971000000,
             "operating_income": 6878000000,
             "fcf": 6105000000,
+            "net_income": 6489000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823024000009/"
           },
@@ -39850,6 +40484,7 @@
             "revenue": 59427000000,
             "operating_income": 7904000000,
             "fcf": 6470000000,
+            "net_income": 6705000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823025000008/"
           },
@@ -39859,6 +40494,7 @@
             "revenue": 67060000000,
             "operating_income": 12966000000,
             "fcf": 11288000000,
+            "net_income": 10335000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
           },
@@ -39868,6 +40504,7 @@
             "revenue": 64809000000,
             "operating_income": 13072000000,
             "fcf": 10047000000,
+            "net_income": 10792000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
           },
@@ -39877,6 +40514,7 @@
             "revenue": 67589000000,
             "operating_income": 11151000000,
             "fcf": 8918000000,
+            "net_income": 8884000000,
             "reasons": {},
             "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
           }
@@ -40077,14 +40715,21 @@
           ]
         },
         "net_income": {
-          "value": null,
+          "value": 8884000000,
           "unit": "USD",
-          "reason": "no NetIncomeLoss for the fiscal year",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "NetIncomeLossAvailableToCommonStockholdersBasic",
           "rule": null,
           "partial": null,
-          "inputs": []
+          "inputs": [
+            {
+              "concept": "NetIncomeLossAvailableToCommonStockholdersBasic",
+              "period_end": "2025-12-31",
+              "value": 8884000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
+            }
+          ]
         },
         "interest_expense": {
           "value": null,
@@ -40126,23 +40771,6 @@
               "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
               "period_end": "2025-12-31",
               "value": 11541000000,
-              "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
-            }
-          ]
-        },
-        "cogs": {
-          "value": 49000000,
-          "unit": "USD",
-          "reason": null,
-          "not_comparable": null,
-          "formula": "CostOfGoodsAndServicesSold",
-          "rule": null,
-          "partial": null,
-          "inputs": [
-            {
-              "concept": "CostOfGoodsAndServicesSold",
-              "period_end": "2025-12-31",
-              "value": 49000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
             }
           ]
@@ -40204,6 +40832,23 @@
               "concept": "InterestPaidNet",
               "period_end": "2025-12-31",
               "value": 1842000000,
+              "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
+            }
+          ]
+        },
+        "cogs": {
+          "value": 44752000000,
+          "unit": "USD",
+          "reason": null,
+          "not_comparable": null,
+          "formula": "CostOfRevenue (CostOfGoodsAndServicesSold (49000000) is under 2% of revenue, so not used)",
+          "rule": null,
+          "partial": null,
+          "inputs": [
+            {
+              "concept": "CostOfRevenue",
+              "period_end": "2025-12-31",
+              "value": 44752000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
             }
           ]
@@ -40317,11 +40962,11 @@
           ]
         },
         "dio": {
-          "value": null,
+          "value": 147.91014926707186,
           "unit": "days",
-          "reason": "outside 0 to 1000 days (135,087): the inventory or cogs tag likely holds a different item",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "inventory / cogs x 365 (fiscal-year-end balance)",
           "rule": null,
           "partial": null,
           "inputs": [
@@ -40332,9 +40977,9 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
             },
             {
-              "concept": "CostOfGoodsAndServicesSold",
+              "concept": "CostOfRevenue",
               "period_end": "2025-12-31",
-              "value": 49000000,
+              "value": 44752000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
             }
           ]
@@ -40363,11 +41008,11 @@
           ]
         },
         "dpo": {
-          "value": null,
+          "value": 73.14354665713265,
           "unit": "days",
-          "reason": "outside 0 to 1000 days (66,802): the payables or cogs tag likely holds a different item",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "payables / cogs x 365 (fiscal-year-end balance)",
           "rule": null,
           "partial": null,
           "inputs": [
@@ -40378,19 +41023,19 @@
               "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
             },
             {
-              "concept": "CostOfGoodsAndServicesSold",
+              "concept": "CostOfRevenue",
               "period_end": "2025-12-31",
-              "value": 49000000,
+              "value": 44752000000,
               "filing_url": "https://www.sec.gov/Archives/edgar/data/18230/000001823026000008/"
             }
           ]
         },
         "ccc": {
-          "value": null,
+          "value": 133.73773696612145,
           "unit": "days",
-          "reason": "DIO, DSO or DPO unavailable",
+          "reason": null,
           "not_comparable": null,
-          "formula": null,
+          "formula": "dio + dso - dpo",
           "rule": null,
           "partial": null,
           "inputs": []

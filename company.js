@@ -166,6 +166,7 @@
     else if (kind === 'industrial') title = nm + ' earned ' + L.usd(rev) + ' of revenue in ' + fy + growth + (om != null ? ', at a ' + L.pct(om) + ' operating margin.' : '.');
     else title = nm + ' earned ' + L.usd(rev) + ' of revenue in ' + fy + growth + (ni != null ? ', and ' + L.usd(ni) + ' of net income.' : '.');
     var hy = (c.history && c.history.years) || [], useH = hy.length >= 3, cg = c.history && c.history.revenue_cagr;
+    var hasNI = useH && hy.some(function (y) { return L.isNum(y.net_income); });
     var head = el('div', { 'class': 'panel-head' }, el('h2', { 'class': 'statement' }, title));
     if (useH && cg && L.isNum(cg.value)) {
       var spanTxt = L.word(c.history.cagr_years) + ' year' + (c.history.cagr_years === 1 ? '' : 's');
@@ -192,10 +193,10 @@
     if (kind !== 'bank') specs.push(['Operating income', 'operating_income', c.prior && val(c.prior.operating_income), opi, F(c, 'operating_income')]);
     if (kind === 'industrial') specs.push(['Free cash flow', 'fcf', c.prior && val(c.prior.fcf), fcf, F(c, 'fcf')]);
     else specs.push(['Net income', 'net_income', null, ni, V(c, 'net_income')]);
-    specs = specs.filter(function (x) { return L.isNum(x[3]) && ((useH && x[1] !== 'net_income') || L.isNum(x[2])); });
+    specs = specs.filter(function (x) { return L.isNum(x[3]) && ((useH && (x[1] !== 'net_income' || hasNI)) || L.isNum(x[2])); });
     var cs = el('div', { 'class': 'charts3 n' + specs.length });
     specs.forEach(function (x) {
-      var box = el('div'), host = el('div', { 'class': 'chart' }), multi = useH && x[1] !== 'net_income';
+      var box = el('div'), host = el('div', { 'class': 'chart' }), multi = useH && (x[1] !== 'net_income' || hasNI);
       box.appendChild(el('h3', { 'class': 'box-t' }, x[0] + (multi ? ', ' + L.word(hy.length) + ' fiscal years' : (L.isNum(x[2]) ? ', two fiscal years' : ', ' + fy)))); box.appendChild(host); cs.appendChild(box);
       if (multi) {
         L.bars(host, { name: x[0], fmt: L.usd, items: hy.map(function (y) { return { label: fyLabel(c, y), short: "'" + fyLabel(c, y).slice(-2), v: L.isNum(y[x[1]]) ? y[x[1]] : null, spec: yearNote(c, x[1], x[4], y) }; }) });
@@ -216,7 +217,7 @@
     var rows = [['Revenue', 'revenue', F(c, 'revenue'), true]];
     if (kind !== 'bank') rows.push(['Operating income', 'operating_income', F(c, 'operating_income'), true]);
     if (kind === 'industrial') { rows.push(['Free cash flow', 'fcf', F(c, 'fcf'), true]); if (!useH) rows.push(['EBITDA', 'ebitda', V(c, 'ebitda'), false]); }
-    if (!useH) rows.push(['Net income', 'net_income', V(c, 'net_income'), false]);
+    if (hasNI) rows.push(['Net income', 'net_income', V(c, 'net_income'), true]); else if (!useH) rows.push(['Net income', 'net_income', V(c, 'net_income'), false]);
     var tb = el('tbody'), last = yrs.length - 1;
     rows.forEach(function (x) {
       var cur = x[3] ? hv(x[1], last) : val(x[2]); if (cur == null) return;
