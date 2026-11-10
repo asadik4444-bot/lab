@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "run": {
-    "built_at": "2026-11-10T18:03:52Z",
-    "git_commit": "3214682a02d92cc93c3cd06684fb56340687a971",
+    "built_at": "2026-11-10T19:44:11Z",
+    "git_commit": "a06958ade7d94b5dfdd226b0265613c108cfc752",
     "github_run_id": null
   },
   "sources": [
@@ -10,7 +10,7 @@
       "id": "universe",
       "label": "US company universe (SEC)",
       "newest_data": "2026-11-09",
-      "checked_at": "2026-11-10T18:03:52Z",
+      "checked_at": "2026-11-10T19:44:11Z",
       "state": "fresh",
       "stale_series": []
     },
@@ -18,7 +18,7 @@
       "id": "fundamentals",
       "label": "Company fundamentals (SEC filings)",
       "newest_data": "2026-11-09",
-      "checked_at": "2026-11-10T18:03:52Z",
+      "checked_at": "2026-11-10T19:44:11Z",
       "state": "fresh",
       "stale_series": []
     },
@@ -26,7 +26,7 @@
       "id": "valuation",
       "label": "Valuation inputs (SEC filings)",
       "newest_data": "2026-11-09",
-      "checked_at": "2026-11-10T18:03:52Z",
+      "checked_at": "2026-11-10T19:44:11Z",
       "state": "fresh",
       "stale_series": []
     },
@@ -34,7 +34,7 @@
       "id": "deals",
       "label": "Deal filings, PE sponsors, Form D (SEC)",
       "newest_data": "2026-11-09",
-      "checked_at": "2026-11-10T18:03:52Z",
+      "checked_at": "2026-11-10T19:44:11Z",
       "state": "fresh",
       "stale_series": []
     },
@@ -42,7 +42,7 @@
       "id": "macro_daily",
       "label": "Macro series, daily",
       "newest_data": "2026-11-10",
-      "checked_at": "2026-11-10T18:03:52Z",
+      "checked_at": "2026-11-10T19:44:11Z",
       "state": "fresh",
       "stale_series": []
     },
@@ -50,7 +50,7 @@
       "id": "macro_monthly",
       "label": "Macro series, monthly",
       "newest_data": "2026-10-31",
-      "checked_at": "2026-11-10T18:03:52Z",
+      "checked_at": "2026-11-10T19:44:11Z",
       "state": "fresh",
       "stale_series": []
     },
@@ -58,7 +58,7 @@
       "id": "macro_quarterly",
       "label": "Macro series, quarterly",
       "newest_data": "2026-12-31",
-      "checked_at": "2026-11-10T18:03:52Z",
+      "checked_at": "2026-11-10T19:44:11Z",
       "state": "fresh",
       "stale_series": []
     },
@@ -66,7 +66,7 @@
       "id": "macro_annual",
       "label": "Macro series, annual",
       "newest_data": "2025-12-31",
-      "checked_at": "2026-11-10T18:03:52Z",
+      "checked_at": "2026-11-10T19:44:11Z",
       "state": "fresh",
       "stale_series": []
     }
@@ -74,7 +74,7 @@
   "rooms": [
     {
       "file": "company_room.json",
-      "sha256": "5822bbcb5dbdf326f01862935e4d7ffb31efb303d4c34023c45ee93212aebc1c",
+      "sha256": "565e613fd88ffc32680424fc19f45a0c805b2a5926919940d9acabdc00f4264d",
       "bytes": 1354767
     },
     {
@@ -89,8 +89,8 @@
     },
     {
       "file": "markets.json",
-      "sha256": "db09d4979140a65fcd055f4b44d8bfd628e51adf1dc023b487c66ee1f253b7d6",
-      "bytes": 213656
+      "sha256": "082f65be1fbf78268359e923e4853f85845d3e35e2608a09fd6184e113e6bb16",
+      "bytes": 213355
     },
     {
       "file": "today.json",

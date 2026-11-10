@@ -3,8 +3,8 @@
   "private": false,
   "universe_as_of": "2026-11-09",
   "rank_basis": "public_float_unverified",
-  "fundamentals_built": "2026-11-10 17:32 UTC",
-  "valuation_built": "2026-11-10 17:54 UTC",
+  "fundamentals_built": "2026-11-10 19:44 UTC",
+  "valuation_built": "2026-11-10 19:44 UTC",
   "defaults": {
     "erp": 0.05,
     "terminal_growth": 0.025,

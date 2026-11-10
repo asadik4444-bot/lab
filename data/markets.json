@@ -16,12 +16,12 @@
     "unit_errors_over_assets_limit": 16,
     "excluded_over_assets_limit": 21,
     "excluded_price_rule_only": 2,
-    "excluded_with_assets": 25,
+    "excluded_with_assets": 24,
     "impossible_figures": 25,
     "off_chart_size": 2,
-    "other_exclusions": 7,
+    "other_exclusions": 6,
     "rows_with_badges": 8,
-    "share_lookups": 220
+    "share_lookups": 219
   },
   "facts": {
     "top3_names": [
@@ -843,14 +843,14 @@
       "ticker_source": "submissions",
       "public_float": 902700000000.0,
       "float_end": "2025-06-30",
-      "shares": 941481.0,
-      "shares_basis": "dei_cover",
-      "shares_end": "2011-04-29",
+      "shares": 1426372.0,
+      "shares_basis": "filing_class_equivalent",
+      "shares_end": "2026-09-30",
       "assets": 1303907000000.0,
       "assets_end": "2026-09-30",
       "float_to_assets": 0.6923039756669762,
       "badges": [
-        "shares_stale"
+        "shares_proxy"
       ],
       "fundamentals": {
         "fy": 2025,
@@ -1456,14 +1456,14 @@
       "ticker_source": "submissions",
       "public_float": 501700000000.0,
       "float_end": "2026-03-31",
-      "shares": 469280842.0,
-      "shares_basis": "dei_cover",
-      "shares_end": "2010-01-27",
+      "shares": 1907000000.0,
+      "shares_basis": "filing_class_equivalent",
+      "shares_end": "2026-09-30",
       "assets": 94360000000.0,
       "assets_end": "2026-09-30",
       "float_to_assets": 5.316871555743959,
       "badges": [
-        "shares_stale"
+        "shares_proxy"
       ],
       "fundamentals": {
         "fy": 2026,
@@ -5439,10 +5439,10 @@
       "rule": "assets",
       "reason": "float_scale_suspect",
       "public_float": 3496559430000.0,
-      "assets": 2139565000.0,
-      "implied_float_price": 92458.1071279454,
-      "float_to_assets": 1634.2384690345934,
-      "why": "Excluded as a likely unit error in the filing: its public float of $3,496.6bn is 1,634× its total assets ($2.14bn); with its share count it implies a share price of $92,458."
+      "assets": 3173046000.0,
+      "implied_float_price": 92448.11128929438,
+      "float_to_assets": 1101.956741251151,
+      "why": "Excluded as a likely unit error in the filing: its public float of $3,496.6bn is 1,102× its total assets ($3.17bn); with its share count it implies a share price of $92,448."
     },
     {
       "name": "McGRATH RENTCORP",
@@ -5499,10 +5499,10 @@
       "rule": "assets",
       "reason": "float_scale_suspect",
       "public_float": 950740231000.0,
-      "assets": 924640000.0,
-      "implied_float_price": 3466.346282681218,
-      "float_to_assets": 1028.2274517650112,
-      "why": "Excluded as a likely unit error in the filing: its public float of $950.7bn is 1,028× its total assets ($0.92bn)."
+      "assets": 857686000.0,
+      "implied_float_price": 3433.7847286425135,
+      "float_to_assets": 1108.494520139072,
+      "why": "Excluded as a likely unit error in the filing: its public float of $950.7bn is 1,108× its total assets ($0.86bn)."
     },
     {
       "name": "GENTHERM INCORPORATED",
@@ -5519,9 +5519,9 @@
       "rule": "assets",
       "reason": "no_shares",
       "public_float": 837400000000.0,
-      "assets": 1787741000.0,
+      "assets": 1818246000.0,
       "implied_float_price": null,
-      "float_to_assets": 468.41237069575516,
+      "float_to_assets": 460.5537424528914,
       "why": "Excluded: no usable share count in its SEC filings."
     },
     {
@@ -5539,10 +5539,10 @@
       "rule": "assets",
       "reason": "float_scale_suspect",
       "public_float": 399708338000.0,
-      "assets": 1607870000.0,
-      "implied_float_price": 4.799261800801795,
-      "float_to_assets": 248.5949349138923,
-      "why": "Excluded as a likely unit error in the filing: its public float of $399.7bn is 249× its total assets ($1.61bn)."
+      "assets": 1602228000.0,
+      "implied_float_price": 4.786797676642023,
+      "float_to_assets": 249.47032382407497,
+      "why": "Excluded as a likely unit error in the filing: its public float of $399.7bn is 249× its total assets ($1.60bn)."
     },
     {
       "name": "Civista Bancshares, Inc.",
@@ -5593,20 +5593,10 @@
       "implied_float_price": null,
       "float_to_assets": 0.37473391080824175,
       "why": "Excluded: SEC records show no common-stock ticker on NYSE, Nasdaq or Cboe (often delisted or acquired)."
-    },
-    {
-      "name": "JOHNSON CONTROLS INTERNATIONAL PLC",
-      "rule": "other",
-      "reason": "no_shares",
-      "public_float": 52600000000.0,
-      "assets": 38759000000.0,
-      "implied_float_price": null,
-      "float_to_assets": 1.357104156453985,
-      "why": "Excluded: no usable share count in its SEC filings."
     }
   ],
   "fundamentals_summary": {
-    "built": "2026-11-10 17:32 UTC",
+    "built": "2026-11-10 19:44 UTC",
     "companies": 50,
     "checks": 769,
     "passed": 769,
