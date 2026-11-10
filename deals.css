@@ -24,7 +24,7 @@
 .flist .fn{min-width:0}
 .flist .fn b{font-weight:600}
 .flist .fl2{color:var(--cash-ink);text-underline-offset:3px;justify-self:end;white-space:nowrap}
-.flist .fd{font-variant-numeric:tabular-nums lining-nums}
+.flist .fd{font-variant-numeric:lining-nums}
 .chip{display:inline-block;margin-left:6px;padding:0 7px;border:1px solid var(--hair);border-radius:6px;font:600 12px/18px var(--sans);color:var(--ink-2);letter-spacing:.02em}
 .badge{display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--ink-3);border-radius:6px;font:600 12px/20px var(--sans);text-decoration:none;min-height:24px;letter-spacing:.02em}
 .badge:hover,.badge[aria-expanded="true"]{background:var(--paper)}
@@ -62,11 +62,11 @@
 .ratel .tipt{font-size:13px;line-height:18px;min-height:24px}
 .bfix{margin:8px 0 14px;display:grid;grid-template-columns:auto 1fr;gap:2px 16px;font-size:14px;line-height:24px}
 .bfix dt{color:var(--ink-2);font-weight:600}
-.bfix dd{margin:0;color:var(--ink-2);font-variant-numeric:tabular-nums lining-nums}
+.bfix dd{margin:0;color:var(--ink-2);font-variant-numeric:lining-nums}
 .btiles .tv{font-variant-numeric:normal}
 .bbridge .cap{margin-top:8px}
 .mt .rs{color:var(--ink-3)}
-.ytable td,.rtable td,.sptable td{font-variant-numeric:tabular-nums lining-nums}
+.ytable td,.rtable td,.sptable td{font-variant-numeric:lining-nums}
 
 @media (max-width:1100px){
   .bgrid{display:block}

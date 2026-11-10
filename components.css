@@ -92,6 +92,10 @@ button,select,input{font:inherit;color:inherit}
 .chg.up{color:var(--up);background:var(--up-bg)}
 .chg.down{color:var(--down);background:var(--down-bg)}
 .chg.flat{color:var(--ink-2);background:var(--paper)}
+/* Rates, yields and deal counts: direction without a good/bad colour (green and red are for company growth). */
+.chg.neu{color:var(--ink);background:var(--paper)}
+.mainlink{margin-right:18px}
+@media (max-width:620px){.mainlink{display:none}}
 
 /* ---------- footer ---------- */
 .foot{background:var(--navy);color:var(--on-navy-2);font-size:13px;line-height:18px;margin-top:40px}
@@ -409,7 +413,7 @@ table{border-collapse:collapse;width:100%}
 .cotable tbody tr:focus-within{outline:2px solid var(--mark);outline-offset:-2px}
 
 /* round 2 */
-.dtable td,.dtable th,.cotable td,.gtable td button{font-variant-numeric:tabular-nums lining-nums}
+.dtable td,.dtable th,.cotable td,.gtable td button{font-variant-numeric:lining-nums}
 .gtable td button.neg{color:var(--ink-3);font-weight:400}
 .tiles.t1{grid-template-columns:1fr}.tiles.t2{grid-template-columns:repeat(2,1fr)}.tiles.t4{grid-template-columns:repeat(4,1fr)}
 /* chart rows by count; one column below 900 px. Four tiles become two by two on a phone. */
@@ -519,3 +523,17 @@ table{border-collapse:collapse;width:100%}
   .vgrid .rangebox{order:1}.vgrid .pbox{order:2}.vgrid .vleft{order:3;margin-top:0}
 }
 .tile,.fig{min-width:0}.tile .ts,.fig .fs,.tile .tv{overflow-wrap:anywhere}
+
+/* Today: the valuation is the Lab's showpiece, so it gets its own block; and who built the Lab. */
+.tryblock{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 48px;align-items:center;margin-top:36px;padding:24px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--hair)}
+.try-h{margin:0;font:400 32px/38px var(--serif);letter-spacing:-.005em}
+.try-s{margin:6px 0 0;max-width:60ch;color:var(--ink-2);font-size:15px;line-height:22px}
+.tryblock .try{border-top:0;padding:0;margin:0;gap:10px;justify-content:flex-end}
+.tryblock .try a{border:1.5px solid var(--ink);border-radius:var(--r);padding:0 14px;min-height:44px;color:var(--ink)}
+.tryblock .try a:hover{background:var(--ink);color:var(--bone);text-decoration:none}
+.tryblock .try a.all{border-color:transparent;color:var(--cash-ink)}
+.byline{margin:18px 0 0;font-size:14px;line-height:20px;color:var(--ink-2)}
+.byline a{color:var(--cash-ink);font-weight:600}
+@media (max-width:900px){.tryblock{grid-template-columns:1fr}.tryblock .try{justify-content:flex-start}.try-h{font-size:26px;line-height:32px}}
+/* Phone: the company header is shorter, so the tabs come sooner. */
+@media (max-width:620px){.chead-id .back{width:auto;order:3;min-height:40px}.chead-id .switch{order:4;flex:1 1 0;min-width:0;width:auto}.chead-id .switch select{min-width:0;width:100%}.chead-id .switch span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.fig .fs{display:none}.fig .fv{font-size:20px;line-height:26px}.fig{padding:8px 12px 8px 0}.fig+.fig{padding-left:12px}.figs{margin-top:4px}.chead-id .idtxt{flex:1 1 calc(100% - 64px);min-width:0}.fig:nth-child(2n+1){padding-left:0}}

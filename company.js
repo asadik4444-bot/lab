@@ -192,7 +192,7 @@
     if (kind !== 'bank') specs.push(['Operating income', 'operating_income', c.prior && val(c.prior.operating_income), opi, F(c, 'operating_income')]);
     if (kind === 'industrial') specs.push(['Free cash flow', 'fcf', c.prior && val(c.prior.fcf), fcf, F(c, 'fcf')]);
     else specs.push(['Net income', 'net_income', null, ni, V(c, 'net_income')]);
-    specs = specs.filter(function (x) { return L.isNum(x[3]); });
+    specs = specs.filter(function (x) { return L.isNum(x[3]) && ((useH && x[1] !== 'net_income') || L.isNum(x[2])); });
     var cs = el('div', { 'class': 'charts3 n' + specs.length });
     specs.forEach(function (x) {
       var box = el('div'), host = el('div', { 'class': 'chart' }), multi = useH && x[1] !== 'net_income';
@@ -215,8 +215,8 @@
     }
     var rows = [['Revenue', 'revenue', F(c, 'revenue'), true]];
     if (kind !== 'bank') rows.push(['Operating income', 'operating_income', F(c, 'operating_income'), true]);
-    if (kind === 'industrial') { rows.push(['Free cash flow', 'fcf', F(c, 'fcf'), true]); rows.push(['EBITDA', 'ebitda', V(c, 'ebitda'), false]); }
-    rows.push(['Net income', 'net_income', V(c, 'net_income'), false]);
+    if (kind === 'industrial') { rows.push(['Free cash flow', 'fcf', F(c, 'fcf'), true]); if (!useH) rows.push(['EBITDA', 'ebitda', V(c, 'ebitda'), false]); }
+    if (!useH) rows.push(['Net income', 'net_income', V(c, 'net_income'), false]);
     var tb = el('tbody'), last = yrs.length - 1;
     rows.forEach(function (x) {
       var cur = x[3] ? hv(x[1], last) : val(x[2]); if (cur == null) return;
@@ -235,7 +235,7 @@
     p.appendChild(el('div', { 'class': 'table-scroll', style: 'margin-top:20px', tabindex: '0', role: 'region', 'aria-label': 'Earnings, ' + L.word(yrs.length) + ' fiscal years. Scrolls sideways if narrow.' }, tab));
     var stop = c.history && c.history.stop;
     p.appendChild(el('p', { 'class': 'cap' }, useH
-      ? 'USD. ' + L.word(hy.length).replace(/^./, function (s) { return s.toUpperCase(); }) + ' fiscal years back to back, each as last reported in a 10-K, so restated figures replace the originals. Latest year in navy. Change compares the last two years. EBITDA and net income are for the latest year only.' + (hy.length < 5 && stop ? ' Earlier years are not shown: ' + reasonText(stop).toLowerCase() + '.' : '') + ' Source: SEC EDGAR 10-K. Not investment advice.'
+      ? 'USD. ' + L.word(hy.length).replace(/^./, function (s) { return s.toUpperCase(); }) + ' fiscal years back to back, each as last reported in a 10-K, so restated figures replace the originals. Latest year in navy. Change compares the last two years.' + (hy.length < 5 && stop ? ' Earlier years are not shown: ' + reasonText(stop).toLowerCase() + '.' : '') + ' Source: SEC EDGAR 10-K. Not investment advice.'
       : 'USD. Latest fiscal year in navy, the year before in grey, both from the same 10-K.' + (stop ? ' No longer history: ' + reasonText(stop).toLowerCase() + '.' : '') + ' Source: SEC EDGAR 10-K, fiscal year to ' + L.date(c.fy.end) + '. Not investment advice.'));
   }
   /* fiscal-year label for a history year: the company's FY number, offset from the year the period ends */
@@ -485,6 +485,28 @@
   }
 
   /* ---------- Cash & debt ---------- */
+  /* bars only for rows with a value; the rest are named in one line with their reason */
+  function shown(rows) { return rows.filter(function (r) { return r.text !== 'n/a'; }); }
+  function notShown(rows, keys) {
+    var c = S.co, groups = {}, order = [];
+    rows.forEach(function (r, i) {
+      if (r.text !== 'n/a') return;
+      var w = plainWhy(V(c, keys[i]) && V(c, keys[i]).reason);
+      if (!groups[w]) { groups[w] = []; order.push(w); }
+      groups[w].push(r.label.toLowerCase());
+    });
+    function join(a) { return a.length < 2 ? a[0] : a.slice(0, -1).join(', ') + ' and ' + a[a.length - 1]; }
+    return order.length ? 'Not shown: ' + order.map(function (w) { return join(groups[w]) + ' (' + w + ')'; }).join('; ') + '.' : '';
+  }
+  /* hub reasons in plain words for the one-line note */
+  function plainWhy(r) {
+    r = r || '';
+    if (/^outside 0 to/.test(r)) return 'the cost-of-goods or balance line in this 10-K looks like a different item';
+    if (/DIO, DSO or DPO unavailable/i.test(r)) return 'it needs all three day counts';
+    var t = reasonText(r);
+    if (/^No .*(10-K|tags)/i.test(t)) return 'not reported in this 10-K';
+    return t.charAt(0).toLowerCase() + t.slice(1);
+  }
   function renderCash(c) {
     var p = $('panel-cash'); p.textContent = '';
     var nm = L.shortName(c.name);
@@ -518,12 +540,18 @@
     a.appendChild(el('h3', { 'class': 'vsub' }, 'Claims on the business and cash'));
     var ah = el('div', { 'class': 'chart' }); a.appendChild(ah);
     function row(label, key, kind, sign) { var n = V(c, key), v = val(n); return { label: label, v: v == null || v === 0 ? null : sign * v, kind: kind, text: v == null ? 'n/a' : (v === 0 ? 'none' : (sign < 0 ? MINUS : '') + L.usd(v)), spec: nodeNote(c, key, n) }; }
-    L.hbars(ah, [row('Debt', 'debt', 'hi', 1), row('Finance leases', 'finance_leases', 'hi', 1), Object.assign(row('Non-controlling interest', 'nci', 'hi', 1), { short: 'Non-controlling int.' }), row('Cash', 'cash', 'ctx', -1), Object.assign(row('Short-term investments', 'short_term_investments', 'ctx', -1), { short: 'Short-term inv.' })], { name: 'Claims and cash' });
+    var claimRows = [row('Debt', 'debt', 'hi', 1), row('Finance leases', 'finance_leases', 'hi', 1), Object.assign(row('Non-controlling interest', 'nci', 'hi', 1), { short: 'Non-controlling int.' }), row('Cash', 'cash', 'ctx', -1), Object.assign(row('Short-term investments', 'short_term_investments', 'ctx', -1), { short: 'Short-term inv.' })];
+    L.hbars(ah, shown(claimRows), { name: 'Claims and cash' });
+    var missA = notShown(claimRows, ['debt', 'finance_leases', 'nci', 'cash', 'short_term_investments']);
+    if (missA) a.appendChild(el('p', { 'class': 'cap' }, missA));
     a.appendChild(el('p', { 'class': 'cap' }, 'USD at ' + L.date(c.fy.end) + '. Claims in navy to the right, cash and investments in grey to the left. Operating leases (' + usdOr(val(V(c, 'operating_leases')), 'n/a') + ') are not added. The bridge to enterprise value is on the Value tab.'));
     b.appendChild(el('h3', { 'class': 'vsub' }, 'Does growth turn into cash? Working-capital days'));
     var bh = el('div', { 'class': 'chart' }); b.appendChild(bh);
     function wc(label, key, kind, sign) { var n = V(c, key), v = val(n); return { label: label, v: v == null || v === 0 ? null : sign * v, kind: kind, text: v == null ? 'n/a' : (v === 0 ? 'none' : (sign < 0 ? MINUS : '') + L.days(v) + ' d'), spec: nodeNote(c, key, n) }; }
-    L.hbars(bh, [wc('Inventory days', 'dio', 'ctx', 1), wc('Receivable days', 'dso', 'ctx', 1), wc('Payable days', 'dpo', 'ctx', -1), wc('Cash cycle', 'ccc', 'hi', 1)], { name: 'Working-capital days' });
+    var wcRows = [wc('Inventory days', 'dio', 'ctx', 1), wc('Receivable days', 'dso', 'ctx', 1), wc('Payable days', 'dpo', 'ctx', -1), wc('Cash cycle', 'ccc', 'hi', 1)];
+    if (shown(wcRows).length) L.hbars(bh, shown(wcRows), { name: 'Working-capital days' }); else bh.remove();
+    var missB = notShown(wcRows, ['dio', 'dso', 'dpo', 'ccc']);
+    if (missB) b.appendChild(el('p', { 'class': 'cap' }, missB));
     b.appendChild(el('p', { 'class': 'cap' }, 'Days. Fiscal-year-end balance divided by the annual flow, times a year. Cash cycle = inventory + receivable − payable days; below zero, suppliers fund the cycle.'));
     cols.appendChild(a); cols.appendChild(b); p.appendChild(cols);
     p.appendChild(disc('Source: SEC EDGAR 10-K, fiscal year to ' + L.date(c.fy.end) + '. Not investment advice.'));

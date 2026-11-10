@@ -39,7 +39,7 @@
     /* Financing */
     var s2 = S.financing, det = macro.headline.detail, dpp = det.change_1y_pp, ser = macro.series.filter(function (x) { return x.id === det.series; })[0];
     var ch2 = fill('d-fin', {
-      sentence: s2.text, big: figText(s2.figure), chip: L.chg(dpp, L.pp(dpp)), of: 'vs a year ago',
+      sentence: s2.text, big: figText(s2.figure), chip: L.chg(dpp, L.pp(dpp), { neutral: true }), of: 'vs a year ago',
       note: note(s2, null, { formula: 'change = latest value − value a year earlier', working: L.pp(dpp) + ' against ' + L.month(det.from) + '.', source: (ser ? ser.credit : 'ECB') + '.' }),
       stamp: s2.figure.label + ' · ECB'
     });
@@ -48,7 +48,7 @@
     /* Deals */
     var s3 = S.deals, dh = deals.headline;
     var ch3 = fill('d-deals', {
-      sentence: s3.text, big: figText(s3.figure), chip: L.chg(dh.change, L.pctS(dh.change)), of: 'vs ' + L.num(dh.year_earlier) + ' a year earlier',
+      sentence: s3.text, big: figText(s3.figure), chip: L.chg(dh.change, L.pctS(dh.change), { neutral: true }), of: 'vs ' + L.num(dh.year_earlier) + ' a year earlier',
       note: note(s3, null, { formula: 'proxies + tender offers in the window; change = this window / same window a year earlier − 1', working: L.pctS(dh.change) + ' against ' + L.num(dh.year_earlier) + ' in ' + L.month(dh.compare_from) + ' to ' + L.month(dh.compare_to) + '.', source: 'SEC EDGAR; SPAC mergers are shown separately.' }),
       stamp: L.month(dh.from).slice(0, 3) + '–' + L.month(dh.to) + ' · SEC'
     });
@@ -60,6 +60,6 @@
       var c = co.companies.filter(function (x) { return x.ticker === tk; })[0];
       if (c) t.appendChild(el('a', { href: 'company.html?c=' + tk + '#value' }, L.shortName(c.name) + ' →'));
     });
-    t.appendChild(el('a', { href: 'companies.html' }, 'All ' + co.companies.length + ' →'));
+    t.appendChild(el('a', { href: 'companies.html', 'class': 'all' }, 'All ' + co.companies.length + ' companies →'));
   }).catch(L.fail);
 })();

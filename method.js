@@ -4,6 +4,15 @@
   var L = Lab, el = L.el, $ = L.$;
   L.shell({ page: 'method' });
   var HUMAN = { float_scale_suspect: 'Float looks mis-scaled', no_listed_ticker: 'No listed ticker', no_shares: 'No share count', shares_proxy: 'Shares: diluted average, no cover count', shares_stale: 'Shares: older than 200 days', float_stale: 'Float: older than about 21 months' };
+  /* The newest observation as the series counts it: a quarter, a month or a year. A quarterly survey is dated by its
+     survey round, so its end date can lie after today; a period label does not read as a future day. */
+  function newest(s) {
+    var d = L.parseDate(s.newest_data); if (!d) return L.date(s.newest_data);
+    if (/quarterly/.test(s.id)) return 'Q' + (Math.floor(d.getUTCMonth() / 3) + 1) + ' ' + d.getUTCFullYear();
+    if (/monthly/.test(s.id)) return L.month(s.newest_data);
+    if (/annual/.test(s.id)) return String(d.getUTCFullYear());
+    return L.date(s.newest_data);
+  }
   var RULE = { size: 'Size', assets: 'Float above the assets limit', price: 'Impossible share price', other: 'Other' };
   function human(k) { return HUMAN[k] || String(k).replace(/_/g, ' ').replace(/^./, function (c) { return c.toUpperCase(); }); }
   function row(cells, cls) { return el('tr', cls ? { 'class': cls } : null, cells); }
@@ -28,14 +37,14 @@
     var p = $('panel-pipeline');
     p.appendChild(el('h3', { 'class': 'vsub' }, 'Sources: state and newest data'));
     p.appendChild(table(['Source', 'State', 'Newest data', 'Checked', 'Stale series'], ST.sources.map(function (s) {
-      return row([el('th', { scope: 'row' }, L.tipLabel(s.label, { title: s.label, def: 'One input of the nightly run. It is fine while its state is fresh; otherwise the strip on every page names it.', formula: 'state = fresh when the newest data is within the source’s limit', working: 'State ' + s.state + '; newest data ' + L.date(s.newest_data) + '; checked ' + L.stamp(s.checked_at) + '.', source: 'status.json', more: 'method.html#pipeline' })), el('td', null, s.state === 'fresh' ? 'fine' : s.state), el('td', null, L.date(s.newest_data)), el('td', null, L.stamp(s.checked_at)), el('td', null, s.stale_series && s.stale_series.length ? s.stale_series.join(', ') : el('span', { 'class': 'rs' }, 'none'))]);
+      return row([el('th', { scope: 'row' }, L.tipLabel(s.label, { title: s.label, def: 'One input of the nightly run. It is fine while its state is fresh; otherwise the strip on every page names it.', formula: 'state = fresh when the newest data is within the source’s limit', working: 'State ' + s.state + '; newest data ' + newest(s) + '; checked ' + L.stamp(s.checked_at) + '.', source: 'status.json', more: 'method.html#pipeline' })), el('td', null, s.state === 'fresh' ? 'fine' : s.state), el('td', null, newest(s)), el('td', null, L.stamp(s.checked_at)), el('td', null, s.stale_series && s.stale_series.length ? s.stale_series.join(', ') : el('span', { 'class': 'rs' }, 'none'))]);
     })));
-    p.appendChild(el('p', { 'class': 'cap' }, 'Source: status.json, run built ' + L.stamp(ST.run.built_at) + (ST.run.git_commit ? ', commit ' + ST.run.git_commit.slice(0, 7) : '') + (ST.run.github_run_id ? ', run ' + ST.run.github_run_id : ', no scheduled-run id recorded') + '.'));
+    p.appendChild(el('p', { 'class': 'cap' }, 'The pipeline last built these pages on ' + L.stamp(ST.run.built_at) + (ST.run.git_commit ? ', code version ' + ST.run.git_commit.slice(0, 7) : '') + (ST.run.github_run_id ? ', run ' + ST.run.github_run_id : '') + '. A quarterly survey is dated by its survey round, which can lie after today.'));
     p.appendChild(h3('What the company checks cover'));
     var cov = fs.coverage, names = { revenue: 'Revenue', revenue_prior: 'Revenue, prior year', growth_yoy: 'Revenue growth', operating_income: 'Operating income', operating_margin: 'Operating margin', cfo: 'Cash from operations', capex: 'Capital spending', fcf: 'Free cash flow', fcf_margin: 'FCF margin', capex_to_revenue: 'Capex / revenue' };
     p.appendChild(table(['Figure', 'Companies with a value', 'Out of'], Object.keys(cov).map(function (k) { return row([el('th', { scope: 'row' }, names[k] || human(k)), el('td', { 'class': 'r' }, String(cov[k])), el('td', { 'class': 'r' }, String(fs.companies))]); }), [1, 2]));
     p.appendChild(el('p', { 'class': 'cap' }, fs.checks + ' automated checks, ' + fs.passed + ' passed, over ' + fs.companies + ' companies; ' + fs.financial_companies + ' are banks or insurers, where operating margin and free cash flow do not apply. Fundamentals built ' + fs.built + ' from SEC EDGAR company facts and submissions.'));
-    p.appendChild(el('details', { 'class': 'fold', style: 'margin-top:16px' }, [el('summary', null, ['Files in this build', el('small', null, ST.rooms.length + ' room files with checksums')]), el('div', { 'class': 'fold-body' }, table(['File', 'Bytes', 'SHA-256 (first 12)'], ST.rooms.map(function (f) { return row([el('th', { scope: 'row' }, f.file), el('td', { 'class': 'r' }, L.num(f.bytes)), el('td', null, f.sha256.slice(0, 12))]); }), [1]))]));
+    p.appendChild(el('details', { 'class': 'fold', style: 'margin-top:16px' }, [el('summary', null, ['Files in this build', el('small', null, ST.rooms.length + ' data files with checksums')]), el('div', { 'class': 'fold-body' }, table(['File', 'Bytes', 'SHA-256 (first 12)'], ST.rooms.map(function (f) { return row([el('th', { scope: 'row' }, f.file), el('td', { 'class': 'r' }, L.num(f.bytes)), el('td', null, f.sha256.slice(0, 12))]); }), [1]))]));
 
     /* ---------- catches ---------- */
     var c = $('panel-catches'), k = M.counts, x = M.cross_check, lim = M.facts.assets_limit;

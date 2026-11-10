@@ -87,12 +87,12 @@
   Lab.month = function (s) { var d = parseDate(s); return d ? MON[d.getUTCMonth()] + ' ' + d.getUTCFullYear() : ''; };
   Lab.monthName = function (s) { var d = parseDate(s); return d ? MON[d.getUTCMonth()] : ''; };
   /* a change chip: arrow and sign; colour follows direction only (up green, down red) */
-  Lab.chg = function (value, text) {
+  Lab.chg = function (value, text, o) {
     // Direction follows the DISPLAYED rounding (logic rule, KPIS_AND_FEEDS §6): "+0.0%" is flat, never a green arrow.
     var shownZero = /^[+−-]?0(?:[.,]0+)?\s*(?:%|pp|×)?$/.test(String(text == null ? '' : text).trim());
     var dir = !isNum(value) || value === 0 || shownZero ? 'flat' : (value > 0 ? 'up' : 'down');
     var arrow = dir === 'flat' ? '\u25AC' : (dir === 'up' ? UP : DOWN);
-    return el('span', { 'class': 'chg ' + dir }, [el('span', { 'aria-hidden': 'true' }, arrow), el('span', null, text)]);
+    return el('span', { 'class': 'chg ' + dir + (o && o.neutral && dir !== 'flat' ? ' neu' : '') }, [el('span', { 'aria-hidden': 'true' }, arrow), el('span', null, text)]);
   };
   var KEEP = { PLC: 1, IBM: 1, USA: 1, NVIDIA: 1 }, LOWER = { AND: 1, OF: 1, THE: 1 };
   Lab.niceName = function (n) {
@@ -161,7 +161,8 @@
   function place() {
     var n = ensureNote();
     if (cur.sheet) { n.style.left = n.style.top = ''; return; }
-    var r = cur.node.getBoundingClientRect(), vw = document.documentElement.clientWidth, vh = window.innerHeight, gap = 10;
+    var box = (cur.node.closest && cur.node.closest('.fig, .tile')) || cur.node;
+    var r = box.getBoundingClientRect(), vw = document.documentElement.clientWidth, vh = window.innerHeight, gap = 10;
     var w = n.offsetWidth, h = n.offsetHeight;
     var wrap = document.querySelector('.wrap'), wr = wrap ? wrap.getBoundingClientRect() : { left: 12, right: vw - 12 };
     var x = Math.max(wr.left, Math.min(r.left, wr.right - w)); x = Math.max(12, Math.min(x, vw - w - 12));
@@ -607,7 +608,7 @@
     var left = el('div', { 'class': 'tb-left' });
     left.innerHTML = '<a class="logo" href="https://aabdurashidov.ch" aria-label="Asadbek Abdurashidov, main site"><span class="l1">Asadbek</span><span class="l2">ABDURASHIDOV</span></a><a class="seal-mark" href="index.html" aria-label="The Lab, home"><img src="assets/favicon.svg" alt="" width="32" height="32"></a>';
     var right = el('div', { 'class': 'tb-right' });
-    right.innerHTML = '<a class="cvlink" href="https://aabdurashidov.ch/cv.pdf">CV</a><button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><i><b></b><b></b></i><span>Menu</span></button>';
+    right.innerHTML = '<a class="cvlink mainlink" href="https://aabdurashidov.ch">Main site</a><a class="cvlink" href="https://aabdurashidov.ch/cv.pdf">CV</a><button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu"><i><b></b><b></b></i><span>Menu</span></button>';
     header.appendChild(left); header.appendChild(nav); header.appendChild(right);
     var menu = el('nav', { id: 'menu', 'aria-label': 'Lab pages, menu', hidden: true });
     var ul = el('ul');

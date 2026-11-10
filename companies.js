@@ -5,14 +5,14 @@
   L.shell({ page: 'companies' });
   function basis(k) { return /cover/.test(k) ? 'cover' : (/dilut/.test(k) ? 'diluted avg' : String(k).replace(/_/g, ' ')); }
   function sh(v) { return v >= 1e9 ? L.num(v / 1e9, 2) + 'bn' : L.num(v / 1e6, 0) + 'mn'; }
-  var FLAG = { shares_proxy: 'Shares: avg', shares_stale: 'Shares: old', float_stale: 'Float: old', float_scale_suspect: 'Float: scale?' };
+  var FLAG = { shares_proxy: 'Average share count', shares_stale: 'Older share count', float_stale: 'Older float figure', float_scale_suspect: 'Float may be mis-scaled' };
   function f(r, k) { return r.fundamentals && !r.fundamentals.financial && !r.fundamentals.not_comparable ? r.fundamentals[k] : null; }
   function fa(r, k) { return r.fundamentals ? r.fundamentals[k] : null; }
   function pc(v) { return L.pct(v); }
   var COLS = [
     { k: 'rank', t: '#', get: function (r) { return r.rank; }, def: 'Position by SEC public float, largest first. The float is reported once a year, so the order is not a market-cap ranking.', formula: 'rank of dei:EntityPublicFloat' },
     { k: 'name', t: 'Company', get: function (r) { return r.name; } },
-    { k: 'float', t: 'Public float', r: 1, get: function (r) { return r.public_float; }, def: 'The value of shares held by outsiders, as reported on the cover of the annual report at the end of the second fiscal quarter.', formula: 'EntityPublicFloat' },
+    { k: 'float', t: 'Public float (10-K cover)', r: 1, get: function (r) { return r.public_float; }, def: 'The value of shares held by outsiders, as reported on the cover of the annual report at the end of the second fiscal quarter.', formula: 'EntityPublicFloat' },
     { k: 'shares', t: 'Shares', r: 1, get: function (r) { return r.shares; }, def: 'The share count, with the filing it comes from. When there is no cover count, the diluted average is used and flagged.', formula: 'cover share count, else diluted average' },
         { k: 'rev', t: 'Revenue', r: 1, bar: 1, get: function (r) { return fa(r, 'revenue'); }, fmt: L.usd, def: 'Sales for the latest fiscal year.', formula: 'as filed' },
     { k: 'g', t: 'Growth', r: 1, bar: 1, get: function (r) { return fa(r, 'growth_yoy'); }, chip: 1, def: 'Revenue against the fiscal year before. Fiscal years end on different dates.', formula: 'revenue / revenue_prior − 1' },
@@ -58,7 +58,7 @@
       tr.appendChild(el('td', { 'class': 'r', 'data-l': 'Shares' }, [sh(r.shares), el('span', { 'class': 'sub2' }, basis(r.shares_basis) + ' ' + L.date(r.shares_end))]));
       var fl = nmc.querySelector('.flags');
       (r.badges || []).forEach(function (k) { fl.appendChild(L.tip(el('button', { type: 'button', 'class': 'flag' }, FLAG[k] || k), { title: FLAG[k] || k, def: M.badges[k] || '', source: src(r), href: null, more: 'method.html#data-quality' })); });
-      if (r.ticker_source === 'override') fl.appendChild(L.tip(el('button', { type: 'button', 'class': 'flag' }, 'Ticker by hand'), { title: 'Ticker added by hand', def: 'SEC lists no ticker for this company, so one was added by hand.', source: src(r), href: null }));
+      if (r.ticker_source === 'override') fl.appendChild(L.tip(el('button', { type: 'button', 'class': 'flag' }, 'Ticker added manually'), { title: 'Ticker added manually', def: 'SEC lists no ticker for this company, so one was added by hand.', source: src(r), href: null }));
       COLS.slice(4).forEach(function (k) {
         var v = k.get(r), td = el('td', { 'class': 'r', 'data-l': k.t });
         if (v == null) td.appendChild(el('span', { 'class': 'muted' }, 'n/a'));

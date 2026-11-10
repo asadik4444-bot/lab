@@ -30,7 +30,7 @@
     return c.value < 0 ? 'easier' : (c.value > 0 ? 'harder' : 'little changed');
   }
   function chip(c, sign, withWord) {
-    var t = fmtChange(c), w = meaning(c, sign), zero = !/[1-9]/.test(t), n = el('span', null, L.chg(zero ? 0 : c.value, t));
+    var t = fmtChange(c), w = meaning(c, sign), zero = !/[1-9]/.test(t), n = el('span', null, L.chg(zero ? 0 : c.value, t, { neutral: true }));
     if (withWord && w) n.appendChild(el('span', { 'class': 'mw' }, ' ' + w));
     return n;
   }
