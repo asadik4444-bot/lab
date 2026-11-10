@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Company · The Lab · Asadbek Abdurashidov</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/mona-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+</head>
+<body>
+<main id="main" tabindex="-1">
+  <div class="wrap chead">
+    <div class="chead-id">
+      <a class="back" href="companies.html">&larr; Companies</a>
+      <span id="logo"></span>
+      <div class="idtxt"><h1 id="h1">&ndash;</h1><p class="filed" id="filed">&nbsp;</p></div>
+      <label class="switch"><span>Switch company</span><select id="pick"><option>Loading&hellip;</option></select></label>
+    </div>
+    <div class="figs" id="figs" role="group" aria-label="Key figures">
+      <div class="fig"><span class="fl">Revenue</span><span class="fv">&ndash;</span><span class="fs"></span></div>
+      <div class="fig"><span class="fl">EBITDA</span><span class="fv">&ndash;</span><span class="fs"></span></div>
+      <div class="fig"><span class="fl">Operating margin</span><span class="fv">&ndash;</span><span class="fs"></span></div>
+      <div class="fig"><span class="fl">Free cash flow</span><span class="fv">&ndash;</span><span class="fs"></span></div>
+    </div>
+  </div>
+  <div class="tabs-bar"><div class="wrap"><div class="tablist" id="tablist" role="tablist" aria-label="Company sections"></div></div></div>
+  <div class="wrap" id="panels" style="min-height:1000px"></div>
+</main>
+<script src="lab.js"></script>
+<script src="glossary.js"></script>
+<script src="company_math.js"></script>
+<script src="company.js"></script>
+</body>
+</html>

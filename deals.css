@@ -1,0 +1,119 @@
+/* Deals page. Linked after components.css; adds only what the Deals page needs. */
+.dhead{padding-top:16px}
+.dhead .statement{max-width:34ch}
+.dlede{margin:8px 0 0;font-size:15px;line-height:22px;color:var(--ink-2);max-width:74ch}
+.dhead .figs{margin-top:12px}
+.fig .fs{min-height:20px}
+.fig .fs .chg{margin-left:2px}
+#panels{min-height:0}
+.src{margin-top:6px}
+.vsub.lat{margin-top:28px}
+.vsub.ctxh{margin-top:28px}
+
+/* key under the flow chart: swatches, not a legend inside the plot */
+.key{margin:6px 0 0;display:flex;flex-wrap:wrap;gap:4px 20px;font-size:13px;line-height:20px;color:var(--ink-2)}
+.key span{display:inline-flex;align-items:center;gap:8px}
+.key .sw{display:inline-block;width:12px;height:12px;border-radius:2px;flex:none}
+.key .sw.ink{background:var(--ink)}
+.key .sw.tan{background:var(--soft)}
+.key .sw.out{border:1.25px solid var(--grey-mark);background:transparent}
+
+/* latest filings */
+.flist{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.flist li{display:grid;grid-template-columns:minmax(0,1fr) 110px 120px 150px;gap:4px 16px;align-items:center;padding:6px 0;border-bottom:1px solid var(--hair);font-size:14px;line-height:20px}
+.flist .fn{min-width:0}
+.flist .fn b{font-weight:600}
+.flist .fl2{color:var(--cash-ink);text-underline-offset:3px;justify-self:end;white-space:nowrap}
+.flist .fd{font-variant-numeric:tabular-nums lining-nums}
+.chip{display:inline-block;margin-left:6px;padding:0 7px;border:1px solid var(--hair);border-radius:6px;font:600 12px/18px var(--sans);color:var(--ink-2);letter-spacing:.02em}
+.badge{display:inline-flex;align-items:center;padding:0 8px;border:1px solid var(--ink-3);border-radius:6px;font:600 12px/20px var(--sans);text-decoration:none;min-height:24px;letter-spacing:.02em}
+.badge:hover,.badge[aria-expanded="true"]{background:var(--paper)}
+
+/* sponsors */
+.sptable{margin-top:20px}
+.sptable th.nm{white-space:normal}
+.mono{display:inline-grid;place-items:center;min-width:28px;height:28px;padding:0 4px;margin-right:10px;border-radius:6px;background:var(--paper);font:700 11px/1 var(--sans);color:var(--ink);vertical-align:middle;letter-spacing:.02em}
+.rk{color:var(--ink-3);margin-right:2px}
+.sptable tr.nrow td{padding:0;border-bottom:1px solid var(--hair)}
+.sptable tr.sp td,.sptable tr.sp th{border-bottom:0}
+.how summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;min-height:44px;font:600 13px/18px var(--sans);color:var(--cash-ink)}
+.how summary::-webkit-details-marker{display:none}
+.how summary::before{content:"";width:6px;height:6px;border-right:2px solid var(--cash-ink);border-bottom:2px solid var(--cash-ink);transform:rotate(-45deg);margin:0 4px 0 2px}
+.how[open] summary::before{transform:rotate(45deg)}
+.how p{margin:0 0 10px;padding-left:22px;font-size:14px;line-height:20px;color:var(--ink-2);max-width:80ch}
+
+/* fundraising */
+.rtable{margin-top:24px}
+.ctx3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px 32px}
+.ctxt{margin:0;font:600 13px/18px var(--sans);color:var(--ink-2)}
+.cap.miss{color:var(--ink-2)}
+.tblwrap{overflow-x:auto}
+
+/* buyout */
+.btiles{margin-top:16px}
+.bgrid{display:grid;grid-template-columns:5fr 7fr;grid-template-areas:"left range" "left bridge";grid-template-rows:auto 1fr;gap:0 48px;margin-top:16px;align-items:start}
+.bgrid .bleft{grid-area:left}
+.bgrid .bsticky{grid-area:range}
+.bgrid .bbridge{grid-area:bridge;margin-top:20px}
+.bsticky{background:var(--bone)}
+.bsticky .vsub{margin-bottom:0}
+.bleft .vsub{margin-bottom:4px}
+.ratel{margin:0 0 8px;font-size:13px;line-height:18px;color:var(--ink-3)}
+.ratel .tipt{font-size:13px;line-height:18px;min-height:24px}
+.bfix{margin:8px 0 14px;display:grid;grid-template-columns:auto 1fr;gap:2px 16px;font-size:14px;line-height:24px}
+.bfix dt{color:var(--ink-2);font-weight:600}
+.bfix dd{margin:0;color:var(--ink-2);font-variant-numeric:tabular-nums lining-nums}
+.btiles .tv{font-variant-numeric:normal}
+.bbridge .cap{margin-top:8px}
+.mt .rs{color:var(--ink-3)}
+.ytable td,.rtable td,.sptable td{font-variant-numeric:tabular-nums lining-nums}
+
+@media (max-width:1100px){
+  .bgrid{display:block}
+  .bgrid .bbridge{margin-top:20px}
+  .bleft{margin-top:12px}
+  .ctx3{grid-template-columns:1fr}
+}
+
+@media (max-width:620px){
+  .dhead{padding-top:10px}
+  .tiles.btiles{grid-template-columns:repeat(2,1fr)}
+  /* sticky IRR range bar under the tabs while the sliders scroll */
+  .bsticky{position:sticky;top:calc(var(--bar) + 48px);z-index:10;padding-bottom:4px;border-bottom:1px solid var(--hair)}
+  .bfix{grid-template-columns:1fr}
+  .bfix dd{margin-bottom:6px}
+  /* latest filings: two-line rows */
+  .flist li{grid-template-columns:auto auto 1fr;gap:0 12px;padding:8px 0}
+  .flist .fn{grid-column:1/-1}
+  .flist .fb{grid-column:1}
+  .flist .fd{grid-column:2}
+  .flist .fl2{grid-column:3;display:inline-flex;align-items:center;min-height:44px}
+  .flist .badge,.flist .fd .tipt{min-height:28px}
+  /* tables as two-line rows */
+  .mt thead{display:none}
+  .mt,.mt tbody,.mt tr,.mt td,.mt th{display:block}
+  .mt tr{display:grid;grid-template-columns:repeat(var(--c,3),1fr);gap:0 8px;padding:8px 0;border-bottom:1px solid var(--hair)}
+  .mt tbody th,.mt td{border:0;padding:0;text-align:left}
+  .mt td.r{text-align:left;padding-left:0}
+  .mt td[data-l]::before{content:attr(data-l) " ";display:block;font-size:12px;line-height:16px;color:var(--ink-3)}
+  .mt td[data-l=""]::before{display:none}
+  .ytable{--c:3}.ytable tbody th{grid-column:1/-1;font-weight:600}
+  .rtable{--c:4}.rtable tbody th{grid-column:1/-1;font-weight:600}
+  .sptable{--c:3}
+  .sptable tr.sp th.nm{grid-column:1/3;font-weight:600}
+  .sptable tr.sp td.g{grid-column:3;text-align:right;font-weight:600}
+  .sptable tr.sp{border-bottom:0;padding-bottom:0}
+  .sptable tr.nrow{display:block;padding:0;border-bottom:1px solid var(--hair)}
+  .sptable tr.nrow td{display:block;border:0}
+  .sptable tr.sp td:not(.g){margin-top:4px}
+  .mt td .tipt{min-height:28px}
+  .mt td{display:flex;flex-direction:column;justify-content:flex-start}
+  .mt td.r{align-items:flex-start}
+  .sptable tr.sp td.g{align-items:flex-end}
+  .mt td[data-l]::before{align-self:flex-start}
+}
+
+.fig{min-width:0}
+.fig .fs{display:flex;flex-wrap:wrap;gap:2px 6px;align-items:center}
+@media (max-width:900px){.figs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.fig .fl .tipt{text-align:left}}

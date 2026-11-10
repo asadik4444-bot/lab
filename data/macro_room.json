@@ -1,0 +1,3636 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-12-31",
+  "export": {
+    "exported_at": "2026-11-10T04:28:50.815776Z",
+    "series": 30,
+    "restricted_not_shown": 2
+  },
+  "headline": {
+    "text": "Borrowing for euro-area companies got more expensive over the past year.",
+    "detail": {
+      "series": "ea_nfc_borrowing_cost",
+      "latest": {
+        "period": "2026-09",
+        "value": 3.9
+      },
+      "change_1y_pp": 0.3999999999999999,
+      "from": "2025-09"
+    }
+  },
+  "spreads": [
+    {
+      "label": "US 2s10s (10y − 2y)",
+      "value": 0.3200000000000003,
+      "unit": "pp",
+      "period": "2026-11-09",
+      "inputs": [
+        "us_treasury_2y",
+        "us_treasury_10y"
+      ]
+    },
+    {
+      "label": "Euro AAA 2s10s (10y − 2y)",
+      "value": 0.3550933020999998,
+      "unit": "pp",
+      "period": "2026-11-06",
+      "inputs": [
+        "ea_aaa_yield_2y",
+        "ea_aaa_yield_10y"
+      ]
+    }
+  ],
+  "groups": [
+    "Policy rates",
+    "Yield curves",
+    "Credit conditions",
+    "Activity & prices",
+    "FX"
+  ],
+  "series": [
+    {
+      "id": "ecb_deposit_rate",
+      "group": "Policy rates",
+      "label": "ECB deposit rate",
+      "kind": "rate",
+      "title": "Deposit facility - date of changes (raw data) - Level",
+      "unit": "PCPA",
+      "frequency": "D",
+      "latest": {
+        "period": "2026-11-10",
+        "value": 2.5
+      },
+      "change_short": {
+        "value": 0.0,
+        "unit": "pp",
+        "from": "2026-10-11",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.5,
+        "unit": "pp",
+        "from": "2025-11-10"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-30",
+          "value": 3.25
+        },
+        {
+          "period": "2024-12-31",
+          "value": 3.0
+        },
+        {
+          "period": "2025-01-31",
+          "value": 3.0
+        },
+        {
+          "period": "2025-02-28",
+          "value": 2.75
+        },
+        {
+          "period": "2025-03-31",
+          "value": 2.5
+        },
+        {
+          "period": "2025-04-30",
+          "value": 2.25
+        },
+        {
+          "period": "2025-05-31",
+          "value": 2.25
+        },
+        {
+          "period": "2025-06-30",
+          "value": 2.0
+        },
+        {
+          "period": "2025-07-31",
+          "value": 2.0
+        },
+        {
+          "period": "2025-08-31",
+          "value": 2.0
+        },
+        {
+          "period": "2025-09-30",
+          "value": 2.0
+        },
+        {
+          "period": "2025-10-31",
+          "value": 2.0
+        },
+        {
+          "period": "2025-11-30",
+          "value": 2.0
+        },
+        {
+          "period": "2025-12-31",
+          "value": 2.0
+        },
+        {
+          "period": "2026-01-31",
+          "value": 2.0
+        },
+        {
+          "period": "2026-02-28",
+          "value": 2.0
+        },
+        {
+          "period": "2026-03-31",
+          "value": 2.0
+        },
+        {
+          "period": "2026-04-30",
+          "value": 2.0
+        },
+        {
+          "period": "2026-05-31",
+          "value": 2.0
+        },
+        {
+          "period": "2026-06-30",
+          "value": 2.25
+        },
+        {
+          "period": "2026-07-31",
+          "value": 2.25
+        },
+        {
+          "period": "2026-08-31",
+          "value": 2.25
+        },
+        {
+          "period": "2026-09-30",
+          "value": 2.5
+        },
+        {
+          "period": "2026-10-31",
+          "value": 2.5
+        },
+        {
+          "period": "2026-11-10",
+          "value": 2.5
+        }
+      ],
+      "credit": "Source: ECB Data Portal, FM.D.U2.EUR.4F.KR.DFR.LEV, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "estr",
+      "group": "Policy rates",
+      "label": "€STR",
+      "kind": "rate",
+      "title": "Euro short-term rate",
+      "unit": "PC",
+      "frequency": "B",
+      "latest": {
+        "period": "2026-11-06",
+        "value": 2.443
+      },
+      "change_short": {
+        "value": 0.0040000000000000036,
+        "unit": "pp",
+        "from": "2026-10-07",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.5130000000000001,
+        "unit": "pp",
+        "from": "2025-11-06"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 3.163
+        },
+        {
+          "period": "2024-12-31",
+          "value": 2.905
+        },
+        {
+          "period": "2025-01-31",
+          "value": 2.912
+        },
+        {
+          "period": "2025-02-28",
+          "value": 2.658
+        },
+        {
+          "period": "2025-03-31",
+          "value": 2.415
+        },
+        {
+          "period": "2025-04-30",
+          "value": 2.156
+        },
+        {
+          "period": "2025-05-30",
+          "value": 2.161
+        },
+        {
+          "period": "2025-06-30",
+          "value": 1.921
+        },
+        {
+          "period": "2025-07-31",
+          "value": 1.919
+        },
+        {
+          "period": "2025-08-29",
+          "value": 1.92
+        },
+        {
+          "period": "2025-09-30",
+          "value": 1.916
+        },
+        {
+          "period": "2025-10-31",
+          "value": 1.921
+        },
+        {
+          "period": "2025-11-28",
+          "value": 1.925
+        },
+        {
+          "period": "2025-12-31",
+          "value": 1.921
+        },
+        {
+          "period": "2026-01-30",
+          "value": 1.926
+        },
+        {
+          "period": "2026-02-27",
+          "value": 1.93
+        },
+        {
+          "period": "2026-03-31",
+          "value": 1.929
+        },
+        {
+          "period": "2026-04-30",
+          "value": 1.93
+        },
+        {
+          "period": "2026-05-29",
+          "value": 1.93
+        },
+        {
+          "period": "2026-06-30",
+          "value": 2.182
+        },
+        {
+          "period": "2026-07-31",
+          "value": 2.184
+        },
+        {
+          "period": "2026-08-31",
+          "value": 2.185
+        },
+        {
+          "period": "2026-09-30",
+          "value": 2.437
+        },
+        {
+          "period": "2026-10-30",
+          "value": 2.44
+        },
+        {
+          "period": "2026-11-06",
+          "value": 2.443
+        }
+      ],
+      "credit": "Source: ECB Data Portal, EST.B.EU000A2X2A25.WT, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "us_effr",
+      "group": "Policy rates",
+      "label": "Fed funds (EFFR)",
+      "kind": "rate",
+      "title": "Effective federal funds rate",
+      "unit": "PC",
+      "frequency": "B",
+      "latest": {
+        "period": "2026-11-06",
+        "value": 3.88
+      },
+      "change_short": {
+        "value": 0.0,
+        "unit": "pp",
+        "from": "2026-10-07",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.009999999999999787,
+        "unit": "pp",
+        "from": "2025-11-06"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 4.58
+        },
+        {
+          "period": "2024-12-31",
+          "value": 4.33
+        },
+        {
+          "period": "2025-01-31",
+          "value": 4.33
+        },
+        {
+          "period": "2025-02-28",
+          "value": 4.33
+        },
+        {
+          "period": "2025-03-31",
+          "value": 4.33
+        },
+        {
+          "period": "2025-04-30",
+          "value": 4.33
+        },
+        {
+          "period": "2025-05-30",
+          "value": 4.33
+        },
+        {
+          "period": "2025-06-30",
+          "value": 4.33
+        },
+        {
+          "period": "2025-07-31",
+          "value": 4.33
+        },
+        {
+          "period": "2025-08-29",
+          "value": 4.33
+        },
+        {
+          "period": "2025-09-30",
+          "value": 4.09
+        },
+        {
+          "period": "2025-10-31",
+          "value": 3.86
+        },
+        {
+          "period": "2025-11-28",
+          "value": 3.89
+        },
+        {
+          "period": "2025-12-31",
+          "value": 3.64
+        },
+        {
+          "period": "2026-01-30",
+          "value": 3.64
+        },
+        {
+          "period": "2026-02-27",
+          "value": 3.64
+        },
+        {
+          "period": "2026-03-31",
+          "value": 3.64
+        },
+        {
+          "period": "2026-04-30",
+          "value": 3.64
+        },
+        {
+          "period": "2026-05-29",
+          "value": 3.62
+        },
+        {
+          "period": "2026-06-30",
+          "value": 3.63
+        },
+        {
+          "period": "2026-07-31",
+          "value": 3.63
+        },
+        {
+          "period": "2026-08-31",
+          "value": 3.63
+        },
+        {
+          "period": "2026-09-30",
+          "value": 3.88
+        },
+        {
+          "period": "2026-10-30",
+          "value": 3.88
+        },
+        {
+          "period": "2026-11-06",
+          "value": 3.88
+        }
+      ],
+      "credit": "Source: Federal Reserve Bank of New York, EFFR, accessed 2026-11-10. The EFFR is subject to the Terms of Use posted at newyorkfed.org. The New York Fed is not responsible for publication of the EFFR by Asadbek Abdurashidov (aabdurashidov.ch), does not sanction or endorse any particular republication, and has no liability for your use.",
+      "source": "nyfed"
+    },
+    {
+      "id": "us_sofr",
+      "group": "Policy rates",
+      "label": "SOFR",
+      "kind": "rate",
+      "title": "Secured Overnight Financing Rate",
+      "unit": "PC",
+      "frequency": "B",
+      "latest": {
+        "period": "2026-11-06",
+        "value": 3.89
+      },
+      "change_short": {
+        "value": 0.010000000000000231,
+        "unit": "pp",
+        "from": "2026-10-07",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": -0.029999999999999805,
+        "unit": "pp",
+        "from": "2025-11-06"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 4.59
+        },
+        {
+          "period": "2024-12-31",
+          "value": 4.49
+        },
+        {
+          "period": "2025-01-31",
+          "value": 4.38
+        },
+        {
+          "period": "2025-02-28",
+          "value": 4.39
+        },
+        {
+          "period": "2025-03-31",
+          "value": 4.41
+        },
+        {
+          "period": "2025-04-30",
+          "value": 4.41
+        },
+        {
+          "period": "2025-05-30",
+          "value": 4.35
+        },
+        {
+          "period": "2025-06-30",
+          "value": 4.45
+        },
+        {
+          "period": "2025-07-31",
+          "value": 4.39
+        },
+        {
+          "period": "2025-08-29",
+          "value": 4.34
+        },
+        {
+          "period": "2025-09-30",
+          "value": 4.24
+        },
+        {
+          "period": "2025-10-31",
+          "value": 4.22
+        },
+        {
+          "period": "2025-11-28",
+          "value": 4.12
+        },
+        {
+          "period": "2025-12-31",
+          "value": 3.87
+        },
+        {
+          "period": "2026-01-30",
+          "value": 3.68
+        },
+        {
+          "period": "2026-02-27",
+          "value": 3.68
+        },
+        {
+          "period": "2026-03-31",
+          "value": 3.68
+        },
+        {
+          "period": "2026-04-30",
+          "value": 3.66
+        },
+        {
+          "period": "2026-05-29",
+          "value": 3.63
+        },
+        {
+          "period": "2026-06-30",
+          "value": 3.68
+        },
+        {
+          "period": "2026-07-31",
+          "value": 3.66
+        },
+        {
+          "period": "2026-08-31",
+          "value": 3.68
+        },
+        {
+          "period": "2026-09-30",
+          "value": 3.9
+        },
+        {
+          "period": "2026-10-30",
+          "value": 3.95
+        },
+        {
+          "period": "2026-11-06",
+          "value": 3.89
+        }
+      ],
+      "credit": "Source: Federal Reserve Bank of New York, SOFR, accessed 2026-11-10. The SOFR is subject to the Terms of Use posted at newyorkfed.org. The New York Fed is not responsible for publication of the SOFR by Asadbek Abdurashidov (aabdurashidov.ch), does not sanction or endorse any particular republication, and has no liability for your use. The SOFR Data are calculated using data provided under a license granted to the New York Fed by DTCC Solutions LLC (Solutions), an affiliate of The Depository Trust & Clearing Corporation. Solutions, its affiliates, and third parties from which they obtained data have no liability for the content of this material.",
+      "source": "nyfed"
+    },
+    {
+      "id": "ch_snb_policy_rate",
+      "group": "Policy rates",
+      "label": "SNB policy rate",
+      "kind": "rate",
+      "title": "SNB policy rate",
+      "unit": "PC",
+      "frequency": "D",
+      "latest": {
+        "period": "2026-11-06",
+        "value": 0.0
+      },
+      "change_short": {
+        "value": 0.0,
+        "unit": "pp",
+        "from": "2026-10-07",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.0,
+        "unit": "pp",
+        "from": "2025-11-06"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 1.0
+        },
+        {
+          "period": "2024-12-31",
+          "value": 0.5
+        },
+        {
+          "period": "2025-01-31",
+          "value": 0.5
+        },
+        {
+          "period": "2025-02-28",
+          "value": 0.5
+        },
+        {
+          "period": "2025-03-31",
+          "value": 0.25
+        },
+        {
+          "period": "2025-04-30",
+          "value": 0.25
+        },
+        {
+          "period": "2025-05-30",
+          "value": 0.25
+        },
+        {
+          "period": "2025-06-30",
+          "value": 0.0
+        },
+        {
+          "period": "2025-07-31",
+          "value": 0.0
+        },
+        {
+          "period": "2025-08-29",
+          "value": 0.0
+        },
+        {
+          "period": "2025-09-30",
+          "value": 0.0
+        },
+        {
+          "period": "2025-10-31",
+          "value": 0.0
+        },
+        {
+          "period": "2025-11-28",
+          "value": 0.0
+        },
+        {
+          "period": "2025-12-31",
+          "value": 0.0
+        },
+        {
+          "period": "2026-01-30",
+          "value": 0.0
+        },
+        {
+          "period": "2026-02-27",
+          "value": 0.0
+        },
+        {
+          "period": "2026-03-31",
+          "value": 0.0
+        },
+        {
+          "period": "2026-04-30",
+          "value": 0.0
+        },
+        {
+          "period": "2026-05-29",
+          "value": 0.0
+        },
+        {
+          "period": "2026-06-30",
+          "value": 0.0
+        },
+        {
+          "period": "2026-07-31",
+          "value": 0.0
+        },
+        {
+          "period": "2026-08-31",
+          "value": 0.0
+        },
+        {
+          "period": "2026-09-30",
+          "value": 0.0
+        },
+        {
+          "period": "2026-10-30",
+          "value": 0.0
+        },
+        {
+          "period": "2026-11-06",
+          "value": 0.0
+        }
+      ],
+      "credit": "Source: Swiss National Bank (SNB), data portal cube snbgwdzid (LZ), accessed 2026-11-10",
+      "source": "snb"
+    },
+    {
+      "id": "ea_aaa_yield_2y",
+      "group": "Yield curves",
+      "label": "Euro area AAA 2-year",
+      "kind": "rate",
+      "title": "AAA yield curve - 2-year spot rate",
+      "unit": "PCPA",
+      "frequency": "B",
+      "latest": {
+        "period": "2026-11-06",
+        "value": 2.930495511
+      },
+      "change_short": {
+        "value": -0.06596107109999982,
+        "unit": "pp",
+        "from": "2026-10-07",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.9670707365000002,
+        "unit": "pp",
+        "from": "2025-11-06"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 1.9120084184
+        },
+        {
+          "period": "2024-12-30",
+          "value": 2.0111511629
+        },
+        {
+          "period": "2025-01-31",
+          "value": 2.0552152666
+        },
+        {
+          "period": "2025-02-28",
+          "value": 1.974536006
+        },
+        {
+          "period": "2025-03-31",
+          "value": 1.9946853961
+        },
+        {
+          "period": "2025-04-30",
+          "value": 1.6995058817
+        },
+        {
+          "period": "2025-05-30",
+          "value": 1.780577865
+        },
+        {
+          "period": "2025-06-30",
+          "value": 1.8448999837
+        },
+        {
+          "period": "2025-07-31",
+          "value": 1.9362248244
+        },
+        {
+          "period": "2025-08-29",
+          "value": 1.9213686405
+        },
+        {
+          "period": "2025-09-30",
+          "value": 1.9908238068
+        },
+        {
+          "period": "2025-10-31",
+          "value": 1.9496455975
+        },
+        {
+          "period": "2025-11-28",
+          "value": 2.0086159249
+        },
+        {
+          "period": "2025-12-31",
+          "value": 2.108454926
+        },
+        {
+          "period": "2026-01-30",
+          "value": 2.0495671759
+        },
+        {
+          "period": "2026-02-27",
+          "value": 1.9805043076
+        },
+        {
+          "period": "2026-03-31",
+          "value": 2.5889838861
+        },
+        {
+          "period": "2026-04-30",
+          "value": 2.6058943243
+        },
+        {
+          "period": "2026-05-29",
+          "value": 2.5006714674
+        },
+        {
+          "period": "2026-06-30",
+          "value": 2.4760833371
+        },
+        {
+          "period": "2026-07-31",
+          "value": 2.7607858384
+        },
+        {
+          "period": "2026-08-31",
+          "value": 2.8560179314
+        },
+        {
+          "period": "2026-09-30",
+          "value": 3.1591707336
+        },
+        {
+          "period": "2026-10-30",
+          "value": 3.0051075689
+        },
+        {
+          "period": "2026-11-06",
+          "value": 2.930495511
+        }
+      ],
+      "credit": "Source: ECB Data Portal, YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_2Y, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "ea_aaa_yield_10y",
+      "group": "Yield curves",
+      "label": "Euro area AAA 10-year",
+      "kind": "rate",
+      "title": "AAA yield curve - 10-year spot rate",
+      "unit": "PCPA",
+      "frequency": "B",
+      "latest": {
+        "period": "2026-11-06",
+        "value": 3.2855888131
+      },
+      "change_short": {
+        "value": -0.25276240559999996,
+        "unit": "pp",
+        "from": "2026-10-07",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.5522485933999999,
+        "unit": "pp",
+        "from": "2025-11-06"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 2.1852246483
+        },
+        {
+          "period": "2024-12-30",
+          "value": 2.4473038368
+        },
+        {
+          "period": "2025-01-31",
+          "value": 2.5304298486
+        },
+        {
+          "period": "2025-02-28",
+          "value": 2.4692621079
+        },
+        {
+          "period": "2025-03-31",
+          "value": 2.7817290051
+        },
+        {
+          "period": "2025-04-30",
+          "value": 2.5575500372
+        },
+        {
+          "period": "2025-05-30",
+          "value": 2.6100622245
+        },
+        {
+          "period": "2025-06-30",
+          "value": 2.6791846244
+        },
+        {
+          "period": "2025-07-31",
+          "value": 2.7630604692
+        },
+        {
+          "period": "2025-08-29",
+          "value": 2.7854844577
+        },
+        {
+          "period": "2025-09-30",
+          "value": 2.7786738794
+        },
+        {
+          "period": "2025-10-31",
+          "value": 2.721602685
+        },
+        {
+          "period": "2025-11-28",
+          "value": 2.7737857403
+        },
+        {
+          "period": "2025-12-31",
+          "value": 2.9480486243
+        },
+        {
+          "period": "2026-01-30",
+          "value": 2.9033834533
+        },
+        {
+          "period": "2026-02-27",
+          "value": 2.7266574195
+        },
+        {
+          "period": "2026-03-31",
+          "value": 3.0729993471
+        },
+        {
+          "period": "2026-04-30",
+          "value": 3.0939583349
+        },
+        {
+          "period": "2026-05-29",
+          "value": 3.016587454
+        },
+        {
+          "period": "2026-06-30",
+          "value": 2.9244927445
+        },
+        {
+          "period": "2026-07-31",
+          "value": 3.2273140986
+        },
+        {
+          "period": "2026-08-31",
+          "value": 3.3395935506
+        },
+        {
+          "period": "2026-09-30",
+          "value": 3.5816574153
+        },
+        {
+          "period": "2026-10-30",
+          "value": 3.3650469366
+        },
+        {
+          "period": "2026-11-06",
+          "value": 3.2855888131
+        }
+      ],
+      "credit": "Source: ECB Data Portal, YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "us_treasury_3m",
+      "group": "Yield curves",
+      "label": "US Treasury 3-month",
+      "kind": "rate",
+      "title": "U.S. Treasury three-month par yield",
+      "unit": "PC",
+      "frequency": "B",
+      "latest": {
+        "period": "2026-11-09",
+        "value": 4.24
+      },
+      "change_short": {
+        "value": -0.009999999999999787,
+        "unit": "pp",
+        "from": "2026-10-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.3200000000000003,
+        "unit": "pp",
+        "from": "2025-11-07"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 4.58
+        },
+        {
+          "period": "2024-12-31",
+          "value": 4.37
+        },
+        {
+          "period": "2025-01-31",
+          "value": 4.31
+        },
+        {
+          "period": "2025-02-28",
+          "value": 4.32
+        },
+        {
+          "period": "2025-03-31",
+          "value": 4.32
+        },
+        {
+          "period": "2025-04-30",
+          "value": 4.31
+        },
+        {
+          "period": "2025-05-30",
+          "value": 4.36
+        },
+        {
+          "period": "2025-06-30",
+          "value": 4.41
+        },
+        {
+          "period": "2025-07-31",
+          "value": 4.41
+        },
+        {
+          "period": "2025-08-29",
+          "value": 4.23
+        },
+        {
+          "period": "2025-09-30",
+          "value": 4.02
+        },
+        {
+          "period": "2025-10-31",
+          "value": 3.89
+        },
+        {
+          "period": "2025-11-28",
+          "value": 3.88
+        },
+        {
+          "period": "2025-12-31",
+          "value": 3.67
+        },
+        {
+          "period": "2026-01-30",
+          "value": 3.67
+        },
+        {
+          "period": "2026-02-27",
+          "value": 3.67
+        },
+        {
+          "period": "2026-03-31",
+          "value": 3.7
+        },
+        {
+          "period": "2026-04-30",
+          "value": 3.68
+        },
+        {
+          "period": "2026-05-29",
+          "value": 3.69
+        },
+        {
+          "period": "2026-06-30",
+          "value": 3.87
+        },
+        {
+          "period": "2026-07-31",
+          "value": 3.83
+        },
+        {
+          "period": "2026-08-31",
+          "value": 3.91
+        },
+        {
+          "period": "2026-09-30",
+          "value": 4.2
+        },
+        {
+          "period": "2026-10-30",
+          "value": 4.16
+        },
+        {
+          "period": "2026-11-09",
+          "value": 4.24
+        }
+      ],
+      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (3 Mo), accessed 2026-11-10",
+      "source": "ust"
+    },
+    {
+      "id": "us_treasury_2y",
+      "group": "Yield curves",
+      "label": "US Treasury 2-year",
+      "kind": "rate",
+      "title": "U.S. Treasury two-year par yield",
+      "unit": "PC",
+      "frequency": "B",
+      "latest": {
+        "period": "2026-11-09",
+        "value": 4.56
+      },
+      "change_short": {
+        "value": -0.2400000000000002,
+        "unit": "pp",
+        "from": "2026-10-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 1.0099999999999998,
+        "unit": "pp",
+        "from": "2025-11-07"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 4.13
+        },
+        {
+          "period": "2024-12-31",
+          "value": 4.25
+        },
+        {
+          "period": "2025-01-31",
+          "value": 4.22
+        },
+        {
+          "period": "2025-02-28",
+          "value": 3.99
+        },
+        {
+          "period": "2025-03-31",
+          "value": 3.89
+        },
+        {
+          "period": "2025-04-30",
+          "value": 3.6
+        },
+        {
+          "period": "2025-05-30",
+          "value": 3.89
+        },
+        {
+          "period": "2025-06-30",
+          "value": 3.72
+        },
+        {
+          "period": "2025-07-31",
+          "value": 3.94
+        },
+        {
+          "period": "2025-08-29",
+          "value": 3.59
+        },
+        {
+          "period": "2025-09-30",
+          "value": 3.6
+        },
+        {
+          "period": "2025-10-31",
+          "value": 3.6
+        },
+        {
+          "period": "2025-11-28",
+          "value": 3.47
+        },
+        {
+          "period": "2025-12-31",
+          "value": 3.47
+        },
+        {
+          "period": "2026-01-30",
+          "value": 3.52
+        },
+        {
+          "period": "2026-02-27",
+          "value": 3.38
+        },
+        {
+          "period": "2026-03-31",
+          "value": 3.79
+        },
+        {
+          "period": "2026-04-30",
+          "value": 3.88
+        },
+        {
+          "period": "2026-05-29",
+          "value": 3.98
+        },
+        {
+          "period": "2026-06-30",
+          "value": 4.14
+        },
+        {
+          "period": "2026-07-31",
+          "value": 4.28
+        },
+        {
+          "period": "2026-08-31",
+          "value": 4.34
+        },
+        {
+          "period": "2026-09-30",
+          "value": 4.88
+        },
+        {
+          "period": "2026-10-30",
+          "value": 4.56
+        },
+        {
+          "period": "2026-11-09",
+          "value": 4.56
+        }
+      ],
+      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (2 Yr), accessed 2026-11-10",
+      "source": "ust"
+    },
+    {
+      "id": "us_treasury_10y",
+      "group": "Yield curves",
+      "label": "US Treasury 10-year",
+      "kind": "rate",
+      "title": "U.S. Treasury ten-year par yield",
+      "unit": "PC",
+      "frequency": "B",
+      "latest": {
+        "period": "2026-11-09",
+        "value": 4.88
+      },
+      "change_short": {
+        "value": -0.3600000000000003,
+        "unit": "pp",
+        "from": "2026-10-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.7699999999999996,
+        "unit": "pp",
+        "from": "2025-11-07"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 4.18
+        },
+        {
+          "period": "2024-12-31",
+          "value": 4.58
+        },
+        {
+          "period": "2025-01-31",
+          "value": 4.58
+        },
+        {
+          "period": "2025-02-28",
+          "value": 4.24
+        },
+        {
+          "period": "2025-03-31",
+          "value": 4.23
+        },
+        {
+          "period": "2025-04-30",
+          "value": 4.17
+        },
+        {
+          "period": "2025-05-30",
+          "value": 4.41
+        },
+        {
+          "period": "2025-06-30",
+          "value": 4.24
+        },
+        {
+          "period": "2025-07-31",
+          "value": 4.37
+        },
+        {
+          "period": "2025-08-29",
+          "value": 4.23
+        },
+        {
+          "period": "2025-09-30",
+          "value": 4.16
+        },
+        {
+          "period": "2025-10-31",
+          "value": 4.11
+        },
+        {
+          "period": "2025-11-28",
+          "value": 4.02
+        },
+        {
+          "period": "2025-12-31",
+          "value": 4.18
+        },
+        {
+          "period": "2026-01-30",
+          "value": 4.26
+        },
+        {
+          "period": "2026-02-27",
+          "value": 3.97
+        },
+        {
+          "period": "2026-03-31",
+          "value": 4.3
+        },
+        {
+          "period": "2026-04-30",
+          "value": 4.4
+        },
+        {
+          "period": "2026-05-29",
+          "value": 4.45
+        },
+        {
+          "period": "2026-06-30",
+          "value": 4.44
+        },
+        {
+          "period": "2026-07-31",
+          "value": 4.75
+        },
+        {
+          "period": "2026-08-31",
+          "value": 4.75
+        },
+        {
+          "period": "2026-09-30",
+          "value": 5.29
+        },
+        {
+          "period": "2026-10-30",
+          "value": 4.94
+        },
+        {
+          "period": "2026-11-09",
+          "value": 4.88
+        }
+      ],
+      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (10 Yr), accessed 2026-11-10",
+      "source": "ust"
+    },
+    {
+      "id": "de_10y",
+      "group": "Yield curves",
+      "label": "Germany 10-year",
+      "kind": "rate",
+      "title": "Long-term interest rate for convergence purposes - Euro",
+      "unit": "PC",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-09",
+        "value": 3.473
+      },
+      "change_short": {
+        "value": 0.2879999999999998,
+        "unit": "pp",
+        "from": "2026-08",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.7799999999999998,
+        "unit": "pp",
+        "from": "2025-09"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-09",
+          "value": 2.166
+        },
+        {
+          "period": "2024-10",
+          "value": 2.228
+        },
+        {
+          "period": "2024-11",
+          "value": 2.305
+        },
+        {
+          "period": "2024-12",
+          "value": 2.178
+        },
+        {
+          "period": "2025-01",
+          "value": 2.484
+        },
+        {
+          "period": "2025-02",
+          "value": 2.405
+        },
+        {
+          "period": "2025-03",
+          "value": 2.741
+        },
+        {
+          "period": "2025-04",
+          "value": 2.511
+        },
+        {
+          "period": "2025-05",
+          "value": 2.562
+        },
+        {
+          "period": "2025-06",
+          "value": 2.52
+        },
+        {
+          "period": "2025-07",
+          "value": 2.631
+        },
+        {
+          "period": "2025-08",
+          "value": 2.674
+        },
+        {
+          "period": "2025-09",
+          "value": 2.693
+        },
+        {
+          "period": "2025-10",
+          "value": 2.617
+        },
+        {
+          "period": "2025-11",
+          "value": 2.657
+        },
+        {
+          "period": "2025-12",
+          "value": 2.813
+        },
+        {
+          "period": "2026-01",
+          "value": 2.807
+        },
+        {
+          "period": "2026-02",
+          "value": 2.744
+        },
+        {
+          "period": "2026-03",
+          "value": 2.91
+        },
+        {
+          "period": "2026-04",
+          "value": 3.0
+        },
+        {
+          "period": "2026-05",
+          "value": 3.045
+        },
+        {
+          "period": "2026-06",
+          "value": 2.964
+        },
+        {
+          "period": "2026-07",
+          "value": 3.07
+        },
+        {
+          "period": "2026-08",
+          "value": 3.185
+        },
+        {
+          "period": "2026-09",
+          "value": 3.473
+        }
+      ],
+      "credit": "Source: ECB Data Portal, IRS.M.DE.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "fr_10y",
+      "group": "Yield curves",
+      "label": "France 10-year",
+      "kind": "rate",
+      "title": "Long-term interest rate for convergence purposes - Euro",
+      "unit": "PC",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-09",
+        "value": 4.44
+      },
+      "change_short": {
+        "value": 0.4400000000000004,
+        "unit": "pp",
+        "from": "2026-08",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.9300000000000006,
+        "unit": "pp",
+        "from": "2025-09"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-09",
+          "value": 2.9
+        },
+        {
+          "period": "2024-10",
+          "value": 2.99
+        },
+        {
+          "period": "2024-11",
+          "value": 3.09
+        },
+        {
+          "period": "2024-12",
+          "value": 3.01
+        },
+        {
+          "period": "2025-01",
+          "value": 3.32
+        },
+        {
+          "period": "2025-02",
+          "value": 3.15
+        },
+        {
+          "period": "2025-03",
+          "value": 3.43
+        },
+        {
+          "period": "2025-04",
+          "value": 3.26
+        },
+        {
+          "period": "2025-05",
+          "value": 3.26
+        },
+        {
+          "period": "2025-06",
+          "value": 3.24
+        },
+        {
+          "period": "2025-07",
+          "value": 3.36
+        },
+        {
+          "period": "2025-08",
+          "value": 3.42
+        },
+        {
+          "period": "2025-09",
+          "value": 3.51
+        },
+        {
+          "period": "2025-10",
+          "value": 3.44
+        },
+        {
+          "period": "2025-11",
+          "value": 3.44
+        },
+        {
+          "period": "2025-12",
+          "value": 3.56
+        },
+        {
+          "period": "2026-01",
+          "value": 3.53
+        },
+        {
+          "period": "2026-02",
+          "value": 3.4
+        },
+        {
+          "period": "2026-03",
+          "value": 3.64
+        },
+        {
+          "period": "2026-04",
+          "value": 3.73
+        },
+        {
+          "period": "2026-05",
+          "value": 3.74
+        },
+        {
+          "period": "2026-06",
+          "value": 3.68
+        },
+        {
+          "period": "2026-07",
+          "value": 3.85
+        },
+        {
+          "period": "2026-08",
+          "value": 4.0
+        },
+        {
+          "period": "2026-09",
+          "value": 4.44
+        }
+      ],
+      "credit": "Source: ECB Data Portal, IRS.M.FR.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "it_10y",
+      "group": "Yield curves",
+      "label": "Italy 10-year",
+      "kind": "rate",
+      "title": "Long-term interest rate for convergence purposes - Euro",
+      "unit": "PC",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-09",
+        "value": 4.362
+      },
+      "change_short": {
+        "value": 0.3759999999999999,
+        "unit": "pp",
+        "from": "2026-08",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.8029999999999999,
+        "unit": "pp",
+        "from": "2025-09"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-09",
+          "value": 3.565
+        },
+        {
+          "period": "2024-10",
+          "value": 3.501
+        },
+        {
+          "period": "2024-11",
+          "value": 3.569
+        },
+        {
+          "period": "2024-12",
+          "value": 3.321
+        },
+        {
+          "period": "2025-01",
+          "value": 3.676
+        },
+        {
+          "period": "2025-02",
+          "value": 3.575
+        },
+        {
+          "period": "2025-03",
+          "value": 3.887
+        },
+        {
+          "period": "2025-04",
+          "value": 3.712
+        },
+        {
+          "period": "2025-05",
+          "value": 3.629
+        },
+        {
+          "period": "2025-06",
+          "value": 3.501
+        },
+        {
+          "period": "2025-07",
+          "value": 3.537
+        },
+        {
+          "period": "2025-08",
+          "value": 3.538
+        },
+        {
+          "period": "2025-09",
+          "value": 3.559
+        },
+        {
+          "period": "2025-10",
+          "value": 3.442
+        },
+        {
+          "period": "2025-11",
+          "value": 3.459
+        },
+        {
+          "period": "2025-12",
+          "value": 3.552
+        },
+        {
+          "period": "2026-01",
+          "value": 3.492
+        },
+        {
+          "period": "2026-02",
+          "value": 3.388
+        },
+        {
+          "period": "2026-03",
+          "value": 3.733
+        },
+        {
+          "period": "2026-04",
+          "value": 3.818
+        },
+        {
+          "period": "2026-05",
+          "value": 3.839
+        },
+        {
+          "period": "2026-06",
+          "value": 3.734
+        },
+        {
+          "period": "2026-07",
+          "value": 3.881
+        },
+        {
+          "period": "2026-08",
+          "value": 3.986
+        },
+        {
+          "period": "2026-09",
+          "value": 4.362
+        }
+      ],
+      "credit": "Source: ECB Data Portal, IRS.M.IT.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "es_10y",
+      "group": "Yield curves",
+      "label": "Spain 10-year",
+      "kind": "rate",
+      "title": "Long-term interest rate for convergence purposes - Euro",
+      "unit": "PC",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-09",
+        "value": 3.927
+      },
+      "change_short": {
+        "value": 0.29200000000000026,
+        "unit": "pp",
+        "from": "2026-08",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.665,
+        "unit": "pp",
+        "from": "2025-09"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-09",
+          "value": 2.986
+        },
+        {
+          "period": "2024-10",
+          "value": 2.963
+        },
+        {
+          "period": "2024-11",
+          "value": 3.053
+        },
+        {
+          "period": "2024-12",
+          "value": 2.886
+        },
+        {
+          "period": "2025-01",
+          "value": 3.173
+        },
+        {
+          "period": "2025-02",
+          "value": 3.1
+        },
+        {
+          "period": "2025-03",
+          "value": 3.391
+        },
+        {
+          "period": "2025-04",
+          "value": 3.229
+        },
+        {
+          "period": "2025-05",
+          "value": 3.204
+        },
+        {
+          "period": "2025-06",
+          "value": 3.164
+        },
+        {
+          "period": "2025-07",
+          "value": 3.241
+        },
+        {
+          "period": "2025-08",
+          "value": 3.256
+        },
+        {
+          "period": "2025-09",
+          "value": 3.262
+        },
+        {
+          "period": "2025-10",
+          "value": 3.147
+        },
+        {
+          "period": "2025-11",
+          "value": 3.173
+        },
+        {
+          "period": "2025-12",
+          "value": 3.271
+        },
+        {
+          "period": "2026-01",
+          "value": 3.268
+        },
+        {
+          "period": "2026-02",
+          "value": 3.174
+        },
+        {
+          "period": "2026-03",
+          "value": 3.385
+        },
+        {
+          "period": "2026-04",
+          "value": 3.448
+        },
+        {
+          "period": "2026-05",
+          "value": 3.488
+        },
+        {
+          "period": "2026-06",
+          "value": 3.413
+        },
+        {
+          "period": "2026-07",
+          "value": 3.534
+        },
+        {
+          "period": "2026-08",
+          "value": 3.635
+        },
+        {
+          "period": "2026-09",
+          "value": 3.927
+        }
+      ],
+      "credit": "Source: ECB Data Portal, IRS.M.ES.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "ea_nfc_borrowing_cost",
+      "group": "Credit conditions",
+      "label": "Euro-area company borrowing cost",
+      "kind": "rate",
+      "title": "Cost of borrowing for corporations",
+      "unit": "PCPA",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-09",
+        "value": 3.9
+      },
+      "change_short": {
+        "value": 0.1299999999999999,
+        "unit": "pp",
+        "from": "2026-08",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.3999999999999999,
+        "unit": "pp",
+        "from": "2025-09"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-09",
+          "value": 4.8
+        },
+        {
+          "period": "2024-10",
+          "value": 4.67
+        },
+        {
+          "period": "2024-11",
+          "value": 4.52
+        },
+        {
+          "period": "2024-12",
+          "value": 4.36
+        },
+        {
+          "period": "2025-01",
+          "value": 4.25
+        },
+        {
+          "period": "2025-02",
+          "value": 4.11
+        },
+        {
+          "period": "2025-03",
+          "value": 3.94
+        },
+        {
+          "period": "2025-04",
+          "value": 3.8
+        },
+        {
+          "period": "2025-05",
+          "value": 3.66
+        },
+        {
+          "period": "2025-06",
+          "value": 3.61
+        },
+        {
+          "period": "2025-07",
+          "value": 3.52
+        },
+        {
+          "period": "2025-08",
+          "value": 3.46
+        },
+        {
+          "period": "2025-09",
+          "value": 3.5
+        },
+        {
+          "period": "2025-10",
+          "value": 3.51
+        },
+        {
+          "period": "2025-11",
+          "value": 3.5
+        },
+        {
+          "period": "2025-12",
+          "value": 3.57
+        },
+        {
+          "period": "2026-01",
+          "value": 3.57
+        },
+        {
+          "period": "2026-02",
+          "value": 3.51
+        },
+        {
+          "period": "2026-03",
+          "value": 3.58
+        },
+        {
+          "period": "2026-04",
+          "value": 3.62
+        },
+        {
+          "period": "2026-05",
+          "value": 3.63
+        },
+        {
+          "period": "2026-06",
+          "value": 3.79
+        },
+        {
+          "period": "2026-07",
+          "value": 3.8
+        },
+        {
+          "period": "2026-08",
+          "value": 3.77
+        },
+        {
+          "period": "2026-09",
+          "value": 3.9
+        }
+      ],
+      "credit": "Source: ECB Data Portal, MIR.M.U2.B.A2I.AM.R.A.2240.EUR.N, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "ea_bls_credit_standards_ent",
+      "group": "Credit conditions",
+      "label": "Bank credit standards (net % tightening)",
+      "kind": "rate",
+      "title": "Credit standards-Overall-Enterprise",
+      "unit": "PC",
+      "frequency": "Q",
+      "latest": {
+        "period": "2026-Q4",
+        "value": 8.55228309538633
+      },
+      "change_short": {
+        "value": 1.2573964336182124,
+        "unit": "pp",
+        "from": "2026-Q3",
+        "label": "vs previous quarter"
+      },
+      "change_1y": {
+        "value": 4.3706327631925905,
+        "unit": "pp",
+        "from": "2025-Q4"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-Q4",
+          "value": 0.1326635920790095
+        },
+        {
+          "period": "2025-Q1",
+          "value": 7.0497383992199385
+        },
+        {
+          "period": "2025-Q2",
+          "value": 2.9022939077480023
+        },
+        {
+          "period": "2025-Q3",
+          "value": -1.4184499749805128
+        },
+        {
+          "period": "2025-Q4",
+          "value": 4.181650332193739
+        },
+        {
+          "period": "2026-Q1",
+          "value": 6.594182567260878
+        },
+        {
+          "period": "2026-Q2",
+          "value": 10.093858121838787
+        },
+        {
+          "period": "2026-Q3",
+          "value": 7.294886661768117
+        },
+        {
+          "period": "2026-Q4",
+          "value": 8.55228309538633
+        }
+      ],
+      "credit": "Source: ECB Data Portal, BLS.Q.U2.ALL.O.E.Z.B3.ST.S.WFNET, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "ea_ciss",
+      "group": "Credit conditions",
+      "label": "Euro-area stress index (CISS)",
+      "kind": "stress",
+      "title": "NEW CISS - Composite Indicator of Systemic Stress.",
+      "unit": "PURE_NUMB",
+      "frequency": "D",
+      "latest": {
+        "period": "2026-11-06",
+        "value": 0.005469029059745524
+      },
+      "change_short": {
+        "value": -0.011222311091227254,
+        "unit": "index",
+        "from": "2026-10-07",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": -0.03411055141379059,
+        "unit": "index",
+        "from": "2025-11-06"
+      },
+      "financing_sign": "lower_is_easier",
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 0.05810232342329003
+        },
+        {
+          "period": "2024-12-31",
+          "value": 0.025587284544624715
+        },
+        {
+          "period": "2025-01-31",
+          "value": 0.01753059101046632
+        },
+        {
+          "period": "2025-02-28",
+          "value": 0.0029808423982163744
+        },
+        {
+          "period": "2025-03-31",
+          "value": 0.011968932710822569
+        },
+        {
+          "period": "2025-04-30",
+          "value": 0.1268582640518664
+        },
+        {
+          "period": "2025-05-30",
+          "value": 0.019553560182000683
+        },
+        {
+          "period": "2025-06-30",
+          "value": 0.023628201975001383
+        },
+        {
+          "period": "2025-07-31",
+          "value": 0.026622386127340768
+        },
+        {
+          "period": "2025-08-29",
+          "value": 0.012749351645274106
+        },
+        {
+          "period": "2025-09-30",
+          "value": 0.042563458484785065
+        },
+        {
+          "period": "2025-10-31",
+          "value": 0.03963790176207486
+        },
+        {
+          "period": "2025-11-28",
+          "value": 0.018670972457687465
+        },
+        {
+          "period": "2025-12-31",
+          "value": 0.02203821968660609
+        },
+        {
+          "period": "2026-01-30",
+          "value": 0.03386703099673802
+        },
+        {
+          "period": "2026-02-27",
+          "value": 0.011358384058584291
+        },
+        {
+          "period": "2026-03-31",
+          "value": 0.05534594863599613
+        },
+        {
+          "period": "2026-04-30",
+          "value": 0.003972027701654745
+        },
+        {
+          "period": "2026-05-29",
+          "value": 0.005712045167027976
+        },
+        {
+          "period": "2026-06-30",
+          "value": 0.009833126231662551
+        },
+        {
+          "period": "2026-07-31",
+          "value": 0.01291774079003026
+        },
+        {
+          "period": "2026-08-31",
+          "value": 0.020503594559205633
+        },
+        {
+          "period": "2026-09-30",
+          "value": 0.013269439799121124
+        },
+        {
+          "period": "2026-10-30",
+          "value": 0.011477353394565133
+        },
+        {
+          "period": "2026-11-06",
+          "value": 0.005469029059745524
+        }
+      ],
+      "credit": "Source: ECB Data Portal, CISS.D.U2.Z0Z.4F.EC.SS_CIN.IDX, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "ea_gdp_qoq",
+      "group": "Activity & prices",
+      "label": "Euro-area GDP growth (q/q)",
+      "kind": "pct",
+      "title": "Gross domestic product (GDP) and main components (output, expenditure and income) - quarterly data",
+      "unit": "CLV_PCH_PRE",
+      "frequency": "Q",
+      "latest": {
+        "period": "2026-Q3",
+        "value": 0.4
+      },
+      "change_short": {
+        "value": -0.19999999999999996,
+        "unit": "pp",
+        "from": "2026-Q2",
+        "label": "vs previous quarter"
+      },
+      "change_1y": {
+        "value": 0.10000000000000003,
+        "unit": "pp",
+        "from": "2025-Q3"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-Q3",
+          "value": 0.6
+        },
+        {
+          "period": "2024-Q4",
+          "value": 0.3
+        },
+        {
+          "period": "2025-Q1",
+          "value": 0.5
+        },
+        {
+          "period": "2025-Q2",
+          "value": 0.0
+        },
+        {
+          "period": "2025-Q3",
+          "value": 0.3
+        },
+        {
+          "period": "2025-Q4",
+          "value": 0.2
+        },
+        {
+          "period": "2026-Q1",
+          "value": 0.0
+        },
+        {
+          "period": "2026-Q2",
+          "value": 0.6
+        },
+        {
+          "period": "2026-Q3",
+          "value": 0.4
+        }
+      ],
+      "credit": "Source: Eurostat, namq_10_gdp, accessed 2026-11-10",
+      "source": "eurostat"
+    },
+    {
+      "id": "ea_hicp_yoy",
+      "group": "Activity & prices",
+      "label": "Euro-area inflation (HICP y/y)",
+      "kind": "pct",
+      "title": "Harmonised index of consumer prices (HICP) - ECOICOP ver.2 - indices and rates of change, monthly data",
+      "unit": "RCH_A",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-10",
+        "value": 4.0
+      },
+      "change_short": {
+        "value": 0.20000000000000018,
+        "unit": "pp",
+        "from": "2026-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 1.9,
+        "unit": "pp",
+        "from": "2025-10"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-10",
+          "value": 2.0
+        },
+        {
+          "period": "2024-11",
+          "value": 2.2
+        },
+        {
+          "period": "2024-12",
+          "value": 2.4
+        },
+        {
+          "period": "2025-01",
+          "value": 2.5
+        },
+        {
+          "period": "2025-02",
+          "value": 2.3
+        },
+        {
+          "period": "2025-03",
+          "value": 2.2
+        },
+        {
+          "period": "2025-04",
+          "value": 2.2
+        },
+        {
+          "period": "2025-05",
+          "value": 1.9
+        },
+        {
+          "period": "2025-06",
+          "value": 2.0
+        },
+        {
+          "period": "2025-07",
+          "value": 2.0
+        },
+        {
+          "period": "2025-08",
+          "value": 2.0
+        },
+        {
+          "period": "2025-09",
+          "value": 2.2
+        },
+        {
+          "period": "2025-10",
+          "value": 2.1
+        },
+        {
+          "period": "2025-11",
+          "value": 2.1
+        },
+        {
+          "period": "2025-12",
+          "value": 2.0
+        },
+        {
+          "period": "2026-01",
+          "value": 1.7
+        },
+        {
+          "period": "2026-02",
+          "value": 1.9
+        },
+        {
+          "period": "2026-03",
+          "value": 2.6
+        },
+        {
+          "period": "2026-04",
+          "value": 3.0
+        },
+        {
+          "period": "2026-05",
+          "value": 3.2
+        },
+        {
+          "period": "2026-06",
+          "value": 2.8
+        },
+        {
+          "period": "2026-07",
+          "value": 2.9
+        },
+        {
+          "period": "2026-08",
+          "value": 3.2
+        },
+        {
+          "period": "2026-09",
+          "value": 3.8
+        },
+        {
+          "period": "2026-10",
+          "value": 4.0
+        }
+      ],
+      "credit": "Source: Eurostat, prc_hicp_minr, accessed 2026-11-10",
+      "source": "eurostat"
+    },
+    {
+      "id": "ea_unemployment",
+      "group": "Activity & prices",
+      "label": "Euro-area unemployment",
+      "kind": "pct",
+      "title": "Unemployment by sex and age - monthly data",
+      "unit": "PC_ACT",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-09",
+        "value": 6.5
+      },
+      "change_short": {
+        "value": 0.0,
+        "unit": "pp",
+        "from": "2026-08",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.20000000000000018,
+        "unit": "pp",
+        "from": "2025-09"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-09",
+          "value": 6.3
+        },
+        {
+          "period": "2024-10",
+          "value": 6.2
+        },
+        {
+          "period": "2024-11",
+          "value": 6.2
+        },
+        {
+          "period": "2024-12",
+          "value": 6.2
+        },
+        {
+          "period": "2025-01",
+          "value": 6.3
+        },
+        {
+          "period": "2025-02",
+          "value": 6.3
+        },
+        {
+          "period": "2025-03",
+          "value": 6.3
+        },
+        {
+          "period": "2025-04",
+          "value": 6.3
+        },
+        {
+          "period": "2025-05",
+          "value": 6.3
+        },
+        {
+          "period": "2025-06",
+          "value": 6.3
+        },
+        {
+          "period": "2025-07",
+          "value": 6.3
+        },
+        {
+          "period": "2025-08",
+          "value": 6.3
+        },
+        {
+          "period": "2025-09",
+          "value": 6.3
+        },
+        {
+          "period": "2025-10",
+          "value": 6.3
+        },
+        {
+          "period": "2025-11",
+          "value": 6.3
+        },
+        {
+          "period": "2025-12",
+          "value": 6.3
+        },
+        {
+          "period": "2026-01",
+          "value": 6.3
+        },
+        {
+          "period": "2026-02",
+          "value": 6.4
+        },
+        {
+          "period": "2026-03",
+          "value": 6.4
+        },
+        {
+          "period": "2026-04",
+          "value": 6.4
+        },
+        {
+          "period": "2026-05",
+          "value": 6.4
+        },
+        {
+          "period": "2026-06",
+          "value": 6.4
+        },
+        {
+          "period": "2026-07",
+          "value": 6.5
+        },
+        {
+          "period": "2026-08",
+          "value": 6.5
+        },
+        {
+          "period": "2026-09",
+          "value": 6.5
+        }
+      ],
+      "credit": "Source: Eurostat, une_rt_m, accessed 2026-11-10",
+      "source": "eurostat"
+    },
+    {
+      "id": "ea_esi",
+      "group": "Activity & prices",
+      "label": "Euro-area economic sentiment",
+      "kind": "points",
+      "title": "Economic sentiment and confidence indicators by sector - monthly data",
+      "unit": "index",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-10",
+        "value": 96.9
+      },
+      "change_short": {
+        "value": -0.5999999999999943,
+        "unit": "points",
+        "from": "2026-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": -0.19999999999998863,
+        "unit": "points",
+        "from": "2025-10"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-10",
+          "value": 96.3
+        },
+        {
+          "period": "2024-11",
+          "value": 96.0
+        },
+        {
+          "period": "2024-12",
+          "value": 93.8
+        },
+        {
+          "period": "2025-01",
+          "value": 95.2
+        },
+        {
+          "period": "2025-02",
+          "value": 96.4
+        },
+        {
+          "period": "2025-03",
+          "value": 95.6
+        },
+        {
+          "period": "2025-04",
+          "value": 94.9
+        },
+        {
+          "period": "2025-05",
+          "value": 95.9
+        },
+        {
+          "period": "2025-06",
+          "value": 94.7
+        },
+        {
+          "period": "2025-07",
+          "value": 96.0
+        },
+        {
+          "period": "2025-08",
+          "value": 95.4
+        },
+        {
+          "period": "2025-09",
+          "value": 95.8
+        },
+        {
+          "period": "2025-10",
+          "value": 97.1
+        },
+        {
+          "period": "2025-11",
+          "value": 97.2
+        },
+        {
+          "period": "2025-12",
+          "value": 96.9
+        },
+        {
+          "period": "2026-01",
+          "value": 99.1
+        },
+        {
+          "period": "2026-02",
+          "value": 98.3
+        },
+        {
+          "period": "2026-03",
+          "value": 96.8
+        },
+        {
+          "period": "2026-04",
+          "value": 93.7
+        },
+        {
+          "period": "2026-05",
+          "value": 94.2
+        },
+        {
+          "period": "2026-06",
+          "value": 95.5
+        },
+        {
+          "period": "2026-07",
+          "value": 97.0
+        },
+        {
+          "period": "2026-08",
+          "value": 98.2
+        },
+        {
+          "period": "2026-09",
+          "value": 97.5
+        },
+        {
+          "period": "2026-10",
+          "value": 96.9
+        }
+      ],
+      "credit": "Source: European Commission (DG ECFIN), via Eurostat ei_bssi_m_r2, accessed 2026-11-10",
+      "source": "eurostat"
+    },
+    {
+      "id": "ea_industrial_production",
+      "group": "Activity & prices",
+      "label": "Euro-area industrial production",
+      "kind": "level",
+      "title": "Production in industry - monthly data",
+      "unit": "I21",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-08",
+        "value": 97.5
+      },
+      "change_short": {
+        "value": -0.005102040816326481,
+        "unit": "%",
+        "from": "2026-07",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": -0.012158054711246202,
+        "unit": "%",
+        "from": "2025-08"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-08",
+          "value": 97.7
+        },
+        {
+          "period": "2024-09",
+          "value": 96.7
+        },
+        {
+          "period": "2024-10",
+          "value": 96.9
+        },
+        {
+          "period": "2024-11",
+          "value": 96.9
+        },
+        {
+          "period": "2024-12",
+          "value": 96.5
+        },
+        {
+          "period": "2025-01",
+          "value": 98.1
+        },
+        {
+          "period": "2025-02",
+          "value": 98.9
+        },
+        {
+          "period": "2025-03",
+          "value": 101.5
+        },
+        {
+          "period": "2025-04",
+          "value": 97.9
+        },
+        {
+          "period": "2025-05",
+          "value": 98.8
+        },
+        {
+          "period": "2025-06",
+          "value": 98.5
+        },
+        {
+          "period": "2025-07",
+          "value": 98.5
+        },
+        {
+          "period": "2025-08",
+          "value": 98.7
+        },
+        {
+          "period": "2025-09",
+          "value": 98.1
+        },
+        {
+          "period": "2025-10",
+          "value": 98.4
+        },
+        {
+          "period": "2025-11",
+          "value": 98.8
+        },
+        {
+          "period": "2025-12",
+          "value": 98.4
+        },
+        {
+          "period": "2026-01",
+          "value": 97.2
+        },
+        {
+          "period": "2026-02",
+          "value": 97.5
+        },
+        {
+          "period": "2026-03",
+          "value": 98.0
+        },
+        {
+          "period": "2026-04",
+          "value": 98.2
+        },
+        {
+          "period": "2026-05",
+          "value": 98.4
+        },
+        {
+          "period": "2026-06",
+          "value": 98.3
+        },
+        {
+          "period": "2026-07",
+          "value": 98.0
+        },
+        {
+          "period": "2026-08",
+          "value": 97.5
+        }
+      ],
+      "credit": "Source: Eurostat, sts_inpr_m, accessed 2026-11-10",
+      "source": "eurostat"
+    },
+    {
+      "id": "ea_bankruptcies",
+      "group": "Activity & prices",
+      "label": "Euro-area bankruptcy declarations",
+      "kind": "level",
+      "title": "Business registration and bankruptcy index by NACE Rev. 2 activity - quarterly data",
+      "unit": "I21",
+      "frequency": "Q",
+      "latest": {
+        "period": "2026-Q2",
+        "value": 214.8
+      },
+      "change_short": {
+        "value": 0.06918865107018424,
+        "unit": "%",
+        "from": "2026-Q1",
+        "label": "vs previous quarter"
+      },
+      "change_1y": {
+        "value": 0.0686567164179106,
+        "unit": "%",
+        "from": "2025-Q2"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-Q2",
+          "value": 174.1
+        },
+        {
+          "period": "2024-Q3",
+          "value": 181.8
+        },
+        {
+          "period": "2024-Q4",
+          "value": 184.7
+        },
+        {
+          "period": "2025-Q1",
+          "value": 186.8
+        },
+        {
+          "period": "2025-Q2",
+          "value": 201.0
+        },
+        {
+          "period": "2025-Q3",
+          "value": 205.8
+        },
+        {
+          "period": "2025-Q4",
+          "value": 205.7
+        },
+        {
+          "period": "2026-Q1",
+          "value": 200.9
+        },
+        {
+          "period": "2026-Q2",
+          "value": 214.8
+        }
+      ],
+      "credit": "Source: Eurostat, sts_rb_q, accessed 2026-11-10",
+      "source": "eurostat"
+    },
+    {
+      "id": "us_unemployment",
+      "group": "Activity & prices",
+      "label": "US unemployment",
+      "kind": "pct",
+      "title": "U.S. unemployment rate",
+      "unit": "PC",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-10",
+        "value": 4.1
+      },
+      "change_short": {
+        "value": -0.10000000000000053,
+        "unit": "pp",
+        "from": "2026-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": -0.3000000000000007,
+        "unit": "pp",
+        "from": "2025-09"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-10",
+          "value": 4.1
+        },
+        {
+          "period": "2024-11",
+          "value": 4.2
+        },
+        {
+          "period": "2024-12",
+          "value": 4.1
+        },
+        {
+          "period": "2025-01",
+          "value": 4.0
+        },
+        {
+          "period": "2025-02",
+          "value": 4.2
+        },
+        {
+          "period": "2025-03",
+          "value": 4.2
+        },
+        {
+          "period": "2025-04",
+          "value": 4.2
+        },
+        {
+          "period": "2025-05",
+          "value": 4.3
+        },
+        {
+          "period": "2025-06",
+          "value": 4.1
+        },
+        {
+          "period": "2025-07",
+          "value": 4.3
+        },
+        {
+          "period": "2025-08",
+          "value": 4.3
+        },
+        {
+          "period": "2025-09",
+          "value": 4.4
+        },
+        {
+          "period": "2025-11",
+          "value": 4.5
+        },
+        {
+          "period": "2025-12",
+          "value": 4.4
+        },
+        {
+          "period": "2026-01",
+          "value": 4.3
+        },
+        {
+          "period": "2026-02",
+          "value": 4.4
+        },
+        {
+          "period": "2026-03",
+          "value": 4.3
+        },
+        {
+          "period": "2026-04",
+          "value": 4.3
+        },
+        {
+          "period": "2026-05",
+          "value": 4.3
+        },
+        {
+          "period": "2026-06",
+          "value": 4.2
+        },
+        {
+          "period": "2026-07",
+          "value": 4.1
+        },
+        {
+          "period": "2026-08",
+          "value": 4.1
+        },
+        {
+          "period": "2026-09",
+          "value": 4.2
+        },
+        {
+          "period": "2026-10",
+          "value": 4.1
+        }
+      ],
+      "credit": "Source: U.S. Bureau of Labor Statistics, LNS14000000, accessed 2026-11-10",
+      "source": "bls"
+    },
+    {
+      "id": "us_cpi_u_nsa",
+      "group": "Activity & prices",
+      "label": "US CPI (index)",
+      "kind": "level",
+      "title": "U.S. CPI-U, all items, not seasonally adjusted",
+      "unit": "index 1982-84=100",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-09",
+        "value": 336.94
+      },
+      "change_short": {
+        "value": 0.0058510955877961734,
+        "unit": "%",
+        "from": "2026-08",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.03737684729064039,
+        "unit": "%",
+        "from": "2025-09"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-09",
+          "value": 315.301
+        },
+        {
+          "period": "2024-10",
+          "value": 315.664
+        },
+        {
+          "period": "2024-11",
+          "value": 315.493
+        },
+        {
+          "period": "2024-12",
+          "value": 315.605
+        },
+        {
+          "period": "2025-01",
+          "value": 317.671
+        },
+        {
+          "period": "2025-02",
+          "value": 319.082
+        },
+        {
+          "period": "2025-03",
+          "value": 319.799
+        },
+        {
+          "period": "2025-04",
+          "value": 320.795
+        },
+        {
+          "period": "2025-05",
+          "value": 321.465
+        },
+        {
+          "period": "2025-06",
+          "value": 322.561
+        },
+        {
+          "period": "2025-07",
+          "value": 323.048
+        },
+        {
+          "period": "2025-08",
+          "value": 323.976
+        },
+        {
+          "period": "2025-09",
+          "value": 324.8
+        },
+        {
+          "period": "2025-11",
+          "value": 324.122
+        },
+        {
+          "period": "2025-12",
+          "value": 324.054
+        },
+        {
+          "period": "2026-01",
+          "value": 325.252
+        },
+        {
+          "period": "2026-02",
+          "value": 326.785
+        },
+        {
+          "period": "2026-03",
+          "value": 330.213
+        },
+        {
+          "period": "2026-04",
+          "value": 333.02
+        },
+        {
+          "period": "2026-05",
+          "value": 335.123
+        },
+        {
+          "period": "2026-06",
+          "value": 333.952
+        },
+        {
+          "period": "2026-07",
+          "value": 333.918
+        },
+        {
+          "period": "2026-08",
+          "value": 334.98
+        },
+        {
+          "period": "2026-09",
+          "value": 336.94
+        }
+      ],
+      "credit": "Source: U.S. Bureau of Labor Statistics, CUUR0000SA0, accessed 2026-11-10",
+      "source": "bls"
+    },
+    {
+      "id": "us_nonfarm_payrolls",
+      "group": "Activity & prices",
+      "label": "US nonfarm payrolls (thousands)",
+      "kind": "level",
+      "title": "U.S. total nonfarm payroll employment",
+      "unit": "thousands",
+      "frequency": "M",
+      "latest": {
+        "period": "2026-10",
+        "value": 159293.0
+      },
+      "change_short": {
+        "value": 0.001036901111055144,
+        "unit": "%",
+        "from": "2026-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": 0.0055868390485329655,
+        "unit": "%",
+        "from": "2025-10"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-10",
+          "value": 157945.0
+        },
+        {
+          "period": "2024-11",
+          "value": 158079.0
+        },
+        {
+          "period": "2024-12",
+          "value": 158316.0
+        },
+        {
+          "period": "2025-01",
+          "value": 158268.0
+        },
+        {
+          "period": "2025-02",
+          "value": 158310.0
+        },
+        {
+          "period": "2025-03",
+          "value": 158377.0
+        },
+        {
+          "period": "2025-04",
+          "value": 158485.0
+        },
+        {
+          "period": "2025-05",
+          "value": 158498.0
+        },
+        {
+          "period": "2025-06",
+          "value": 158478.0
+        },
+        {
+          "period": "2025-07",
+          "value": 158542.0
+        },
+        {
+          "period": "2025-08",
+          "value": 158472.0
+        },
+        {
+          "period": "2025-09",
+          "value": 158548.0
+        },
+        {
+          "period": "2025-10",
+          "value": 158408.0
+        },
+        {
+          "period": "2025-11",
+          "value": 158449.0
+        },
+        {
+          "period": "2025-12",
+          "value": 158432.0
+        },
+        {
+          "period": "2026-01",
+          "value": 158592.0
+        },
+        {
+          "period": "2026-02",
+          "value": 158436.0
+        },
+        {
+          "period": "2026-03",
+          "value": 158650.0
+        },
+        {
+          "period": "2026-04",
+          "value": 158798.0
+        },
+        {
+          "period": "2026-05",
+          "value": 158861.0
+        },
+        {
+          "period": "2026-06",
+          "value": 158892.0
+        },
+        {
+          "period": "2026-07",
+          "value": 158882.0
+        },
+        {
+          "period": "2026-08",
+          "value": 159068.0
+        },
+        {
+          "period": "2026-09",
+          "value": 159128.0
+        },
+        {
+          "period": "2026-10",
+          "value": 159293.0
+        }
+      ],
+      "credit": "Source: U.S. Bureau of Labor Statistics, CES0000000001, accessed 2026-11-10",
+      "source": "bls"
+    },
+    {
+      "id": "eu_road_freight_tkm",
+      "group": "Activity & prices",
+      "label": "EU road freight (million tkm)",
+      "kind": "level",
+      "title": "Road freight transport by type of operation and type of transport (t, tkm, vehicle-km) - annual data",
+      "unit": "MIO_TKM",
+      "frequency": "A",
+      "latest": {
+        "period": "2025",
+        "value": 1886027.0
+      },
+      "change_short": null,
+      "change_1y": {
+        "value": 0.009237656547322226,
+        "unit": "%",
+        "from": "2024"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024",
+          "value": 1868764.0
+        },
+        {
+          "period": "2025",
+          "value": 1886027.0
+        }
+      ],
+      "credit": "Source: Eurostat, road_go_ta_tott, accessed 2026-11-10",
+      "source": "eurostat"
+    },
+    {
+      "id": "eurusd",
+      "group": "FX",
+      "label": "EUR/USD",
+      "kind": "level",
+      "title": "US dollar/Euro ECB reference exchange rate",
+      "unit": "USD",
+      "frequency": "D",
+      "latest": {
+        "period": "2026-11-09",
+        "value": 1.1193
+      },
+      "change_short": {
+        "value": -0.0011600928074246841,
+        "unit": "%",
+        "from": "2026-10-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": -0.03183115647435342,
+        "unit": "%",
+        "from": "2025-11-07"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 1.0562
+        },
+        {
+          "period": "2024-12-31",
+          "value": 1.0389
+        },
+        {
+          "period": "2025-01-31",
+          "value": 1.0393
+        },
+        {
+          "period": "2025-02-28",
+          "value": 1.0411
+        },
+        {
+          "period": "2025-03-31",
+          "value": 1.0815
+        },
+        {
+          "period": "2025-04-30",
+          "value": 1.1373
+        },
+        {
+          "period": "2025-05-30",
+          "value": 1.1339
+        },
+        {
+          "period": "2025-06-30",
+          "value": 1.172
+        },
+        {
+          "period": "2025-07-31",
+          "value": 1.1446
+        },
+        {
+          "period": "2025-08-29",
+          "value": 1.1658
+        },
+        {
+          "period": "2025-09-30",
+          "value": 1.1741
+        },
+        {
+          "period": "2025-10-31",
+          "value": 1.1554
+        },
+        {
+          "period": "2025-11-28",
+          "value": 1.1566
+        },
+        {
+          "period": "2025-12-31",
+          "value": 1.175
+        },
+        {
+          "period": "2026-01-30",
+          "value": 1.1919
+        },
+        {
+          "period": "2026-02-27",
+          "value": 1.1805
+        },
+        {
+          "period": "2026-03-31",
+          "value": 1.1498
+        },
+        {
+          "period": "2026-04-30",
+          "value": 1.1702
+        },
+        {
+          "period": "2026-05-29",
+          "value": 1.1644
+        },
+        {
+          "period": "2026-06-30",
+          "value": 1.1394
+        },
+        {
+          "period": "2026-07-31",
+          "value": 1.1485
+        },
+        {
+          "period": "2026-08-31",
+          "value": 1.1596
+        },
+        {
+          "period": "2026-09-30",
+          "value": 1.1355
+        },
+        {
+          "period": "2026-10-30",
+          "value": 1.1172
+        },
+        {
+          "period": "2026-11-09",
+          "value": 1.1193
+        }
+      ],
+      "credit": "Source: ECB Data Portal, EXR.D.USD.EUR.SP00.A, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "eurchf",
+      "group": "FX",
+      "label": "EUR/CHF",
+      "kind": "level",
+      "title": "Swiss franc/Euro ECB reference exchange rate",
+      "unit": "CHF",
+      "frequency": "D",
+      "latest": {
+        "period": "2026-11-09",
+        "value": 0.9164
+      },
+      "change_short": {
+        "value": -0.015999140985718863,
+        "unit": "%",
+        "from": "2026-10-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": -0.01589347079037806,
+        "unit": "%",
+        "from": "2025-11-07"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 0.9309
+        },
+        {
+          "period": "2024-12-31",
+          "value": 0.9412
+        },
+        {
+          "period": "2025-01-31",
+          "value": 0.9449
+        },
+        {
+          "period": "2025-02-28",
+          "value": 0.9394
+        },
+        {
+          "period": "2025-03-31",
+          "value": 0.9531
+        },
+        {
+          "period": "2025-04-30",
+          "value": 0.9389
+        },
+        {
+          "period": "2025-05-30",
+          "value": 0.9341
+        },
+        {
+          "period": "2025-06-30",
+          "value": 0.9347
+        },
+        {
+          "period": "2025-07-31",
+          "value": 0.9297
+        },
+        {
+          "period": "2025-08-29",
+          "value": 0.9364
+        },
+        {
+          "period": "2025-09-30",
+          "value": 0.9364
+        },
+        {
+          "period": "2025-10-31",
+          "value": 0.9287
+        },
+        {
+          "period": "2025-11-28",
+          "value": 0.9318
+        },
+        {
+          "period": "2025-12-31",
+          "value": 0.9314
+        },
+        {
+          "period": "2026-01-30",
+          "value": 0.9157
+        },
+        {
+          "period": "2026-02-27",
+          "value": 0.9104
+        },
+        {
+          "period": "2026-03-31",
+          "value": 0.9194
+        },
+        {
+          "period": "2026-04-30",
+          "value": 0.919
+        },
+        {
+          "period": "2026-05-29",
+          "value": 0.9111
+        },
+        {
+          "period": "2026-06-30",
+          "value": 0.9224
+        },
+        {
+          "period": "2026-07-31",
+          "value": 0.9304
+        },
+        {
+          "period": "2026-08-31",
+          "value": 0.9376
+        },
+        {
+          "period": "2026-09-30",
+          "value": 0.9478
+        },
+        {
+          "period": "2026-10-30",
+          "value": 0.9194
+        },
+        {
+          "period": "2026-11-09",
+          "value": 0.9164
+        }
+      ],
+      "credit": "Source: ECB Data Portal, EXR.D.CHF.EUR.SP00.A, accessed 2026-11-10",
+      "source": "ecb"
+    },
+    {
+      "id": "eurgbp",
+      "group": "FX",
+      "label": "EUR/GBP",
+      "kind": "level",
+      "title": "Pound sterling/Euro ECB reference exchange rate",
+      "unit": "GBP",
+      "frequency": "D",
+      "latest": {
+        "period": "2026-11-09",
+        "value": 0.8343
+      },
+      "change_short": {
+        "value": -0.015726201290657382,
+        "unit": "%",
+        "from": "2026-10-09",
+        "label": "vs 1 month earlier"
+      },
+      "change_1y": {
+        "value": -0.053115423901940684,
+        "unit": "%",
+        "from": "2025-11-07"
+      },
+      "financing_sign": null,
+      "spark": [
+        {
+          "period": "2024-11-29",
+          "value": 0.83205
+        },
+        {
+          "period": "2024-12-31",
+          "value": 0.82918
+        },
+        {
+          "period": "2025-01-31",
+          "value": 0.83608
+        },
+        {
+          "period": "2025-02-28",
+          "value": 0.82608
+        },
+        {
+          "period": "2025-03-31",
+          "value": 0.83536
+        },
+        {
+          "period": "2025-04-30",
+          "value": 0.8518
+        },
+        {
+          "period": "2025-05-30",
+          "value": 0.8412
+        },
+        {
+          "period": "2025-06-30",
+          "value": 0.8555
+        },
+        {
+          "period": "2025-07-31",
+          "value": 0.8649
+        },
+        {
+          "period": "2025-08-29",
+          "value": 0.8668
+        },
+        {
+          "period": "2025-09-30",
+          "value": 0.8734
+        },
+        {
+          "period": "2025-10-31",
+          "value": 0.8816
+        },
+        {
+          "period": "2025-11-28",
+          "value": 0.8752
+        },
+        {
+          "period": "2025-12-31",
+          "value": 0.8726
+        },
+        {
+          "period": "2026-01-30",
+          "value": 0.8662
+        },
+        {
+          "period": "2026-02-27",
+          "value": 0.8763
+        },
+        {
+          "period": "2026-03-31",
+          "value": 0.86833
+        },
+        {
+          "period": "2026-04-30",
+          "value": 0.86625
+        },
+        {
+          "period": "2026-05-29",
+          "value": 0.86723
+        },
+        {
+          "period": "2026-06-30",
+          "value": 0.86178
+        },
+        {
+          "period": "2026-07-31",
+          "value": 0.85573
+        },
+        {
+          "period": "2026-08-31",
+          "value": 0.85648
+        },
+        {
+          "period": "2026-09-30",
+          "value": 0.85463
+        },
+        {
+          "period": "2026-10-30",
+          "value": 0.8338
+        },
+        {
+          "period": "2026-11-09",
+          "value": 0.8343
+        }
+      ],
+      "credit": "Source: ECB Data Portal, EXR.D.GBP.EUR.SP00.A, accessed 2026-11-10",
+      "source": "ecb"
+    }
+  ],
+  "key_figures": [
+    "ecb_deposit_rate",
+    "us_effr",
+    "ea_nfc_borrowing_cost",
+    "ea_ciss"
+  ],
+  "notes": [
+    "Green/red marks easier/harder conditions for deal financing and is used only for rates, yields, borrowing cost, credit standards and the stress index; activity, prices and FX are shown neutrally.",
+    "Changes compare the latest observation with the closest one at least 1 month / 1 year earlier.",
+    "Euribor (EMMI) and SARON (SIX) are restricted benchmarks and are not shown."
+  ]
+}

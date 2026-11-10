@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Markets Room · Asadbek Abdurashidov</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/mona-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div role="note" style="position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:#13213a;color:#f4efe6;font:500 15px/22px system-ui,sans-serif;padding:10px 20px;text-align:center;box-shadow:0 -1px 0 rgba(244,239,230,.25)">Previous version (v1) of the Lab, kept for comparison. It shows the same public data as the current Lab. <a href="../" style="color:#f4efe6;text-decoration:underline">Go to the current Lab</a></div>
+<a class="skip" href="#main">Skip to the Markets room</a>
+
+<header class="topbar">
+  <a class="logo" href="https://aabdurashidov.ch" aria-label="Asadbek Abdurashidov, main site"><span class="l1">Asadbek</span><span class="l2">ABDURASHIDOV</span></a>
+  <a class="seal-mark" href="https://aabdurashidov.ch" tabindex="-1" aria-hidden="true"><img src="assets/favicon.svg" alt="" width="34" height="34"></a>
+  <div class="tb-right">
+    <a class="pill" href="https://aabdurashidov.ch/cv.pdf"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v9m0 0-3.5-3.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>CV</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav id="menu" aria-label="Rooms" hidden>
+  <ul>
+    <li><a href="https://aabdurashidov.ch">Main site</a></li>
+    <li><a href="index.html" aria-current="page">Markets</a></li>
+    <li><a href="macro.html">Macro</a></li>
+    <li><a href="deals.html">Deals</a></li>
+    <li><a href="company.html">Company</a></li>
+  </ul>
+</nav>
+
+<main id="main" tabindex="-1">
+  <section id="top" class="dark hero" aria-labelledby="h1">
+    <div class="wrap">
+      <p class="eyebrow" data-reveal>AUTOMATED &middot; SEC EDGAR</p>
+      <h1 id="h1" class="display" data-reveal><span class="cap">THE MARKETS</span> <span class="serif">ROOM</span></h1>
+      <p id="finding" class="deck" data-reveal>&nbsp;</p>
+      <div class="figures" id="figures" role="group" aria-label="Key figures" data-reveal></div>
+      <ul class="leaders" id="leaders" aria-label="Leaders" data-reveal></ul>
+    </div>
+  </section>
+
+  <div class="shell">
+    <nav class="rail" aria-label="Rooms status"><ul id="rail"></ul></nav>
+
+    <div class="content">
+      <section id="trust" class="block" aria-labelledby="chart-title">
+        <div data-reveal>
+          <p class="eyebrow ink">CAN THE RANKING BE TRUSTED?</p>
+          <h2 id="chart-title" class="statement"></h2>
+          <ul class="legend" id="legend" aria-label="Legend"></ul>
+        </div>
+        <div id="chart-wrap" class="chart-wrap" tabindex="0" role="group" aria-label="Scatter chart. Use the left and right arrow keys to move between points, Escape to clear." aria-describedby="chart-alt">
+          <svg id="chart" focusable="false" aria-hidden="true"></svg>
+          <div id="tip" class="tip" role="presentation" hidden></div>
+        </div>
+        <p id="chart-alt" class="sr-only"></p>
+        <div id="live" class="sr-only" aria-live="polite"></div>
+        <p class="offchart" id="offchart"></p>
+        <p class="unit" id="unit"></p>
+        <p class="prov" id="source"></p>
+      </section>
+
+      <section id="grew" class="block" aria-labelledby="grow-title">
+        <div data-reveal>
+          <p class="eyebrow ink">WHO GREW, WHO SHRANK</p>
+          <h2 id="grow-title" class="statement"></h2>
+          <ul class="legend" aria-label="Legend"><li><i class="k-up"></i>Revenue grew</li><li><i class="k-down"></i>Revenue shrank</li></ul>
+        </div>
+        <div id="grow-chart" class="grow-chart"></div>
+        <p class="unit" id="grow-unit"></p>
+        <p class="offchart" id="grow-clip"></p>
+        <p class="prov" id="prov-grow"></p>
+      </section>
+
+      <section id="fifty" class="block" aria-labelledby="fifty-h">
+        <div data-reveal>
+          <p class="eyebrow ink">RANKED BY PUBLIC FLOAT</p>
+          <h2 id="fifty-h" class="display sm"><span class="cap">THE</span> <span class="serif">fifty</span></h2>
+          <p class="lede">Select a company to open its fundamentals and the filings behind them.</p>
+        </div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Ranked companies table, scrolls sideways on narrow screens">
+          <table id="table">
+            <thead>
+              <tr>
+                <th scope="col" class="num" data-sort="rank"><button type="button">Rank</button></th>
+                <th scope="col">Company</th>
+                <th scope="col" class="num" data-sort="float"><button type="button" title="Public float, USD billions">Float, $bn</button></th>
+                <th scope="col" class="num" data-sort="revenue"><button type="button" title="Revenue of the latest fiscal year, USD billions">Revenue (FY, $bn)</button></th>
+                <th scope="col" class="num" data-sort="growth"><button type="button" title="Revenue growth, year on year">Growth y/y</button></th>
+                <th scope="col" class="num" data-sort="margin"><button type="button" title="Operating income divided by revenue">Op. margin</button></th>
+                <th scope="col" class="num" data-sort="fcf"><button type="button" title="Free cash flow divided by revenue">FCF margin</button></th>
+                <th scope="col">Badges</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="prov" id="prov-table"></p>
+      </section>
+
+      <section id="drill" class="dark drill" role="region" aria-labelledby="drill-name" hidden>
+        <div class="drill-in">
+          <div class="drill-head">
+            <div class="drill-title">
+              <span id="drill-logo" class="drill-logo"></span>
+              <div>
+                <h2 id="drill-name" class="mon-name" tabindex="-1"></h2>
+                <p id="drill-fy" class="mon-fy"></p>
+              </div>
+            </div>
+            <button id="drill-close" type="button" class="close">Close</button>
+          </div>
+          <div class="drill-body">
+            <div class="mon-kpis" id="drill-kpis"></div>
+            <div class="mon-chart" id="drill-chart"></div>
+            <div class="mon-side">
+              <div class="mon-filings" id="drill-filings"></div>
+              <div class="dq" id="drill-dq"></div>
+            </div>
+          </div>
+          <p class="mon-foot" id="prov-drill"></p>
+          <p class="sr-only" id="drill-live" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section id="caught" class="block" aria-labelledby="excl-title">
+        <div data-reveal>
+          <p class="eyebrow ink">EXCLUDED FROM THE RANKING</p>
+          <h2 id="excl-title" class="statement"></h2>
+        </div>
+        <ul class="excl" id="excl"></ul>
+      </section>
+    </div>
+  </div>
+
+  <section class="dark notes" aria-label="Notes">
+    <div class="wrap">
+      <p>Public float is the market value of shares held by non-affiliates, reported once a year in the 10-K. It is not today&rsquo;s market cap.</p>
+      <p>Ranking by market cap needs daily prices; that version is private for now.</p>
+      <p>Not investment advice.</p>
+      <p class="credit">Logos: Simple Icons (CC0) and SVGL (MIT); trademarks belong to their owners; used only to identify the companies.</p>
+      <p id="error" class="error" role="alert" hidden></p>
+    </div>
+  </section>
+</main>
+<div id="pop" class="pop" role="dialog" aria-label="Badge explanation" hidden></div>
+<script src="v1compat.js"></script>
+<script src="app.js"></script>
+<div aria-hidden="true" style="height:64px"></div>
+</body>
+</html>

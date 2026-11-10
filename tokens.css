@@ -1,0 +1,25 @@
+/* Lab design tokens: quiet-luxury beige and dark navy. Fonts are local (fonts/). */
+@font-face{font-family:"Mona Sans";src:url("fonts/mona-sans-normal-latin.woff2") format("woff2");font-weight:200 900;font-stretch:75% 125%;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Mona Sans";src:url("fonts/mona-sans-normal-latin-ext.woff2") format("woff2");font-weight:200 900;font-stretch:75% 125%;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Instrument Serif";src:url("fonts/instrument-serif-normal-latin.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Instrument Serif";src:url("fonts/instrument-serif-normal-latin-ext.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Instrument Serif";src:url("fonts/instrument-serif-italic-latin.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  /* surfaces */
+  --bone:#f4efe6; --paper:#ece4d4; --navy:#0f1a2e;
+  /* ink (all AA on bone) */
+  --ink:#14213d; --ink-2:#4b5568; --ink-3:#5f6878;
+  /* cashmere: text version is darker so it passes AA; mark version is for shapes */
+  --cash:#a9825a; --cash-ink:#7a5c38; --mark:#9c7345; --soft:#d9c4a3;
+  --grey-mark:#8f897a; --grey-soft:#cfc6b4; --hair:#d6cbb6; --hair-d:#2b3856;
+  /* on navy */
+  --on-navy:#f4efe6; --on-navy-2:#aab1c0; --cash-d:#c9a77c;
+  /* up/down: only for a change, always with arrow and sign */
+  --up:#1d6a43; --down:#a4372b; --up-bg:#e3eddf; --down-bg:#f3e0da;
+  --sans:"Mona Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Instrument Serif",Georgia,serif;
+  --out:cubic-bezier(.2,.7,.2,1);
+  --bar:70px; --wrap:1180px; --pad:clamp(20px,4vw,48px);
+  --r:10px;
+}

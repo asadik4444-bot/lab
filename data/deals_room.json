@@ -1,0 +1,593 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-09",
+  "headline": {
+    "text": "123 US public-company merger proxies and tender offers were filed from May to October 2026: about as many as the 122 in the same months a year earlier (SPACs excluded).",
+    "last": 123,
+    "year_earlier": 122,
+    "change": 0.008196721311475308,
+    "from": "2026-05",
+    "to": "2026-10",
+    "compare_from": "2025-05",
+    "compare_to": "2025-10"
+  },
+  "flow_title": "About 20 filings a month over the last 23 full months; the busiest was December 2025 with 34.",
+  "monthly": [
+    {
+      "month": "2024-12",
+      "proxies": 16,
+      "proxies_spac": 5,
+      "tenders": 5,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-01",
+      "proxies": 13,
+      "proxies_spac": 7,
+      "tenders": 6,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-02",
+      "proxies": 10,
+      "proxies_spac": 2,
+      "tenders": 4,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-03",
+      "proxies": 17,
+      "proxies_spac": 6,
+      "tenders": 6,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-04",
+      "proxies": 10,
+      "proxies_spac": 2,
+      "tenders": 3,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-05",
+      "proxies": 15,
+      "proxies_spac": 4,
+      "tenders": 4,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-06",
+      "proxies": 9,
+      "proxies_spac": 2,
+      "tenders": 6,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-07",
+      "proxies": 15,
+      "proxies_spac": 6,
+      "tenders": 6,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-08",
+      "proxies": 22,
+      "proxies_spac": 2,
+      "tenders": 5,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-09",
+      "proxies": 16,
+      "proxies_spac": 7,
+      "tenders": 4,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-10",
+      "proxies": 17,
+      "proxies_spac": 0,
+      "tenders": 3,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-11",
+      "proxies": 15,
+      "proxies_spac": 8,
+      "tenders": 3,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2025-12",
+      "proxies": 30,
+      "proxies_spac": 0,
+      "tenders": 4,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-01",
+      "proxies": 16,
+      "proxies_spac": 5,
+      "tenders": 2,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-02",
+      "proxies": 19,
+      "proxies_spac": 6,
+      "tenders": 2,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-03",
+      "proxies": 16,
+      "proxies_spac": 6,
+      "tenders": 7,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-04",
+      "proxies": 18,
+      "proxies_spac": 4,
+      "tenders": 4,
+      "tenders_spac": 1
+    },
+    {
+      "month": "2026-05",
+      "proxies": 18,
+      "proxies_spac": 5,
+      "tenders": 5,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-06",
+      "proxies": 14,
+      "proxies_spac": 8,
+      "tenders": 3,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-07",
+      "proxies": 16,
+      "proxies_spac": 3,
+      "tenders": 1,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-08",
+      "proxies": 15,
+      "proxies_spac": 6,
+      "tenders": 2,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-09",
+      "proxies": 22,
+      "proxies_spac": 2,
+      "tenders": 3,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-10",
+      "proxies": 19,
+      "proxies_spac": 6,
+      "tenders": 5,
+      "tenders_spac": 0
+    },
+    {
+      "month": "2026-11",
+      "proxies": 6,
+      "proxies_spac": 2,
+      "tenders": 0,
+      "tenders_spac": 0
+    }
+  ],
+  "window": [
+    "2024-12-01",
+    "2026-11-09"
+  ],
+  "amendments_skipped": {
+    "SC TO-T": 372
+  },
+  "spac_filings": 105,
+  "filings_total": 582,
+  "recent": [
+    {
+      "name": "RREEF Property Trust, Inc.",
+      "tickers": [],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1542447/000154244726000119/"
+    },
+    {
+      "name": "Option Care Health, Inc.",
+      "tickers": [
+        "OPCH"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-11-09",
+      "url": "https://www.sec.gov/Archives/edgar/data/1014739/000114036126042547/"
+    },
+    {
+      "name": "Criteo S.A.",
+      "tickers": [
+        "CRTO"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/1576427/000162828026070665/"
+    },
+    {
+      "name": "DANA Inc",
+      "tickers": [
+        "DAN"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-11-05",
+      "url": "https://www.sec.gov/Archives/edgar/data/26780/000119312526449892/"
+    },
+    {
+      "name": "BLUE RIDGE BANKSHARES, INC.",
+      "tickers": [
+        "BRBS"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-11-03",
+      "url": "https://www.sec.gov/Archives/edgar/data/842717/000110465926121764/"
+    },
+    {
+      "name": "Planet 13 Holdings Inc.",
+      "tickers": [
+        "PLNH"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-11-02",
+      "url": "https://www.sec.gov/Archives/edgar/data/1813452/000110465926121478/"
+    },
+    {
+      "name": "Chemomab Therapeutics Ltd.",
+      "tickers": [
+        "CMMB"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1534248/000149315226049444/"
+    },
+    {
+      "name": "Pacira BioSciences, Inc.",
+      "tickers": [
+        "PCRX"
+      ],
+      "form": "SC TO-T",
+      "form_label": "Third-party tender offers (SC TO-T)",
+      "file_date": "2026-10-30",
+      "url": "https://www.sec.gov/Archives/edgar/data/1396814/000114036126041224/"
+    },
+    {
+      "name": "Distribution Solutions Group, Inc.",
+      "tickers": [
+        "DSGR"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/703604/000119312526436088/"
+    },
+    {
+      "name": "ULTRALIFE CORP",
+      "tickers": [
+        "ULBI"
+      ],
+      "form": "SC TO-T",
+      "form_label": "Third-party tender offers (SC TO-T)",
+      "file_date": "2026-10-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/875657/000119312526435071/"
+    },
+    {
+      "name": "IMPACT BIOMEDICAL INC.",
+      "tickers": [
+        "IBO"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1834105/000149315226048594/"
+    },
+    {
+      "name": "Mistras Group, Inc.",
+      "tickers": [
+        "MG"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-10-27",
+      "url": "https://www.sec.gov/Archives/edgar/data/1436126/000114036126040834/"
+    }
+  ],
+  "sponsors": [
+    {
+      "rank": 1,
+      "name": "Blackstone",
+      "status": "mapped",
+      "private_fund_gross_assets": 842038583168.0,
+      "raum": 1352670169753.0,
+      "private_fund_count": 896,
+      "advisers": 29,
+      "note": "All 29 roster advisers named Blackstone are Blackstone entities (incl. Blackstone Ireland); none excluded."
+    },
+    {
+      "rank": 2,
+      "name": "KKR",
+      "status": "mapped",
+      "private_fund_gross_assets": 576982082478.0,
+      "raum": 677146650562.0,
+      "private_fund_count": 752,
+      "advisers": 4,
+      "note": "Kohlberg Kravis Roberts & Co., KKR Credit Advisors (US and Singapore), KKR Registered Advisor. Excluded Accel-KKR and FS/KKR Advisor (joint ventures) and Kohlberg & Company (a different firm)."
+    },
+    {
+      "rank": 3,
+      "name": "Ares",
+      "status": "mapped",
+      "private_fund_gross_assets": 417636424273.0,
+      "raum": 458821489418.0,
+      "private_fund_count": 682,
+      "advisers": 1,
+      "note": "Ares Management LLC. Excluded CION Ares Management (joint venture) and Certares Management (unrelated)."
+    },
+    {
+      "rank": 4,
+      "name": "Apollo",
+      "status": "mapped",
+      "private_fund_gross_assets": 405948410054.0,
+      "raum": 762373896337.0,
+      "private_fund_count": 714,
+      "advisers": 8,
+      "note": "Apollo-named advisers of Apollo Global Management. Excluded Apollon Wealth Management and Apollon Financial (unrelated) and Apollo Wealth Management LLC (USD 39m RAUM, ownership unclear)."
+    },
+    {
+      "rank": 5,
+      "name": "TPG",
+      "status": "mapped",
+      "private_fund_gross_assets": 277073728280.0,
+      "raum": 465282428674.0,
+      "private_fund_count": 423,
+      "advisers": 7,
+      "note": "TPG advisers incl. TPG Angelo Gordon (acquired by TPG in 2023). Excluded The Planning Group / TPG Advisors LLC (unrelated)."
+    },
+    {
+      "rank": 6,
+      "name": "Carlyle",
+      "status": "mapped",
+      "private_fund_gross_assets": 213313939662.0,
+      "raum": 363727517072.0,
+      "private_fund_count": 404,
+      "advisers": 4,
+      "note": "Carlyle Investment Management (The Carlyle Group), Carlyle Global Credit, and two Carlyle Aviation advisers."
+    }
+  ],
+  "roster_date": "2026-11-02",
+  "fundraising": [
+    {
+      "quarter": "2024Q4",
+      "new_notices": 1293,
+      "amendments": 820,
+      "amount_sold_new": 20152566522.0,
+      "indefinite_new": 889
+    },
+    {
+      "quarter": "2025Q1",
+      "new_notices": 1317,
+      "amendments": 718,
+      "amount_sold_new": 37276922509.0,
+      "indefinite_new": 828
+    },
+    {
+      "quarter": "2025Q2",
+      "new_notices": 1088,
+      "amendments": 804,
+      "amount_sold_new": 47665895808.0,
+      "indefinite_new": 799
+    },
+    {
+      "quarter": "2025Q3",
+      "new_notices": 1267,
+      "amendments": 752,
+      "amount_sold_new": 37260151816.0,
+      "indefinite_new": 880
+    },
+    {
+      "quarter": "2025Q4",
+      "new_notices": 1386,
+      "amendments": 891,
+      "amount_sold_new": 60491096720.0,
+      "indefinite_new": 1030
+    },
+    {
+      "quarter": "2026Q1",
+      "new_notices": 1427,
+      "amendments": 748,
+      "amount_sold_new": 62127497639.0,
+      "indefinite_new": 986
+    },
+    {
+      "quarter": "2026Q2",
+      "new_notices": 1704,
+      "amendments": 892,
+      "amount_sold_new": 45080117495.0,
+      "indefinite_new": 1246
+    },
+    {
+      "quarter": "2026Q3",
+      "new_notices": 1730,
+      "amendments": 865,
+      "amount_sold_new": 29790062339.0,
+      "indefinite_new": 1082
+    }
+  ],
+  "fundraising_types": {
+    "Private Equity Fund": [
+      {
+        "quarter": "2024Q4",
+        "new": 1293
+      },
+      {
+        "quarter": "2025Q1",
+        "new": 1317
+      },
+      {
+        "quarter": "2025Q2",
+        "new": 1088
+      },
+      {
+        "quarter": "2025Q3",
+        "new": 1267
+      },
+      {
+        "quarter": "2025Q4",
+        "new": 1386
+      },
+      {
+        "quarter": "2026Q1",
+        "new": 1427
+      },
+      {
+        "quarter": "2026Q2",
+        "new": 1704
+      },
+      {
+        "quarter": "2026Q3",
+        "new": 1730
+      }
+    ],
+    "Venture Capital Fund": [
+      {
+        "quarter": "2024Q4",
+        "new": 1644
+      },
+      {
+        "quarter": "2025Q1",
+        "new": 1697
+      },
+      {
+        "quarter": "2025Q2",
+        "new": 1667
+      },
+      {
+        "quarter": "2025Q3",
+        "new": 1872
+      },
+      {
+        "quarter": "2025Q4",
+        "new": 2148
+      },
+      {
+        "quarter": "2026Q1",
+        "new": 2306
+      },
+      {
+        "quarter": "2026Q2",
+        "new": 2541
+      },
+      {
+        "quarter": "2026Q3",
+        "new": 2464
+      }
+    ],
+    "Hedge Fund": [
+      {
+        "quarter": "2024Q4",
+        "new": 373
+      },
+      {
+        "quarter": "2025Q1",
+        "new": 524
+      },
+      {
+        "quarter": "2025Q2",
+        "new": 349
+      },
+      {
+        "quarter": "2025Q3",
+        "new": 412
+      },
+      {
+        "quarter": "2025Q4",
+        "new": 382
+      },
+      {
+        "quarter": "2026Q1",
+        "new": 460
+      },
+      {
+        "quarter": "2026Q2",
+        "new": 484
+      },
+      {
+        "quarter": "2026Q3",
+        "new": 505
+      }
+    ],
+    "Other Investment Fund": [
+      {
+        "quarter": "2024Q4",
+        "new": 942
+      },
+      {
+        "quarter": "2025Q1",
+        "new": 861
+      },
+      {
+        "quarter": "2025Q2",
+        "new": 807
+      },
+      {
+        "quarter": "2025Q3",
+        "new": 1000
+      },
+      {
+        "quarter": "2025Q4",
+        "new": 958
+      },
+      {
+        "quarter": "2026Q1",
+        "new": 1256
+      },
+      {
+        "quarter": "2026Q2",
+        "new": 1278
+      },
+      {
+        "quarter": "2026Q3",
+        "new": 1310
+      }
+    ]
+  },
+  "formd_quarters": [
+    "2024Q4",
+    "2025Q1",
+    "2025Q2",
+    "2025Q3",
+    "2025Q4",
+    "2026Q1",
+    "2026Q2",
+    "2026Q3"
+  ],
+  "formd_unavailable": [
+    "2026Q4"
+  ],
+  "notes": [
+    "Merger proxies (DEFM14A) and tender offers (SC TO-T) are counted by filing date: a proxy is filed weeks or months after a deal is announced, so these are filings, not announcements.",
+    "SPAC mergers are flagged (blank-check industry code, '... Acquisition Corp' names, warrant/unit tickers) and shown separately; amendments (e.g. SC TO-T/A) are not new deals and are left out.",
+    "PE sponsors: sum of each firm's own SEC-registered advisers (Form ADV roster); joint ventures and unrelated name matches excluded. Private-fund gross assets is the ranking basis; summed RAUM can overlap between related advisers. Non-US sponsors (EQT, CVC, Partners Group) are largely not SEC-registered.",
+    "Form D covers US exempt-offering notices only; not every fund files. 'Amount sold' sums new notices; offerings with an indefinite size are counted separately.",
+    "Source: SEC EDGAR (full-text search, Form ADV, Form D data sets). Not investment advice."
+  ]
+}

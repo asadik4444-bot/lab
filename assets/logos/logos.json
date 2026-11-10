@@ -1,0 +1,152 @@
+{
+ "NVDA": {
+  "file": "assets/logos/NVDA.svg",
+  "source": "simpleicons",
+  "hex": "76B900"
+ },
+ "AAPL": {
+  "file": "assets/logos/AAPL.svg",
+  "source": "simpleicons",
+  "hex": "000000"
+ },
+ "GOOGL": {
+  "file": "assets/logos/GOOGL.svg",
+  "source": "simpleicons",
+  "hex": "4285F4"
+ },
+ "META": {
+  "file": "assets/logos/META.svg",
+  "source": "simpleicons",
+  "hex": "0467DF"
+ },
+ "AVGO": {
+  "file": "assets/logos/AVGO.svg",
+  "source": "simpleicons",
+  "hex": "E31837"
+ },
+ "TSLA": {
+  "file": "assets/logos/TSLA.svg",
+  "source": "simpleicons",
+  "hex": "CC0000"
+ },
+ "NFLX": {
+  "file": "assets/logos/NFLX.svg",
+  "source": "simpleicons",
+  "hex": "E50914"
+ },
+ "MA": {
+  "file": "assets/logos/MA.svg",
+  "source": "simpleicons",
+  "hex": "EB001B"
+ },
+ "V": {
+  "file": "assets/logos/V.svg",
+  "source": "simpleicons",
+  "hex": "1A1F71"
+ },
+ "BAC": {
+  "file": "assets/logos/BAC.svg",
+  "source": "simpleicons",
+  "hex": "012169"
+ },
+ "ABBV": {
+  "file": "assets/logos/ABBV.svg",
+  "source": "simpleicons",
+  "hex": "071D49"
+ },
+ "KO": {
+  "file": "assets/logos/KO.svg",
+  "source": "simpleicons",
+  "hex": "D00013"
+ },
+ "PLTR": {
+  "file": "assets/logos/PLTR.svg",
+  "source": "simpleicons",
+  "hex": "101113"
+ },
+ "CSCO": {
+  "file": "assets/logos/CSCO.svg",
+  "source": "simpleicons",
+  "hex": "1BA0D7"
+ },
+ "GE": {
+  "file": "assets/logos/GE.svg",
+  "source": "simpleicons",
+  "hex": "0870D8"
+ },
+ "WFC": {
+  "file": "assets/logos/WFC.svg",
+  "source": "simpleicons",
+  "hex": "D71E28"
+ },
+ "AMD": {
+  "file": "assets/logos/AMD.svg",
+  "source": "simpleicons",
+  "hex": "ED1C24"
+ },
+ "ABT": {
+  "file": "assets/logos/ABT.svg",
+  "source": "simpleicons",
+  "hex": "008FC7"
+ },
+ "AXP": {
+  "file": "assets/logos/AXP.svg",
+  "source": "simpleicons",
+  "hex": "2E77BC"
+ },
+ "GS": {
+  "file": "assets/logos/GS.svg",
+  "source": "simpleicons",
+  "hex": "7399C6"
+ },
+ "MCD": {
+  "file": "assets/logos/MCD.svg",
+  "source": "simpleicons",
+  "hex": "FBC817"
+ },
+ "T": {
+  "file": "assets/logos/T.svg",
+  "source": "simpleicons",
+  "hex": "009FDB"
+ },
+ "MRK": {
+  "file": "assets/logos/MRK.svg",
+  "source": "simpleicons",
+  "hex": "007A73"
+ },
+ "UBER": {
+  "file": "assets/logos/UBER.svg",
+  "source": "simpleicons",
+  "hex": "000000"
+ },
+ "BKNG": {
+  "file": "assets/logos/BKNG.svg",
+  "source": "simpleicons",
+  "hex": "003A9A"
+ },
+ "VZ": {
+  "file": "assets/logos/VZ.svg",
+  "source": "simpleicons",
+  "hex": "CD040B"
+ },
+ "CAT": {
+  "file": "assets/logos/CAT.svg",
+  "source": "simpleicons",
+  "hex": "FFCD11"
+ },
+ "MSFT": {
+  "file": "assets/logos/MSFT.svg",
+  "source": "svgl",
+  "hex": null
+ },
+ "IBM": {
+  "file": "assets/logos/IBM.svg",
+  "source": "svgl",
+  "hex": null
+ },
+ "CRM": {
+  "file": "assets/logos/CRM.svg",
+  "source": "svgl",
+  "hex": null
+ }
+}

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Company Room · Asadbek Abdurashidov</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/mona-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div role="note" style="position:fixed;left:0;right:0;bottom:0;z-index:2147483000;background:#13213a;color:#f4efe6;font:500 15px/22px system-ui,sans-serif;padding:10px 20px;text-align:center;box-shadow:0 -1px 0 rgba(244,239,230,.25)">Previous version (v1) of the Lab, kept for comparison. It shows the same public data as the current Lab. <a href="../" style="color:#f4efe6;text-decoration:underline">Go to the current Lab</a></div>
+<a class="skip" href="#main">Skip to the Company room</a>
+
+<header class="topbar">
+  <a class="logo" href="https://aabdurashidov.ch" aria-label="Asadbek Abdurashidov, main site"><span class="l1">Asadbek</span><span class="l2">ABDURASHIDOV</span></a>
+  <a class="seal-mark" href="https://aabdurashidov.ch" tabindex="-1" aria-hidden="true"><img src="assets/favicon.svg" alt="" width="34" height="34"></a>
+  <div class="tb-right">
+    <a class="pill" href="https://aabdurashidov.ch/cv.pdf"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v9m0 0-3.5-3.5M8 11l3.5-3.5M3 14h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>CV</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav id="menu" aria-label="Rooms" hidden>
+  <ul>
+    <li><a href="https://aabdurashidov.ch">Main site</a></li>
+    <li><a href="index.html">Markets</a></li>
+    <li><a href="macro.html">Macro</a></li>
+    <li><a href="deals.html">Deals</a></li>
+    <li><a href="company.html" aria-current="page">Company</a></li>
+  </ul>
+</nav>
+
+<main id="main" tabindex="-1">
+  <section id="top" class="dark hero co-hero" aria-labelledby="h1">
+    <div class="wrap">
+      <div class="co-pick" data-reveal>
+        <label for="co-select">Company</label>
+        <select id="co-select"></select>
+      </div>
+      <p class="eyebrow" id="eyebrow" data-reveal></p>
+      <h1 id="h1" class="co-title" data-reveal><span id="co-logo" class="co-logo"></span><span class="co-name" id="co-name"></span><span class="co-sep" aria-hidden="true">&middot;</span><span class="co-tk" id="co-tk"></span></h1>
+      <p id="deck" class="deck" data-reveal>&nbsp;</p>
+      <p id="co-notice" class="deck-detail" role="status" hidden></p>
+      <div class="figures eq" id="figures" role="group" aria-label="Key figures" data-reveal></div>
+      <p class="fig-legend" id="disc-hero" data-reveal></p>
+    </div>
+  </section>
+
+  <div class="shell">
+    <nav class="rail" aria-label="Rooms status"><ul id="rail"></ul></nav>
+
+    <div class="content">
+      <section id="bridge" class="block" aria-labelledby="bridge-title">
+        <div data-reveal>
+          <p class="eyebrow ink">FROM MARKET VALUE TO ENTERPRISE VALUE</p>
+          <h2 id="bridge-title" class="statement"></h2>
+        </div>
+        <p id="bridge-why" class="offchart" hidden></p>
+        <div id="bridge-body">
+          <div id="bridge-chart" class="chart-wrap"></div>
+          <p class="unit" id="bridge-unit"></p>
+          <ul class="caveats" id="bridge-cav" aria-label="Caveats on this enterprise value"></ul>
+          <p class="offchart" id="bridge-memo"></p>
+          <details class="det" id="bridge-det">
+            <summary>How each step is built: formula, rule and source facts</summary>
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Enterprise value bridge, source facts. Scrolls sideways on narrow screens.">
+              <table class="dtable" id="bridge-table"></table>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section id="earn" class="block" aria-labelledby="earn-title">
+        <div data-reveal>
+          <p class="eyebrow ink">WHAT IT EARNS</p>
+          <h2 id="earn-title" class="statement"></h2>
+        </div>
+        <div class="etiles" id="etiles"></div>
+        <div class="pairs" id="pairs"></div>
+        <p class="unit" id="earn-unit"></p>
+        <p class="prov" id="earn-src"></p>
+      </section>
+
+      <section id="dcf" class="block" aria-labelledby="dcf-title">
+        <div data-reveal>
+          <p class="eyebrow ink">WHAT IT&rsquo;S WORTH ON STATED ASSUMPTIONS</p>
+          <h2 id="dcf-title" class="statement"></h2>
+          <p class="disc" id="disc-dcf"></p>
+        </div>
+        <p id="dcf-none" class="offchart" hidden></p>
+        <div id="dcf-body">
+          <div class="dcf-grid">
+            <form class="ctls" id="ctls" aria-label="DCF assumptions" onsubmit="return false">
+              <div id="ctl-list"></div>
+              <button type="button" class="btn" id="reset">Reset to defaults</button>
+            </form>
+            <div class="outs">
+              <div class="rangeblk">
+                <h3 class="gh sm">ENTERPRISE <span class="serif">value</span></h3>
+                <div id="ev-range" class="chart-wrap"></div>
+              </div>
+              <div class="rangeblk">
+                <h3 class="gh sm">VALUE <span class="serif">per share</span></h3>
+                <div id="ps-range" class="chart-wrap"></div>
+                <p class="offchart" id="ps-note"></p>
+              </div>
+            </div>
+          </div>
+          <div class="latest">
+            <h3 class="gh sm">PROJECTED UNLEVERED <span class="serif">free cash flow</span></h3>
+            <div id="ufcf-chart" class="chart-wrap"></div>
+            <p class="unit" id="ufcf-unit"></p>
+            <p class="offchart" id="tv-note"></p>
+            <details class="det">
+              <summary>Year-by-year table</summary>
+              <div class="table-scroll" tabindex="0" role="region" aria-label="Projected cash flow by year. Scrolls sideways on narrow screens.">
+                <table class="dtable" id="ufcf-table"></table>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="rev" class="block" aria-labelledby="rev-title" hidden>
+        <div data-reveal>
+          <p class="eyebrow ink">WHAT TODAY&rsquo;S PRICE IMPLIES</p>
+          <h2 id="rev-title" class="statement"></h2>
+        </div>
+        <div class="revbig">
+          <p class="rv-n" id="rev-n"></p>
+          <div>
+            <p class="rv-k" id="rev-k"></p>
+            <p class="rv-c" id="rev-c"></p>
+          </div>
+        </div>
+        <p class="unit" id="rev-unit"></p>
+      </section>
+
+      <section id="gridsec" class="block" aria-labelledby="grid-title" hidden>
+        <div data-reveal>
+          <p class="eyebrow ink">GROWTH &times; MARGIN</p>
+          <h2 id="grid-title" class="statement"></h2>
+        </div>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Value per share by growth and margin. Scrolls sideways on narrow screens.">
+          <table class="gtable" id="gtable"></table>
+        </div>
+        <p class="unit" id="grid-unit"></p>
+      </section>
+
+      <section id="wc" class="block" aria-labelledby="wc-title" hidden>
+        <div data-reveal>
+          <p class="eyebrow ink">WORKING CAPITAL</p>
+          <h2 id="wc-title" class="statement"></h2>
+        </div>
+        <div id="wc-chart" class="chart-wrap"></div>
+        <p class="unit" id="wc-unit"></p>
+      </section>
+
+      <section id="sources" class="block" aria-labelledby="src-h">
+        <div data-reveal>
+          <p class="eyebrow ink">NOTES, SOURCES AND PROVENANCE</p>
+          <h2 id="src-h" class="statement">What the numbers rest on.</h2>
+        </div>
+        <ul class="notes-list" id="cnotes"></ul>
+        <p class="disc strong" id="disc-end"></p>
+        <p class="prov" id="prov"></p>
+      </section>
+    </div>
+  </div>
+
+  <section class="dark notes" aria-label="Notes">
+    <div class="wrap">
+      <p>Not investment advice.</p>
+      <p id="error" class="error" role="alert" hidden></p>
+    </div>
+  </section>
+</main>
+<script src="v1compat.js"></script>
+<script src="company_math.js"></script>
+<script src="company.js"></script>
+<div aria-hidden="true" style="height:64px"></div>
+</body>
+</html>

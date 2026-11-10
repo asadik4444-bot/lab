@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Companies · The Lab · Asadbek Abdurashidov</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/mona-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+</head>
+<body>
+<main id="main" tabindex="-1">
+  <div class="wrap" style="padding-top:24px">
+    <h1 class="statement" id="ct-title">&ndash;</h1>
+    <p class="t-second second" id="ct-second" style="margin:8px 0 0;min-height:0">&nbsp;</p>
+    <ul class="leaders" id="leaders" aria-label="Leaders"></ul>
+    <div class="ctoolbar">
+      <div class="seg" role="group" aria-label="View"><button type="button" aria-pressed="true" data-v="table">Table</button><button type="button" aria-pressed="false" data-v="growth">Growth</button></div>
+      <label class="sr-only" for="q">Search companies</label><input id="q" type="search" placeholder="Search name or ticker" autocomplete="off"><span class="small" id="ct-count"></span>
+    </div>
+    <div id="ct-growth" hidden></div>
+    <div id="ct-wrap"></div>
+    <details class="fold" id="ct-built" style="margin-top:20px"></details>
+  </div>
+</main>
+<script src="lab.js"></script>
+<script src="companies.js"></script>
+</body>
+</html>

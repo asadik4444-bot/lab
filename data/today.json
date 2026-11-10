@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-11-10",
+  "sentences": [
+    {
+      "id": "financing",
+      "text": "Euro-area companies borrow at 3.9%, 0.4 pp more than a year ago.",
+      "href": "/financing",
+      "figure": {
+        "value": 3.9,
+        "unit": "%",
+        "label": "Euro-area company borrowing cost, Sep 2026"
+      },
+      "as_of": "2026-09-30"
+    },
+    {
+      "id": "deals",
+      "text": "123 US merger filings in six months, level with the same months last year.",
+      "href": "/deals",
+      "figure": {
+        "value": 123,
+        "unit": "filings",
+        "label": "Merger proxies and tender offers, last six full months (SPACs excluded)"
+      },
+      "as_of": "2026-11-09"
+    },
+    {
+      "id": "companies",
+      "text": "44 of 47 large US companies grew revenue in their latest fiscal year.",
+      "href": "/companies",
+      "figure": {
+        "value": 44,
+        "unit": "companies",
+        "label": "of 47 with a revenue growth figure"
+      },
+      "as_of": "2026-11-10"
+    }
+  ]
+}
