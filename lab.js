@@ -622,9 +622,7 @@
     var main = document.getElementById('main');
     body.insertBefore(header, main); body.insertBefore(menu, main); body.insertBefore(strip, main);
     body.appendChild(el('footer', { 'class': 'foot' }, el('div', { 'class': 'wrap' }, [
-      el('div', { 'class': 'fl' }, [el('a', { href: 'method.html' }, 'Method and sources'), el('a', { href: 'https://aabdurashidov.ch' }, 'Main site'),
-        /* the owner's way back: a frozen copy of the previous Lab in v1/ (tools/freeze_v1.py), on the same public data */
-        el('a', { href: 'v1/', 'class': 'v1link' }, 'Previous version (v1)')]),
+      el('div', { 'class': 'fl' }, [el('a', { href: 'method.html' }, 'Method and sources'), el('a', { href: 'https://aabdurashidov.ch' }, 'Main site')]),
       el('span', null, 'Not investment advice. Figures come from public filings and official statistics, each with its date.')
     ])));
     var btn = right.querySelector('.menu-btn');
@@ -636,16 +634,18 @@
 
   /* Freshness strip, driven by status.json: run.built_at and one row per source. Arguments are ignored (kept for old callers). */
   var STALE_WORDS = { fresh: 'fine', stale: 'stale', failed: 'failed' };
+  Lab.freshness = function (s, now) { return window.LabFreshness.assess(s, now); };
   Lab.status = function () {
     var host = Lab.$('status-host'); if (!host) return Promise.resolve();
     return Lab.load('status').then(function (s) {
+      s = Lab.freshness(s);
       var built = String(s.run.built_at), srcs = s.sources, bad = srcs.filter(function (x) { return x.state !== 'fresh'; }), fine = srcs.length - bad.length;
-      var d = parseDate(built), now = new Date(), fresh = d && (now - d) / 36e5 < 24;
+      var fresh = !s.overdue && !bad.length;
       Lab.rememberBuild(built);
-      var txt = ['Updated ', el('b', null, Lab.stamp(built)), ' · ' + fine + ' of ' + srcs.length + ' ', el('span', { 'class': 'w-src' }, 'sources '), 'fine'];
-      if (bad.length) { var x = bad[0], nm = x.label.charAt(0).toLowerCase() + x.label.slice(1); txt.push(' · ' + nm + ' ' + (STALE_WORDS[x.state] || x.state) + (x.newest_data ? ' since ' + Lab.date(x.newest_data) : '')); }
+      var txt = [s.overdue ? 'Refresh overdue · Last build ' : 'Built ', el('b', null, Lab.stamp(built)), ' · ' + fine + ' of ' + srcs.length + ' ', el('span', { 'class': 'w-src' }, 'sources '), 'within their age limits'];
+      if (bad.length) { var x = bad[0], nm = x.label.charAt(0).toLowerCase() + x.label.slice(1); txt.push(' · ' + nm + ' needs review'); }
       var b = el('button', { type: 'button', 'class': 'status' + (fresh && !reduced ? ' pulse' : '') }, [el('span', { 'class': 'dot', 'aria-hidden': 'true' }), el('span', null, txt)]);
-      Lab.tip(b, { title: 'When each source was built', def: 'The nightly run writes status.json with one row per source: its state and the date of its newest data. A source is fine while its state is fresh; anything else is named in the strip and stays visible with its date.', working: srcs.map(function (x) { return x.label + ': ' + (STALE_WORDS[x.state] || x.state) + ', newest data ' + Lab.date(x.newest_data) + (x.stale_series && x.stale_series.length ? ', stale series ' + x.stale_series.join(', ') : ''); }).join('. ') + '.', source: 'status.json, run built ' + Lab.stamp(built) + (s.run.git_commit ? ', commit ' + s.run.git_commit.slice(0, 7) : '') + '.', more: 'method.html#pipeline' });
+      Lab.tip(b, { title: 'Build and source dates', def: 'Freshness uses the current time. A public build is overdue after 36 hours. Observation dates do not change merely because a fetch succeeds.', working: srcs.map(function (x) { return x.label + ': ' + (STALE_WORDS[x.state] || x.state) + ', newest data ' + Lab.date(x.newest_data) + ', checked ' + Lab.stamp(x.checked_at); }).join('. '), source: 'status.json, build ' + Lab.stamp(built) + (s.run.git_commit ? ', commit ' + s.run.git_commit.slice(0, 7) : ''), more: 'method.html#pipeline' });
       host.textContent = ''; host.appendChild(b);
       return s;
     });

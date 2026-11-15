@@ -1,9 +1,9 @@
 /* Deals page: header sentence and four figures, then four tabs (Filings, Sponsors, Fundraising, Buyout maths).
-   Every number comes from deals_room.json, macro_room.json (SOFR) or lbo_math.js. The only typed values are the
+   Every number comes from deals_room.json, macro_room.json (SOFR) or detailed_math.js. The only typed values are the
    stated assumption defaults of SPEC-buyout.md and UI limits, both labelled below. */
 (function () {
   'use strict';
-  var L = Lab, el = L.el, sv = L.sv, $ = L.$, C = L.C, MINUS = L.MINUS, LBO = window.LboMath;
+  var L = Lab, el = L.el, sv = L.sv, $ = L.$, C = L.C, MINUS = L.MINUS;
   L.shell({ page: 'deals' });
 
   var TABS = [{ id: 'filings', name: 'Filings' }, { id: 'sponsors', name: 'Sponsors' }, { id: 'fundraising', name: 'Fundraising' }, { id: 'buyout', name: 'Buyout maths' }];
@@ -262,174 +262,15 @@
     p.appendChild(srcLine(srcFormD() + ' Form D covers US exempt-offering notices only; not every fund files. Not investment advice.'));
   }
 
-  /* ---------- Buyout maths ---------- */
-  function params() {
-    return { ebitda0: EBITDA0, entry: S.entry, leverage: S.leverage, rate: SOFR ? SOFR.value / 100 + S.spread / 100 : NaN, growth: S.growth / 100, conversion: S.conversion / 100, exit: S.exit, years: YEARS };
-  }
-  function sofrText() { return SOFR ? 'SOFR ' + L.num(SOFR.value, 2) + '% on ' + L.date(SOFR.period) : 'SOFR not available'; }
-  function rateText() { return sofrText() + ' + ' + L.num(S.spread, 2) + ' pp spread (assumption)'; }
-  var SRC_B = 'Hypothetical model on stated assumptions (lbo_math.js); no real company. SOFR: Federal Reserve Bank of New York.';
-  function ctlSpec(ct) {
-    var e = EBITDA0, y5 = LBO.lbo(params()), m = {
-      entry: ['Entry multiple', 'The enterprise value paid for the company, as a multiple of its EBITDA.', 'entry price = entry multiple × EBITDA', L.mult(S.entry) + ' × ' + fm(e) + ' = ' + fm(S.entry * e)],
-      leverage: ['Debt at entry', 'Borrowed money at the start, as a multiple of EBITDA. The rest of the price is the equity cheque.', 'debt = leverage × EBITDA; equity = price − debt', lev(S.leverage) + ' × ' + fm(e) + ' = ' + fm(S.leverage * e) + ' of debt; equity ' + fm((S.entry - S.leverage) * e) + '.'],
-      spread: ['Spread over SOFR', 'The margin added to the SOFR base rate to give the interest rate on the debt. A stated assumption, not a quote.', 'interest rate = SOFR + spread', SOFR ? sofrText() + ' + ' + L.num(S.spread, 2) + ' pp = ' + L.num(SOFR.value + S.spread, 2) + '% a year.' : 'SOFR is not in the data.'],
-      growth: ['EBITDA growth a year', 'How fast EBITDA grows each year of the holding period.', 'EBITDA(t) = EBITDA(t−1) × (1 + growth)', y5 ? fm(e) + ' becomes ' + fm(y5.years[y5.years.length - 1].ebitda) + ' in year ' + YEARS + '.' : null],
-      conversion: ['Cash conversion', 'The share of EBITDA left as cash before interest, after capital spending, tax and working capital.', 'cash flow = conversion × EBITDA − interest; interest = rate × debt at the start of the year', y5 ? 'Year 1: ' + L.pct(S.conversion / 100, 0) + ' × ' + fm(y5.years[0].ebitda) + ' − ' + fm(y5.years[0].interest) + ' = ' + fm(y5.years[0].fcf) + '.' : null],
-      exit: ['Exit multiple', 'The enterprise value the company is sold for at the end, as a multiple of its EBITDA that year.', 'exit price = exit multiple × EBITDA in year ' + YEARS, y5 ? L.mult(S.exit) + ' × ' + fm(y5.years[y5.years.length - 1].ebitda) + ' = ' + fm(y5.ev_out) + '.' : null]
-    }[ct.k];
-    return spec({ title: m[0], def: m[1], formula: m[2], working: m[3], source: 'Assumption: default ' + ct.fmt(ct.def) + ', range ' + ct.fmt(ct.min) + ' to ' + ct.fmt(ct.max) + '. ' + (ct.k === 'spread' ? 'SOFR from the Financing data.' : 'Not a forecast.'), caution: 'Hypothetical model on stated assumptions; not investment advice.', more: 'method.html#buyout' });
-  }
-  function snap(ct, v) { v = Math.max(ct.min, Math.min(ct.max, v)); return Math.round((v - ct.min) / ct.step) * ct.step + ct.min; }
-  function buildCtl(ct) {
-    var inp = el('input', { type: 'range', id: 'b-' + ct.k, min: ct.min, max: ct.max, step: ct.step, 'aria-label': ct.name }); inp.value = S[ct.k];
-    var vin = el('input', { type: 'text', inputmode: 'decimal', 'class': 'vin', id: 'bv-' + ct.k, 'aria-label': ct.name + ', typed value', autocomplete: 'off' }); vin.value = ct.fmt(S[ct.k]);
-    var box = el('div', { 'class': 'ctl' }, [el('div', { 'class': 'ctl-top' }, [L.tipLabel(ct.name, function () { return ctlSpec(ct); }), vin]), inp]);
-    function set(v) { v = snap(ct, v); S[ct.k] = v; inp.value = v; vin.value = ct.fmt(v); refresh(); }
-    inp.addEventListener('input', function () { S[ct.k] = parseFloat(inp.value); vin.value = ct.fmt(S[ct.k]); refresh(); });
-    inp.addEventListener('keydown', function (e) { if (e.key === 'PageUp' || e.key === 'PageDown') { e.preventDefault(); set(S[ct.k] + (e.key === 'PageUp' ? ct.big : -ct.big)); } });
-    function commit() { var n = parseFloat(vin.value.replace('−', '-').replace(/[^0-9.\-]/g, '')); if (isFinite(n)) set(n); else vin.value = ct.fmt(S[ct.k]); }
-    vin.addEventListener('change', commit); vin.addEventListener('keydown', function (e) { if (e.key === 'Enter') commit(); });
-    box.__sync = function () { inp.value = S[ct.k]; vin.value = ct.fmt(S[ct.k]); };
-    return box;
-  }
-  function tile(label, s, value, sub) { return el('div', { 'class': 'tile' }, [el('span', { 'class': 'tl' }, nt(label, s)), el('span', { 'class': 'tv' }, value), el('span', { 'class': 'ts' }, sub || '')]); }
-
+  /* Detailed buyout with bounded debt and explicit funding. */
   function renderBuyout() {
-    var p = $('panel-buyout'); p.textContent = ''; P = {};
-    P.title = el('h2', { 'class': 'statement', id: 'b-title' });
-    P.sub = el('p', { 'class': 't-second second prompt' }, 'Hypothetical: a generic company with ' + fm(EBITDA0) + ' of EBITDA, held ' + L.word(YEARS) + ' years. No real company. Not investment advice.');
-    P.live = el('p', { 'class': 'sr-only', 'aria-live': 'polite' });
-    p.appendChild(el('div', { 'class': 'panel-head', style: 'margin-bottom:0' }, [P.title, P.sub, P.live]));
-    P.tiles = el('div', { 'class': 'tiles t4 btiles' }); p.appendChild(P.tiles);
-    var grid = el('div', { 'class': 'bgrid' });
-    /* range box */
-    P.psHost = el('div', { 'class': 'rbar' }); P.evline = el('p', { 'class': 'evline' });
-    var rbox = el('div', { 'class': 'bsticky' }, [el('p', { 'class': 'vsub' }, 'Return a year (IRR), exit multiple ±1×'), P.psHost, P.evline]);
-    /* controls */
-    var left = el('div', { 'class': 'bleft' });
-    left.appendChild(el('h3', { 'class': 'vsub' }, 'Assumptions'));
-    P.boxes = CT.map(function (ct) {
-      var b = buildCtl(ct); left.appendChild(b);
-      if (ct.k === 'spread') { P.rate = el('p', { 'class': 'ratel' }); left.appendChild(P.rate); }
-      return b;
-    });
-    left.appendChild(el('dl', { 'class': 'bfix' }, [
-      el('dt', null, nt('EBITDA at entry', spec({ title: 'EBITDA at entry', def: 'Fixed for every case: a generic company that earns $100m of EBITDA in the year before the buyout. It is not any real company.', source: 'Assumption, fixed.', caution: 'Hypothetical model on stated assumptions.', more: 'method.html#buyout' }))), el('dd', null, fm(EBITDA0) + ', fixed'),
-      el('dt', null, nt('Holding period', spec({ title: 'Holding period', def: 'Fixed at ' + L.word(YEARS) + ' years: cash flows at the end of each year, exit at the end of year ' + YEARS + '.', source: 'Assumption, fixed.', caution: 'Hypothetical model on stated assumptions.', more: 'method.html#buyout' }))), el('dd', null, L.word(YEARS) + ' years, fixed')
-    ]));
-    var reset = el('button', { type: 'button', 'class': 'btn' }, 'Reset to starting values');
-    reset.addEventListener('click', function () { CT.forEach(function (c) { S[c.k] = c.def; }); P.boxes.forEach(function (b) { b.__sync(); }); refresh(); });
-    left.appendChild(reset);
-    /* bridge */
-    P.bridgeHost = el('div', { 'class': 'chart' });
-    var bbox = el('div', { 'class': 'bbridge' }, [el('h3', { 'class': 'vsub' }, 'Where the value comes from, $m'), P.bridgeHost, P.bnote = el('p', { 'class': 'cap' })]);
-    grid.appendChild(rbox); grid.appendChild(left); grid.appendChild(bbox); p.appendChild(grid);
-    /* year table fold-out */
-    P.ytable = el('div', { 'class': 'tblwrap' });
-    P.fold = el('details', { 'class': 'fold' }, [el('summary', null, ['Year by year', el('small', null, L.word(YEARS) + ' years, central case')]), el('div', { 'class': 'fold-body' }, [P.ytable, P.ynote = el('p', { 'class': 'cap' })])]);
-    p.appendChild(el('div', { 'class': 'folds' }, P.fold));
-    p.appendChild(el('p', { 'class': 'disc' }, 'Hypothetical model on stated assumptions, with no real company; not investment advice. ' + (SOFR ? 'Base rate: ' + sofrText() + ', Federal Reserve Bank of New York.' : '')));
-    if (!SOFR) { P.title.textContent = 'The buyout maths needs the SOFR rate, and it is not in the data.'; return; }
-    refresh();
+    window.DetailedModels.buyout($('panel-buyout'), SOFR);
   }
 
-  function tileSpecs(r, pr) {
-    var yN = r.years[r.years.length - 1];
-    return [
-      ['Return a year (IRR)', spec({ title: 'Return a year (IRR)', def: 'The yearly return on the equity cheque over the holding period, with no interim payouts.', formula: 'IRR = MOIC^(1 / years) − 1', working: L.num(r.moic, 2) + '× ^ (1 / ' + YEARS + ') − 1 = ' + L.pct(r.irr), source: SRC_B, caution: 'Hypothetical model on stated assumptions; not investment advice.', more: 'method.html#buyout' }), L.pct(r.irr), 'a year, ' + L.word(YEARS) + ' years'],
-      ['Money multiple (MOIC)', spec({ title: 'Money multiple (MOIC)', def: 'Equity at exit divided by the equity put in.', formula: 'MOIC = equity at exit / equity at entry', working: fm(r.equity_out) + ' / ' + fm(r.equity_in) + ' = ' + L.num(r.moic, 2) + '×', source: SRC_B, caution: 'Hypothetical model on stated assumptions; not investment advice.', more: 'method.html#buyout' }), L.mult(r.moic), 'of the equity put in'],
-      ['Equity at entry', spec({ title: 'Equity at entry', def: 'The cheque the buyer writes: the purchase price less the debt.', formula: 'equity = entry multiple × EBITDA − debt', working: fm(r.ev_in) + ' − ' + fm(r.debt0) + ' = ' + fm(r.equity_in), source: SRC_B, more: 'method.html#buyout' }), fm(r.equity_in), 'price ' + fm(r.ev_in) + ', debt ' + fm(r.debt0)],
-      ['Equity at exit', spec({ title: 'Equity at exit', def: 'What the buyer receives at the end: the sale price, less the debt still owed, plus any cash built up.', formula: 'equity out = exit multiple × EBITDA − debt + cash', working: fm(r.ev_out) + ' − ' + fm(yN.debt) + ' + ' + fm(yN.cash) + ' = ' + fm(r.equity_out), source: SRC_B, more: 'method.html#buyout' }), fm(r.equity_out), 'price ' + fm(r.ev_out) + ', debt ' + fm(yN.debt)]
-    ];
-  }
-  function drawBridge(r) {
-    var yN = r.years[r.years.length - 1], b = r.bridge, ein = r.equity_in, e1 = ein + b.growth, e2 = e1 + b.multiple, e3 = e2 + b.deleveraging;
-    var rows = [
-      { label: 'Equity in', a: 0, b: ein, tot: true, text: fm(ein), s: spec({ title: 'Equity in', def: 'The equity cheque at entry.', formula: 'entry price − debt', working: fm(r.ev_in) + ' − ' + fm(r.debt0) + ' = ' + fm(ein), source: SRC_B, more: 'method.html#buyout' }) },
-      { label: 'EBITDA growth', a: ein, b: e1, text: fms(b.growth), s: spec({ title: 'Value from EBITDA growth', def: 'The extra value from earnings growing, priced at the entry multiple.', formula: '(EBITDA in year ' + YEARS + ' − EBITDA at entry) × entry multiple', working: '(' + fm(yN.ebitda) + ' − ' + fm(EBITDA0) + ') × ' + L.mult(S.entry) + ' = ' + fms(b.growth), source: SRC_B, more: 'method.html#buyout' }) },
-      { label: 'Multiple change', a: e1, b: e2, text: fms(b.multiple), s: spec({ title: 'Value from the change in multiple', def: 'The gain or loss from selling at a different multiple than the one paid. Zero when exit equals entry.', formula: '(exit multiple − entry multiple) × EBITDA in year ' + YEARS, working: '(' + L.mult(S.exit) + ' − ' + L.mult(S.entry) + ') × ' + fm(yN.ebitda) + ' = ' + fms(b.multiple), source: SRC_B, more: 'method.html#buyout' }) },
-      { label: 'Debt paydown', a: e2, b: e3, text: fms(b.deleveraging), s: spec({ title: 'Value from debt paydown and cash', def: 'Cash the business generates after interest, used to repay debt and then kept as cash. If cash flow is negative, debt grows and this part is negative.', formula: '(debt at entry − debt in year ' + YEARS + ') + cash in year ' + YEARS, working: '(' + fm(r.debt0) + ' − ' + fm(yN.debt) + ') + ' + fm(yN.cash) + ' = ' + fms(b.deleveraging), source: SRC_B, more: 'method.html#buyout' }) },
-      { label: 'Equity out', a: 0, b: r.equity_out, tot: true, text: fm(r.equity_out), s: spec({ title: 'Equity out', def: 'Equity at exit: the three parts above added to the equity put in.', formula: 'equity in + growth + multiple change + debt paydown', working: fm(ein) + ' ' + fms(b.growth) + ' ' + fms(b.multiple) + ' ' + fms(b.deleveraging) + ' = ' + fm(r.equity_out), source: SRC_B, more: 'method.html#buyout' }) }
-    ];
-    L.chart(P.bridgeHost, function (h, w) {
-      var rh = 36, H = rows.length * rh + 4, labW = Math.min(132, w * 0.34), neg = rows.some(function (x) { return x.b < x.a; }), valW = 70;
-      var lo = Math.min.apply(null, rows.map(function (x) { return Math.min(x.a, x.b); }).concat([0])), hi = Math.max.apply(null, rows.map(function (x) { return Math.max(x.a, x.b); }).concat([0]));
-      var x = L.scale(lo, hi, labW + (neg ? valW : 0), w - valW), svg = svgRoot(w, H, 'Returns bridge in $m: ' + rows.map(function (q) { return q.label + ' ' + q.text; }).join('; ') + '.');
-      svg.appendChild(sv('line', { x1: x(0), x2: x(0), y1: 0, y2: H, stroke: C.ink, 'stroke-width': 1 }));
-      rows.forEach(function (q, i) {
-        var cy = 2 + i * rh + rh / 2, g = sv('g'), x1 = Math.min(x(q.a), x(q.b)), x2 = Math.max(x(q.a), x(q.b)), right = q.b >= q.a;
-        g.appendChild(sv('rect', { x: 0, y: cy - rh / 2, width: w, height: rh, fill: 'transparent' }));
-        g.appendChild(sv('text', { x: 0, y: cy + 4.5, 'font-size': 14, fill: C.ink, 'font-weight': q.tot ? 600 : 400 }, q.label));
-        g.appendChild(sv('rect', { x: x1, y: cy - 8, width: Math.max(2, x2 - x1), height: 16, rx: 2, fill: q.tot ? C.ink : C.ink2, 'fill-opacity': q.tot ? 1 : 0.55 }));
-        g.appendChild(sv('text', { x: right ? x2 + 8 : x1 - 8, y: cy + 4.5, 'text-anchor': right ? 'start' : 'end', 'font-size': 14, 'font-weight': 600, fill: C.ink }, q.text));
-        L.tip(g, q.s); g.setAttribute('aria-label', q.label + ' ' + q.text);
-        svg.appendChild(g);
-      });
-      h.appendChild(svg);
-    });
-  }
-  function renderYears(r, pr) {
-    var rows = [{ t: 0, ebitda: EBITDA0, interest: null, fcf: null, debt: r.debt0, cash: 0 }].concat(r.years);
-    var t = el('table', { 'class': 'dtable mt ytable' });
-    t.appendChild(el('thead', null, el('tr', null, ['Year', 'EBITDA', 'Interest', 'Cash flow after interest', 'Debt', 'Cash'].map(function (hh, i) { return el('th', { scope: 'col', 'class': i ? 'r' : '' }, hh); }))));
-    var tb = el('tbody');
-    function cell(label, key, row, v) {
-      if (v == null) return el('td', { 'class': 'r', 'data-l': label }, el('span', { 'class': 'rs' }, '–'));
-      var w = {
-        ebitda: ['EBITDA, year ' + row.t, 'EBITDA grown at ' + L.pct(S.growth / 100) + ' a year.', 'EBITDA(t) = EBITDA(t−1) × (1 + growth)'],
-        interest: ['Interest, year ' + row.t, 'The interest rate on the debt at the start of the year.', 'interest = rate × debt at the start of the year'],
-        fcf: ['Cash flow after interest, year ' + row.t, 'Cash conversion times EBITDA, less interest. It repays debt first; any surplus is kept as cash. If negative, debt grows.', 'cash flow = conversion × EBITDA − interest'],
-        debt: ['Debt, end of year ' + row.t, 'Debt left after the year’s cash flow is applied.', 'debt = max(debt − cash flow, 0); debt grows if cash flow is negative'],
-        cash: ['Cash, end of year ' + row.t, 'Cash kept once the debt is fully repaid.', 'cash = cash + cash flow left after repaying debt']
-      }[key];
-      return el('td', { 'class': 'r', 'data-l': label }, nt(fm(v), spec({ title: w[0], def: w[1], formula: w[2], working: fm(v) + ' at ' + L.pct(pr.rate, 2) + ' interest.', source: SRC_B, more: 'method.html#buyout' })));
-    }
-    rows.forEach(function (row) {
-      tb.appendChild(el('tr', null, [el('th', { scope: 'row' }, row.t === 0 ? 'Entry' : 'Year ' + row.t), cell('EBITDA', 'ebitda', row, row.ebitda), cell('Interest', 'interest', row, row.interest), cell('Cash flow', 'fcf', row, row.fcf), cell('Debt', 'debt', row, row.debt), cell('Cash', 'cash', row, row.cash)]));
-    });
-    t.appendChild(tb); P.ytable.textContent = ''; P.ytable.appendChild(t);
-    P.ynote.textContent = '$m, hypothetical. Interest is ' + L.pct(pr.rate, 2) + ' (' + rateText() + ') on the debt at the start of each year. Cash flow repays debt first; once debt is zero it builds as cash.';
-  }
-
-  function refresh() {
-    if (!P.title || !SOFR) return;
-    var pr = params(), r = LBO.lbo(pr), mid = L.mult(S.entry), debt = lev(S.leverage);
-    P.rate.textContent = '';
-    P.rate.appendChild(L.tipLabel(rateText() + ' = ' + L.num(SOFR.value + S.spread, 2) + '% a year', spec({ title: 'Interest rate on the debt', def: 'The base rate plus a spread. SOFR is the US overnight secured funding rate, read from the Financing data; the spread is a stated assumption.', formula: 'rate = SOFR + spread', working: sofrText() + ' + ' + L.num(S.spread, 2) + ' pp = ' + L.num(SOFR.value + S.spread, 2) + '% a year.', source: 'Federal Reserve Bank of New York, SOFR, ' + L.date(SOFR.period) + '. Spread: assumption.', more: 'method.html#sofr' })));
-    CT.forEach(function (ct) { var i = $('b-' + ct.k); if (i) i.style.setProperty('--p', ((+i.value - +i.min) / (+i.max - +i.min) * 100) + '%'); });
-    var title;
-    P.tiles.textContent = ''; P.psHost.textContent = ''; P.evline.textContent = '';
-    if (!r) {
-      title = S.leverage >= S.entry ? 'Debt exceeds the purchase price, so this hypothetical buyout has no result.' : 'These inputs give no result for this hypothetical buyout.';
-      P.title.textContent = title; P.bridgeHost.textContent = ''; P.ytable.textContent = ''; P.bnote.textContent = '';
-      P.psHost.appendChild(el('p', { 'class': 'cap' }, 'No IRR range: there is no result at these inputs.'));
-      announce(title); return;
-    }
-    if (r.irr == null) title = 'At ' + mid + ' entry and ' + debt + ' debt, the equity is wiped out in this hypothetical buyout.';
-    else title = 'At ' + mid + ' entry and ' + debt + ' debt, this hypothetical buyout returns ' + L.pct(r.irr) + ' a year over ' + L.word(YEARS) + ' years (' + L.mult(r.moic) + ' money).';
-    P.title.textContent = title; announce(title);
-    if (r.irr != null) tileSpecs(r, pr).forEach(function (x) { P.tiles.appendChild(tile(x[0], x[1], x[2], x[3])); });
-    else P.tiles.appendChild(tile('Equity at exit', spec({ title: 'Equity at exit', def: 'Sale price less debt plus cash; not above zero here, so there is no IRR.', working: fm(r.equity_out), source: SRC_B }), fm(r.equity_out), 'the equity is wiped out'));
-    var rg = LBO.lboRange(pr);
-    if (rg && rg.low != null && rg.high != null && rg.mid != null) {
-      var rs = spec({ title: 'The range, not a point', def: 'The bar spans the IRR if the company is sold one turn of EBITDA below the exit multiple (low) and one turn above (high). The pale tick is the exit multiple you set.', formula: 'IRR at exit − 1×, exit, exit + 1×', working: 'Exit ' + L.mult(rg.exits[0]) + ': ' + L.pct(rg.low) + '; ' + L.mult(rg.exits[1]) + ': ' + L.pct(rg.mid) + '; ' + L.mult(rg.exits[2]) + ': ' + L.pct(rg.high) + '.', source: SRC_B, caution: 'Hypothetical model on stated assumptions; not investment advice.', more: 'method.html#buyout' });
-      L.range(P.psHost, { name: 'IRR', low: rg.low, mid: rg.mid, high: rg.high, fmt: function (v) { return L.pct(v); }, spec: rs });
-      P.evline.appendChild(L.tipLabel('Exit ' + L.mult(rg.exits[0]) + ' to ' + L.mult(rg.exits[2]), rs));
-      P.evline.appendChild(document.createTextNode(', central ' + L.mult(rg.exits[1]) + '. One turn is one times EBITDA.'));
-    } else {
-      P.psHost.appendChild(el('p', { 'class': 'cap' }, 'No IRR range: at one end of the exit multiple the equity is wiped out.'));
-    }
-    drawBridge(r);
-    P.bnote.textContent = 'The three parts add up exactly to equity out less equity in: ' + fms(r.bridge.growth) + ' ' + fms(r.bridge.multiple) + ' ' + fms(r.bridge.deleveraging) + ' = ' + fms(r.equity_out - r.equity_in) + '. Hypothetical.';
-    renderYears(r, pr);
-  }
-
-  /* ---------- notes and provenance ---------- */
   function renderNotes() {
     var ul = el('ul', { 'class': 'list' });
     D.notes.forEach(function (t) { if (/^Source: SEC EDGAR/.test(t)) return; ul.appendChild(el('li', null, t)); });
-    ul.appendChild(el('li', null, 'Buyout maths: hypothetical and generic, with $' + L.num(EBITDA0) + 'm of EBITDA and no real company. The model is in lbo_math.js; its defaults are stated assumptions, not forecasts. The base rate is SOFR from the Financing data' + (SOFR ? ', ' + L.date(SOFR.period) + '.' : '.')));
+    ul.appendChild(el('li', null, 'Buyout maths: hypothetical and generic, with $' + L.num(EBITDA0) + 'm of EBITDA and no real company. The model is in detailed_math.js; its defaults are stated assumptions, not forecasts. The base rate is SOFR from the Financing data' + (SOFR ? ', ' + L.date(SOFR.period) + '.' : '.')));
     if (MAC && MAC.series) { var s = MAC.series.filter(function (x) { return x.id === 'us_sofr'; })[0]; if (s && s.credit) ul.appendChild(el('li', null, s.credit)); }
     ul.appendChild(el('li', null, 'Refreshed ' + L.date(D.as_of) + ' from SEC EDGAR (full-text search, Form ADV roster ' + L.date(D.roster_date) + ', Form D data sets ' + qLabel(D.formd_quarters[0]) + ' to ' + qLabel(D.formd_quarters[D.formd_quarters.length - 1]) + '). Not investment advice.'));
     $('notes').appendChild(el('div', { 'class': 'folds' }, el('details', { 'class': 'fold' }, [el('summary', null, ['Notes and sources', el('small', null, 'how the deal figures are built')]), el('div', { 'class': 'fold-body' }, ul)])));

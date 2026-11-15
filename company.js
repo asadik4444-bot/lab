@@ -1,8 +1,8 @@
 /* Company page: fixed header, four tabs (Earnings, Value, Cash & debt, Sources) and the price box.
-   Valuation maths is company_math.js (unchanged). The price you type is used in this browser only. */
+   Valuation uses detailed_math.js and the explicit-input form. The price you type is used in this browser only. */
 (function () {
   'use strict';
-  var L = Lab, el = L.el, $ = L.$, CM = window.CompanyMath, MINUS = L.MINUS;
+  var L = Lab, el = L.el, $ = L.$, MINUS = L.MINUS;
   L.shell({ page: 'companies' });
 
   /* UI settings, not data: slider limits, grid steps, range width, reverse-DCF search range */
@@ -92,19 +92,6 @@
   var liveT = null;
   function announce(text) { clearTimeout(liveT); liveT = setTimeout(function () { if (P.live) P.live.textContent = text; }, 400); }
   function disc(txt) { return el('p', { 'class': 'disc' }, txt); }
-
-  /* ---------- the price box maths: company_math.js plus simple arithmetic ---------- */
-  function priceCalc() {
-    var c = S.co, price = S.price, r = { price: price };
-    if (price == null || !S.shares) return r;
-    r.mcap = price * S.shares;
-    var eps = val(V(c, 'eps_diluted')); r.eps = eps; r.pe = eps > 0 ? price / eps : null;
-    if (c.financial) return r;
-    r.net = CM.netClaims(S.claims); r.ev = r.mcap + r.net;
-    r.ebitda = val(V(c, 'ebitda')); r.evEbitda = r.ebitda > 0 ? r.ev / r.ebitda : null;
-    if (S.p && r.ev > 0) r.implied = CM.reverseGrowth(S.p, r.ev, SEARCH[0], SEARCH[1]);
-    return r;
-  }
 
   /* ---------- three kinds of company: industrial, bank (SIC 60-62), insurer (SIC 63-64) ---------- */
   function kindOf(c) {
@@ -257,236 +244,30 @@
     return { title: DEFS.revenue_cagr[0], def: DEFS.revenue_cagr[1], formula: DEFS.revenue_cagr[2], working: '(' + L.usd(b.revenue) + ' / ' + L.usd(a.revenue) + ')^(1/' + c.history.cagr_years + ') − 1 = ' + L.pctS(g.value), source: '10-K filings for ' + fyLabel(c, a) + ' and ' + fyLabel(c, b) + '.', href: b.filing_url || null, more: 'method.html#revenue_cagr' };
   }
 
-  /* ---------- Value ---------- */
-  function ctlNote(key) {
-    var c = S.co, gb = D.defaults.growth_bounds, dp = key === 'rate' || key === 'terminal' ? 2 : 1;
-    var m = {
-      growth: ['Revenue growth, years 1–' + CM.STAGE1, 'How fast revenue grows each year for ' + L.word(CM.STAGE1) + ' years, then fades in a straight line to terminal growth by year ' + CM.YEARS + '.', 'revenue(t) = revenue(t−1) × (1 + growth)', 'Default: the last fiscal year’s growth, kept within ' + L.pct(gb[0]) + ' to ' + L.pctS(gb[1]) + '.'],
-      margin: ['Unlevered FCF margin', 'The share of revenue that turns into free cash flow before financing costs.', 'cash flow = revenue × margin', 'Default: the last fiscal year’s unlevered FCF margin, FY' + c.fy.fy + '.'],
-      rate: ['Discount rate', 'The yearly return used to bring future cash back to today. A higher rate gives a lower value.', 'present value = cash flow / (1 + rate)^year', 'Default: ' + D.defaults.discount_rate_text + '.'],
-      terminal: ['Terminal growth', 'Yearly growth of cash flow after year ' + CM.YEARS + ', for ever. It must stay below the discount rate.', 'terminal value = last cash flow × (1 + g) / (rate − g)', 'Default: an assumption, not a forecast.']
-    }[key];
-    return { title: m[0], def: m[1], formula: m[2], working: 'Now ' + L.pct(S.p[key], dp) + '; default ' + L.pct(S.def[key], dp) + '.', source: m[3], href: null, more: 'method.html#dcf' };
-  }
-  var CTL = [{ key: 'growth', name: 'Revenue growth, years 1–5', dec: 1 }, { key: 'margin', name: 'Unlevered FCF margin', dec: 1 }, { key: 'rate', name: 'Discount rate', dec: 1 }, { key: 'terminal', name: 'Terminal growth', dec: 1 }];
-
-  function aligned(def, lo, hi) { return [def - Math.floor((def - lo) / STEP + 1e-9) * STEP, def + Math.floor((hi - def) / STEP + 1e-9) * STEP]; }
-
+  /* Value tab. A non-financial company has one valuation tool: the workspace. Banks and insurers keep the P/E form here. */
   function renderValue(c) {
-    var p = $('panel-value'); p.textContent = ''; P = {};
-    var dd = c.dcf && c.dcf.defaults, nm = L.shortName(c.name);
-    S.p = null; S.def = null; S.claims = claims(c); S.shares = val(c.shares_for_per_share);
-    P.title = el('h2', { 'class': 'statement', id: 'v-title', style: 'max-width:none' });
-    P.second = el('p', { 'class': 't-second second prompt' });
-    P.live = el('p', { 'class': 'sr-only', 'aria-live': 'polite' });
-    p.appendChild(el('div', { 'class': 'panel-head', style: 'margin-bottom:0' }, [P.title, P.second, P.live]));
-    var grid = el('div', { 'class': 'vgrid' }); p.appendChild(grid);
-
-    if (c.financial) {
-      P.title.textContent = 'A cash-flow valuation does not describe ' + nm + '.';
-      grid.style.display = 'block';
-      p.insertBefore(el('div', { 'class': 'na', style: 'margin-top:20px' }, [el('p', null, finCopy(kindOf(c))), el('small', null, 'A DCF on free cash flow and an enterprise-value multiple would mislead, so the Lab does not compute them. Type a share price to see market value and the price-to-earnings ratio.')]), grid);
-      grid.appendChild(buildPriceBox(c));
-      p.appendChild(disc(DISC));
-      refresh(); return;
-    }
-    if (!dd) {
-      P.title.textContent = 'There is no DCF for ' + nm + '.';
-      grid.style.display = 'block';
-      p.insertBefore(el('div', { 'class': 'na', style: 'margin-top:20px' }, [el('p', null, why(c.dcf) + '.'), el('small', null, 'The enterprise value and multiples still work once you type a share price.')]), grid);
-      grid.appendChild(buildPriceBox(c)); p.appendChild(buildFolds(c)); p.appendChild(disc(DISC)); refresh(); return;
-    }
-    S.def = { revenue: c.dcf.revenue, growth: dd.growth, margin: dd.margin, rate: dd.rate, terminal: dd.terminal };
-    S.p = Object.assign({}, S.def);
-    var gb = D.defaults.growth_bounds, span = (gb[1] - gb[0]) / 2, lim = { growth: [gb[0] - span, gb[1] + span], margin: LIMITS.margin, rate: LIMITS.rate, terminal: LIMITS.terminal };
-
-    var left = el('div', { 'class': 'vleft' });
-    left.appendChild(el('h3', { 'class': 'vsub' }, 'Assumptions'));
-    CTL.forEach(function (ct) {
-      var r = aligned(S.def[ct.key], Math.min(lim[ct.key][0], S.def[ct.key]), Math.max(lim[ct.key][1], S.def[ct.key]));
-      var inp = el('input', { type: 'range', id: 'in-' + ct.key, min: r[0], max: r[1], step: STEP, 'aria-label': ct.name }); inp.value = S.p[ct.key];
-      var vin = el('input', { type: 'text', inputmode: 'decimal', 'class': 'vin', id: 'v-' + ct.key, 'aria-label': ct.name + ', value in percent', autocomplete: 'off' });
-      vin.value = L.pct(S.p[ct.key], ct.dec);
-      var lab = L.tipLabel(ct.name, function () { return ctlNote(ct.key); });
-      var box = el('div', { 'class': 'ctl' }, [el('div', { 'class': 'ctl-top' }, [lab, vin]), inp]);
-      function set(v) { v = Math.max(+inp.min, Math.min(+inp.max, v)); S.p[ct.key] = v; inp.value = v; vin.value = L.pct(v, ct.dec); refresh(); }
-      inp.addEventListener('input', function () { S.p[ct.key] = parseFloat(inp.value); vin.value = L.pct(S.p[ct.key], ct.dec); refresh(); });
-      inp.addEventListener('keydown', function (e) { if (e.key === 'PageUp' || e.key === 'PageDown') { e.preventDefault(); set(S.p[ct.key] + (e.key === 'PageUp' ? PAGE : -PAGE)); } });
-      function commit() { var n = parseFloat(vin.value.replace('−', '-').replace(/[%\s]/g, '')); if (isFinite(n)) set(n / 100); else vin.value = L.pct(S.p[ct.key], ct.dec); }
-      vin.addEventListener('change', commit); vin.addEventListener('keydown', function (e) { if (e.key === 'Enter') commit(); });
-      left.appendChild(box);
-    });
-    var reset = el('button', { type: 'button', 'class': 'btn' }, 'Reset to starting values');
-    reset.addEventListener('click', function () { CTL.forEach(function (ct) { S.p[ct.key] = S.def[ct.key]; $('in-' + ct.key).value = S.def[ct.key]; $('v-' + ct.key).value = L.pct(S.def[ct.key], ct.dec); }); refresh(); });
-    left.appendChild(reset);
-
-    P.rangebox = el('div', { 'class': 'rangebox' }, [el('p', { 'class': 'vsub' }, 'Value per share'), (P.psHost = el('div', { 'class': 'rbar' })), (P.evline = el('p', { 'class': 'evline' }))]);
-    grid.appendChild(left); grid.appendChild(P.rangebox); grid.appendChild(buildPriceBox(c));
-
-    var sens = el('div', { 'class': 'sens' });
-    var sh = el('div', { 'class': 'sens-head' }, el('h3', { 'class': 'vsub', style: 'margin:0' }, 'Sensitivity: value per share, growth × margin'));
-    P.gridToggle = el('button', { type: 'button', 'class': 'linkbtn' });
-    P.gridToggle.addEventListener('click', function () { S.full = !S.full; refresh(); });
-    sh.appendChild(P.gridToggle); sens.appendChild(sh);
-    sens.appendChild(el('div', { 'class': 'table-scroll', tabindex: '0', role: 'region', 'aria-label': 'Sensitivity grid, value per share. Scrolls sideways if narrow.' }, (P.gtable = el('table', { 'class': 'gtable' }))));
-    sens.appendChild(P.gnote = el('p', { 'class': 'cap' }));
-    p.appendChild(sens);
-    p.appendChild(buildFolds(c));
-    p.appendChild(disc(DISC));
-    refresh();
+    $('panel-value').replaceChildren();   // the page redraws in place when the visitor changes company
+    if (c.financial) { window.DetailedModels.company($('panel-value'), c, D, MROW[c.ticker]); return; }
+    var link = 'valuation.html?c=' + encodeURIComponent(c.ticker);
+    /* The valuation page opens with its simple view. The five steps of its detailed path can be opened one by one. */
+    var steps = [['business', 'The business', 'what the company earns today'],
+      ['forecast', 'The forecast', 'the cash flow of the next ten years'],
+      ['value', 'The value', 'what that cash is worth today, for one share'],
+      ['range', 'The range', 'three cases, and the inputs that move the value most'],
+      ['price', 'The price', 'the growth or the discount rate that the share price needs']];
+    $('panel-value').append(el('section', { 'class': 'workspace-entry', 'aria-label': 'Company valuation' }, [
+      el('div', null, [el('h2', null, 'What could this business be worth?'),
+        el('p', null, 'A ten-year cash-flow model, prefilled from the ' + L.shortName(c.name) + ' filing. It opens with one chart and three assumptions. Five steps show the detail.'),
+        el('ol', { 'class': 'workspace-views' }, steps.map(function (v) { return el('li', null, [el('a', { href: link + '&design=' + v[0] }, v[1]), ': ' + v[2]]); }))]),
+      el('a', { href: link, 'class': 'btn' }, 'Open the valuation')
+    ]));
+    if ((c.quality_flags || []).length) $('panel-value').append(el('details', { 'class': 'fold' }, [
+      el('summary', null, 'Source checks to review · ' + c.quality_flags.length),
+      el('p', { 'class': 'cap' }, 'These checks did not pass. Review the filing before you use the related assumption.'),
+      el('ul', null, c.quality_flags.map(function (t) { return el('li', null, t); }))
+    ]));
   }
 
-  function buildPriceBox(c) {
-    var box = el('div', { 'class': 'pbox', role: 'group', 'aria-labelledby': 'pb-label' });
-    box.appendChild(el('label', { id: 'pb-label', 'for': 'price' }, 'Type a share price (USD)'));
-    var inp = el('input', { id: 'price', type: 'text', inputmode: 'decimal', autocomplete: 'off', 'aria-describedby': 'pb-note pb-err' });
-    var clear = el('button', { type: 'button', hidden: true, 'aria-label': 'Clear the share price' }, 'Clear');
-    box.appendChild(el('div', { 'class': 'pin' }, [el('span', { 'class': 'cur', 'aria-hidden': 'true' }, '$'), inp, clear]));
-    P.err = el('p', { 'class': 'perr', id: 'pb-err', role: 'status' }); box.appendChild(P.err);
-    box.appendChild(el('p', { 'class': 'pnote', id: 'pb-note' }, 'Calculated in your browser; nothing is stored.'));
-    P.pres = el('div', { 'class': 'pres' }); box.appendChild(P.pres);
-    inp.addEventListener('input', function () {
-      var raw = inp.value.replace(/[$,\s]/g, ''); clear.hidden = !raw;
-      if (!raw) { S.price = null; P.err.textContent = ''; } else {
-        var n = Number(raw);
-        if (!isFinite(n) || n <= 0) P.err.textContent = 'Type a price above 0.'; else { S.price = n; P.err.textContent = ''; }
-      }
-      refresh();
-    });
-    clear.addEventListener('click', function () { inp.value = ''; S.price = null; clear.hidden = true; P.err.textContent = ''; refresh(); inp.focus(); });
-    return box;
-  }
-
-  function renderPrice(c) {
-    var r = priceCalc(), has = r.price != null, host = P.pres; host.textContent = '';
-    if (!has) {
-      host.appendChild(el('span', { 'class': 'dash' }, c.financial ? 'Market cap and P/E appear here once you type a price.' : 'Market cap, enterprise value and multiples appear here once you type a price.'));
-      P.second.className = 't-second second prompt'; P.second.textContent = 'Type today’s share price to see what it implies.';
-      return r;
-    }
-    function pr(label, sp, value) { host.appendChild(el('span', { 'class': 'pr' }, [L.tipLabel(label, sp), el('b', null, value)])); }
-    var k = S.claims, basis = c.shares_for_per_share && c.shares_for_per_share.basis || 'not stated';
-    pr('Market cap', { title: 'Market cap', def: 'What the whole equity is worth at your price.', formula: 'price × diluted shares', working: '$' + priceTxt(r.price) + ' × ' + sharesText() + ' shares = ' + L.usd(r.mcap), source: 'Your price; shares: ' + basis + ', ' + srcText(c), href: hrefOf(F(c, 'revenue')), more: 'method.html#market_cap' }, L.usd(r.mcap));
-    if (!c.financial) {
-      var miss = missing(c);
-      pr('EV', { title: 'Enterprise value', def: 'What the whole business is worth to shareholders and lenders together.', formula: 'market cap + debt + finance leases + non-controlling interest − cash − short-term investments', working: L.usd(r.mcap) + ' + ' + usdOr(k.debt) + ' + ' + usdOr(k.finance_leases, '$0') + ' + ' + usdOr(k.nci, '$0') + ' − ' + usdOr(k.cash) + ' − ' + usdOr(k.short_term_investments, '$0') + ' = ' + L.usd(r.ev), source: srcText(c), href: hrefOf(V(c, 'debt')), caution: miss.length ? 'Not reported, counted as 0: ' + miss.join(', ') + '.' : null, more: 'method.html#ev' }, L.usd(r.ev));
-      pr('EV/EBITDA', { title: 'EV / EBITDA', def: 'How many years of EBITDA the enterprise value equals: a common yardstick in deal work.', formula: 'enterprise value / EBITDA', working: r.evEbitda != null ? L.usd(r.ev) + ' / ' + L.usd(r.ebitda) + ' = ' + L.mult(r.evEbitda) : 'EBITDA is not positive or not reported.', source: srcText(c), href: hrefOf(V(c, 'ebitda')), more: 'method.html#ev_ebitda' }, r.evEbitda != null ? L.mult(r.evEbitda) : 'n/a');
-    }
-    pr('P/E', { title: 'P/E', def: 'Dollars paid for one dollar of yearly earnings.', formula: 'price / diluted EPS', working: r.pe != null ? '$' + priceTxt(r.price) + ' / $' + L.num(r.eps, 2) + ' = ' + L.mult(r.pe) : 'Earnings per share are not positive or not reported.', source: 'Your price; EPS diluted, ' + srcText(c), href: hrefOf(V(c, 'eps_diluted')), more: 'method.html#pe' }, r.pe != null ? L.mult(r.pe) : 'n/a');
-    P.second.className = 't-second second';
-    if (!c.financial && S.p) {
-      P.second.textContent = r.implied != null ? 'At $' + priceTxt(r.price) + ', the price needs ' + L.pct(r.implied) + ' revenue growth a year for ' + L.word(CM.STAGE1) + ' years.' : (r.ev > 0 ? 'At $' + priceTxt(r.price) + ', no growth rate between ' + L.pctS(SEARCH[0], 0) + ' and ' + L.pctS(SEARCH[1], 0) + ' matches the price.' : 'At $' + priceTxt(r.price) + ', the enterprise value is not positive.');
-    } else if (!c.financial) {
-      P.second.textContent = 'At $' + priceTxt(r.price) + ', enterprise value is ' + L.usd(r.ev) + (r.evEbitda != null ? ', ' + L.mult(r.evEbitda) + ' EBITDA.' : '.');
-    } else {
-      P.second.textContent = 'At $' + priceTxt(r.price) + ', the price is ' + (r.pe != null ? L.mult(r.pe) + ' diluted earnings.' : 'not comparable with earnings per share.');
-    }
-    return r;
-  }
-
-  function buildFolds(c) {
-    var wrap = el('div', { 'class': 'folds' });
-    P.bridgeBody = el('div', { 'class': 'fold-body' });
-    var f1 = el('details', { 'class': 'fold' }, [el('summary', null, ['How enterprise value is built', el('small', null, 'market cap plus claims, less cash')]), P.bridgeBody]);
-    f1.addEventListener('toggle', function () { if (f1.open) refresh(); });
-    wrap.appendChild(f1);
-    if (S.p) {
-      P.uHost = el('div', { 'class': 'chart' }); P.utable = el('div', { 'class': 'table-scroll', tabindex: '0', role: 'region', 'aria-label': 'Year-by-year projection' }); P.unote = el('p', { 'class': 'cap' });
-      P.fold2 = el('details', { 'class': 'fold' }, [el('summary', null, ['Cash flows by year', el('small', null, 'ten years, central case')]), el('div', { 'class': 'fold-body' }, [P.uHost, P.utable, P.unote])]);
-      P.fold2.addEventListener('toggle', function () { if (P.fold2.open) refresh(); });
-      wrap.appendChild(P.fold2);
-    }
-    P.f1 = f1; return wrap;
-  }
-
-  function renderBridge(c, r) {
-    var b = P.bridgeBody; if (!b || !P.f1.open) return; b.textContent = '';
-    var k = S.claims, has = r.price != null;
-    var rows = [['Market cap', has ? L.usd(r.mcap) : 'type a price', 'price × diluted shares', has ? '$' + priceTxt(r.price) + ' × ' + sharesText() : null, null, 'market_cap'],
-      ['+ Debt', usdOr(k.debt), 'debt', null, V(c, 'debt'), 'debt'], ['+ Finance leases', usdOr(k.finance_leases), 'finance_leases', null, V(c, 'finance_leases'), 'finance_leases'], ['+ Non-controlling interest', usdOr(k.nci), 'nci', null, V(c, 'nci'), 'nci'],
-      [MINUS + ' Cash', usdOr(k.cash), 'cash', null, V(c, 'cash'), 'cash'], [MINUS + ' Short-term investments', usdOr(k.short_term_investments), 'short_term_investments', null, V(c, 'short_term_investments'), 'short_term_investments'],
-      ['= Enterprise value', has ? L.usd(r.ev) : 'type a price', null, null, null, 'ev']];
-    var t = el('table', { 'class': 'dtable' });
-    t.appendChild(el('thead', null, el('tr', null, [el('th', { scope: 'col' }, 'Step'), el('th', { scope: 'col', 'class': 'r' }, 'USD')])));
-    var tb = el('tbody');
-    rows.forEach(function (x) {
-      var sp = x[4] ? nodeNote(c, x[2], x[4]) : { title: x[0].replace(/^[+=−] /, ''), def: x[5] === 'ev' ? 'Market cap plus net claims on the business.' : 'What the whole equity is worth at your price.', formula: x[2] || 'market cap + debt + finance leases + non-controlling interest − cash − short-term investments', working: x[3] || (has && x[5] === 'ev' ? L.usd(r.mcap) + ' + net claims of ' + L.usd(r.net) + ' = ' + L.usd(r.ev) : null), source: srcText(c), more: 'method.html#' + x[5] };
-      tb.appendChild(el('tr', null, [el('th', { scope: 'row' }, L.tipLabel(x[0], sp)), el('td', { 'class': 'r' }, x[1])]));
-    });
-    t.appendChild(tb); b.appendChild(t);
-    b.appendChild(el('p', { 'class': 'cap' }, 'Fiscal year end ' + L.date(c.fy.end) + '. Operating leases are not added: US GAAP EBITDA is already after rent.' + (missing(c).length ? ' Not reported, counted as zero: ' + missing(c).join(', ') + '.' : '')));
-  }
-
-  function refresh() {
-    var c = S.co; if (!c || !P.pres) return;
-    var r = renderPrice(c);
-    CTL.forEach(function (ct) { var i = $('in-' + ct.key); if (i) i.style.setProperty('--p', ((+i.value - +i.min) / (+i.max - +i.min) * 100) + '%'); });
-    renderBridge(c, r);
-    if (!S.p) return;
-    var vr = CM.valueRange(S.p, S.claims, S.shares, RANGE_PP);
-    if (!vr) { P.title.textContent = 'These inputs give no value: the discount rate must be above terminal growth.'; P.psHost.textContent = ''; return; }
-    var hasPs = vr.perShare.low != null, ref = vr.perShare.mid, psf = function (v) { return L.psz(v, ref); }, psr = function (v) { return L.ps(v, ref); };
-    var title = 'On these assumptions the business is worth ' + (hasPs ? (vr.perShare.low < 0 ? 'up to ' + psr(vr.perShare.high) : rangeText(vr.perShare.low, vr.perShare.high, psr)) + ' a share.' : rangeText(vr.ev.low, vr.ev.high, L.usd) + '.');
-    P.title.textContent = title; announce(title + ' ' + P.second.textContent);
-    var rn = function (a, m, b, f) { return { title: 'The range, not a point', def: 'The bar spans the value at a discount rate one percentage point higher (low) and lower (high). The pale tick is the central case.', formula: 'low: rate + 1 pp; high: rate − 1 pp', working: 'Low ' + f(a) + ', central ' + f(m) + ', high ' + f(b) + '. Rates ' + L.pct(S.p.rate + RANGE_PP, 2) + ', ' + L.pct(S.p.rate, 2) + ', ' + L.pct(S.p.rate - RANGE_PP, 2) + '.', source: 'company_math.valueRange on SEC data for FY' + c.fy.fy + '.', href: hrefOf(F(c, 'revenue')), caution: 'Hypothetical model on stated assumptions; not investment advice.', more: 'method.html#dcf' }; };
-    if (hasPs) L.range(P.psHost, { name: 'Value per share', low: vr.perShare.low, mid: vr.perShare.mid, high: vr.perShare.high, mark: r.price, markLabel: 'your price', fmt: psf, spec: rn(vr.perShare.low, vr.perShare.mid, vr.perShare.high, psf) });
-    else L.range(P.psHost, { name: 'Enterprise value', low: vr.ev.low, mid: vr.ev.mid, high: vr.ev.high, mark: r.ev, markLabel: 'at your price', fmt: L.usd, spec: rn(vr.ev.low, vr.ev.mid, vr.ev.high, L.usd) });
-    var nc = CM.netClaims(S.claims);
-    P.evline.textContent = '';
-    P.evline.appendChild(L.tipLabel('Enterprise value ' + rangeText(vr.ev.low, vr.ev.high, L.usd), { title: 'Enterprise value range', def: 'The value of the whole business at the same three discount rates; per share is this less net claims, divided by shares.', formula: 'per share = (enterprise value − net claims) / diluted shares', working: 'Central ' + L.usd(vr.ev.mid) + ' − ' + L.usd(nc) + ' = ' + L.usd(vr.ev.mid - nc) + '; / ' + sharesText() + ' ' + (c.shares_for_per_share.basis || '') + ' shares', source: 'company_math.valueRange, ' + srcText(c), href: hrefOf(V(c, 'debt')), caution: missing(c).length ? 'Not reported, counted as 0: ' + missing(c).join(', ') + '.' : null, more: 'method.html#ev' }));
-    P.evline.appendChild(document.createTextNode(', central ' + L.usd(vr.ev.mid)));
-    renderGrid(c, r);
-    if (P.fold2 && P.fold2.open) renderFold(c, vr);
-  }
-
-  function renderGrid(c, r) {
-    var steps = S.full ? GRID5 : GRID3, g = CM.grid(S.p, S.claims, S.shares, steps, steps), tb = P.gtable; tb.textContent = '';
-    P.gridToggle.textContent = S.full ? 'Show 3 × 3' : 'Show 5 × 5';
-    var near = null, best = Infinity, lo = Infinity, hi = -Infinity, has = r.price != null, gm = (steps.length - 1) / 2, ref = g[gm][gm] && g[gm][gm].perShare, psr = function (v) { return L.ps(v, ref); }, psf = function (v) { return L.psz(v, ref); };
-    g.forEach(function (row, i) { row.forEach(function (cl, j) {
-      if (!cl || cl.perShare == null) return;
-      lo = Math.min(lo, cl.perShare); hi = Math.max(hi, cl.perShare);
-      if (has && Math.abs(cl.perShare - r.price) < best) { best = Math.abs(cl.perShare - r.price); near = [i, j]; }
-    }); });
-    var inside = has && r.price >= lo && r.price <= hi;
-    function lab(d) { return d === 0 ? 'base' : (d < 0 ? MINUS : '+') + L.num(Math.abs(d) * 100) + ' pp'; }
-    tb.appendChild(el('caption', { 'class': 'sr-only' }, 'Value per share in dollars. Rows: revenue growth for years 1 to 5. Columns: unlevered FCF margin.'));
-    var hr = el('tr', null, el('th', { scope: 'col', 'class': 'corner' }, 'Growth ↓ / margin →'));
-    steps.forEach(function (dm, j) { var mv = null; g.forEach(function (row) { if (row[j]) mv = row[j].margin; }); hr.appendChild(el('th', { scope: 'col' }, [el('b', null, mv != null ? L.pct(mv) : 'n/a'), el('span', null, lab(dm))])); });
-    tb.appendChild(el('thead', null, hr));
-    var tbd = el('tbody'), mid = (steps.length - 1) / 2;
-    g.forEach(function (row, i) {
-      var tr = el('tr'), gv = null; row.forEach(function (cl) { if (cl) gv = cl.growth; });
-      tr.appendChild(el('th', { scope: 'row' }, [el('b', null, gv != null ? L.pct(gv) : 'n/a'), el('span', null, lab(steps[i]))]));
-      row.forEach(function (cl, j) {
-        var base = i === mid && j === mid, isNear = inside && near && near[0] === i && near[1] === j;
-        var td = el('td', { 'class': (base ? 'base ' : '') + (isNear ? 'near' : '') });
-        var btn = el('button', { type: 'button', 'class': cl && cl.perShare < 0 ? 'neg' : null }, [cl && cl.perShare != null ? psf(cl.perShare) : 'n/a', isNear ? el('span', { 'class': 'gt' }, '≈ your price') : null, base ? el('span', { 'class': 'sr-only' }, ' (base case)') : null, isNear ? el('span', { 'class': 'sr-only' }, ' (nearest your price)') : null]);
-        if (cl) L.tip(btn, { title: 'Growth ' + L.pct(cl.growth) + ', margin ' + L.pct(cl.margin), def: 'One case of the DCF with only growth and margin changed from your settings.', formula: 'DCF(growth, margin, rate, terminal growth)', working: (cl.perShare != null ? psf(cl.perShare) + ' a share; ' : '') + 'enterprise value ' + L.usd(cl.ev) + ' at ' + L.pct(S.p.rate, 2) + ' and ' + L.pct(S.p.terminal, 2) + '.', source: 'company_math.grid on SEC data for FY' + c.fy.fy + '.', href: null, caution: 'Hypothetical model on stated assumptions.', more: 'method.html#sensitivity' });
-        td.appendChild(btn); tr.appendChild(td);
-      });
-      tbd.appendChild(tr);
-    });
-    tb.appendChild(tbd);
-    P.gnote.textContent = 'USD a share, at your discount rate and terminal growth. Base case outlined in navy; steps are in percentage points; margin is floored at the model’s minimum.' + (has ? (inside ? ' The cell nearest your price is filled.' : ' Your price lies outside this grid, so no cell is filled.') : ' Type a price to fill the nearest cell.');
-  }
-
-  function renderFold(c, vr) {
-    var res = vr.central, y0 = c.fy.fy;
-    L.years(P.uHost, { name: 'Projected unlevered free cash flow', fmt: L.usd, hiIndex: CM.STAGE1,
-      items: res.ufcf.map(function (v, i) { return { label: 'FY' + String(y0 + i + 1).slice(2), v: v, spec: { title: 'Projected cash flow, FY' + (y0 + i + 1), def: 'Revenue times the unlevered FCF margin in the central case.', formula: 'cash flow = revenue × margin; present value = cash flow / (1 + rate)^year', working: L.usd(v) + '; present value ' + L.usd(res.pv[i]) + ' (year ' + (i + 1) + ').', source: 'company_math.dcf', href: null, caution: 'Hypothetical model on stated assumptions.', more: 'method.html#dcf' } }; }) });
-    var rev = S.p.revenue || c.dcf.revenue, rows = [];
-    res.ufcf.forEach(function (v, i) { rev = rev * (1 + res.growthPath[i]); rows.push(['FY' + (y0 + i + 1), L.pctS(res.growthPath[i]), L.usd(rev), L.usd(v), L.usd(res.pv[i])]); });
-    var t = el('table', { 'class': 'dtable' });
-    t.appendChild(el('thead', null, el('tr', null, ['Year', 'Revenue growth', 'Revenue', 'Unlevered FCF', 'Present value'].map(function (h, i) { return el('th', { scope: 'col', 'class': i ? 'r' : '' }, h); }))));
-    var tb = el('tbody'); rows.forEach(function (r2) { tb.appendChild(el('tr', null, r2.map(function (x, i) { return el(i ? 'td' : 'th', { 'class': i ? 'r' : '', scope: i ? null : 'row' }, x); }))); });
-    tb.appendChild(el('tr', null, [el('th', { scope: 'row' }, 'Terminal value'), el('td', { 'class': 'r' }, ''), el('td', { 'class': 'r' }, ''), el('td', { 'class': 'r' }, L.usd(res.terminalValue)), el('td', { 'class': 'r' }, L.usd(res.pvTerminal))]));
-    t.appendChild(tb); P.utable.textContent = ''; P.utable.appendChild(t);
-    P.unote.textContent = 'USD. Growth holds for ' + L.word(CM.STAGE1) + ' years (navy bars), then fades to terminal growth by year ' + CM.YEARS + '. The terminal value is ' + L.pct(res.pvTerminal / res.ev, 0) + ' of the central enterprise value of ' + L.usd(res.ev) + '. Hypothetical model on stated assumptions.';
-  }
-
-  /* ---------- Cash & debt ---------- */
-  /* bars only for rows with a value; the rest are named in one line with their reason */
   function shown(rows) { return rows.filter(function (r) { return r.text !== 'n/a'; }); }
   function notShown(rows, keys) {
     var c = S.co, groups = {}, order = [];
@@ -611,7 +392,7 @@
     (D.notes || []).forEach(function (t) { if (/^Market values are not shown/.test(t) || /^Hypothetical model/.test(t)) return; ul.appendChild(el('li', null, t)); });
     ul.appendChild(el('li', null, 'Market values come only from the price you type, in your browser. The Lab keeps no prices.'));
     p.appendChild(el('details', { 'class': 'fold' }, [el('summary', null, ['Notes and definitions', el('small', null, 'how each figure is built')]), el('div', { 'class': 'fold-body' }, ul)]));
-    p.appendChild(disc('Discount rate: ' + D.defaults.discount_rate_text + '. ' + DISC));
+    p.appendChild(disc('The Value tab calculates company WACC from your explicit assumptions. ' + DISC));
   }
 
   /* ---------- page ---------- */

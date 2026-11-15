@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex"><title>Company valuation · The Lab</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="value_visuals.css"><link rel="stylesheet" href="analyst_visuals.css">
+  <link rel="stylesheet" href="valuation_workspace.css">
+</head>
+<body class="valuation-workspace">
+<main id="main" tabindex="-1"><div id="design" class="ws-page ws-view-simple" data-level="simple" data-state="loading">
+  <!-- The company, and the two levels of the page: one simple view, and a detailed path of five steps. -->
+  <div class="ws-wrap ws-bar">
+    <div class="ws-identity">
+      <span class="ws-logo" id="company-logo" aria-hidden="true"></span>
+      <span class="ws-pick"><label class="ws-sr" for="company-picker">Company</label><select id="company-picker" disabled><option>Loading…</option></select></span>
+      <span id="company-symbol" class="ws-ticker"></span><span id="company-period" class="ws-period"></span>
+    </div>
+    <nav class="ws-levels" aria-label="Level of detail">
+      <button type="button" data-level="simple" aria-pressed="true">Simple</button>
+      <button type="button" data-level="detailed" aria-pressed="false">Detailed</button>
+    </nav>
+  </div>
+  <h1 id="company-name" class="ws-sr">Loading the filing…</h1>
+  <p id="workspace-headline" class="ws-sr" role="status" hidden></p>
+
+  <section id="simple-view" class="vs" aria-label="The valuation in one view"></section>
+
+  <div class="ws-detail">
+    <section class="ws-result-line" aria-label="Result of the model"><div class="ws-wrap">
+      <div class="ws-figure ws-result"><span>This forecast</span><strong id="workspace-value">—</strong><small id="workspace-basis">a share</small></div>
+      <div class="ws-figure"><span>Share price</span><strong id="workspace-price">—</strong><small id="price-basis"></small></div>
+      <div class="ws-figure ws-implied"><span>The price needs</span><strong id="workspace-implied">—</strong><small id="workspace-implied-note"></small></div>
+      <div class="ws-result-actions"><button type="button" id="provisional-flag" class="ws-flag" hidden></button><button type="button" class="ws-primary" data-open-assumptions>Inputs &amp; sources</button></div>
+    </div></section>
+    <div class="ws-wrap ws-path">
+      <nav class="ws-steps" aria-label="Steps of the valuation"><ol>
+        <li><button type="button" data-mode="business" aria-label="Step 1 of 5: The business"><b>1</b><span>The business</span></button></li>
+        <li><button type="button" data-mode="forecast" aria-label="Step 2 of 5: The forecast"><b>2</b><span>The forecast</span></button></li>
+        <li><button type="button" data-mode="value" aria-label="Step 3 of 5: The value"><b>3</b><span>The value</span></button></li>
+        <li><button type="button" data-mode="range" aria-label="Step 4 of 5: The range"><b>4</b><span>The range</span></button></li>
+        <li><button type="button" data-mode="price" aria-label="Step 5 of 5: The price"><b>5</b><span>The price</span></button></li>
+      </ol></nav>
+      <header class="ws-step-head"><h2 id="workspace-view-title"></h2><p id="step-answer"></p></header>
+      <div class="ws-main">
+        <section class="ws-analysis" id="workspace-chart" tabindex="-1" aria-labelledby="workspace-view-title"><div id="visual-output"><p>Loading the company model.</p></div></section>
+        <aside class="ws-controls" aria-label="Assumptions of this step">
+          <h3>Change it</h3>
+          <div class="ws-control" data-step="forecast"><label for="growth">Revenue growth <output id="growth-out"></output></label><input id="growth" type="range" min="-5" max="20" step=".01" value="8"><small id="growth-note">Each year, years 1–5. Then it fades.</small></div>
+          <div class="ws-control" data-step="forecast"><label for="margin">Year 10 EBIT margin <output id="margin-out"></output></label><input id="margin" type="range" min="10" max="40" step=".01" value="22"><small id="margin-note">The share of sales left as operating profit.</small></div>
+          <div class="ws-control" data-step="value"><label for="beta">Equity beta <output id="beta-out"></output></label><input id="beta" type="range" min=".5" max="2" step=".01" value="1.2"><small>Beta multiplies the equity risk premium in the cost of equity.</small></div>
+          <label class="ws-number" data-step="value" for="quick-terminal"><span>Terminal growth <small>% a year</small></span><input id="quick-terminal" type="number" min="-99.99" step="any" data-quick="terminalGrowth"><small>Growth after year 10.</small></label>
+          <label class="ws-number" data-step="price" for="quick-price"><span>Share price <small>USD</small></span><input id="quick-price" type="number" min="0.000001" step="any" data-quick="price" aria-describedby="quick-price-note"><small id="quick-price-note">Price × shares is also the market value of equity in the WACC weights.</small></label>
+          <p id="quick-control-note"></p>
+          <button type="button" class="ws-text-button" id="step-inputs">More inputs of this step</button>
+        </aside>
+      </div>
+      <nav class="ws-step-nav" aria-label="Previous and next step"><button type="button" id="step-back"></button><button type="button" id="step-next"></button></nav>
+      <p class="ws-draft-row"><span id="workspace-draft" role="status"></span> <button type="button" class="ws-text-button" id="workspace-reset">Reset this company</button></p>
+    </div>
+  </div>
+  <footer class="ws-wrap ws-footer"><p id="company-basis"></p><p id="calculation-basis"></p><p>Not investment advice. No price targets. Your changes stay in this tab.</p>
+    <span class="ws-footer-links"><a id="company-detail" href="companies.html">Company report</a><a id="company-filing" target="_blank" rel="noopener">Source filing</a></span></footer>
+</div></main>
+<dialog id="workspace-inputs" aria-labelledby="inputs-title">
+  <header class="ws-drawer-head"><div><span id="inputs-company">Company model</span><h2 id="inputs-title">Inputs &amp; sources</h2></div><button type="button" id="close-inputs" aria-label="Close inputs">Close</button></header>
+  <p class="ws-drawer-intro">You can change each field. <span class="ws-key ws-key-source">Navy</span> marks a sourced reference. <span class="ws-key ws-key-assumption">Amber</span> marks a model assumption. <span class="ws-key ws-key-provisional">Framed amber</span> marks a provisional value: a placeholder for an input that the filing does not give. Amounts are USD millions, except price and EPS. Shares are in millions.</p>
+  <div id="all-assumptions" class="design-assumptions">
+    <p class="ws-drawer-state" id="assumptions-summary" role="status">Company defaults</p>
+    <form id="assumption-form" novalidate>
+      <div id="assumption-groups"></div>
+      <details class="assumption-group" id="annual-assumptions">
+        <summary>Optional · set each forecast year</summary>
+        <div class="assumption-intro"><label class="assumption-check"><input id="annual-overrides" type="checkbox"> Use separate inputs for each of the ten years.</label><p id="annual-note"></p><button type="button" id="seed-annual" class="assumption-button">Copy the generated forecast into these rows</button></div>
+        <div class="annual-scroll" role="region" aria-label="Ten annual forecast assumptions" tabindex="0"><table class="annual-table"><thead><tr><th scope="col">Year</th><th scope="col">Growth %</th><th scope="col">EBIT margin %</th><th scope="col">Tax %</th><th scope="col">D&amp;A / sales %</th><th scope="col">Capex / sales %</th><th scope="col">WC / sales %</th></tr></thead><tbody id="annual-inputs"></tbody></table></div>
+      </details>
+      <div class="assumption-actions"><button type="submit" class="assumption-button assumption-primary">Check all inputs</button><button type="button" id="reset-assumptions" class="assumption-button">Reset company defaults</button><span id="assumption-status" role="status"></span></div>
+    </form>
+  </div>
+  <details class="ws-method"><summary>How this model works</summary><p>Ten annual free cash flows to the firm, discounted at the company WACC. Without annual inputs, the model generates the ten years from your assumptions: growth is constant in years 1–5, then fades to terminal growth by year 10, and the EBIT margin moves in a straight line to its year-10 level. With the capex rule on, capex above depreciation counts as growth investment and returns to the depreciation level in years 6–10. With the rule off, the capex ratio holds for all ten years. The capex seed is bounded to depreciation plus revenue growth; a negative growth seed counts as zero. With annual inputs, the ten rows replace the generated years. Terminal reinvestment equals growth divided by return on capital. With the default setting, return on capital equals WACC: investment after year 10 earns only its cost and creates no extra value. Terminal growth still sets the profit of year 11.</p><p>The same claims and current-share bridge feeds each view. Multiple bands are selected inputs, not peer research. The reverse calculation holds all other inputs fixed and solves the first-five-year growth, or the discount rate, that gives the entered price. Annual overrides disable the generated cases and the reverse growth solve.</p><p>Year-end discounting. Tax applies to positive EBIT. No tax-loss carryforward. Review the earnings period, share class, cash needs, lease treatment and financing assumptions.</p><p id="full-input-basis"></p></details>
+</dialog>
+<script src="freshness.js"></script><script src="lab.js"></script><script src="detailed_math.js"></script>
+<script src="analyst_math.js"></script><script src="value_visuals.js"></script><script src="analyst_visuals.js"></script>
+<script src="company_inputs.js"></script><script src="valuation_simple.js"></script><script src="valuation_workspace.js"></script><script src="valuation_controller.js"></script>
+</body></html>

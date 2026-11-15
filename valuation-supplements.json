@@ -1,0 +1,962 @@
+{
+ "schema_version": 1,
+ "public": true,
+ "as_of": "2026-11-15",
+ "built_at": "2026-11-15T18:47:50+00:00",
+ "fundamentals_built": "2026-11-15 18:42 UTC",
+ "scope": "Public filing supplements: SEC company facts, the Treasury reference and a dated synthetic-rating table. No market quotes.",
+ "spread_table": {
+  "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+  "table_date": "2026-01",
+  "sha256": "71d5dba40bd0659b7d6fe6f0e2d25036442d66b3c5e309480d0c9b48b2c3ba63"
+ },
+ "defaults": {
+  "provisional_spread": {
+   "value": 0.78,
+   "unit": "percentage points",
+   "rating": "A2/A",
+   "table_date": "2026-01",
+   "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html"
+  }
+ },
+ "companies": {
+  "NVDA": {
+   "ticker": "NVDA",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/",
+     "date": "2026-01-25",
+     "operands": [
+      206803000000,
+      49510000000,
+      157293000000
+     ]
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 503.42×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 503.42471042471044,
+     "fiscal_year_end": "2026-01-25",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "AAPL": {
+   "ticker": "AAPL",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/",
+     "date": "2026-09-26",
+     "operands": [
+      404548000000,
+      292455000000,
+      112093000000
+     ]
+    },
+    "investments": {
+     "value": 100630.0,
+     "kind": "assumption",
+     "note": "Disclosed marketable securities, including non-current securities where available. Assumes these assets are non-operating and excludes cash. Review operational restrictions.",
+     "source": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/",
+     "date": "2026-09-26"
+    }
+   }
+  },
+  "MSFT": {
+   "ticker": "MSFT",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/",
+     "date": "2026-06-30",
+     "operands": [
+      758376000000,
+      315989000000,
+      442387000000
+     ]
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 50.88×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 50.880694854146185,
+     "fiscal_year_end": "2026-06-30",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "AMZN": {
+   "ticker": "AMZN",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 35.17×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 35.16930518909411,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "GOOGL": {
+   "ticker": "GOOGL",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/",
+     "date": "2025-12-31",
+     "operands": [
+      595281000000,
+      180016000000,
+      415265000000
+     ]
+    },
+    "wcRatio": {
+     "value": 12.5823,
+     "kind": "assumption",
+     "note": "Forecast working-capital proxy uses receivables minus payables. Inventory is not separately available and is excluded from this proxy, not asserted to be zero. Edit this ratio or enter annual ratios.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/",
+     "date": "2025-12-31"
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 175.32×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 175.32472826086956,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "META": {
+   "ticker": "META",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/",
+     "date": "2025-12-31",
+     "operands": [
+      366021000000,
+      148778000000,
+      217243000000
+     ]
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 71.48×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 71.48154506437768,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "AVGO": {
+   "ticker": "AVGO",
+   "fields": {
+    "costDebt": {
+     "value": 5.7,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.55% spread. Annual EBIT / accrual interest expense = 7.94×; synthetic Aa2/AA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 7.938940809968847,
+     "fiscal_year_end": "2025-11-02",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "BRK-B": {
+   "ticker": "BRK-B",
+   "fields": {}
+  },
+  "TSLA": {
+   "ticker": "TSLA",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 12.88×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 12.884615384615385,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "LLY": {
+   "ticker": "LLY",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual pre-tax income + interest expense / accrual interest expense = 29.75×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 29.74972067039106,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "JPM": {
+   "ticker": "JPM",
+   "fields": {}
+  },
+  "NFLX": {
+   "ticker": "NFLX",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1065280/000106528026000034/",
+     "date": "2025-12-31",
+     "operands": [
+      55596993000,
+      28981505000,
+      26615488000
+     ]
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 17.16×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 17.16217820762128,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "MA": {
+   "ticker": "MA",
+   "fields": {
+    "wcRatio": {
+     "value": 11.0091,
+     "kind": "assumption",
+     "note": "Forecast working-capital proxy uses receivables minus payables. Inventory is not separately available and is excluded from this proxy, not asserted to be zero. Edit this ratio or enter annual ratios.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000013/",
+     "date": "2025-12-31"
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 26.17×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 26.173130193905816,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "V": {
+   "ticker": "V",
+   "fields": {
+    "wcRatio": {
+     "value": 6.847,
+     "kind": "assumption",
+     "note": "Forecast working-capital proxy uses receivables minus payables. Inventory is not separately available and is excluded from this proxy, not asserted to be zero. Edit this ratio or enter annual ratios.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1403161/000140316126000134/",
+     "date": "2026-09-30"
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 37.08×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 37.0844327176781,
+     "fiscal_year_end": "2026-09-30",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "XOM": {
+   "ticker": "XOM",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual pre-tax income + interest expense / accrual interest expense = 69.44×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 69.43781094527363,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "COST": {
+   "ticker": "COST",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/",
+     "date": "2026-08-30",
+     "operands": [
+      89045000000,
+      53242000000,
+      35803000000
+     ]
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 80.59×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 80.58620689655173,
+     "fiscal_year_end": "2026-08-30",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "WMT": {
+   "ticker": "WMT",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 12.87×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 12.86669542709232,
+     "fiscal_year_end": "2026-01-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "HD": {
+   "ticker": "HD",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/",
+     "date": "2026-02-01",
+     "operands": [
+      105095000000,
+      92282000000,
+      12813000000
+     ]
+    },
+    "financeLeases": {
+     "value": 0,
+     "kind": "derived",
+     "note": "Additional finance leases are zero because the disclosed debt includes them. included in debt (LongTermDebtAndCapitalLeaseObligations)",
+     "source": "https://www.sec.gov/Archives/edgar/data/354950/000162828026019436/",
+     "date": "2026-02-01"
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 8.66×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 8.660862354892206,
+     "fiscal_year_end": "2026-02-01",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "MU": {
+   "ticker": "MU",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/",
+     "date": "2026-09-03",
+     "operands": [
+      195888000000,
+      57510000000,
+      138378000000
+     ]
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 937.17×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 937.1698113207547,
+     "fiscal_year_end": "2026-09-03",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "JNJ": {
+   "ticker": "JNJ",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual pre-tax income + interest expense / accrual interest expense = 34.55×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 34.55406797116375,
+     "fiscal_year_end": "2025-12-28",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "BAC": {
+   "ticker": "BAC",
+   "fields": {}
+  },
+  "ORCL": {
+   "ticker": "ORCL",
+   "fields": {
+    "wcRatio": {
+     "value": -0.8789,
+     "kind": "assumption",
+     "note": "Forecast working-capital proxy uses receivables minus payables. Inventory is not separately available and is excluded from this proxy, not asserted to be zero. Edit this ratio or enter annual ratios.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/",
+     "date": "2026-05-31"
+    },
+    "costDebt": {
+     "value": 5.93,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.78% spread. Annual EBIT / accrual interest expense = 4.48×; synthetic A2/A band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 4.480539247662535,
+     "fiscal_year_end": "2026-05-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "PG": {
+   "ticker": "PG",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 22.52×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 22.517673888255416,
+     "fiscal_year_end": "2026-06-30",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "ABBV": {
+   "ticker": "ABBV",
+   "fields": {
+    "financeLeases": {
+     "value": 0,
+     "kind": "derived",
+     "note": "Additional finance leases are zero because the disclosed debt includes them. included in debt (LongTermDebtAndCapitalLeaseObligations)",
+     "source": "https://www.sec.gov/Archives/edgar/data/1551152/000155115226000008/",
+     "date": "2025-12-31"
+    },
+    "costDebt": {
+     "value": 5.93,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.78% spread. Annual EBIT / accrual interest expense = 5.21×; synthetic A2/A band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 5.210853784998272,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "KO": {
+   "ticker": "KO",
+   "fields": {
+    "financeLeases": {
+     "value": 0,
+     "kind": "derived",
+     "note": "Additional finance leases are zero because the disclosed debt includes them. included in debt (LongTermDebtAndCapitalLeaseObligations)",
+     "source": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/",
+     "date": "2025-12-31"
+    },
+    "investments": {
+     "value": 1934.0,
+     "kind": "assumption",
+     "note": "Disclosed marketable securities, including non-current securities where available. Assumes these assets are non-operating and excludes cash. Review operational restrictions.",
+     "source": "https://www.sec.gov/Archives/edgar/data/21344/000162828026010047/",
+     "date": "2025-12-31"
+    },
+    "costDebt": {
+     "value": 5.7,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.55% spread. Annual EBIT / accrual interest expense = 8.32×; synthetic Aa2/AA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 8.32043530834341,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "PLTR": {
+   "ticker": "PLTR",
+   "fields": {
+    "wcRatio": {
+     "value": 23.1039,
+     "kind": "assumption",
+     "note": "Forecast working-capital proxy uses receivables minus payables. Inventory is not separately available and is excluded from this proxy, not asserted to be zero. Edit this ratio or enter annual ratios.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/",
+     "date": "2025-12-31"
+    }
+   }
+  },
+  "CSCO": {
+   "ticker": "CSCO",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/858877/000085887726000132/",
+     "date": "2026-07-25",
+     "operands": [
+      129637000000,
+      79352000000,
+      50285000000
+     ]
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 10.45×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 10.454421768707483,
+     "fiscal_year_end": "2026-07-25",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "PM": {
+   "ticker": "PM",
+   "fields": {
+    "financeLeases": {
+     "value": 0,
+     "kind": "derived",
+     "note": "Additional finance leases are zero because the disclosed debt includes them. included in debt (LongTermDebtAndCapitalLeaseObligations)",
+     "source": "https://www.sec.gov/Archives/edgar/data/1413329/000162828026005939/",
+     "date": "2025-12-31"
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 9.38×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 9.383742911153119,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "UNH": {
+   "ticker": "UNH",
+   "fields": {}
+  },
+  "IBM": {
+   "ticker": "IBM",
+   "fields": {
+    "costDebt": {
+     "value": 5.85,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.70% spread. Annual pre-tax income + interest expense / accrual interest expense = 6.34×; synthetic A1/A+ band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 6.337467700258398,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "GE": {
+   "ticker": "GE",
+   "fields": {}
+  },
+  "WFC": {
+   "ticker": "WFC",
+   "fields": {}
+  },
+  "CVX": {
+   "ticker": "CVX",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual pre-tax income + interest expense / accrual interest expense = 17.22×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 17.222678718159408,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "AMD": {
+   "ticker": "AMD",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 28.20×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 28.198473282442748,
+     "fiscal_year_end": "2025-12-27",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "ABT": {
+   "ticker": "ABT",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 16.33×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 16.33468559837728,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "AXP": {
+   "ticker": "AXP",
+   "fields": {}
+  },
+  "LIN": {
+   "ticker": "LIN",
+   "fields": {
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 34.99×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 34.9921568627451,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "MS": {
+   "ticker": "MS",
+   "fields": {}
+  },
+  "GS": {
+   "ticker": "GS",
+   "fields": {}
+  },
+  "MCD": {
+   "ticker": "MCD",
+   "fields": {
+    "costDebt": {
+     "value": 5.7,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.55% spread. Annual EBIT / accrual interest expense = 7.83×; synthetic Aa2/AA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 7.833754740834387,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "T": {
+   "ticker": "T",
+   "fields": {
+    "wcRatio": {
+     "value": -16.7667,
+     "kind": "assumption",
+     "note": "Forecast working-capital proxy uses receivables minus payables. Inventory is not separately available and is excluded from this proxy, not asserted to be zero. Edit this ratio or enter annual ratios.",
+     "source": "https://www.sec.gov/Archives/edgar/data/732717/000073271726000120/",
+     "date": "2025-12-31"
+    },
+    "costDebt": {
+     "value": 6.04,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.89% spread. Annual EBIT / accrual interest expense = 3.55×; synthetic A3/A- band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 3.551146384479718,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "MRK": {
+   "ticker": "MRK",
+   "fields": {
+    "investments": {
+     "value": 956.0,
+     "kind": "assumption",
+     "note": "Disclosed marketable securities, including non-current securities where available. Assumes these assets are non-operating and excludes cash. Review operational restrictions.",
+     "source": "https://www.sec.gov/Archives/edgar/data/310158/000031015826000063/",
+     "date": "2025-12-31"
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual pre-tax income + interest expense / accrual interest expense = 16.52×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 16.524686809137805,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "RTX": {
+   "ticker": "RTX",
+   "fields": {
+    "financeLeases": {
+     "value": 0,
+     "kind": "derived",
+     "note": "Additional finance leases are zero because the disclosed debt includes them. included in debt (LongTermDebtAndCapitalLeaseObligations)",
+     "source": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000006/",
+     "date": "2025-12-31"
+    },
+    "costDebt": {
+     "value": 5.93,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.78% spread. Annual EBIT / cash interest paid proxy (accrual interest is unavailable) = 5.01×; synthetic A2/A band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 5.005382131324004,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "ISRG": {
+   "ticker": "ISRG",
+   "fields": {
+    "investments": {
+     "value": 5666.1,
+     "kind": "assumption",
+     "note": "Disclosed marketable securities, including non-current securities where available. Assumes these assets are non-operating and excludes cash. Review operational restrictions.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000010/",
+     "date": "2025-12-31"
+    }
+   }
+  },
+  "CRM": {
+   "ticker": "CRM",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000060/",
+     "date": "2026-01-31",
+     "operands": [
+      112305000000,
+      53163000000,
+      59142000000
+     ]
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 25.71×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 25.712962962962962,
+     "fiscal_year_end": "2026-01-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "TXN": {
+   "ticker": "TXN",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/97476/000009747626000059/",
+     "date": "2025-12-31",
+     "operands": [
+      34585000000,
+      18312000000,
+      16273000000
+     ]
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 11.09×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 11.09208103130755,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "UBER": {
+   "ticker": "UBER",
+   "fields": {
+    "nci": {
+     "value": 877.0,
+     "kind": "derived",
+     "note": "Total equity including NCI − parent shareholders’ equity. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/",
+     "date": "2025-12-31",
+     "operands": [
+      27918000000,
+      27041000000
+     ]
+    },
+    "wcRatio": {
+     "value": 5.4098,
+     "kind": "assumption",
+     "note": "Forecast working-capital proxy uses receivables minus payables. Inventory is not separately available and is excluded from this proxy, not asserted to be zero. Edit this ratio or enter annual ratios.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1543151/000154315126000015/",
+     "date": "2025-12-31"
+    },
+    "costDebt": {
+     "value": 5.55,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.40% spread. Annual EBIT / accrual interest expense = 12.65×; synthetic Aaa/AAA band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 12.647727272727273,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "BKNG": {
+   "ticker": "BKNG",
+   "fields": {
+    "nci": {
+     "value": 0.0,
+     "kind": "derived",
+     "note": "Assets − liabilities − parent shareholders’ equity = 0; no residual NCI in the consolidated balance sheet. No zero is inferred from a missing tag.",
+     "source": "https://www.sec.gov/Archives/edgar/data/1075531/000107553126000009/",
+     "date": "2025-12-31",
+     "operands": [
+      29264000000,
+      34842000000,
+      -5578000000
+     ]
+    },
+    "costDebt": {
+     "value": 5.93,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.78% spread. Annual EBIT / accrual interest expense = 5.46×; synthetic A2/A band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 5.457637600494744,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "VZ": {
+   "ticker": "VZ",
+   "fields": {
+    "costDebt": {
+     "value": 5.93,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.78% spread. Annual EBIT / accrual interest expense = 4.37×; synthetic A2/A band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 4.370929190319689,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  },
+  "CAT": {
+   "ticker": "CAT",
+   "fields": {
+    "costDebt": {
+     "value": 5.85,
+     "kind": "assumption",
+     "note": "Synthetic borrowing-cost estimate: 5.15% Treasury (2026-11-13) + 0.70% spread. Annual EBIT / cash interest paid proxy (accrual interest is unavailable) = 6.05×; synthetic A1/A+ band. Spread table: January 2026. This is a source-based estimate, not a current traded company yield or an agency credit rating.",
+     "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",
+     "date": "2026-01",
+     "method": "synthetic_rating",
+     "coverage": 6.0537459283387625,
+     "fiscal_year_end": "2025-12-31",
+     "risk_free_date": "2026-11-13"
+    }
+   }
+  }
+ }
+}

@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "as_of": "2026-11-09",
+  "schema_version": 2,
+  "as_of": "2026-11-15",
   "rank_basis": "public_float_unverified",
   "source": "SEC EDGAR: XBRL frames (dei:EntityPublicFloat, us-gaap:Assets), submissions, companyconcept",
   "cross_check": {
@@ -5481,10 +5481,10 @@
       "rule": "assets",
       "reason": "float_scale_suspect",
       "public_float": 4817275689000.0,
-      "assets": 3699042000.0,
-      "implied_float_price": 98163.00775842776,
-      "float_to_assets": 1302.303593470958,
-      "why": "Excluded as a likely unit error in the filing: its public float of $4,817.3bn is 1,302× its total assets ($3.70bn); with its share count it implies a share price of $98,163."
+      "assets": 3802973000.0,
+      "implied_float_price": 98142.84891794482,
+      "float_to_assets": 1266.7130923622124,
+      "why": "Excluded as a likely unit error in the filing: its public float of $4,817.3bn is 1,267× its total assets ($3.80bn); with its share count it implies a share price of $98,143."
     },
     {
       "name": "TTM TECHNOLOGIES, INC.",
@@ -5641,10 +5641,10 @@
       "rule": "assets",
       "reason": "float_scale_suspect",
       "public_float": 238500000000.0,
-      "assets": 500432000.0,
-      "implied_float_price": 9798.938518172881,
-      "float_to_assets": 476.58822777120565,
-      "why": "Excluded as a likely unit error in the filing: its public float of $238.5bn is 477× its total assets ($0.50bn); with its share count it implies a share price of $9,799."
+      "assets": 508276000.0,
+      "implied_float_price": 9868.637061776137,
+      "float_to_assets": 469.233251225712,
+      "why": "Excluded as a likely unit error in the filing: its public float of $238.5bn is 469× its total assets ($0.51bn); with its share count it implies a share price of $9,869."
     },
     {
       "name": "Forrester Research, Inc.",
@@ -5668,7 +5668,7 @@
     }
   ],
   "fundamentals_summary": {
-    "built": "2026-11-10 20:09 UTC",
+    "built": "2026-11-15 18:42 UTC",
     "companies": 50,
     "checks": 791,
     "passed": 791,

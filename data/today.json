@@ -1,6 +1,6 @@
 {
-  "schema_version": 1,
-  "as_of": "2026-11-10",
+  "schema_version": 2,
+  "as_of": "2026-11-15",
   "sentences": [
     {
       "id": "financing",
@@ -22,7 +22,7 @@
         "unit": "filings",
         "label": "Merger proxies and tender offers, last six full months (SPACs excluded)"
       },
-      "as_of": "2026-11-09"
+      "as_of": "2026-11-15"
     },
     {
       "id": "companies",
@@ -33,7 +33,7 @@
         "unit": "companies",
         "label": "of 50 with a revenue growth figure"
       },
-      "as_of": "2026-11-10"
+      "as_of": "2026-11-15"
     }
   ]
 }

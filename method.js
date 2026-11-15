@@ -26,11 +26,11 @@
   function h3(t, extra) { return el('h3', { 'class': 'vsub', style: 'margin-top:' + (extra || 24) + 'px' }, t); }
 
   Promise.all([L.load('status'), L.load('markets'), L.load('macro_room'), L.load('deals_room'), L.load('company_room')]).then(function (r) {
-    var ST = r[0], M = r[1], MA = r[2], DL = r[3], CO = r[4], fs = M.fundamentals_summary;
+    var ST = L.freshness(r[0]), M = r[1], MA = r[2], DL = r[3], CO = r[4], fs = M.fundamentals_summary;
     L.status();
     $('m-title').textContent = fs.checks + ' checks ran in the latest build; ' + fs.passed + ' passed.';
     var fine = ST.sources.filter(function (s) { return s.state === 'fresh'; }).length;
-    $('m-second').textContent = 'The pipeline built these pages on ' + L.stamp(ST.run.built_at) + '; ' + fine + ' of ' + ST.sources.length + ' sources are fine. Every figure shows its date, formula and source; this page shows how.';
+    $('m-second').textContent = 'The pipeline built these pages on ' + L.stamp(ST.run.built_at) + '. ' + (ST.overdue ? 'The build is overdue. ' : '') + fine + ' of ' + ST.sources.length + ' sources remain within their data-age limits. Check times and observation dates are separate.';
     var tabs = L.tabs({ list: $('tablist'), panels: $('panels'), label: 'Method', tabs: [{ id: 'pipeline', name: 'Pipeline status' }, { id: 'catches', name: 'Data-quality catches' }, { id: 'glossary', name: 'Glossary' }, { id: 'sources', name: 'Sources and licences' }] });
 
     /* ---------- pipeline ---------- */
@@ -44,6 +44,12 @@
     var cov = fs.coverage, names = { revenue: 'Revenue', revenue_prior: 'Revenue, prior year', growth_yoy: 'Revenue growth', operating_income: 'Operating income', operating_margin: 'Operating margin', cfo: 'Cash from operations', capex: 'Capital spending', fcf: 'Free cash flow', fcf_margin: 'FCF margin', capex_to_revenue: 'Capex / revenue' };
     p.appendChild(table(['Figure', 'Companies with a value', 'Out of'], Object.keys(cov).map(function (k) { return row([el('th', { scope: 'row' }, names[k] || human(k)), el('td', { 'class': 'r' }, String(cov[k])), el('td', { 'class': 'r' }, String(fs.companies))]); }), [1, 2]));
     p.appendChild(el('p', { 'class': 'cap' }, fs.checks + ' automated checks, ' + fs.passed + ' passed, over ' + fs.companies + ' companies; ' + fs.financial_companies + ' are banks or insurers, where operating margin and free cash flow do not apply. Fundamentals built ' + fs.built + ' from SEC EDGAR company facts and submissions.'));
+    var flagged = CO.companies.filter(function(c){return (c.quality_flags || []).length;});
+    if(flagged.length){
+      p.appendChild(h3('Valuation input checks to review'));
+      p.appendChild(el('p',{class:'cap'},'These checks flag rejected candidates or unresolved source inconsistencies. Missing and rejected model inputs require an explicit visitor assumption.'));
+      p.appendChild(table(['Company','Check'],flagged.flatMap(function(c){return c.quality_flags.map(function(flag){return row([el('th',{scope:'row'},c.ticker),el('td',null,flag)]);});})));
+    }
     p.appendChild(el('details', { 'class': 'fold', style: 'margin-top:16px' }, [el('summary', null, ['Files in this build', el('small', null, ST.rooms.length + ' data files with checksums')]), el('div', { 'class': 'fold-body' }, table(['File', 'Bytes', 'SHA-256 (first 12)'], ST.rooms.map(function (f) { return row([el('th', { scope: 'row' }, f.file), el('td', { 'class': 'r' }, L.num(f.bytes)), el('td', null, f.sha256.slice(0, 12))]); }), [1]))]));
 
     /* ---------- catches ---------- */

@@ -1,8 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "as_of": "2026-12-31",
   "export": {
-    "exported_at": "2026-11-10T04:28:50.815776Z",
+    "exported_at": "2026-11-15T18:47:35.185753Z",
     "series": 30,
     "restricted_not_shown": 2
   },
@@ -21,9 +21,9 @@
   "spreads": [
     {
       "label": "US 2s10s (10y − 2y)",
-      "value": 0.3200000000000003,
+      "value": 0.27000000000000046,
       "unit": "pp",
-      "period": "2026-11-09",
+      "period": "2026-11-13",
       "inputs": [
         "us_treasury_2y",
         "us_treasury_10y"
@@ -31,9 +31,9 @@
     },
     {
       "label": "Euro AAA 2s10s (10y − 2y)",
-      "value": 0.3550933020999998,
+      "value": 0.29210434350000014,
       "unit": "pp",
-      "period": "2026-11-06",
+      "period": "2026-11-12",
       "inputs": [
         "ea_aaa_yield_2y",
         "ea_aaa_yield_10y"
@@ -57,19 +57,19 @@
       "unit": "PCPA",
       "frequency": "D",
       "latest": {
-        "period": "2026-11-10",
+        "period": "2026-11-15",
         "value": 2.5
       },
       "change_short": {
         "value": 0.0,
         "unit": "pp",
-        "from": "2026-10-11",
+        "from": "2026-10-16",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
         "value": 0.5,
         "unit": "pp",
-        "from": "2025-11-10"
+        "from": "2025-11-15"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -170,11 +170,11 @@
           "value": 2.5
         },
         {
-          "period": "2026-11-10",
+          "period": "2026-11-15",
           "value": 2.5
         }
       ],
-      "credit": "Source: ECB Data Portal, FM.D.U2.EUR.4F.KR.DFR.LEV, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, FM.D.U2.EUR.4F.KR.DFR.LEV, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -186,19 +186,19 @@
       "unit": "PC",
       "frequency": "B",
       "latest": {
-        "period": "2026-11-06",
+        "period": "2026-11-12",
         "value": 2.443
       },
       "change_short": {
         "value": 0.0040000000000000036,
         "unit": "pp",
-        "from": "2026-10-07",
+        "from": "2026-10-13",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
         "value": 0.5130000000000001,
         "unit": "pp",
-        "from": "2025-11-06"
+        "from": "2025-11-12"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -299,11 +299,11 @@
           "value": 2.44
         },
         {
-          "period": "2026-11-06",
+          "period": "2026-11-12",
           "value": 2.443
         }
       ],
-      "credit": "Source: ECB Data Portal, EST.B.EU000A2X2A25.WT, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, EST.B.EU000A2X2A25.WT, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -315,19 +315,19 @@
       "unit": "PC",
       "frequency": "B",
       "latest": {
-        "period": "2026-11-06",
+        "period": "2026-11-12",
         "value": 3.88
       },
       "change_short": {
         "value": 0.0,
         "unit": "pp",
-        "from": "2026-10-07",
+        "from": "2026-10-13",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
         "value": 0.009999999999999787,
         "unit": "pp",
-        "from": "2025-11-06"
+        "from": "2025-11-12"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -428,11 +428,11 @@
           "value": 3.88
         },
         {
-          "period": "2026-11-06",
+          "period": "2026-11-12",
           "value": 3.88
         }
       ],
-      "credit": "Source: Federal Reserve Bank of New York, EFFR, accessed 2026-11-10. The EFFR is subject to the Terms of Use posted at newyorkfed.org. The New York Fed is not responsible for publication of the EFFR by Asadbek Abdurashidov (aabdurashidov.ch), does not sanction or endorse any particular republication, and has no liability for your use.",
+      "credit": "Source: Federal Reserve Bank of New York, EFFR, accessed 2026-11-15. The EFFR is subject to the Terms of Use posted at newyorkfed.org. The New York Fed is not responsible for publication of the EFFR by Asadbek Abdurashidov (aabdurashidov.ch), does not sanction or endorse any particular republication, and has no liability for your use.",
       "source": "nyfed"
     },
     {
@@ -444,19 +444,19 @@
       "unit": "PC",
       "frequency": "B",
       "latest": {
-        "period": "2026-11-06",
-        "value": 3.89
+        "period": "2026-11-12",
+        "value": 3.9
       },
       "change_short": {
-        "value": 0.010000000000000231,
+        "value": 0.009999999999999787,
         "unit": "pp",
-        "from": "2026-10-07",
+        "from": "2026-10-13",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": -0.029999999999999805,
+        "value": -0.08000000000000007,
         "unit": "pp",
-        "from": "2025-11-06"
+        "from": "2025-11-12"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -557,11 +557,11 @@
           "value": 3.95
         },
         {
-          "period": "2026-11-06",
-          "value": 3.89
+          "period": "2026-11-12",
+          "value": 3.9
         }
       ],
-      "credit": "Source: Federal Reserve Bank of New York, SOFR, accessed 2026-11-10. The SOFR is subject to the Terms of Use posted at newyorkfed.org. The New York Fed is not responsible for publication of the SOFR by Asadbek Abdurashidov (aabdurashidov.ch), does not sanction or endorse any particular republication, and has no liability for your use. The SOFR Data are calculated using data provided under a license granted to the New York Fed by DTCC Solutions LLC (Solutions), an affiliate of The Depository Trust & Clearing Corporation. Solutions, its affiliates, and third parties from which they obtained data have no liability for the content of this material.",
+      "credit": "Source: Federal Reserve Bank of New York, SOFR, accessed 2026-11-15. The SOFR is subject to the Terms of Use posted at newyorkfed.org. The New York Fed is not responsible for publication of the SOFR by Asadbek Abdurashidov (aabdurashidov.ch), does not sanction or endorse any particular republication, and has no liability for your use. The SOFR Data are calculated using data provided under a license granted to the New York Fed by DTCC Solutions LLC (Solutions), an affiliate of The Depository Trust & Clearing Corporation. Solutions, its affiliates, and third parties from which they obtained data have no liability for the content of this material.",
       "source": "nyfed"
     },
     {
@@ -690,7 +690,7 @@
           "value": 0.0
         }
       ],
-      "credit": "Source: Swiss National Bank (SNB), data portal cube snbgwdzid (LZ), accessed 2026-11-10",
+      "credit": "Source: Swiss National Bank (SNB), data portal cube snbgwdzid (LZ), accessed 2026-11-15",
       "source": "snb"
     },
     {
@@ -702,19 +702,19 @@
       "unit": "PCPA",
       "frequency": "B",
       "latest": {
-        "period": "2026-11-06",
-        "value": 2.930495511
+        "period": "2026-11-12",
+        "value": 3.0751415729
       },
       "change_short": {
-        "value": -0.06596107109999982,
+        "value": -0.006374666300000165,
         "unit": "pp",
-        "from": "2026-10-07",
+        "from": "2026-10-13",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 0.9670707365000002,
+        "value": 1.0993490900999998,
         "unit": "pp",
-        "from": "2025-11-06"
+        "from": "2025-11-12"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -815,11 +815,11 @@
           "value": 3.0051075689
         },
         {
-          "period": "2026-11-06",
-          "value": 2.930495511
+          "period": "2026-11-12",
+          "value": 3.0751415729
         }
       ],
-      "credit": "Source: ECB Data Portal, YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_2Y, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_2Y, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -831,19 +831,19 @@
       "unit": "PCPA",
       "frequency": "B",
       "latest": {
-        "period": "2026-11-06",
-        "value": 3.2855888131
+        "period": "2026-11-12",
+        "value": 3.3672459164
       },
       "change_short": {
-        "value": -0.25276240559999996,
+        "value": -0.1245322486,
         "unit": "pp",
-        "from": "2026-10-07",
+        "from": "2026-10-13",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 0.5522485933999999,
+        "value": 0.6434390746999998,
         "unit": "pp",
-        "from": "2025-11-06"
+        "from": "2025-11-12"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -944,11 +944,11 @@
           "value": 3.3650469366
         },
         {
-          "period": "2026-11-06",
-          "value": 3.2855888131
+          "period": "2026-11-12",
+          "value": 3.3672459164
         }
       ],
-      "credit": "Source: ECB Data Portal, YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, YC.B.U2.EUR.4F.G_N_A.SV_C_YM.SR_10Y, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -960,19 +960,19 @@
       "unit": "PC",
       "frequency": "B",
       "latest": {
-        "period": "2026-11-09",
-        "value": 4.24
+        "period": "2026-11-13",
+        "value": 4.32
       },
       "change_short": {
-        "value": -0.009999999999999787,
+        "value": 0.040000000000000036,
         "unit": "pp",
-        "from": "2026-10-09",
+        "from": "2026-10-14",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 0.3200000000000003,
+        "value": 0.3600000000000003,
         "unit": "pp",
-        "from": "2025-11-07"
+        "from": "2025-11-13"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -1073,11 +1073,11 @@
           "value": 4.16
         },
         {
-          "period": "2026-11-09",
-          "value": 4.24
+          "period": "2026-11-13",
+          "value": 4.32
         }
       ],
-      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (3 Mo), accessed 2026-11-10",
+      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (3 Mo), accessed 2026-11-15",
       "source": "ust"
     },
     {
@@ -1089,19 +1089,19 @@
       "unit": "PC",
       "frequency": "B",
       "latest": {
-        "period": "2026-11-09",
-        "value": 4.56
+        "period": "2026-11-13",
+        "value": 4.88
       },
       "change_short": {
-        "value": -0.2400000000000002,
+        "value": 0.05999999999999961,
         "unit": "pp",
-        "from": "2026-10-09",
+        "from": "2026-10-14",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 1.0099999999999998,
+        "value": 1.2999999999999998,
         "unit": "pp",
-        "from": "2025-11-07"
+        "from": "2025-11-13"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -1202,11 +1202,11 @@
           "value": 4.56
         },
         {
-          "period": "2026-11-09",
-          "value": 4.56
+          "period": "2026-11-13",
+          "value": 4.88
         }
       ],
-      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (2 Yr), accessed 2026-11-10",
+      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (2 Yr), accessed 2026-11-15",
       "source": "ust"
     },
     {
@@ -1218,19 +1218,19 @@
       "unit": "PC",
       "frequency": "B",
       "latest": {
-        "period": "2026-11-09",
-        "value": 4.88
+        "period": "2026-11-13",
+        "value": 5.15
       },
       "change_short": {
-        "value": -0.3600000000000003,
+        "value": -0.040000000000000036,
         "unit": "pp",
-        "from": "2026-10-09",
+        "from": "2026-10-14",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 0.7699999999999996,
+        "value": 1.04,
         "unit": "pp",
-        "from": "2025-11-07"
+        "from": "2025-11-13"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -1331,11 +1331,11 @@
           "value": 4.94
         },
         {
-          "period": "2026-11-09",
-          "value": 4.88
+          "period": "2026-11-13",
+          "value": 5.15
         }
       ],
-      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (10 Yr), accessed 2026-11-10",
+      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (10 Yr), accessed 2026-11-15",
       "source": "ust"
     },
     {
@@ -1347,26 +1347,22 @@
       "unit": "PC",
       "frequency": "M",
       "latest": {
-        "period": "2026-09",
-        "value": 3.473
+        "period": "2026-10",
+        "value": 3.416
       },
       "change_short": {
-        "value": 0.2879999999999998,
+        "value": -0.05699999999999994,
         "unit": "pp",
-        "from": "2026-08",
+        "from": "2026-09",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 0.7799999999999998,
+        "value": 0.7989999999999999,
         "unit": "pp",
-        "from": "2025-09"
+        "from": "2025-10"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
-        {
-          "period": "2024-09",
-          "value": 2.166
-        },
         {
           "period": "2024-10",
           "value": 2.228
@@ -1462,9 +1458,13 @@
         {
           "period": "2026-09",
           "value": 3.473
+        },
+        {
+          "period": "2026-10",
+          "value": 3.416
         }
       ],
-      "credit": "Source: ECB Data Portal, IRS.M.DE.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, IRS.M.DE.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -1476,26 +1476,22 @@
       "unit": "PC",
       "frequency": "M",
       "latest": {
-        "period": "2026-09",
-        "value": 4.44
+        "period": "2026-10",
+        "value": 4.89
       },
       "change_short": {
-        "value": 0.4400000000000004,
+        "value": 0.4499999999999993,
         "unit": "pp",
-        "from": "2026-08",
+        "from": "2026-09",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 0.9300000000000006,
+        "value": 1.4499999999999997,
         "unit": "pp",
-        "from": "2025-09"
+        "from": "2025-10"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
-        {
-          "period": "2024-09",
-          "value": 2.9
-        },
         {
           "period": "2024-10",
           "value": 2.99
@@ -1591,9 +1587,13 @@
         {
           "period": "2026-09",
           "value": 4.44
+        },
+        {
+          "period": "2026-10",
+          "value": 4.89
         }
       ],
-      "credit": "Source: ECB Data Portal, IRS.M.FR.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, IRS.M.FR.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -1605,26 +1605,22 @@
       "unit": "PC",
       "frequency": "M",
       "latest": {
-        "period": "2026-09",
-        "value": 4.362
+        "period": "2026-10",
+        "value": 4.68
       },
       "change_short": {
-        "value": 0.3759999999999999,
+        "value": 0.3179999999999996,
         "unit": "pp",
-        "from": "2026-08",
+        "from": "2026-09",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 0.8029999999999999,
+        "value": 1.2379999999999995,
         "unit": "pp",
-        "from": "2025-09"
+        "from": "2025-10"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
-        {
-          "period": "2024-09",
-          "value": 3.565
-        },
         {
           "period": "2024-10",
           "value": 3.501
@@ -1720,9 +1716,13 @@
         {
           "period": "2026-09",
           "value": 4.362
+        },
+        {
+          "period": "2026-10",
+          "value": 4.68
         }
       ],
-      "credit": "Source: ECB Data Portal, IRS.M.IT.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, IRS.M.IT.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -1734,26 +1734,22 @@
       "unit": "PC",
       "frequency": "M",
       "latest": {
-        "period": "2026-09",
-        "value": 3.927
+        "period": "2026-10",
+        "value": 4.066
       },
       "change_short": {
-        "value": 0.29200000000000026,
+        "value": 0.1389999999999998,
         "unit": "pp",
-        "from": "2026-08",
+        "from": "2026-09",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 0.665,
+        "value": 0.919,
         "unit": "pp",
-        "from": "2025-09"
+        "from": "2025-10"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
-        {
-          "period": "2024-09",
-          "value": 2.986
-        },
         {
           "period": "2024-10",
           "value": 2.963
@@ -1849,9 +1845,13 @@
         {
           "period": "2026-09",
           "value": 3.927
+        },
+        {
+          "period": "2026-10",
+          "value": 4.066
         }
       ],
-      "credit": "Source: ECB Data Portal, IRS.M.ES.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, IRS.M.ES.L.L40.CI.0000.EUR.N.Z, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -1980,7 +1980,7 @@
           "value": 3.9
         }
       ],
-      "credit": "Source: ECB Data Portal, MIR.M.U2.B.A2I.AM.R.A.2240.EUR.N, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, MIR.M.U2.B.A2I.AM.R.A.2240.EUR.N, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -2045,7 +2045,7 @@
           "value": 8.55228309538633
         }
       ],
-      "credit": "Source: ECB Data Portal, BLS.Q.U2.ALL.O.E.Z.B3.ST.S.WFNET, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, BLS.Q.U2.ALL.O.E.Z.B3.ST.S.WFNET, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -2057,19 +2057,19 @@
       "unit": "PURE_NUMB",
       "frequency": "D",
       "latest": {
-        "period": "2026-11-06",
-        "value": 0.005469029059745524
+        "period": "2026-11-12",
+        "value": 0.0065077495417175555
       },
       "change_short": {
-        "value": -0.011222311091227254,
+        "value": -0.005008126753254309,
         "unit": "index",
-        "from": "2026-10-07",
+        "from": "2026-10-13",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": -0.03411055141379059,
+        "value": -0.02506072314226798,
         "unit": "index",
-        "from": "2025-11-06"
+        "from": "2025-11-12"
       },
       "financing_sign": "lower_is_easier",
       "spark": [
@@ -2167,14 +2167,14 @@
         },
         {
           "period": "2026-10-30",
-          "value": 0.011477353394565133
+          "value": 0.011472799965832167
         },
         {
-          "period": "2026-11-06",
-          "value": 0.005469029059745524
+          "period": "2026-11-12",
+          "value": 0.0065077495417175555
         }
       ],
-      "credit": "Source: ECB Data Portal, CISS.D.U2.Z0Z.4F.EC.SS_CIN.IDX, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, CISS.D.U2.Z0Z.4F.EC.SS_CIN.IDX, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -2239,7 +2239,7 @@
           "value": 0.4
         }
       ],
-      "credit": "Source: Eurostat, namq_10_gdp, accessed 2026-11-10",
+      "credit": "Source: Eurostat, namq_10_gdp, accessed 2026-11-15",
       "source": "eurostat"
     },
     {
@@ -2368,7 +2368,7 @@
           "value": 4.0
         }
       ],
-      "credit": "Source: Eurostat, prc_hicp_minr, accessed 2026-11-10",
+      "credit": "Source: Eurostat, prc_hicp_minr, accessed 2026-11-15",
       "source": "eurostat"
     },
     {
@@ -2497,7 +2497,7 @@
           "value": 6.5
         }
       ],
-      "credit": "Source: Eurostat, une_rt_m, accessed 2026-11-10",
+      "credit": "Source: Eurostat, une_rt_m, accessed 2026-11-15",
       "source": "eurostat"
     },
     {
@@ -2626,7 +2626,7 @@
           "value": 96.9
         }
       ],
-      "credit": "Source: European Commission (DG ECFIN), via Eurostat ei_bssi_m_r2, accessed 2026-11-10",
+      "credit": "Source: European Commission (DG ECFIN), via Eurostat ei_bssi_m_r2, accessed 2026-11-15",
       "source": "eurostat"
     },
     {
@@ -2755,7 +2755,7 @@
           "value": 97.5
         }
       ],
-      "credit": "Source: Eurostat, sts_inpr_m, accessed 2026-11-10",
+      "credit": "Source: Eurostat, sts_inpr_m, accessed 2026-11-15",
       "source": "eurostat"
     },
     {
@@ -2820,7 +2820,7 @@
           "value": 214.8
         }
       ],
-      "credit": "Source: Eurostat, sts_rb_q, accessed 2026-11-10",
+      "credit": "Source: Eurostat, sts_rb_q, accessed 2026-11-15",
       "source": "eurostat"
     },
     {
@@ -2945,7 +2945,7 @@
           "value": 4.1
         }
       ],
-      "credit": "Source: U.S. Bureau of Labor Statistics, LNS14000000, accessed 2026-11-10",
+      "credit": "Source: U.S. Bureau of Labor Statistics, LNS14000000, accessed 2026-11-15",
       "source": "bls"
     },
     {
@@ -2957,26 +2957,22 @@
       "unit": "index 1982-84=100",
       "frequency": "M",
       "latest": {
-        "period": "2026-09",
-        "value": 336.94
+        "period": "2026-10",
+        "value": 337.511
       },
       "change_short": {
-        "value": 0.0058510955877961734,
+        "value": 0.0016946637383510321,
         "unit": "%",
-        "from": "2026-08",
+        "from": "2026-09",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": 0.03737684729064039,
+        "value": 0.03913485221674873,
         "unit": "%",
         "from": "2025-09"
       },
       "financing_sign": null,
       "spark": [
-        {
-          "period": "2024-09",
-          "value": 315.301
-        },
         {
           "period": "2024-10",
           "value": 315.664
@@ -3068,9 +3064,13 @@
         {
           "period": "2026-09",
           "value": 336.94
+        },
+        {
+          "period": "2026-10",
+          "value": 337.511
         }
       ],
-      "credit": "Source: U.S. Bureau of Labor Statistics, CUUR0000SA0, accessed 2026-11-10",
+      "credit": "Source: U.S. Bureau of Labor Statistics, CUUR0000SA0, accessed 2026-11-15",
       "source": "bls"
     },
     {
@@ -3199,7 +3199,7 @@
           "value": 159293.0
         }
       ],
-      "credit": "Source: U.S. Bureau of Labor Statistics, CES0000000001, accessed 2026-11-10",
+      "credit": "Source: U.S. Bureau of Labor Statistics, CES0000000001, accessed 2026-11-15",
       "source": "bls"
     },
     {
@@ -3231,7 +3231,7 @@
           "value": 1886027.0
         }
       ],
-      "credit": "Source: Eurostat, road_go_ta_tott, accessed 2026-11-10",
+      "credit": "Source: Eurostat, road_go_ta_tott, accessed 2026-11-15",
       "source": "eurostat"
     },
     {
@@ -3243,19 +3243,19 @@
       "unit": "USD",
       "frequency": "D",
       "latest": {
-        "period": "2026-11-09",
-        "value": 1.1193
+        "period": "2026-11-13",
+        "value": 1.1052
       },
       "change_short": {
-        "value": -0.0011600928074246841,
+        "value": -0.012773559624832509,
         "unit": "%",
-        "from": "2026-10-09",
+        "from": "2026-10-14",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": -0.03183115647435342,
+        "value": -0.048799380325329156,
         "unit": "%",
-        "from": "2025-11-07"
+        "from": "2025-11-13"
       },
       "financing_sign": null,
       "spark": [
@@ -3356,11 +3356,11 @@
           "value": 1.1172
         },
         {
-          "period": "2026-11-09",
-          "value": 1.1193
+          "period": "2026-11-13",
+          "value": 1.1052
         }
       ],
-      "credit": "Source: ECB Data Portal, EXR.D.USD.EUR.SP00.A, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, EXR.D.USD.EUR.SP00.A, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -3372,19 +3372,19 @@
       "unit": "CHF",
       "frequency": "D",
       "latest": {
-        "period": "2026-11-09",
-        "value": 0.9164
+        "period": "2026-11-13",
+        "value": 0.9266
       },
       "change_short": {
-        "value": -0.015999140985718863,
+        "value": -0.006859592711682794,
         "unit": "%",
-        "from": "2026-10-09",
+        "from": "2026-10-14",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": -0.01589347079037806,
+        "value": 0.002379922111640065,
         "unit": "%",
-        "from": "2025-11-07"
+        "from": "2025-11-13"
       },
       "financing_sign": null,
       "spark": [
@@ -3485,11 +3485,11 @@
           "value": 0.9194
         },
         {
-          "period": "2026-11-09",
-          "value": 0.9164
+          "period": "2026-11-13",
+          "value": 0.9266
         }
       ],
-      "credit": "Source: ECB Data Portal, EXR.D.CHF.EUR.SP00.A, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, EXR.D.CHF.EUR.SP00.A, accessed 2026-11-15",
       "source": "ecb"
     },
     {
@@ -3501,19 +3501,19 @@
       "unit": "GBP",
       "frequency": "D",
       "latest": {
-        "period": "2026-11-09",
-        "value": 0.8343
+        "period": "2026-11-13",
+        "value": 0.83559
       },
       "change_short": {
-        "value": -0.015726201290657382,
+        "value": -0.009788469514724119,
         "unit": "%",
-        "from": "2026-10-09",
+        "from": "2026-10-14",
         "label": "vs 1 month earlier"
       },
       "change_1y": {
-        "value": -0.053115423901940684,
+        "value": -0.052511622632951505,
         "unit": "%",
-        "from": "2025-11-07"
+        "from": "2025-11-13"
       },
       "financing_sign": null,
       "spark": [
@@ -3614,11 +3614,11 @@
           "value": 0.8338
         },
         {
-          "period": "2026-11-09",
-          "value": 0.8343
+          "period": "2026-11-13",
+          "value": 0.83559
         }
       ],
-      "credit": "Source: ECB Data Portal, EXR.D.GBP.EUR.SP00.A, accessed 2026-11-10",
+      "credit": "Source: ECB Data Portal, EXR.D.GBP.EUR.SP00.A, accessed 2026-11-15",
       "source": "ecb"
     }
   ],
