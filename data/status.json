@@ -1,110 +1,108 @@
 {
   "schema_version": 2,
   "run": {
-    "built_at": "2026-11-15T18:47:47Z",
-    "git_commit": "da0e92873e7bb689898786120ff6e7291454df28",
-    "github_run_id": "43747308819"
+    "built_at": "2026-11-16T16:25:08Z",
+    "git_commit": "3dc50a786bc65121b9823ac68c21f1f06f4710b8",
+    "github_run_id": "43904999819"
   },
   "sources": [
     {
       "id": "universe",
       "label": "US company universe (SEC)",
-      "newest_data": "2026-11-15",
-      "checked_at": "2026-11-15T18:47:47Z",
+      "newest_data": "2026-11-16",
+      "checked_at": "2026-11-16T16:25:08Z",
       "state": "fresh",
       "stale_series": [],
-      "fresh_until": "2026-11-24T00:00:00Z"
+      "fresh_until": "2026-11-25T00:00:00Z"
     },
     {
       "id": "fundamentals",
       "label": "Company fundamentals (SEC filings)",
-      "newest_data": "2026-11-15",
-      "checked_at": "2026-11-15T18:47:47Z",
+      "newest_data": "2026-11-16",
+      "checked_at": "2026-11-16T16:25:08Z",
       "state": "fresh",
       "stale_series": [],
-      "fresh_until": "2026-11-24T00:00:00Z"
+      "fresh_until": "2026-11-25T00:00:00Z"
     },
     {
       "id": "valuation",
       "label": "Valuation inputs (SEC filings)",
-      "newest_data": "2026-11-15",
-      "checked_at": "2026-11-15T18:47:47Z",
+      "newest_data": "2026-11-16",
+      "checked_at": "2026-11-16T16:25:08Z",
       "state": "fresh",
       "stale_series": [],
-      "fresh_until": "2026-11-24T00:00:00Z"
+      "fresh_until": "2026-11-25T00:00:00Z"
     },
     {
       "id": "deals",
       "label": "Deal filings, PE sponsors, Form D (SEC)",
-      "newest_data": "2026-11-15",
-      "checked_at": "2026-11-15T18:47:47Z",
+      "newest_data": "2026-11-16",
+      "checked_at": "2026-11-16T16:25:08Z",
       "state": "fresh",
       "stale_series": [],
-      "fresh_until": "2026-11-24T00:00:00Z"
+      "fresh_until": "2026-11-25T00:00:00Z"
     },
     {
       "id": "macro_daily",
       "label": "Macro series, daily",
-      "newest_data": "2026-11-15",
-      "checked_at": "2026-11-15T18:47:47Z",
-      "state": "stale",
-      "stale_series": [
-        "ch_snb_policy_rate"
-      ],
-      "fresh_until": "2026-11-13T00:00:00Z"
+      "newest_data": "2026-11-16",
+      "checked_at": "2026-11-16T16:25:08Z",
+      "state": "fresh",
+      "stale_series": [],
+      "fresh_until": "2026-11-20T00:00:00Z"
     },
     {
       "id": "macro_monthly",
       "label": "Macro series, monthly",
       "newest_data": "2026-10-31",
-      "checked_at": "2026-11-15T18:47:47Z",
+      "checked_at": "2026-11-16T16:25:08Z",
       "state": "fresh",
       "stale_series": [],
-      "fresh_until": "2026-11-20T00:00:00Z"
+      "fresh_until": "2026-11-23T00:00:00Z"
     },
     {
       "id": "macro_quarterly",
       "label": "Macro series, quarterly",
       "newest_data": "2026-12-31",
-      "checked_at": "2026-11-15T18:47:47Z",
+      "checked_at": "2026-11-16T16:25:08Z",
       "state": "fresh",
       "stale_series": [],
-      "fresh_until": "2026-11-20T00:00:00Z"
+      "fresh_until": "2026-11-23T00:00:00Z"
     },
     {
       "id": "macro_annual",
       "label": "Macro series, annual",
       "newest_data": "2025-12-31",
-      "checked_at": "2026-11-15T18:47:47Z",
+      "checked_at": "2026-11-16T16:25:08Z",
       "state": "fresh",
       "stale_series": [],
-      "fresh_until": "2026-11-20T00:00:00Z"
+      "fresh_until": "2026-11-23T00:00:00Z"
     }
   ],
   "rooms": [
     {
       "file": "company_room.json",
-      "sha256": "1ea87c750a42bfefa20218c6a41a6ee5fc5192deeee8cbb3ca2cd51b7384c644",
+      "sha256": "a617cd49022345e045f9858387535d3dfc7752703f2ff7dc7a1c1315cb331ec1",
       "bytes": 1420695
     },
     {
       "file": "deals_room.json",
-      "sha256": "e99dab1c5145d4eb4a8239ad1d72dd6454549e1b175c5462667b888fba93f244",
+      "sha256": "ea2ee052d4607d4c57734144996bdc181d36135ba830936e61b462b0015abbfd",
       "bytes": 14243
     },
     {
       "file": "macro_room.json",
-      "sha256": "fa6ab5071c4fd4b0e5c7ec0907ade369ce484ead97e6c49fc56d5408281e9871",
-      "bytes": 79391
+      "sha256": "364f47340c97b55815bee0a1e349465a9a259d108fc72c78f9d90f5ef3be634b",
+      "bytes": 79379
     },
     {
       "file": "markets.json",
-      "sha256": "bb21e19e5d509053303d5d4f421cb73daeada75381a54bdce3f99a48ee9e7895",
+      "sha256": "89c73537833775dc773e422e1e214eacc32f65760f1374cc74ecde80a2b5f6ca",
       "bytes": 215116
     },
     {
       "file": "today.json",
-      "sha256": "a00035c388a7a14f1b1be75f1f909fb1fd6b47372176eb366e18bbed7b83ae26",
+      "sha256": "500a6dd7d309ec2852e9cd11a5963aa658628e8bff3ac10f52004e73e34416e4",
       "bytes": 1037
     }
   ]
