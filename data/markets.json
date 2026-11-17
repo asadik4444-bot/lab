@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-11-16",
+  "as_of": "2026-11-17",
   "rank_basis": "public_float_unverified",
   "source": "SEC EDGAR: XBRL frames (dei:EntityPublicFloat, us-gaap:Assets), submissions, companyconcept",
   "cross_check": {
@@ -5541,10 +5541,10 @@
       "rule": "assets",
       "reason": "float_scale_suspect",
       "public_float": 2290409000000.0,
-      "assets": 38703045.0,
-      "implied_float_price": 865543.5001543718,
-      "float_to_assets": 59179.038755219386,
-      "why": "Excluded as a likely unit error in the filing: its public float of $2,290.4bn is 59,179× its total assets ($0.04bn); with its share count it implies a share price of $865,544."
+      "assets": 36326499.0,
+      "implied_float_price": 654032.7626179369,
+      "float_to_assets": 63050.6396996859,
+      "why": "Excluded as a likely unit error in the filing: its public float of $2,290.4bn is 63,051× its total assets ($0.04bn); with its share count it implies a share price of $654,033."
     },
     {
       "name": "CleanSpark, Inc.",
@@ -5668,7 +5668,7 @@
     }
   ],
   "fundamentals_summary": {
-    "built": "2026-11-16 16:21 UTC",
+    "built": "2026-11-17 16:29 UTC",
     "companies": 50,
     "checks": 791,
     "passed": 791,

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-11-16",
+  "as_of": "2026-11-17",
   "headline": {
     "text": "123 US public-company merger proxies and tender offers were filed from May to October 2026: about as many as the 122 in the same months a year earlier (SPACs excluded).",
     "last": 123,
@@ -176,22 +176,52 @@
     },
     {
       "month": "2026-11",
-      "proxies": 8,
-      "proxies_spac": 5,
+      "proxies": 11,
+      "proxies_spac": 6,
       "tenders": 1,
       "tenders_spac": 0
     }
   ],
   "window": [
     "2024-12-01",
-    "2026-11-16"
+    "2026-11-17"
   ],
   "amendments_skipped": {
-    "SC TO-T": 375
+    "SC TO-T": 376
   },
-  "spac_filings": 108,
-  "filings_total": 588,
+  "spac_filings": 109,
+  "filings_total": 592,
   "recent": [
+    {
+      "name": "VARONIS SYSTEMS INC",
+      "tickers": [
+        "VRNS"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-11-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/1361113/000121390026120640/"
+    },
+    {
+      "name": "DESTINATION XL GROUP, INC.",
+      "tickers": [
+        "DXLG"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-11-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/813298/000119312526463667/"
+    },
+    {
+      "name": "Baldwin Insurance Group, Inc.",
+      "tickers": [
+        "BWIN"
+      ],
+      "form": "DEFM14A",
+      "form_label": "Merger proxies (DEFM14A)",
+      "file_date": "2026-11-16",
+      "url": "https://www.sec.gov/Archives/edgar/data/1781755/000114036126044248/"
+    },
     {
       "name": "PTC INC.",
       "tickers": [
@@ -279,36 +309,6 @@
       "form_label": "Merger proxies (DEFM14A)",
       "file_date": "2026-11-02",
       "url": "https://www.sec.gov/Archives/edgar/data/1813452/000110465926121478/"
-    },
-    {
-      "name": "Chemomab Therapeutics Ltd.",
-      "tickers": [
-        "CMMB"
-      ],
-      "form": "DEFM14A",
-      "form_label": "Merger proxies (DEFM14A)",
-      "file_date": "2026-10-30",
-      "url": "https://www.sec.gov/Archives/edgar/data/1534248/000149315226049444/"
-    },
-    {
-      "name": "Pacira BioSciences, Inc.",
-      "tickers": [
-        "PCRX"
-      ],
-      "form": "SC TO-T",
-      "form_label": "Third-party tender offers (SC TO-T)",
-      "file_date": "2026-10-30",
-      "url": "https://www.sec.gov/Archives/edgar/data/1396814/000114036126041224/"
-    },
-    {
-      "name": "Distribution Solutions Group, Inc.",
-      "tickers": [
-        "DSGR"
-      ],
-      "form": "DEFM14A",
-      "form_label": "Merger proxies (DEFM14A)",
-      "file_date": "2026-10-28",
-      "url": "https://www.sec.gov/Archives/edgar/data/703604/000119312526436088/"
     }
   ],
   "sponsors": [
