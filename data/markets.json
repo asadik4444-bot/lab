@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-11-18",
+  "as_of": "2026-11-19",
   "rank_basis": "public_float_unverified",
   "source": "SEC EDGAR: XBRL frames (dei:EntityPublicFloat, us-gaap:Assets), submissions, companyconcept",
   "cross_check": {
@@ -14,12 +14,12 @@
     "pool": 200,
     "unit_errors_excluded": 20,
     "unit_errors_over_assets_limit": 16,
-    "excluded_over_assets_limit": 21,
+    "excluded_over_assets_limit": 20,
     "excluded_price_rule_only": 2,
-    "excluded_with_assets": 24,
-    "impossible_figures": 25,
+    "excluded_with_assets": 23,
+    "impossible_figures": 24,
     "off_chart_size": 2,
-    "other_exclusions": 6,
+    "other_exclusions": 5,
     "rows_with_badges": 8,
     "share_lookups": 219
   },
@@ -5437,16 +5437,6 @@
       "why": "Excluded: SEC records show no common-stock ticker on NYSE, Nasdaq or Cboe (often delisted or acquired). Its filing's float also looks mis-scaled: its public float of $1,569.6bn is 1,561× its total assets ($1.01bn)."
     },
     {
-      "name": "CONX CORP.",
-      "rule": "assets",
-      "reason": "no_listed_ticker",
-      "public_float": 270424700000.0,
-      "assets": 283506767.0,
-      "implied_float_price": null,
-      "float_to_assets": 953.8562442849909,
-      "why": "Excluded: SEC records show no common-stock ticker on NYSE, Nasdaq or Cboe (often delisted or acquired). Its filing's float also looks mis-scaled: its public float of $270.4bn is 954× its total assets ($0.28bn)."
-    },
-    {
       "name": "INOZYME PHARMA, INC.",
       "rule": "assets",
       "reason": "no_listed_ticker",
@@ -5668,7 +5658,7 @@
     }
   ],
   "fundamentals_summary": {
-    "built": "2026-11-18 16:02 UTC",
+    "built": "2026-11-19 16:07 UTC",
     "companies": 50,
     "checks": 791,
     "passed": 791,
