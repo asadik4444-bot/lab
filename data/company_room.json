@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "private": false,
-  "universe_as_of": "2026-11-19",
+  "universe_as_of": "2026-11-20",
   "rank_basis": "public_float_unverified",
-  "fundamentals_built": "2026-11-19 16:07 UTC",
-  "valuation_built": "2026-11-19 16:07 UTC",
+  "fundamentals_built": "2026-11-20 15:49 UTC",
+  "valuation_built": "2026-11-20 15:50 UTC",
   "defaults": {
     "erp": 0.05,
     "terminal_growth": 0.025,
@@ -13,12 +13,12 @@
       0.2
     ],
     "ust10y": {
-      "value": 0.0507,
-      "date": "2026-11-18",
-      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (10 Yr), accessed 2026-11-19"
+      "value": 0.0504,
+      "date": "2026-11-19",
+      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (10 Yr), accessed 2026-11-20"
     },
-    "discount_rate": 0.1007,
-    "discount_rate_text": "US 10-year Treasury 5.07% on 18 November 2026 is the risk-free reference. Company WACC also uses your beta, equity risk premium, borrowing cost, tax rate, and equity/debt weights"
+    "discount_rate": 0.1004,
+    "discount_rate_text": "US 10-year Treasury 5.04% on 19 November 2026 is the risk-free reference. Company WACC also uses your beta, equity risk premium, borrowing cost, tax rate, and equity/debt weights"
   },
   "definitions": {
     "debt_rule": "1. DebtLongtermAndShorttermCombinedAmount when reported (the company's own total).\n    2. Else noncurrent debt + current debt, where current debt is DebtCurrent when reported, otherwise current\n       maturities plus short-term borrowings (or commercial paper); short-term borrowings equal to the current\n       maturities are the same line and are counted once. For an issuer that tags current maturities only by\n       segment (listed by hand: Caterpillar), the current maturities come from its debt maturity schedule.\n    3. Else LongTermDebt (including current maturities) plus short-term borrowings.\n    4. Else the current parts alone (DebtCurrent, or current maturities plus short-term borrowings).\n    5. With no debt tag at all, 0 (\"no debt tags in the 10-K\"). A blocked (conflicting) tag is never 0.\n\n    The second value maps \"noncurrent\" and \"current\" to True when that maturity's debt tag includes capital or\n    finance leases (LongTermDebtAndCapitalLeaseObligations[Current]); None means unknown (combined total).",
@@ -909,7 +909,7 @@
         "defaults": {
           "growth": 0.2,
           "margin": 0.4487206835461631,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -2727,7 +2727,7 @@
         "defaults": {
           "growth": 0.1778868679984666,
           "margin": 0.2092768478834295,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -3638,7 +3638,7 @@
         "defaults": {
           "growth": 0.12377754683294695,
           "margin": 0.013283092509851515,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -4533,7 +4533,7 @@
         "defaults": {
           "growth": 0.15090081081544376,
           "margin": 0.18339591308365005,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -5391,7 +5391,7 @@
         "defaults": {
           "growth": 0.2,
           "margin": 0.23351533637473515,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -7845,7 +7845,7 @@
         "defaults": {
           "growth": -0.029306991503736307,
           "margin": 0.06819652547462501,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -8704,7 +8704,7 @@
         "defaults": {
           "growth": 0.2,
           "margin": 0.14866628850787125,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -10227,7 +10227,7 @@
         "defaults": {
           "growth": 0.15851068919677527,
           "margin": 0.22422754287702262,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -11062,7 +11062,7 @@
         "defaults": {
           "growth": 0.16416373770724607,
           "margin": 0.5410235720444536,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -11880,7 +11880,7 @@
         "defaults": {
           "growth": 0.147575,
           "margin": 0.4943289212470579,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -12698,7 +12698,7 @@
         "defaults": {
           "growth": -0.04962169429466367,
           "margin": 0.0723785532857947,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -13584,7 +13584,7 @@
         "defaults": {
           "growth": 0.10143695387577888,
           "margin": 0.031308169446094075,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -14483,7 +14483,7 @@
         "defaults": {
           "growth": 0.04725456534694858,
           "margin": 0.023604795445335596,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -15375,7 +15375,7 @@
         "defaults": {
           "growth": 0.03240467921310982,
           "margin": 0.08793570788154091,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -16254,7 +16254,7 @@
         "defaults": {
           "growth": 0.2,
           "margin": 0.4433830502190028,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -17132,7 +17132,7 @@
         "defaults": {
           "growth": 0.06048119251078011,
           "margin": 0.21760460029632364,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -19524,7 +19524,7 @@
         "defaults": {
           "growth": 0.03260405296378909,
           "margin": 0.18202290074579697,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -20459,7 +20459,7 @@
         "defaults": {
           "growth": 0.08566762523520431,
           "margin": 0.32165318470759796,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -21342,7 +21342,7 @@
         "defaults": {
           "growth": 0.018699135164998618,
           "margin": 0.13879992388339546,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -23065,7 +23065,7 @@
         "defaults": {
           "growth": 0.1177498499664631,
           "margin": 0.220848328085882,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -23971,7 +23971,7 @@
         "defaults": {
           "growth": 0.07312952109403875,
           "margin": 0.2936936417500469,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -27945,7 +27945,7 @@
         "defaults": {
           "growth": -0.04643924431530293,
           "margin": 0.09413551678102396,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -29735,7 +29735,7 @@
         "defaults": {
           "growth": 0.0566865315852205,
           "margin": 0.17539504707152015,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -31261,7 +31261,7 @@
         "defaults": {
           "growth": 0.029722769277382214,
           "margin": 0.1555638375145394,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -34310,7 +34310,7 @@
         "defaults": {
           "growth": 0.027072979335600315,
           "margin": 0.20162473346716553,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -35200,7 +35200,7 @@
         "defaults": {
           "growth": 0.01313738935294851,
           "margin": 0.20821683161495158,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -37787,7 +37787,7 @@
         "defaults": {
           "growth": 0.09579100145137881,
           "margin": 0.35293892005929406,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -38692,7 +38692,7 @@
         "defaults": {
           "growth": 0.13049037785307846,
           "margin": 0.17410794635961138,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -40396,7 +40396,7 @@
         "defaults": {
           "growth": 0.1338725304351489,
           "margin": 0.3851105432181624,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }
@@ -41222,7 +41222,7 @@
         "defaults": {
           "growth": 0.025247054633943673,
           "margin": 0.1832596439055562,
-          "rate": 0.1007,
+          "rate": 0.1004,
           "terminal": 0.025
         }
       }

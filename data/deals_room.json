@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-11-19",
+  "as_of": "2026-11-20",
   "headline": {
     "text": "123 US public-company merger proxies and tender offers were filed from May to October 2026: about as many as the 122 in the same months a year earlier (SPACs excluded).",
     "last": 123,
@@ -184,7 +184,7 @@
   ],
   "window": [
     "2024-12-01",
-    "2026-11-19"
+    "2026-11-20"
   ],
   "amendments_skipped": {
     "SC TO-T": 377
