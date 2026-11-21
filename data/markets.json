@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-11-20",
+  "as_of": "2026-11-21",
   "rank_basis": "public_float_unverified",
   "source": "SEC EDGAR: XBRL frames (dei:EntityPublicFloat, us-gaap:Assets), submissions, companyconcept",
   "cross_check": {
@@ -12,13 +12,13 @@
   "counts": {
     "ranked": 50,
     "pool": 200,
-    "unit_errors_excluded": 20,
+    "unit_errors_excluded": 19,
     "unit_errors_over_assets_limit": 16,
     "excluded_over_assets_limit": 20,
     "excluded_price_rule_only": 2,
     "excluded_with_assets": 23,
-    "impossible_figures": 24,
-    "off_chart_size": 2,
+    "impossible_figures": 23,
+    "off_chart_size": 1,
     "other_exclusions": 5,
     "rows_with_badges": 8,
     "share_lookups": 219
@@ -1901,12 +1901,12 @@
       "ticker_source": "submissions",
       "public_float": 371800000000.0,
       "float_end": "2025-08-01",
-      "shares": 997689626.0,
+      "shares": 997852247.0,
       "shares_basis": "dei_cover",
-      "shares_end": "2026-08-18",
-      "assets": 109384000000.0,
-      "assets_end": "2026-08-02",
-      "float_to_assets": 3.3990345937248594,
+      "shares_end": "2026-11-17",
+      "assets": 110102000000.0,
+      "assets_end": "2026-11-01",
+      "float_to_assets": 3.3768687217307587,
       "badges": [],
       "fundamentals": {
         "fy": 2025,
@@ -5407,16 +5407,6 @@
   ],
   "excluded": [
     {
-      "name": "Cabot Corporation",
-      "rule": "size",
-      "reason": "float_scale_suspect",
-      "public_float": 4429047299000000.0,
-      "assets": null,
-      "implied_float_price": null,
-      "float_to_assets": null,
-      "why": "Excluded as a likely unit error in the filing: its public float of $4,429tn is larger than any listed company."
-    },
-    {
       "name": "The ODP Corporation",
       "rule": "size",
       "reason": "float_scale_suspect",
@@ -5658,7 +5648,7 @@
     }
   ],
   "fundamentals_summary": {
-    "built": "2026-11-20 15:49 UTC",
+    "built": "2026-11-21 15:00 UTC",
     "companies": 50,
     "checks": 791,
     "passed": 791,
