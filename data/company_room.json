@@ -3,8 +3,8 @@
   "private": false,
   "universe_as_of": "2026-11-22",
   "rank_basis": "public_float_unverified",
-  "fundamentals_built": "2026-11-22 14:55 UTC",
-  "valuation_built": "2026-11-22 14:55 UTC",
+  "fundamentals_built": "2026-11-22 18:31 UTC",
+  "valuation_built": "2026-11-22 18:31 UTC",
   "defaults": {
     "erp": 0.05,
     "terminal_growth": 0.025,
@@ -8512,7 +8512,7 @@
           "not_comparable": null,
           "formula": "pretax_income + interest_expense + da (no operating income tag)",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
@@ -8564,7 +8564,7 @@
           "not_comparable": null,
           "formula": "net_debt / ebitda",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": []
         },
         "interest_cover": {
@@ -8574,7 +8574,7 @@
           "not_comparable": null,
           "formula": "ebitda / interest_expense",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "InterestExpenseNonoperating",
@@ -8689,7 +8689,7 @@
       },
       "derived": {
         "ev_reason": "market values are private until London Strategic Edge confirms publication",
-        "partial": null,
+        "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
         "ev_ebitda_reason": "market values are private until London Strategic Edge confirms publication",
         "pe_reason": "market values are private until London Strategic Edge confirms publication",
         "ufcf": 9689920018.654541,
@@ -12526,7 +12526,7 @@
           "not_comparable": null,
           "formula": "pretax_income + interest_expense + da (no operating income tag)",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
@@ -12584,7 +12584,7 @@
           "not_comparable": null,
           "formula": "net_debt / ebitda",
           "rule": null,
-          "partial": "finance leases not included: current finance leases not inside debt but not tagged separately (unresolved)",
+          "partial": "finance leases not included: current finance leases not inside debt but not tagged separately (unresolved); approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": []
         },
         "interest_cover": {
@@ -12594,7 +12594,7 @@
           "not_comparable": null,
           "formula": "ebitda / interest_expense",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "InterestExpense",
@@ -12683,7 +12683,7 @@
       },
       "derived": {
         "ev_reason": "market values are private until London Strategic Edge confirms publication",
-        "partial": null,
+        "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
         "ev_ebitda_reason": "market values are private until London Strategic Edge confirms publication",
         "pe_reason": "market values are private until London Strategic Edge confirms publication",
         "ufcf": 24046905786.56586,
@@ -16928,7 +16928,7 @@
           "not_comparable": null,
           "formula": "pretax_income + interest_expense + da (no operating income tag)",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
@@ -16992,7 +16992,7 @@
           "not_comparable": null,
           "formula": "net_debt / ebitda",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": []
         },
         "interest_cover": {
@@ -17002,7 +17002,7 @@
           "not_comparable": null,
           "formula": "ebitda / interest_expense",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "InterestExpenseNonoperating",
@@ -17117,7 +17117,7 @@
       },
       "derived": {
         "ev_reason": "market values are private until London Strategic Edge confirms publication",
-        "partial": null,
+        "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
         "ev_ebitda_reason": "market values are private until London Strategic Edge confirms publication",
         "pe_reason": "market values are private until London Strategic Edge confirms publication",
         "ufcf": 20496830115.711613,
@@ -25392,7 +25392,7 @@
           "not_comparable": null,
           "formula": "pretax_income + interest_expense + da (no operating income tag)",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
@@ -25462,7 +25462,7 @@
           "not_comparable": null,
           "formula": "net_debt / ebitda",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": []
         },
         "interest_cover": {
@@ -25472,7 +25472,7 @@
           "not_comparable": null,
           "formula": "ebitda / interest_expense",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "InterestExpense",
@@ -25587,7 +25587,7 @@
       },
       "derived": {
         "ev_reason": "market values are private until London Strategic Edge confirms publication",
-        "partial": null,
+        "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
         "ev_ebitda_reason": "market values are private until London Strategic Edge confirms publication",
         "pe_reason": "market values are private until London Strategic Edge confirms publication",
         "ufcf": null,
@@ -27735,7 +27735,7 @@
           "not_comparable": null,
           "formula": "pretax_income + interest_expense + da (no operating income tag)",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
@@ -27805,7 +27805,7 @@
           "not_comparable": null,
           "formula": "net_debt / ebitda",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": []
         },
         "interest_cover": {
@@ -27815,7 +27815,7 @@
           "not_comparable": null,
           "formula": "ebitda / interest_expense",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "InterestExpenseDebt",
@@ -27930,7 +27930,7 @@
       },
       "derived": {
         "ev_reason": "market values are private until London Strategic Edge confirms publication",
-        "partial": null,
+        "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
         "ev_ebitda_reason": "market values are private until London Strategic Edge confirms publication",
         "pe_reason": "market values are private until London Strategic Edge confirms publication",
         "ufcf": 17361601630.95781,
@@ -34996,7 +34996,7 @@
           "not_comparable": null,
           "formula": "pretax_income + interest_expense + da (no operating income tag)",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
@@ -35060,7 +35060,7 @@
           "not_comparable": null,
           "formula": "net_debt / ebitda",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": []
         },
         "interest_cover": {
@@ -35070,7 +35070,7 @@
           "not_comparable": null,
           "formula": "ebitda / interest_expense",
           "rule": null,
-          "partial": null,
+          "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
           "inputs": [
             {
               "concept": "InterestExpenseNonoperating",
@@ -35185,7 +35185,7 @@
       },
       "derived": {
         "ev_reason": "market values are private until London Strategic Edge confirms publication",
-        "partial": null,
+        "partial": "approximate: EBIT taken as pre-tax income plus interest expense, so it still holds interest income and other non-operating items",
         "ev_ebitda_reason": "market values are private until London Strategic Edge confirms publication",
         "pe_reason": "market values are private until London Strategic Edge confirms publication",
         "ufcf": 13536384440.119617,

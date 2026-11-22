@@ -108,9 +108,9 @@
     s.appendChild(h3('Financing series: credit and licence per series'));
     s.appendChild(table(['Series', 'Group', 'Source credit'], MA.series.map(function (sr) { return row([el('th', { scope: 'row' }, sr.label), el('td', null, sr.group), el('td', null, sr.credit.replace(/^Source: /, ''))]); })));
     s.appendChild(el('p', { 'class': 'cap' }, MA.export.series + ' series from the hub’s cleared export (' + L.stamp(MA.export.exported_at.replace('T', ' ')) + '); ' + MA.export.restricted_not_shown + ' restricted benchmarks are not shown: Euribor (EMMI) and SARON (SIX). US rates come from the original sources, not from FRED.'));
-    s.appendChild(h3('Logos, type and code'));
+    s.appendChild(h3('Logos and type'));
     var cl = el('ul', { 'class': 'list' });
-    [['Company logos', 'Simple Icons (CC0) and SVGL (MIT), used only to identify companies. Trademarks belong to their owners. ', [['assets/logos/SOURCES.md', 'sources'], ['assets/logos/LICENSE-simple-icons-CC0.md', 'CC0'], ['assets/logos/LICENSE-svgl-MIT.txt', 'MIT']]], ['Type', 'Mona Sans and Instrument Serif, both under the SIL Open Font License, served from this site. ', [['fonts/OFL-MonaSans.txt', 'Mona Sans licence'], ['fonts/OFL-InstrumentSerif.txt', 'Instrument Serif licence']]]].forEach(function (t) {
+    [['Company logos', 'Simple Icons (CC0) and SVGL (MIT), used only to identify companies. Trademarks belong to their owners. ', [['assets/logos/SOURCES.md', 'sources'], ['assets/logos/LICENSE-simple-icons-CC0.md', 'CC0'], ['assets/logos/LICENSE-svgl-MIT.txt', 'MIT']]], ['Type', 'Mona Sans, Instrument Serif and Caveat Brush, all under the SIL Open Font License, served from this site. ', [['fonts/OFL-MonaSans.txt', 'Mona Sans licence'], ['fonts/OFL-InstrumentSerif.txt', 'Instrument Serif licence'], ['fonts/OFL-CaveatBrush.txt', 'Caveat Brush licence']]],].forEach(function (t) {
       var li = el('li', null, [el('b', { style: 'color:var(--ink);font-weight:600' }, t[0] + '. '), t[1]]);
       t[2].forEach(function (a, i) { if (i) li.appendChild(document.createTextNode(' · ')); li.appendChild(el('a', { href: a[0], style: 'color:var(--cash-ink)' }, a[1])); });
       cl.appendChild(li);

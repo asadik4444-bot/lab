@@ -1,0 +1,66 @@
+/* The short opening of the Lab first page, in the look of the main site (aabdurashidov.ch): a navy band over the companies list.
+   Left: the words "in the LAB" and one button. Right: the three rooms as large stacked words; each is a link.
+   The band is short on purpose: the first rows of the companies table stay in view on a laptop screen. Tokens come from tokens.css. */
+@font-face{font-family:"Caveat Brush";src:url("fonts/caveat-brush-normal-latin.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+/* On this page the freshness strip joins the band. */
+.has-open .strip{background:var(--navy);color:var(--on-navy-2);border-bottom-color:var(--hair-d)}
+.has-open .strip .status{color:var(--on-navy)}
+.has-open .strip .dot{background:var(--cash-d)}
+.has-open .strip :focus-visible{outline-color:var(--cash-d)}
+
+.open{--rise:cubic-bezier(.16,1,.3,1);--dim:rgba(244,239,230,.4);position:relative;isolation:isolate;overflow:hidden;background:var(--navy);color:var(--on-navy);padding:clamp(22px,4vh,44px) 0 clamp(26px,4.6vh,50px)}
+/* faint engraved rings, as on the cover of the main site */
+.open::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:repeating-radial-gradient(circle at 92% 120%,transparent 0 58px,rgba(201,167,124,.08) 58px 59px);
+  -webkit-mask-image:radial-gradient(circle at 92% 120%,#000 0,transparent 62%);mask-image:radial-gradient(circle at 92% 120%,#000 0,transparent 62%)}
+.open :focus-visible{outline-color:var(--cash-d)}
+.open-in{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:end;gap:24px clamp(32px,6vw,96px)}
+.open-head{display:flex;flex-direction:column;align-items:flex-start}
+
+.open-title{margin:0;display:grid;justify-items:start;font-weight:400}
+.open-hand{font:400 clamp(34px,3.8vw,56px)/.6 "Caveat Brush","Segoe Script",cursive;color:var(--cash-d);margin-left:.16em;transform:rotate(-8deg) translateY(.2em)}
+.open-word{margin-left:-.045em;font-family:var(--sans);font-weight:850;font-stretch:122%;font-size:clamp(60px,7.2vw,108px);line-height:.86;letter-spacing:-.02em;text-transform:uppercase}
+
+/* the three rooms, as large words */
+.open-rooms{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;align-items:flex-start}
+.room{display:block;color:inherit;text-decoration:none;padding:.02em 0}
+.room-name{display:block;font-family:var(--sans);font-weight:850;font-stretch:118%;font-size:clamp(30px,4.6vw,72px);line-height:1;letter-spacing:-.015em;text-transform:uppercase;color:var(--dim);transition:color .3s var(--out)}
+.room:hover .room-name,.room:focus-visible .room-name{color:var(--on-navy)}
+.room[aria-current] .room-name{color:var(--cash-d)}
+.room:focus-visible{outline:2px solid var(--cash-d);outline-offset:4px;border-radius:2px}
+
+/* the one button: the valuation page */
+.open-act{margin:clamp(18px,3vh,28px) 0 0}
+.open-btn{position:relative;isolation:isolate;overflow:hidden;display:inline-flex;align-items:center;height:48px;padding:0 20px;border:1px solid rgba(244,239,230,.55);border-radius:2px;
+  font:650 12px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;color:var(--on-navy);transition:color .26s var(--rise)}
+.open-btn::before{content:"";position:absolute;inset:-1px;z-index:-1;background:var(--on-navy);transform:scaleY(0);transform-origin:50% 100%;transition:transform .26s var(--rise)}
+.open-btn:hover,.open-btn:focus-visible{color:var(--navy)}
+.open-btn:hover::before,.open-btn:focus-visible::before{transform:none}
+
+/* one motion at the start: the title comes up from its line; the room names follow */
+@media (prefers-reduced-motion:no-preference){
+  .open-word{animation:open-word .9s var(--rise) .05s backwards}
+  .open-hand{animation:open-hand .5s var(--rise) .55s backwards}
+  .room-name{animation:open-name .8s var(--rise) backwards;animation-delay:calc(.25s + var(--i,0)*.08s)}
+  .open-rooms li:nth-child(2){--i:1}
+  .open-rooms li:nth-child(3){--i:2}
+}
+@keyframes open-word{from{transform:translateY(100%);clip-path:inset(0 0 100% 0)}to{transform:none;clip-path:inset(0 0 0 0)}}
+@keyframes open-hand{from{opacity:0;transform:rotate(-15deg) translateY(.5em)}to{opacity:1;transform:rotate(-8deg) translateY(.2em)}}
+@keyframes open-name{from{opacity:0;transform:translateY(.35em)}to{opacity:1;transform:none}}
+
+/* a phone or a narrow window: one column, the rooms in one row of smaller words */
+@media (max-width:760px){
+  .open-in{grid-template-columns:1fr;align-items:start}
+  .open-rooms{flex-direction:row;flex-wrap:wrap;gap:4px 18px;order:2}
+  .room-name{font-size:clamp(20px,6vw,30px)}
+  .room{display:flex;align-items:center;min-height:44px}
+  .open-act{margin-top:16px}
+}
+
+/* the companies list under the band */
+.co-home{padding-top:clamp(24px,4vh,36px)}
+.co-home:focus{outline:0}
+.co-home .second{margin:8px 0 0;min-height:0}
+.ct-built{margin-top:20px}

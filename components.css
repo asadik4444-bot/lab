@@ -537,3 +537,19 @@ table{border-collapse:collapse;width:100%}
 @media (max-width:900px){.tryblock{grid-template-columns:1fr}.tryblock .try{justify-content:flex-start}.try-h{font-size:26px;line-height:32px}}
 /* Phone: the company header is shorter, so the tabs come sooner. */
 @media (max-width:620px){.chead-id .back{width:auto;order:3;min-height:40px}.chead-id .switch{order:4;flex:1 1 0;min-width:0;width:auto}.chead-id .switch select{min-width:0;width:100%}.chead-id .switch span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}.fig .fs{display:none}.fig .fv{font-size:20px;line-height:26px}.fig{padding:8px 12px 8px 0}.fig+.fig{padding-left:12px}.figs{margin-top:4px}.chead-id .idtxt{flex:1 1 calc(100% - 64px);min-width:0}.fig:nth-child(2n+1){padding-left:0}}
+
+/* segmented control (one style for every two- or three-way view switch); the pressed button is ink on bone */
+.seg{display:inline-flex;gap:2px;padding:3px;border:1px solid var(--ink);border-radius:var(--r);background:var(--bone)}
+.seg button{appearance:none;border:0;background:transparent;color:var(--ink-2);min-height:38px;padding:0 16px;border-radius:calc(var(--r) - 3px);font:600 14px/20px var(--sans);cursor:pointer;transition:background-color .15s var(--out),color .15s var(--out)}
+.seg button:hover{color:var(--ink);background:var(--paper)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bone)}
+.seg button:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+.ct-find{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.ct-find[hidden]{display:none}
+/* buttons and links inside a table row stand above the link that covers the row */
+.cotable .flag,.cotable .vlink{position:relative;z-index:1}
+.cotable .vlink{display:inline-block;margin:0 4px 2px 0;padding:0 8px;min-height:24px;border:1px solid var(--hair);border-radius:999px;font:600 12px/20px var(--sans);color:var(--cash-ink);text-decoration:none}
+.cotable .vlink:hover{border-color:var(--cash-ink)}
+.cotable .vlink:focus-visible{outline:2px solid var(--mark);outline-offset:2px}
+@media (max-width:620px){.cotable .vlink{padding:0 16px;border-radius:var(--r);margin-top:4px}}
+@media (max-width:620px){.cotable .flag{min-height:44px}.seg button{min-height:42px}.ct-built .fold-body a{display:inline-flex;align-items:center;min-height:44px}}

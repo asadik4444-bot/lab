@@ -60,6 +60,6 @@
       var c = co.companies.filter(function (x) { return x.ticker === tk; })[0];
       if (c) t.appendChild(el('a', { href: 'company.html?c=' + tk + '#value' }, L.shortName(c.name) + ' →'));
     });
-    t.appendChild(el('a', { href: 'companies.html', 'class': 'all' }, 'All ' + co.companies.length + ' companies →'));
+    t.appendChild(el('a', { href: 'index.html#companies', 'class': 'all' }, 'All ' + co.companies.length + ' companies →'));
   }).catch(L.fail);
 })();

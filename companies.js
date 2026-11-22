@@ -43,7 +43,7 @@
     var t = el('table', { 'class': 'cotable' }), hr = el('tr');
     COLS.forEach(function (c) {
       var b = el('button', { type: 'button' }, [c.t, c.k === S.key ? el('span', { 'aria-hidden': 'true' }, S.dir < 0 ? '▼' : '▲') : null]);
-      b.addEventListener('click', function () { if (S.key === c.k) S.dir = -S.dir; else { S.key = c.k; S.dir = c.k === 'name' || c.k === 'rank' ? 1 : -1; } render(); });
+      b.addEventListener('click', function () { if (S.key === c.k) S.dir = -S.dir; else { S.key = c.k; S.dir = c.k === 'name' || c.k === 'rank' ? 1 : -1; } save(); render(); });
       if (c.def) L.tip(b, { title: c.t, def: c.def, formula: c.formula, source: 'SEC EDGAR, as of ' + L.date(M.as_of) + '.', href: null, more: 'method.html#glossary' }, { noClick: true });
       hr.appendChild(el('th', { scope: 'col', 'class': c.r ? 'r' : '', 'aria-sort': c.k === S.key ? (S.dir < 0 ? 'descending' : 'ascending') : null }, b));
     });
@@ -52,7 +52,10 @@
     rows.forEach(function (r) {
       var tr = el('tr');
       tr.appendChild(el('td', { 'data-l': 'Rank', 'class': 'rk' }, '#' + r.rank));
-      var nmc = el('td', { 'class': 'nmc' }, el('div', { 'class': 'nm' }, [lg(r), el('div', null, [el('div', null, [el('a', { href: 'company.html?c=' + encodeURIComponent(r.ticker) }, L.shortName(r.name)), ' ', el('span', { 'class': 'muted' }, r.ticker)]), el('div', { 'class': 'flags' })])]));
+      /* the whole row opens the company report; banks and insurers have no valuation model, so no "Value" link */
+      var fin = r.fundamentals && r.fundamentals.financial;
+      var vl = fin ? null : el('a', { 'class': 'vlink', href: 'valuation.html?c=' + encodeURIComponent(r.ticker), 'aria-label': 'Value ' + L.shortName(r.name) }, 'Value');
+      var nmc = el('td', { 'class': 'nmc' }, el('div', { 'class': 'nm' }, [lg(r), el('div', null, [el('div', null, [el('a', { href: 'company.html?c=' + encodeURIComponent(r.ticker) }, L.shortName(r.name)), ' ', el('span', { 'class': 'muted' }, r.ticker)]), el('div', { 'class': 'flags' }, vl)])]));
       tr.appendChild(nmc);
       tr.appendChild(el('td', { 'class': 'r', 'data-l': 'Float' }, [L.usd(r.public_float), el('span', { 'class': 'sub2' }, 'at ' + L.date(r.float_end))]));
       tr.appendChild(el('td', { 'class': 'r', 'data-l': 'Shares' }, [sh(r.shares), el('span', { 'class': 'sub2' }, basis(r.shares_basis) + ' ' + L.date(r.shares_end))]));
@@ -62,7 +65,7 @@
       COLS.slice(4).forEach(function (k) {
         var v = k.get(r), td = el('td', { 'class': 'r', 'data-l': k.t });
         /* banks and insurers: margins and free cash flow do not apply, which is not the same as missing */
-        var nc = r.fundamentals && r.fundamentals.financial && { om: 1, fcf: 1, fm: 1 }[k.k];
+        var nc = r.fundamentals && r.fundamentals.financial && { om: 1, fcf: 1, fm: 1, cx: 1 }[k.k];
         if (v == null) td.appendChild(nc ? el('span', { 'class': 'muted', title: 'Not comparable for banks and insurers' }, 'n/c') : el('span', { 'class': 'muted' }, 'n/a'));
         else { td.appendChild(k.chip ? L.chg(v, L.pctS(v)) : document.createTextNode(k.fmt(v))); if (k.k === S.key && k.bar) td.appendChild(el('span', { 'class': 'cbar', style: 'width:' + Math.max(2, Math.abs(v) / maxv * 100) + '%' })); }
         tr.appendChild(td);
@@ -81,6 +84,30 @@
     host.appendChild(el('p', { 'class': 'cap' }, 'Revenue growth, latest fiscal year against the year before. Navy bars grew, grey bars shrank. Fiscal years end on different dates. Bars beyond the axis are clipped and marked in cashmere; hover or use the arrow keys for the true value and the company. Source: SEC EDGAR 10-K filings, as of ' + L.date(M.as_of) + '.'));
   }
 
+  /* the view, the search and the sort live in the address, so that a reload or a shared link keeps the place */
+  function show(v) {
+    S.view = v === 'growth' ? 'growth' : 'table';
+    document.querySelectorAll('.seg button').forEach(function (o) { o.setAttribute('aria-pressed', o.dataset.v === S.view ? 'true' : 'false'); });
+    $('ct-growth').hidden = S.view !== 'growth'; $('ct-wrap').hidden = S.view !== 'table';
+    $('q').closest('.ct-find').hidden = S.view !== 'table'; /* the search filters the table only */
+    if (S.view === 'growth') growth();
+  }
+  function load() {
+    var p = new URLSearchParams(location.search);
+    if (p.get('view') === 'growth') S.view = 'growth';
+    if (p.get('q')) S.q = p.get('q').trim().slice(0, 60);
+    var k = p.get('sort'); if (k && COLS.some(function (c) { return c.k === k; })) { S.key = k; S.dir = p.get('dir') === 'desc' ? -1 : 1; }
+  }
+  function save() {
+    var p = new URLSearchParams(location.search);
+    ['view', 'q', 'sort', 'dir'].forEach(function (k) { p.delete(k); });
+    if (S.view !== 'table') p.set('view', S.view);
+    if (S.q) p.set('q', S.q);
+    if (S.key !== 'rank' || S.dir !== 1) { p.set('sort', S.key); p.set('dir', S.dir < 0 ? 'desc' : 'asc'); }
+    var s = p.toString();
+    try { history.replaceState(history.state, '', location.pathname + (s ? '?' + s : '') + location.hash); } catch (e) { /* a file:// page may refuse; the view still works */ }
+  }
+
   Promise.all([L.load('markets'), L.load('assets/logos/logos.json')]).then(function (r) {
     M = r[0]; LOGOS = r[1] || {}; L.status();
     var g = M.rows.map(function (x) { return fa(x, 'growth_yoy'); }).filter(L.isNum), up = g.filter(function (v) { return v > 0; }).length, down = g.filter(function (v) { return v < 0; }).length;
@@ -88,15 +115,19 @@
     var fa_ = M.facts;
     $('ct-second').textContent = 'The top three, ' + fa_.top3_names.map(L.shortName).join(', ') + ', hold ' + L.usd(fa_.top3_float) + ' of public float' + (fa_.top3_exceeds_bottom25 ? ', more than the bottom 25 together at ' + L.usd(fa_.bottom25_float) + '.' : '; the bottom 25 hold ' + L.usd(fa_.bottom25_float) + '.');
     var lead = $('leaders'); lead.textContent = '';
-    [['Highest revenue growth', 'growth_yoy', L.pctS], ['Highest operating margin', 'operating_margin', pc], ['Highest FCF margin', 'fcf_margin', pc]].forEach(function (x) {
-      var best = null; M.rows.forEach(function (rw) { var v = f(rw, x[1]); if (L.isNum(v) && (!best || v > f(best, x[1]))) best = rw; });
-      if (best) lead.appendChild(el('li', null, [el('span', { 'class': 'lk' }, x[0]), el('span', { 'class': 'lrow' }, [lg(best), el('b', null, best.ticker), el('span', null, x[2](f(best, x[1])))])]));
+    /* revenue growth applies to every company (as in the title count); margins do not apply to banks and insurers */
+    [['Highest revenue growth', 'growth_yoy', L.pctS, fa], ['Highest operating margin', 'operating_margin', pc, f], ['Highest FCF margin', 'fcf_margin', pc, f]].forEach(function (x) {
+      var get = x[3], best = null; M.rows.forEach(function (rw) { var v = get(rw, x[1]); if (L.isNum(v) && (!best || v > get(best, x[1]))) best = rw; });
+      if (best) lead.appendChild(el('li', null, [el('span', { 'class': 'lk' }, x[0]), el('span', { 'class': 'lrow' }, [lg(best), el('b', null, best.ticker), el('span', null, x[2](get(best, x[1])))])]));
     });
     var c = M.counts, ul = el('ul', { 'class': 'list' });
     [c.ranked + ' companies are ranked by SEC public float, from a pool of ' + c.pool + ' filings.', M.excluded.length + ' filings were excluded: ' + c.impossible_figures + ' with impossible figures and ' + c.other_exclusions + ' for other reasons (no listed ticker or no share count). The list is on the Method page.', c.rows_with_badges + ' of the ranked rows carry a data-quality flag.', M.cross_check.overlap + ' of ' + M.cross_check.of + ' match ' + String(M.cross_check.source).split(',')[0] + ', checked ' + L.date(M.cross_check.checked) + '.', 'The list is by SEC public float, which is reported once a year, so it is not a market-cap ranking. Source: ' + M.source + '.'].forEach(function (t) { ul.appendChild(el('li', null, t)); });
     var b = $('ct-built'); b.appendChild(el('summary', null, ['How this list is built', el('small', null, 'counts, exclusions and the cross-check'), ])); b.appendChild(el('div', { 'class': 'fold-body' }, [ul, el('a', { href: 'method.html#catches', style: 'color:var(--cash-ink);font-weight:600' }, 'See the data-quality catches on Method')]));
-    document.querySelectorAll('.seg button').forEach(function (btn) { btn.addEventListener('click', function () { S.view = btn.dataset.v; document.querySelectorAll('.seg button').forEach(function (o) { o.setAttribute('aria-pressed', o === btn ? 'true' : 'false'); }); $('ct-growth').hidden = S.view !== 'growth'; $('ct-wrap').hidden = S.view !== 'table'; $('q').parentNode.hidden = false; if (S.view === 'growth') growth(); }); });
-    $('q').addEventListener('input', function (e) { S.q = e.target.value.trim(); render(); });
+    document.querySelectorAll('.seg button').forEach(function (btn) { btn.addEventListener('click', function () { show(btn.dataset.v); save(); }); });
+    $('q').addEventListener('input', function (e) { S.q = e.target.value.trim(); save(); render(); });
+    load();
+    $('q').value = S.q;
     render();
+    show(S.view);
   }).catch(L.fail);
 })();

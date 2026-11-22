@@ -590,8 +590,7 @@
 
   /* ---------- shell: top bar with five page links, freshness strip, footer ---------- */
   var PAGES = [
-    { id: 'today', href: 'index.html', name: 'Today' },
-    { id: 'companies', href: 'companies.html', name: 'Companies' },
+    { id: 'companies', href: 'index.html', name: 'Companies' },
     { id: 'financing', href: 'financing.html', name: 'Financing' },
     { id: 'deals', href: 'deals.html', name: 'Deals' },
     { id: 'method', href: 'method.html', name: 'Method' }
@@ -645,7 +644,7 @@
       var txt = [s.overdue ? 'Refresh overdue · Last build ' : 'Built ', el('b', null, Lab.stamp(built)), ' · ' + fine + ' of ' + srcs.length + ' ', el('span', { 'class': 'w-src' }, 'sources '), 'within their age limits'];
       if (bad.length) { var x = bad[0], nm = x.label.charAt(0).toLowerCase() + x.label.slice(1); txt.push(' · ' + nm + ' needs review'); }
       var b = el('button', { type: 'button', 'class': 'status' + (fresh && !reduced ? ' pulse' : '') }, [el('span', { 'class': 'dot', 'aria-hidden': 'true' }), el('span', null, txt)]);
-      Lab.tip(b, { title: 'Build and source dates', def: 'Freshness uses the current time. A public build is overdue after 36 hours. Observation dates do not change merely because a fetch succeeds.', working: srcs.map(function (x) { return x.label + ': ' + (STALE_WORDS[x.state] || x.state) + ', newest data ' + Lab.date(x.newest_data) + ', checked ' + Lab.stamp(x.checked_at); }).join('. '), source: 'status.json, build ' + Lab.stamp(built) + (s.run.git_commit ? ', commit ' + s.run.git_commit.slice(0, 7) : ''), more: 'method.html#pipeline' });
+      Lab.tip(b, { title: 'Build and source dates', def: 'Freshness uses the current time. A public build is overdue after 36 hours. Observation dates do not change merely because a fetch succeeds.', working: srcs.map(function (x) { return x.label + ': ' + (STALE_WORDS[x.state] || x.state) + ', newest data ' + Lab.date(x.newest_data) + (x.newest_filing ? ', newest filing ' + Lab.date(x.newest_filing) : '') + ', checked ' + Lab.stamp(x.checked_at); }).join('. '), source: 'status.json, build ' + Lab.stamp(built) + (s.run.git_commit ? ', commit ' + s.run.git_commit.slice(0, 7) : ''), more: 'method.html#pipeline' });
       host.textContent = ''; host.appendChild(b);
       return s;
     });

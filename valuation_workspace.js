@@ -31,7 +31,7 @@
   }
   async function load(){
     try{
-      L.shell({page:'companies',crumb:['Companies','companies.html']});
+      L.shell({page:'companies',crumb:['Companies','index.html#companies']});
       L.status().catch(()=>{});
       const data=await L.load('company_room');
       // Two packs: licence-restricted market data (local only) and public filing supplements.
