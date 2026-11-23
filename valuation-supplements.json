@@ -1,9 +1,9 @@
 {
  "schema_version": 1,
  "public": true,
- "as_of": "2026-11-22",
- "built_at": "2026-11-22T18:36:42+00:00",
- "fundamentals_built": "2026-11-22 18:31 UTC",
+ "as_of": "2026-11-23",
+ "built_at": "2026-11-23T18:49:16+00:00",
+ "fundamentals_built": "2026-11-23 18:44 UTC",
  "scope": "Public filing supplements: SEC company facts, the Treasury reference and a dated synthetic-rating table. No market quotes.",
  "spread_table": {
   "source": "https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ratings.html",

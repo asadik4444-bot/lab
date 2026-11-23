@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "private": false,
-  "universe_as_of": "2026-11-22",
+  "universe_as_of": "2026-11-23",
   "rank_basis": "public_float_unverified",
-  "fundamentals_built": "2026-11-22 18:31 UTC",
-  "valuation_built": "2026-11-22 18:31 UTC",
+  "fundamentals_built": "2026-11-23 18:44 UTC",
+  "valuation_built": "2026-11-23 18:44 UTC",
   "defaults": {
     "erp": 0.05,
     "terminal_growth": 0.025,
@@ -15,7 +15,7 @@
     "ust10y": {
       "value": 0.0492,
       "date": "2026-11-20",
-      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (10 Yr), accessed 2026-11-22"
+      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (10 Yr), accessed 2026-11-23"
     },
     "discount_rate": 0.0992,
     "discount_rate_text": "US 10-year Treasury 4.92% on 20 November 2026 is the risk-free reference. Company WACC also uses your beta, equity risk premium, borrowing cost, tax rate, and equity/debt weights"
