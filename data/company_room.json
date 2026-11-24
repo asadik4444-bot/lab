@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "private": false,
-  "universe_as_of": "2026-11-23",
+  "universe_as_of": "2026-11-24",
   "rank_basis": "public_float_unverified",
-  "fundamentals_built": "2026-11-23 18:44 UTC",
-  "valuation_built": "2026-11-23 18:44 UTC",
+  "fundamentals_built": "2026-11-24 18:10 UTC",
+  "valuation_built": "2026-11-24 18:10 UTC",
   "defaults": {
     "erp": 0.05,
     "terminal_growth": 0.025,
@@ -14,11 +14,11 @@
     ],
     "ust10y": {
       "value": 0.0492,
-      "date": "2026-11-20",
-      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (10 Yr), accessed 2026-11-23"
+      "date": "2026-11-23",
+      "credit": "Source: U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates (10 Yr), accessed 2026-11-24"
     },
     "discount_rate": 0.0992,
-    "discount_rate_text": "US 10-year Treasury 4.92% on 20 November 2026 is the risk-free reference. Company WACC also uses your beta, equity risk premium, borrowing cost, tax rate, and equity/debt weights"
+    "discount_rate_text": "US 10-year Treasury 4.92% on 23 November 2026 is the risk-free reference. Company WACC also uses your beta, equity risk premium, borrowing cost, tax rate, and equity/debt weights"
   },
   "definitions": {
     "debt_rule": "1. DebtLongtermAndShorttermCombinedAmount when reported (the company's own total).\n    2. Else noncurrent debt + current debt, where current debt is DebtCurrent when reported, otherwise current\n       maturities plus short-term borrowings (or commercial paper); short-term borrowings equal to the current\n       maturities are the same line and are counted once. For an issuer that tags current maturities only by\n       segment (listed by hand: Caterpillar), the current maturities come from its debt maturity schedule.\n    3. Else LongTermDebt (including current maturities) plus short-term borrowings.\n    4. Else the current parts alone (DebtCurrent, or current maturities plus short-term borrowings).\n    5. With no debt tag at all, 0 (\"no debt tags in the 10-K\"). A blocked (conflicting) tag is never 0.\n\n    The second value maps \"noncurrent\" and \"current\" to True when that maturity's debt tag includes capital or\n    finance leases (LongTermDebtAndCapitalLeaseObligations[Current]); None means unknown (combined total).",

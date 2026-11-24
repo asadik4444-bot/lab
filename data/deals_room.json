@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-11-23",
+  "as_of": "2026-11-24",
   "headline": {
     "text": "123 US public-company merger proxies and tender offers were filed from May to October 2026: about as many as the 122 in the same months a year earlier (SPACs excluded).",
     "last": 123,
@@ -178,20 +178,30 @@
       "month": "2026-11",
       "proxies": 11,
       "proxies_spac": 6,
-      "tenders": 2,
+      "tenders": 3,
       "tenders_spac": 0
     }
   ],
   "window": [
     "2024-12-01",
-    "2026-11-23"
+    "2026-11-24"
   ],
   "amendments_skipped": {
-    "SC TO-T": 378
+    "SC TO-T": 379
   },
   "spac_filings": 109,
-  "filings_total": 593,
+  "filings_total": 594,
   "recent": [
+    {
+      "name": "RAPID MICRO BIOSYSTEMS, INC.",
+      "tickers": [
+        "RPID"
+      ],
+      "form": "SC TO-T",
+      "form_label": "Third-party tender offers (SC TO-T)",
+      "file_date": "2026-11-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/1380106/000119312526473415/"
+    },
     {
       "name": "Oatly Group AB",
       "tickers": [
@@ -299,16 +309,6 @@
       "form_label": "Merger proxies (DEFM14A)",
       "file_date": "2026-11-05",
       "url": "https://www.sec.gov/Archives/edgar/data/26780/000119312526449892/"
-    },
-    {
-      "name": "BLUE RIDGE BANKSHARES, INC.",
-      "tickers": [
-        "BRBS"
-      ],
-      "form": "DEFM14A",
-      "form_label": "Merger proxies (DEFM14A)",
-      "file_date": "2026-11-03",
-      "url": "https://www.sec.gov/Archives/edgar/data/842717/000110465926121764/"
     }
   ],
   "sponsors": [
