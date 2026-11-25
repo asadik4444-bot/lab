@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-11-24",
+  "as_of": "2026-11-25",
   "headline": {
     "text": "123 US public-company merger proxies and tender offers were filed from May to October 2026: about as many as the 122 in the same months a year earlier (SPACs excluded).",
     "last": 123,
@@ -178,20 +178,30 @@
       "month": "2026-11",
       "proxies": 11,
       "proxies_spac": 6,
-      "tenders": 3,
+      "tenders": 4,
       "tenders_spac": 0
     }
   ],
   "window": [
     "2024-12-01",
-    "2026-11-24"
+    "2026-11-25"
   ],
   "amendments_skipped": {
     "SC TO-T": 379
   },
   "spac_filings": 109,
-  "filings_total": 594,
+  "filings_total": 595,
   "recent": [
+    {
+      "name": "AYTU BIOPHARMA, INC",
+      "tickers": [
+        "AYTU"
+      ],
+      "form": "SC TO-T",
+      "form_label": "Third-party tender offers (SC TO-T)",
+      "file_date": "2026-11-25",
+      "url": "https://www.sec.gov/Archives/edgar/data/1385818/000110465926131889/"
+    },
     {
       "name": "RAPID MICRO BIOSYSTEMS, INC.",
       "tickers": [
@@ -299,16 +309,6 @@
       "form_label": "Merger proxies (DEFM14A)",
       "file_date": "2026-11-05",
       "url": "https://www.sec.gov/Archives/edgar/data/1576427/000162828026070665/"
-    },
-    {
-      "name": "DANA Inc",
-      "tickers": [
-        "DAN"
-      ],
-      "form": "DEFM14A",
-      "form_label": "Merger proxies (DEFM14A)",
-      "file_date": "2026-11-05",
-      "url": "https://www.sec.gov/Archives/edgar/data/26780/000119312526449892/"
     }
   ],
   "sponsors": [

@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "as_of": "2026-11-24",
+  "as_of": "2026-11-25",
   "rank_basis": "public_float_unverified",
   "source": "SEC EDGAR: XBRL frames (dei:EntityPublicFloat, us-gaap:Assets), submissions, companyconcept",
   "cross_check": {
@@ -5530,11 +5530,11 @@
       "name": "CleanSpark, Inc.",
       "rule": "assets",
       "reason": "float_scale_suspect",
-      "public_float": 1967000000000.0,
-      "assets": 2702199000.0,
-      "implied_float_price": 7659.148112789215,
-      "float_to_assets": 727.9256635059076,
-      "why": "Excluded as a likely unit error in the filing: its public float of $1,967.0bn is 728× its total assets ($2.70bn); with its share count it implies a share price of $7,659."
+      "public_float": 2158000000000.0,
+      "assets": 5249898000.0,
+      "implied_float_price": 8283.759212155384,
+      "float_to_assets": 411.0556052708072,
+      "why": "Excluded as a likely unit error in the filing: its public float of $2,158.0bn is 411× its total assets ($5.25bn); with its share count it implies a share price of $8,284."
     },
     {
       "name": "TRUSTMARK CORP",
@@ -5648,7 +5648,7 @@
     }
   ],
   "fundamentals_summary": {
-    "built": "2026-11-24 18:10 UTC",
+    "built": "2026-11-25 17:38 UTC",
     "companies": 50,
     "checks": 791,
     "passed": 791,
