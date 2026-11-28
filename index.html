@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Lab · Companies, financing, deals · Asadbek Abdurashidov</title>
-<meta name="robots" content="noindex">
 <meta name="description" content="A small analyst desk: the 50 largest US companies from their filings, financing conditions and deals, every figure with its date and formula.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/mona-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -36,15 +35,20 @@
     <div class="ctoolbar">
       <div class="seg" role="group" aria-label="View"><button type="button" aria-pressed="true" data-v="table">Table</button><button type="button" aria-pressed="false" data-v="growth">Growth</button></div>
       <div class="ct-find"><label class="sr-only" for="q">Search companies</label><input id="q" type="search" placeholder="Search name or ticker" autocomplete="off"><span class="small" id="ct-count"></span></div>
+      <div class="ct-tools"><button type="button" class="tool" id="ct-more" aria-pressed="false">More columns</button><button type="button" class="tool" id="ct-csv">Download CSV</button></div>
     </div>
+    <div class="ct-sectors" id="ct-sectors"></div>
     <div id="ct-growth" hidden></div>
     <div id="ct-wrap"></div>
-    <p class="cap">n/a: not reported in the 10-K. n/c: not comparable for banks and insurers (margins and free cash flow do not apply). Not investment advice.</p>
+    <p class="cap">n/a: not reported in the 10-K. n/c: not comparable for banks and insurers (margins, free cash flow and debt ratios do not apply). &asymp;: approximate EBITDA (the filing lacks an operating-profit or amortisation line; the company page says which). Net cash: the company holds more cash than debt. Sectors are our own grouping. The CSV holds the rows in view with every column, date and note. Not investment advice.</p>
     <details class="fold ct-built" id="ct-built"></details>
   </div>
 </main>
 <script src="freshness.js"></script>
 <script src="lab.js"></script>
+<script src="glossary.js"></script>
+<script src="companies_model.js"></script>
+<script src="export.js"></script>
 <script src="companies.js"></script>
 </body>
 </html>

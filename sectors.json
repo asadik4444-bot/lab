@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "basis": "Our own grouping by each company's main business, close to the usual sector lists. It is not an official classification. A company that enters the list later shows as \"Not grouped\" until it is added here.",
+  "updated": "2026-11-28",
+  "sectors": [
+    { "id": "tech", "name": "Technology", "short": "Technology" },
+    { "id": "comm", "name": "Communication services", "short": "Communication" },
+    { "id": "disc", "name": "Consumer discretionary", "short": "Consumer" },
+    { "id": "stap", "name": "Consumer staples", "short": "Staples" },
+    { "id": "health", "name": "Health care", "short": "Health care" },
+    { "id": "fin", "name": "Financials", "short": "Financials" },
+    { "id": "energy", "name": "Energy", "short": "Energy" },
+    { "id": "ind", "name": "Industrials", "short": "Industrials" },
+    { "id": "mat", "name": "Materials", "short": "Materials" }
+  ],
+  "companies": {
+    "NVDA": "tech", "AAPL": "tech", "MSFT": "tech", "AVGO": "tech", "MU": "tech", "ORCL": "tech",
+    "PLTR": "tech", "CSCO": "tech", "IBM": "tech", "AMD": "tech", "CRM": "tech", "TXN": "tech",
+    "GOOGL": "comm", "META": "comm", "NFLX": "comm", "T": "comm", "VZ": "comm",
+    "AMZN": "disc", "TSLA": "disc", "HD": "disc", "MCD": "disc", "BKNG": "disc",
+    "COST": "stap", "WMT": "stap", "PG": "stap", "KO": "stap", "PM": "stap",
+    "LLY": "health", "JNJ": "health", "ABBV": "health", "UNH": "health", "ABT": "health", "MRK": "health", "ISRG": "health",
+    "BRK-B": "fin", "JPM": "fin", "MA": "fin", "V": "fin", "BAC": "fin", "WFC": "fin", "AXP": "fin", "MS": "fin", "GS": "fin",
+    "XOM": "energy", "CVX": "energy",
+    "GE": "ind", "RTX": "ind", "UBER": "ind", "CAT": "ind",
+    "LIN": "mat"
+  }
+}

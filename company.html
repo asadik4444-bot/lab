@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Company · The Lab · Asadbek Abdurashidov</title>
-<meta name="robots" content="noindex">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/mona-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="tokens.css">
@@ -18,6 +17,7 @@
 <body>
 <main id="main" tabindex="-1">
   <div class="wrap chead">
+    <p class="print-only" id="print-line"></p>
     <div class="chead-id">
       <a class="back" href="index.html#companies">&larr; Companies</a>
       <span id="logo"></span>
@@ -30,6 +30,7 @@
       <div class="fig"><span class="fl">Operating margin</span><span class="fv">&ndash;</span><span class="fs"></span></div>
       <div class="fig"><span class="fl">Free cash flow</span><span class="fv">&ndash;</span><span class="fs"></span></div>
     </div>
+    <div class="ctools"><button type="button" class="tool" id="co-csv">Download CSV</button><button type="button" class="tool" id="co-print">Print one-page summary</button></div>
   </div>
   <div class="tabs-bar"><div class="wrap"><div class="tablist" id="tablist" role="tablist" aria-label="Company sections"></div></div></div>
   <div class="wrap" id="panels" style="min-height:1000px"></div>
@@ -42,6 +43,7 @@
 <script src="value_visuals.js"></script>
 <script src="analyst_visuals.js"></script>
 <script src="detailed_models.js"></script>
+<script src="export.js"></script>
 <script src="company.js"></script>
 </body>
 </html>

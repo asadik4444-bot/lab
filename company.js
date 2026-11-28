@@ -395,13 +395,40 @@
     p.appendChild(disc('The Value tab calculates company WACC from your explicit assumptions. ' + DISC));
   }
 
+  /* ---------- downloads and print (Wave 1, 28 Nov 2026) ---------- */
+  /* the five-year table as CSV: the same lines as the Earnings tab; a line that does not apply is empty, with a note */
+  function earningsCsv(c) {
+    var kind = kindOf(c), hy = (c.history && c.history.years) || [];
+    var yrs = hy.length ? hy : [{ start: c.fy.start, end: c.fy.end, revenue: val(F(c, 'revenue')), operating_income: val(F(c, 'operating_income')), fcf: val(F(c, 'fcf')), net_income: val(V(c, 'net_income')), reasons: {}, filing_url: hrefOf(F(c, 'revenue')) }];
+    var header = ['Ticker', 'Company', 'Fiscal year start', 'Fiscal year end', 'Revenue (USD)', 'Operating income (USD)', 'Free cash flow (USD)', 'Net income (USD)', 'Notes', '10-K filing', 'Data as of'];
+    var rows = yrs.map(function (y) {
+      var notes = [], rs = y.reasons || {};
+      function get(key, label, applies, notApplies) {
+        if (!applies) { notes.push(label + ': ' + notApplies); return null; }
+        if (L.isNum(y[key])) return y[key];
+        notes.push(label + ': ' + reasonText(rs[key]).toLowerCase()); return null;
+      }
+      return [c.ticker, L.niceName(c.name), y.start || null, y.end || null,
+        get('revenue', 'Revenue', true),
+        get('operating_income', 'Operating income', kind !== 'bank', 'not shown for banks'),
+        get('fcf', 'Free cash flow', kind === 'industrial', 'not comparable for banks and insurers'),
+        get('net_income', 'Net income', true),
+        notes.join('; '), y.filing_url || null, D.fundamentals_built || D.universe_as_of || null];
+    });
+    return LabExport.csv(header, rows);
+  }
+  function printLine(c) {
+    var p = $('print-line'); if (!p) return;
+    p.textContent = 'The Lab · lab.aabdurashidov.ch · ' + L.niceName(c.name) + ' (' + c.ticker + '), fiscal year to ' + L.date(c.fy.end) + ' · Source: SEC EDGAR 10-K · Printed ' + L.date(new Date().toISOString().slice(0, 10)) + ' · Not investment advice.';
+  }
+
   /* ---------- page ---------- */
   function load(ticker) {
     var c = D.companies.filter(function (x) { return x.ticker === ticker; })[0] || D.companies[0];
     S.co = c; S.price = null;
     $('pick').value = c.ticker;
     history.replaceState(null, '', '?c=' + encodeURIComponent(c.ticker) + (location.hash || ''));
-    renderHeader(c); renderEarnings(c); renderValue(c); renderCash(c); renderSources(c);
+    renderHeader(c); renderEarnings(c); renderValue(c); renderCash(c); renderSources(c); printLine(c);
   }
   TABCTL = L.tabs({ list: $('tablist'), panels: $('panels'), tabs: TABS, label: 'Company sections', minHeight: '1000px' });
   var MK = null, MROW = {};
@@ -411,6 +438,8 @@
     var pick = $('pick'); pick.textContent = '';
     D.companies.forEach(function (c) { pick.appendChild(el('option', { value: c.ticker }, c.ticker + ' \u00b7 ' + L.shortName(c.name))); });
     pick.addEventListener('change', function () { load(pick.value); });
+    $('co-csv').addEventListener('click', function () { LabExport.save(LabExport.fileName('lab-' + S.co.ticker + '-five-years', D.fundamentals_built || D.universe_as_of), earningsCsv(S.co)); });
+    $('co-print').addEventListener('click', function () { window.print(); });
     var want = (new URLSearchParams(location.search).get('c') || 'AAPL').toUpperCase();
     load(want);
     TABCTL.initial();

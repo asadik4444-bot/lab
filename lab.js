@@ -94,7 +94,7 @@
     var arrow = dir === 'flat' ? '\u25AC' : (dir === 'up' ? UP : DOWN);
     return el('span', { 'class': 'chg ' + dir + (o && o.neutral && dir !== 'flat' ? ' neu' : '') }, [el('span', { 'aria-hidden': 'true' }, arrow), el('span', null, text)]);
   };
-  var KEEP = { PLC: 1, IBM: 1, USA: 1, NVIDIA: 1 }, LOWER = { AND: 1, OF: 1, THE: 1 };
+  var KEEP = { PLC: 1, IBM: 1, USA: 1, NVIDIA: 1, ATT: 1 }, LOWER = { AND: 1, OF: 1, THE: 1 };
   Lab.niceName = function (n) {
     n = String(n || '').replace(/\u00a0/g, ' ').replace(/\s*\/[A-Z]+$/, '').replace(/\s+/g, ' ').trim();
     if (/[a-z]/.test(n)) return n;
